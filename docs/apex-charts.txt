@@ -1,0 +1,373 @@
+# Tailwind CSS Apex charts - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - third party plugins
+
+p:
+  - Charts are visual tools that simplify complex data sets, making information more accessible. They include line, bar, and pie charts for specific trends.
+
+h2:
+  - Getting started
+
+h3:
+  - Setup
+
+p:
+  - Below are the comprehensively outlined steps you can follow to seamlessly integrateApexcharts JSwith FlyonUI.
+
+p:
+  - Installapexchartsandlodashvia npm. Thelodashlibrary is required by certain JavaScript helpers for ApexCharts, so ensure both packages are installed.
+
+p:
+  - Add the required ApexCharts CSS and JS files to your page in the following locations:
+
+p:
+  - Note:A CDN link won't work here because we need to modify the default Vendor CSS to fit FlyonUI's design.
+
+p:
+  - TheHelper.jsfile provides four custom tooltip functions and an auto-initialization feature for ApexCharts. To use it, include thehelper-apexcharts.jsscript after theapexcharts.jsscript.
+
+p:
+  - Update yourtailwind.cssfile to incorporate the path for the FlyonUI Apex Charts override CSS.
+
+p:
+  - Use the method below to create an ApexCharts instance. This method contains all necessary settings, specifications, and styles for the chart.
+
+h2:
+  - Basic example
+
+h3:
+  - Single area chart
+
+p:
+  - The example below demonstrates how to use a single area chart with Helper.js.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="w-full" id="apex-single-area-chart">
+  </div>
+ </div>
+</div>
+
+h3:
+  - Without helper js
+
+p:
+  - Helper.js offers four different tooltip designs and includes an auto-init function, eliminating the need for manual initialization. However, if you prefer, you can remove the Helper.js file and use the default Apex chart initialization. Below is an example, but keep in mind that you will need to enable the vendor option in the config file for CSS generation.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div id="lineAreaChart">
+  </div>
+ </div>
+</div>
+
+h2:
+  - Illustrations
+
+h3:
+  - Multiple area charts
+
+p:
+  - The following example demonstrates the usage of a multiple area charts.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div id="apex-multiple-area-charts">
+  </div>
+ </div>
+</div>
+
+h3:
+  - Multiple area charts (comparison tooltip)
+
+p:
+  - The following example demonstrates the usage of a multiple area charts with comparison tooltip.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div id="apex-multiple-area-charts-compare">
+  </div>
+ </div>
+</div>
+
+h3:
+  - Multiple area charts (comparison alternative)
+
+p:
+  - The following example demonstrates the usage of a multiple area charts with alternative comparison tooltip.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="w-full" id="apex-multiple-area-charts-compare-alt">
+  </div>
+ </div>
+</div>
+
+h3:
+  - Curved area charts
+
+p:
+  - The following example demonstrates the usage of a curved area charts.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="w-full" id="apex-curved-area-charts">
+  </div>
+ </div>
+</div>
+
+h3:
+  - Column chart
+
+p:
+  - The following example demonstrates the usage of a Column chart.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="w-full" id="apex-column-bar-chart">
+  </div>
+ </div>
+</div>
+
+h3:
+  - Multiple column charts
+
+p:
+  - The following example demonstrates the usage of a multiple column charts.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="w-full" id="apex-multiple-column-charts">
+  </div>
+ </div>
+</div>
+
+h3:
+  - Single line chart
+
+p:
+  - The following example demonstrates the usage of a single line chart.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="w-full" id="apex-single-line-chart">
+  </div>
+ </div>
+</div>
+
+h3:
+  - Multiple line charts
+
+p:
+  - The following example demonstrates the usage of a multiple line charts.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="w-full" id="apex-multiple-line-charts">
+  </div>
+ </div>
+</div>
+
+h3:
+  - Curved line charts
+
+p:
+  - The following example demonstrates the usage of a Curved line charts.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="w-full" id="apex-curved-line-charts">
+  </div>
+ </div>
+</div>
+
+h3:
+  - Candle Stick Chart
+
+p:
+  - The following example demonstrates the usage of a Candle Stick chart.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div id="candleStickChart">
+  </div>
+ </div>
+</div>
+
+h3:
+  - Horizontal bar chart
+
+p:
+  - The following example demonstrates the usage of a Horizontal bar chart.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="w-full" id="apex-horizontal-bar-chart">
+  </div>
+ </div>
+</div>
+
+h3:
+  - Doughnut chart
+
+p:
+  - The following example demonstrates the usage of a doughnut chart.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div id="apex-doughnut-chart">
+  </div>
+ </div>
+</div>
+
+h3:
+  - Bubble chart
+
+p:
+  - The following example demonstrates the usage of a bubble chart.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col h-[420px] flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div id="apex-bubble-chart">
+  </div>
+ </div>
+</div>
+
+h3:
+  - Pie chart
+
+p:
+  - The following example demonstrates the usage of a pie chart.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col h-96 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div id="apex-pie-chart">
+  </div>
+ </div>
+</div>
+
+h3:
+  - Radial bar chart
+
+p:
+  - The following example demonstrates the usage of a radial bar chart.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div id="apex-radial-bar-chart">
+  </div>
+ </div>
+</div>
+
+h3:
+  - Radar chart
+
+p:
+  - The following example demonstrates the usage of a radar chart.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div id="apex-radar-chart">
+  </div>
+ </div>
+</div>
+
+h3:
+  - Small sized sparklines
+
+p:
+  - The following example demonstrates the usage of a small sized sparkline charts.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <ul class="border-base-content/25 divide-base-content/25 w-full divide-y rounded-md border *:p-3">
+   <li class="bg-base-200/40 text-base-content grid-cols-2 grid items-center gap-x-2">
+    <span>
+     Chart types
+    </span>
+    <span>
+     Description
+    </span>
+   </li>
+   <li class="grid-cols-2 grid items-center gap-x-2">
+    <div id="apex-sparklines-area-chart">
+    </div>
+    <span>
+     Inline area chart.
+    </span>
+   </li>
+   <li class="grid-cols-2 grid items-center gap-x-2">
+    <div id="apex-sparklines-bar-chart">
+    </div>
+    <span>
+     Inline bar chart.
+    </span>
+   </li>
+   <li class="grid-cols-2 grid items-center gap-x-2">
+    <div id="apex-sparklines-pie-chart">
+    </div>
+    <span>
+     Inline pie chart.
+    </span>
+   </li>
+   <li class="grid-cols-2 grid items-center gap-x-2">
+    <div id="apex-sparklines-line-chart">
+    </div>
+    <span>
+     Inline line chart.
+    </span>
+   </li>
+   <li class="grid-cols-2 grid items-center gap-x-2">
+    <div id="apex-sparklines-candles-chart">
+    </div>
+    <span>
+     Inline candles chart.
+    </span>
+   </li>
+  </ul>
+ </div>
+</div>
+
+h2:
+  - Apex charts
+
+h3:
+  - On this page
+
+h2:
+  - Apex charts
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

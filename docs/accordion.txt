@@ -1,0 +1,1774 @@
+# Tailwind CSS Accordion - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - components
+
+p:
+  - Utilize the accordion feature to reveal concealed content by toggling the collapse and expand states of its child elements, employing data attribute options.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| accordion | Component | Container class for an accordion group. |
+| accordion-treeview-root | Component | If the accordion is placed in a container with this class, thetreeviewmode is automatically activated. |
+| accordion-item | Part | Container class for a single accordion. |
+| accordion-toggle | Part | Class for accordion button. |
+| accordion-content | Part | Accordion content class. |
+| accordion-heading | Part | Container class specifically for child elements withinaccordion-itemfortreeview. |
+| accordion-bordered | Style | Apply Bordered style. |
+| accordion-shadow | Style | Apply shadow style. |
+| active | State | Indicates the active state of an accordion item. |
+| accordion-selectable | Modifier | If thetreeviewmode is activated, then elements with this class will act as elements that can be selected. |
+| tree-view-space | Modifier | Style space and border for sub-menu intreeview. |
+| accordion-item-active:{tw-utility-class} | Variant | Apply tailwind classes when the accordion item is active. |
+| accordion-selected:{tw-utility-class} | Variant | Modifier applying Tailwind utility styles. |
+
+h2:
+  - Basic example
+
+h3:
+  - Default
+
+p:
+  - Basic accordion example.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="accordion divide-neutral/20 divide-y">
+   <div class="accordion-item active" id="payment-basic">
+    <button aria-controls="payment-basic-collapse" aria-expanded="true" class="accordion-toggle inline-flex items-center gap-x-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     When is payment taken for my order?
+    </button>
+    <div aria-labelledby="payment-basic" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="payment-basic-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Payment is taken during the checkout process when you pay for your order. The order number that appears on the
+confirmation screen indicates payment has been successfully processed.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="delivery-basic">
+    <button aria-controls="delivery-basic-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center gap-x-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     How would you ship my order?
+    </button>
+    <div aria-labelledby="delivery-basic" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="delivery-basic-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       For large products, we deliver your product via a third party logistics company offering you the âroom of
+choiceâ scheduled delivery service. For small products, we offer free parcel delivery.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="cancel-basic">
+    <button aria-controls="cancel-basic-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center gap-x-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     Can I cancel my order?
+    </button>
+    <div aria-labelledby="cancel-basic" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="cancel-basic-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Scheduled delivery orders can be cancelled 72 hours prior to your selected delivery date for full refund.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Always open
+
+p:
+  - To ensure that accordion items remain open even when another item is opened, set thedata-accordion-always-openattribute as shown below.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="accordion divide-neutral/20 divide-y" data-accordion-always-open="">
+   <div class="accordion-item active" id="payment-always">
+    <button aria-controls="payment-always-collapse" aria-expanded="true" class="accordion-toggle inline-flex items-center gap-x-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     When is payment taken for my order?
+    </button>
+    <div aria-labelledby="payment-always" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="payment-always-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Payment is taken during the checkout process when you pay for your order. The order number that appears on the
+confirmation screen indicates payment has been successfully processed.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="delivery-always">
+    <button aria-controls="delivery-always-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center gap-x-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     How would you ship my order?
+    </button>
+    <div aria-labelledby="delivery-always" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="delivery-always-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       For large products, we deliver your product via a third party logistics company offering you the âroom of
+choiceâ scheduled delivery service. For small products, we offer free parcel delivery.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="cancel-always">
+    <button aria-controls="cancel-always-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center gap-x-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     Can I cancel my order?
+    </button>
+    <div aria-labelledby="cancel-alawys" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="cancel-alawys-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Scheduled delivery orders can be cancelled 72 hours prior to your selected delivery date for full refund.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Content advanced style
+
+h3:
+  - Active bordered
+
+p:
+  - Active content will display with a border. You can use theaccordion-item-active:{tw-utility-class}to define the style for an accordion item when it is active, using Tailwind classes.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="accordion">
+   <div class="accordion-item active accordion-item-active:border accordion-item-active:rounded-box accordion-item-active:border-base-content/25" id="payment-border-active">
+    <button aria-controls="payment-border-active-collapse" aria-expanded="true" aria-labelledby="payment-border-active-heading" class="accordion-toggle inline-flex items-center gap-x-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     <span id="payment-border-active-heading">
+      When is payment taken for my order?
+     </span>
+    </button>
+    <div aria-labelledby="payment-border-active-heading" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="payment-border-active-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Payment is taken during the checkout process when you pay for your order. The order number that appears on the
+confirmation screen indicates payment has been successfully processed.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item accordion-item-active:border accordion-item-active:rounded-box accordion-item-active:border-base-content/25" id="delivery-border-active">
+    <button aria-controls="delivery-border-active-collapse" aria-expanded="false" aria-labelledby="delivery-border-active-heading" class="accordion-toggle inline-flex items-center gap-x-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     <span id="delivery-border-active-heading">
+      How would you ship my order?
+     </span>
+    </button>
+    <div aria-labelledby="delivery-border-active-heading" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="delivery-border-active-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       For large products, we deliver your product via a third party logistics company offering you the âroom of
+choiceâ scheduled delivery service. For small products, we offer free parcel delivery.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item accordion-item-active:border accordion-item-active:rounded-box accordion-item-active:border-base-content/25" id="cancel-border-active">
+    <button aria-controls="cancel-border-active-collapse" aria-expanded="false" aria-labelledby="cancel-border-active-heading" class="accordion-toggle inline-flex items-center gap-x-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     <span id="cancel-border-active-heading">
+      Can I cancel my order?
+     </span>
+    </button>
+    <div aria-labelledby="cancel-border-active-heading" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="cancel-border-active-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Scheduled delivery orders can be cancelled 72 hours prior to your selected delivery date for full refund.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Shadow accordion
+
+p:
+  - Apply theaccordion-shadowmodifier class alongside theaccordioncomponent class to add a shadow effect to allaccordion-itemelements.
+
+p:
+  - To modify the shadow color for active items, use theaccordion-item-active:modifier.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="accordion accordion-shadow">
+   <div class="accordion-item active" id="payment-shadow">
+    <button aria-controls="payment-shadow-collapse" aria-expanded="true" class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     When is payment taken for my order?
+    </button>
+    <div aria-labelledby="payment-shadow" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="payment-shadow-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Payment is taken during the checkout process when you pay for your order. The order number that appears on the
+confirmation screen indicates payment has been successfully processed.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="delivery-shadow">
+    <button aria-controls="delivery-shadow-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     How would you ship my order?
+    </button>
+    <div aria-labelledby="delivery-shadow" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="delivery-shadow-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       For large products, we deliver your product via a third party logistics company offering you the âroom of
+choiceâ scheduled delivery service. For small products, we offer free parcel delivery.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="cancelÌ-shadow">
+    <button aria-controls="cancelÌ-shadow-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     Can I cancel my order?
+    </button>
+    <div aria-labelledby="cancelÌ-shadow" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="cancelÌ-shadow-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Scheduled delivery orders can be cancelled 72 hours prior to your selected delivery date for full refund.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Popout accordion
+
+p:
+  - You can improve the visual presentation of the accordion item when it’s active by adding theaccordion-item-activeclass. For example, you could modify its size to create a noticeable distinction when it’s in the active state.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="accordion accordion-shadow">
+   <div class="accordion-item accordion-item-active:scale-[1.05] accordion-item-active:mb-3 active transition-transform ease-in duration-300 delay-[1ms]" id="payment-popout">
+    <button aria-controls="payment-popout-collapse" aria-expanded="true" class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     When is payment taken for my order?
+    </button>
+    <div aria-labelledby="payment-popout" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="payment-popout-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Payment is taken during the checkout process when you pay for your order. The order number that appears on the
+confirmation screen indicates payment has been successfully processed.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item accordion-item-active:scale-[1.05] accordion-item-active:my-3 transition-transform ease-in duration-300 delay-[1ms]" id="delivery-popout">
+    <button aria-controls="delivery-popout-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     How would you ship my order?
+    </button>
+    <div aria-labelledby="delivery-popout" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="delivery-popout-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       For large products, we deliver your product via a third party logistics company offering you the âroom of
+choiceâ scheduled delivery service. For small products, we offer free parcel delivery.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item accordion-item-active:scale-[1.05] accordion-item-active:mt-3 transition-transform ease-in duration-300 delay-[1ms]" id="cancel-popout">
+    <button aria-controls="cancel-popout-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     Can I cancel my order?
+    </button>
+    <div aria-labelledby="cancel-popout" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="cancel-popout-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Scheduled delivery orders can be cancelled 72 hours prior to your selected delivery date for full refund.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Illustrations
+
+h3:
+  - Nested accordion
+
+p:
+  - A simple accordion layout featuring a submenu.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="accordion divide-neutral/20 divide-y">
+   <div class="accordion-item active" id="payment-nested">
+    <button aria-controls="payment-nested-collapse" aria-expanded="true" class="accordion-toggle inline-flex items-center gap-x-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     Payment
+    </button>
+    <div aria-labelledby="payment-nested" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="payment-nested-collapse" role="region">
+     <div class="accordion divide-neutral/20 divide-y ps-6">
+      <div class="accordion-item active" id="payment-sub-one">
+       <button aria-controls="payment-sub-collapse-one" aria-expanded="true" class="accordion-toggle inline-flex items-center gap-x-4 text-start">
+        <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+        </span>
+        <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+        </span>
+        How do I pay for my order?
+       </button>
+       <div aria-labelledby="payment-sub-one" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="payment-sub-collapse-one" role="region">
+        <div class="px-5 pb-4">
+         <p class="text-base-content/80 font-normal">
+          We accept VisaÂ®, MasterCardÂ®, American ExpressÂ®, and PayPalÂ®. Our servers encrypt all information
+submitted to them, so you can be confident that your credit card information will be kept safe and
+secure.
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="accordion-item" id="payment-sub-two">
+       <button aria-controls="payment-sub-collapse-two" aria-expanded="false" class="accordion-toggle inline-flex items-center gap-x-4 text-start">
+        <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+        </span>
+        <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+        </span>
+        Does my subscription automatically renew?
+       </button>
+       <div aria-labelledby="payment-sub-two" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="payment-sub-collapse-two" role="region">
+        <div class="px-5 pb-4">
+         <p class="text-base-content/80 font-normal">
+          No, This is not subscription based item. Pastry pudding cookie toffee bonbon jujubes jujubes powder
+topping. Jelly beans gummi bears sweet roll bonbon muffin liquorice. Wafer lollipop sesame snaps.
+         </p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="delivery-nested">
+    <button aria-controls="delivery-nested-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center gap-x-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     How would you ship my order?
+    </button>
+    <div aria-labelledby="delivery-nested" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="delivery-nested-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       For large products, we deliver your product via a third party logistics company offering you the âroom of
+choiceâ scheduled delivery service. For small products, we offer free parcel delivery.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="cancel-nested">
+    <button aria-controls="cancel-nested-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center gap-x-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     Can I cancel my order?
+    </button>
+    <div aria-labelledby="cancel-nested" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="cancel-nested-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Scheduled delivery orders can be cancelled 72 hours prior to your selected delivery date for full refund.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - With arrow
+
+p:
+  - A simple accordion design that includes an arrow.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="accordion divide-neutral/20 divide-y">
+   <div class="accordion-item active" id="payment-arrow">
+    <button aria-controls="payment-arrow-collapse" aria-expanded="true" class="accordion-toggle inline-flex items-center gap-x-4 text-start">
+     <span class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180">
+     </span>
+     When is payment taken for my order?
+    </button>
+    <div aria-labelledby="payment-arrow" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="payment-arrow-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Payment is taken during the checkout process when you pay for your order. The order number that appears on the
+confirmation screen indicates payment has been successfully processed.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="delivery-arrow">
+    <button aria-controls="delivery-arrow-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center gap-x-4 text-start">
+     <span class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180">
+     </span>
+     How would you ship my order?
+    </button>
+    <div aria-labelledby="delivery-arrow" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="delivery-arrow-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       For large products, we deliver your product via a third party logistics company offering you the âroom of
+choiceâ scheduled delivery service. For small products, we offer free parcel delivery.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="cancel-arrow">
+    <button aria-controls="cancel-arrow-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center gap-x-4 text-start">
+     <span class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180">
+     </span>
+     Can I cancel my order?
+    </button>
+    <div aria-labelledby="cancel-arrow" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="cancel-arrow-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Scheduled delivery orders can be cancelled 72 hours prior to your selected delivery date for full refund.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - With Avatar
+
+p:
+  - The below example is the accordion with avatar.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="accordion accordion-shadow">
+   <div class="accordion-item active" id="payment-arrow-right">
+    <button aria-controls="payment-arrow-right-collapse" aria-expanded="true" class="accordion-toggle inline-flex items-center justify-between text-start">
+     <div class="flex gap-4">
+      <div class="avatar">
+       <div class="size-12 rounded-md">
+        <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png"/>
+       </div>
+      </div>
+      <div>
+       <p class="mb-0.5">
+        Richard Payne
+       </p>
+       <p class="text-sm text-base-content/50 font-normal">
+        pwright@yahoo.com
+       </p>
+      </div>
+     </div>
+     <span class="icon-[tabler--chevron-left] accordion-item-active:-rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:-rotate-180">
+     </span>
+    </button>
+    <div aria-labelledby="payment-arrow-right" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="payment-arrow-right-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Richard Payne is a remarkable individual known for his exceptional skills and expertise in various fields. With a strong background in technology and a passion for innovation, Richard has made significant contributions to the industry.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="delivery-arrow-right">
+    <button aria-controls="delivery-arrow-right-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center justify-between text-start">
+     <div class="flex gap-4">
+      <div class="avatar">
+       <div class="size-12 rounded-md">
+        <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-7.png"/>
+       </div>
+      </div>
+      <div>
+       <p class="mb-0.5">
+        Jordan Stevenson
+       </p>
+       <p class="text-sm text-base-content/50 font-normal">
+        wramirez@outlook.com
+       </p>
+      </div>
+     </div>
+     <span class="icon-[tabler--chevron-left] accordion-item-active:-rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:-rotate-180">
+     </span>
+    </button>
+    <div aria-labelledby="delivery-arrow-right" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="delivery-arrow-right-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Jordan Stevenson is a talented individual with a passion for technology and innovation. Jordan has made significant contributions to various projects and has a deep understanding of programming languages and frameworks.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="cancel-arrow-right">
+    <button aria-controls="cancel-arrow-right-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center justify-between text-start">
+     <div class="flex gap-4">
+      <div class="avatar">
+       <div class="size-12 rounded-md">
+        <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png"/>
+       </div>
+      </div>
+      <div>
+       <p class="mb-0.5">
+        Nicholas Tanner
+       </p>
+       <p class="text-sm text-base-content/50 font-normal">
+        snguyen@icloud.com
+       </p>
+      </div>
+     </div>
+     <span class="icon-[tabler--chevron-left] accordion-item-active:-rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:-rotate-180">
+     </span>
+    </button>
+    <div aria-labelledby="cancel-arrow-right" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="cancel-arrow-right-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Nicholas Tanner is a highly skilled individual with a strong passion for technology and innovation. Nicholas has made significant contributions to numerous projects and possesses a deep understanding of various programming languages and frameworks.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Arrow on right side
+
+p:
+  - A simple accordion setup with an arrow positioned on the right side.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="accordion divide-neutral/20 divide-y">
+   <div class="accordion-item active" id="payment-arrow-right">
+    <button aria-controls="payment-arrow-right-collapse" aria-expanded="true" class="accordion-toggle inline-flex items-center justify-between text-start">
+     When is payment taken for my order?
+     <span class="icon-[tabler--chevron-left] accordion-item-active:-rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:-rotate-180">
+     </span>
+    </button>
+    <div aria-labelledby="payment-arrow-right" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="payment-arrow-right-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Payment is taken during the checkout process when you pay for your order. The order number that appears on the
+confirmation screen indicates payment has been successfully processed.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="delivery-arrow-right">
+    <button aria-controls="delivery-arrow-right-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center justify-between text-start">
+     How would you ship my order?
+     <span class="icon-[tabler--chevron-left] accordion-item-active:-rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:-rotate-180">
+     </span>
+    </button>
+    <div aria-labelledby="delivery-arrow-right" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="delivery-arrow-right-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       For large products, we deliver your product via a third party logistics company offering you the âroom of
+choiceâ scheduled delivery service. For small products, we offer free parcel delivery.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="cancel-arrow-right">
+    <button aria-controls="cancel-arrow-right-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center justify-between text-start">
+     Can I cancel my order?
+     <span class="icon-[tabler--chevron-left] accordion-item-active:-rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:-rotate-180">
+     </span>
+    </button>
+    <div aria-labelledby="cancel-arrow-right" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="cancel-arrow-right-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Scheduled delivery orders can be cancelled 72 hours prior to your selected delivery date for full refund.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Icon
+
+p:
+  - An accordion featuring an icon on the left and an arrow on the right.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="accordion divide-neutral/20 divide-y">
+   <div class="accordion-item active" id="payment-icon">
+    <button aria-controls="payment-icon-collapse" aria-expanded="true" class="accordion-toggle inline-flex items-center justify-between text-start">
+     <span class="inline-flex items-center gap-x-4">
+      <span class="icon-[tabler--credit-card-pay] text-base-content size-6">
+      </span>
+      When is payment taken for my order?
+     </span>
+     <span class="icon-[tabler--chevron-left] accordion-item-active:-rotate-90 text-base- size-4.5 shrink-0 transition-transform duration-300 rtl:-rotate-180">
+     </span>
+    </button>
+    <div aria-labelledby="payment-icon" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="payment-icon-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Payment is taken during the checkout process when you pay for your order. The order number that appears on the
+confirmation screen indicates payment has been successfully processed.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="delivery-icon">
+    <button aria-controls="delivery-icon-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center justify-between text-start">
+     <span class="inline-flex items-center gap-x-4">
+      <span class="icon-[tabler--shopping-bag] text-base-content size-6">
+      </span>
+      How would you ship my order?
+     </span>
+     <span class="icon-[tabler--chevron-left] accordion-item-active:-rotate-90 text-base- size-4.5 shrink-0 transition-transform duration-300 rtl:-rotate-180">
+     </span>
+    </button>
+    <div aria-labelledby="delivery-icon" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="delivery-icon-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       For large products, we deliver your product via a third party logistics company offering you the âroom of
+choiceâ scheduled delivery service. For small products, we offer free parcel delivery.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="cancel-icon">
+    <button aria-controls="cancel-icon-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center justify-between text-start">
+     <span class="inline-flex items-center gap-x-4">
+      <span class="icon-[tabler--ban] text-base-content size-6">
+      </span>
+      Can I cancel my order?
+     </span>
+     <span class="icon-[tabler--chevron-left] accordion-item-active:-rotate-90 text-base- size-4.5 shrink-0 transition-transform duration-300 rtl:-rotate-180">
+     </span>
+    </button>
+    <div aria-labelledby="cancel-icon" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="cancel-icon-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Scheduled delivery orders can be cancelled 72 hours prior to your selected delivery date for full refund.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Without plus
+
+p:
+  - A version without an Plus.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="accordion divide-neutral/20 divide-y">
+   <div class="accordion-item active" id="payment-no-icon">
+    <button aria-controls="payment-no-icon-collapse" aria-expanded="true" class="accordion-toggle text-start">
+     When is payment taken for my order?
+    </button>
+    <div aria-labelledby="payment-no-icon" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="payment-no-icon-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Payment is taken during the checkout process when you pay for your order. The order number that appears on the
+confirmation screen indicates payment has been successfully processed.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="delivery-no-icon">
+    <button aria-controls="delivery-no-icon-collapse" aria-expanded="false" class="accordion-toggle text-start">
+     How would you ship my order?
+    </button>
+    <div aria-labelledby=" delivery-no-icon" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="delivery-no-icon-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       For large products, we deliver your product via a third party logistics company offering you the âroom of
+choiceâ scheduled delivery service. For small products, we offer free parcel delivery.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="cancel-no-icon">
+    <button aria-controls="cancel-no-icon-collapse" aria-expanded="false" class="accordion-toggle text-start">
+     Can I cancel my order?
+    </button>
+    <div aria-labelledby="cancel-no-icon" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="cancel-no-icon-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Scheduled delivery orders can be cancelled 72 hours prior to your selected delivery date for full refund.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Bordered accordion
+
+p:
+  - A basic form of the bordered accordion. Use theaccordion-borderedclass to add a border to the accordion.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="accordion accordion-bordered">
+   <div class="accordion-item active" id="payment-bordered">
+    <button aria-controls="payment-bordered-collapse" aria-expanded="true" class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     When is payment taken for my order?
+    </button>
+    <div aria-labelledby="payment-bordered" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="payment-bordered-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Payment is taken during the checkout process when you pay for your order. The order number that appears on the
+confirmation screen indicates payment has been successfully processed.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="delivery-bordered">
+    <button aria-controls="delivery-bordered-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     How would you ship my order?
+    </button>
+    <div aria-labelledby="delivery-bordered" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="delivery-bordered-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       For large products, we deliver your product via a third party logistics company offering you the âroom of
+choiceâ scheduled delivery service. For small products, we offer free parcel delivery.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item" id="cancelÌ-bordered">
+    <button aria-controls="cancelÌ-bordered-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     Can I cancel my order?
+    </button>
+    <div aria-labelledby="cancelÌ-bordered" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="cancelÌ-bordered-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Scheduled delivery orders can be cancelled 72 hours prior to your selected delivery date for full refund.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Destroy/Reinitialize
+
+p:
+  - Thedestroymethodis provided to facilitate the destruction of a accordion element.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="accordion accordion-bordered">
+   <div class="accordion-item accordion-to-destroy active" id="payment-destroy">
+    <button aria-controls="payment-destroy-collapse" aria-expanded="true" class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     When is payment taken for my order?
+    </button>
+    <div aria-labelledby="payment-destroy" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="payment-destroy-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Payment is taken during the checkout process when you pay for your order. The order number that appears on the
+confirmation screen indicates payment has been successfully processed.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item accordion-to-destroy" id="delivery-destroy">
+    <button aria-controls="delivery-destroy-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     How would you ship my order?
+    </button>
+    <div aria-labelledby="delivery-destroy" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="delivery-destroy-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       For large products, we deliver your product via a third party logistics company offering you the âroom of
+choiceâ scheduled delivery service. For small products, we offer free parcel delivery.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item accordion-to-destroy" id="cancelÌ-destroy">
+    <button aria-controls="cancelÌ-destroy-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     Can I cancel my order?
+    </button>
+    <div aria-labelledby="cancelÌ-destroy" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="cancelÌ-destroy-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Scheduled delivery orders can be cancelled 72 hours prior to your selected delivery date for full refund.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="mt-4 flex gap-3">
+   <button class="btn btn-primary" id="destroy-btn">
+    Destroy
+   </button>
+   <button class="btn btn-primary" disabled="" id="reinit-btn">
+    Reinitialize
+   </button>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Tree View
+
+p:
+  - Use theaccordion-treeview-rootclass to initialize the container as a TreeView component, automatically activating the treeview mode when used within a treeview container.
+
+p:
+  - Within each tree item, use theaccordion-headingclass as a container for child elements inside each accordion-item, organizing them hierarchically under parent items in the TreeView.
+
+p:
+  - To make items selectable, apply theaccordion-selectableclass to elements within the TreeView. This enables interactive selection behavior for each item.
+
+p:
+  - Theaccordion-selected:{tw-utility-class}modifier can be used to style selected items, allowing you to apply Tailwind utility classes that highlight or otherwise visually indicate the selected state.
+
+p:
+  - For styling nested menus within the TreeView, add thetree-view-spacemodifier. This class adds appropriate spacing and border styles to submenus, enhancing readability and distinction between parent and child elements.
+
+p:
+  - Example of a basic Tree View to expand and collapse tree view nodes. You can change icon, text as per your needs.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div aria-orientation="vertical" class="accordion-treeview-root" role="tree">
+   <div class="accordion" data-accordion-always-open="" role="group">
+    <div aria-expanded="true" class="accordion-item active" id="basic-tree-heading-one" role="treeitem">
+     <div class="accordion-heading flex w-full items-center gap-x-0.5 py-0.5">
+      <button aria-controls="basic-tree-collapse-one" aria-expanded="true" aria-label="Expand Button" class="accordion-toggle btn btn-sm btn-circle btn-text">
+       <span class="icon-[tabler--plus] text-base-content/80 accordion-item-active:rotate-45 size-4 transition-all duration-300">
+       </span>
+      </button>
+      <div class="accordion-selectable accordion-selected:bg-base-300/40 grow cursor-pointer rounded-md px-1.5">
+       <div class="flex items-center gap-x-3">
+        <span class="icon-[tabler--folder] text-base-content size-4 shrink-0">
+        </span>
+        <div class="grow">
+         <span class="text-base-content">
+          assets
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div aria-labelledby="basic-tree-heading-one" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="basic-tree-collapse-one" role="group">
+      <div class="tree-view-space" data-accordion-always-open="" role="group">
+       <div aria-expanded="true" class="accordion-item active" id="basic-tree-sub-heading-one" role="treeitem">
+        <div class="accordion-heading flex w-full items-center gap-x-0.5 py-0.5">
+         <button aria-controls="basic-tree-sub-collapse-one" aria-expanded="true" aria-label="Expand Button" class="accordion-toggle btn btn-sm btn-circle btn-text">
+          <span class="icon-[tabler--plus] text-base-content/80 accordion-item-active:rotate-45 size-4 transition-all duration-300">
+          </span>
+         </button>
+         <div class="accordion-selectable accordion-selected:bg-base-300/40 grow cursor-pointer rounded-md px-1.5">
+          <div class="flex items-center gap-x-3">
+           <span class="icon-[tabler--folder] text-base-content size-4 shrink-0">
+           </span>
+           <div class="grow">
+            <span class="text-base-content">
+             css
+            </span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div aria-labelledby="basic-tree-sub-heading-one" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="basic-tree-sub-collapse-one" role="group">
+         <div class="tree-view-space" data-accordion-always-open="" role="group">
+          <div aria-expanded="true" class="accordion-item active" id="basic-tree-sub-level-two-heading-one" role="treeitem">
+           <div class="accordion-heading flex w-full items-center gap-x-0.5 py-0.5">
+            <button aria-controls="basic-tree-sub-level-two-collapse-one" aria-expanded="true" aria-label="Expand Button" class="accordion-toggle btn btn-sm btn-circle btn-text">
+             <span class="icon-[tabler--plus] text-base-content/80 accordion-item-active:rotate-45 size-4 transition-all duration-300">
+             </span>
+            </button>
+            <div class="accordion-selectable accordion-selected:bg-base-300/40 grow cursor-pointer rounded-md px-1.5">
+             <div class="flex items-center gap-x-3">
+              <span class="icon-[tabler--folder] text-base-content size-4 shrink-0">
+              </span>
+              <div class="grow">
+               <span class="text-base-content">
+                main
+               </span>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div aria-labelledby="basic-tree-sub-level-two-heading-one" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="basic-tree-sub-level-two-collapse-one" role="group">
+            <div class="tree-view-space">
+             <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+              <div class="flex items-center gap-x-3">
+               <span class="icon-[tabler--file] text-base-content size-4 shrink-0">
+               </span>
+               <div class="grow">
+                <span class="text-base-content">
+                 main.css
+                </span>
+               </div>
+              </div>
+             </div>
+             <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+              <div class="flex items-center gap-x-3">
+               <span class="icon-[tabler--file] text-base-content size-4 shrink-0">
+               </span>
+               <div class="grow">
+                <span class="text-base-content">
+                 docs.css
+                </span>
+               </div>
+              </div>
+             </div>
+             <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+              <div class="flex items-center gap-x-3">
+               <span class="icon-[tabler--file] text-base-content size-4 shrink-0">
+               </span>
+               <div class="grow">
+                <span class="text-base-content">
+                 README.txt
+                </span>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div aria-expanded="false" class="accordion-item" id="basic-tree-sub-level-two-heading-two" role="treeitem">
+           <div class="accordion-heading flex w-full items-center gap-x-0.5 py-0.5">
+            <button aria-controls="basic-tree-sub-level-two-collapse-two" aria-expanded="false" aria-label="Expand Button" class="accordion-toggle btn btn-sm btn-circle btn-text">
+             <span class="icon-[tabler--plus] text-base-content/80 accordion-item-active:rotate-45 size-4 transition-all duration-300">
+             </span>
+            </button>
+            <div class="accordion-selectable accordion-selected:bg-base-300/40 grow cursor-pointer rounded-md px-1.5">
+             <div class="flex items-center gap-x-3">
+              <span class="icon-[tabler--folder] text-base-content size-4 shrink-0">
+              </span>
+              <div class="grow">
+               <span class="text-base-content">
+                tailwind
+               </span>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div aria-labelledby="basic-tree-sub-level-two-heading-two" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="basic-tree-sub-level-two-collapse-two" role="group">
+            <div class="tree-view-space">
+             <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+              <div class="flex items-center gap-x-3">
+               <span class="icon-[tabler--file] text-base-content size-4 shrink-0">
+               </span>
+               <div class="grow">
+                <span class="text-base-content">
+                 input.css
+                </span>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+           <div class="flex items-center gap-x-3">
+            <span class="icon-[tabler--file] text-base-content size-4 shrink-0">
+            </span>
+            <div class="grow">
+             <span class="text-base-content">
+              .gitignore
+             </span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="accordion-item" id="basic-tree-sub-heading-two">
+        <div class="accordion-heading flex w-full items-center gap-x-0.5 py-0.5">
+         <button aria-controls="basic-tree-sub-collapse-two" aria-expanded="false" aria-label="Expand Button" class="accordion-toggle btn btn-sm btn-circle btn-text">
+          <span class="icon-[tabler--plus] text-base-content/80 accordion-item-active:rotate-45 size-4 transition-all duration-300">
+          </span>
+         </button>
+         <div class="accordion-selectable accordion-selected:bg-base-300/40 grow cursor-pointer rounded-md px-1.5">
+          <div class="flex items-center gap-x-3">
+           <span class="icon-[tabler--folder] text-base-content size-4 shrink-0">
+           </span>
+           <div class="grow">
+            <span class="text-base-content">
+             img
+            </span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div aria-labelledby="basic-tree-sub-heading-two" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="basic-tree-sub-collapse-two" role="group">
+         <div class="tree-view-space">
+          <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+           <div class="flex items-center gap-x-3">
+            <span class="icon-[tabler--photo] text-base-content size-4 shrink-0">
+            </span>
+            <div class="grow">
+             <span class="text-base-content">
+              hero.jpg
+             </span>
+            </div>
+           </div>
+          </div>
+          <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+           <div class="flex items-center gap-x-3">
+            <span class="icon-[tabler--photo] text-base-content size-4 shrink-0">
+            </span>
+            <div class="grow">
+             <span class="text-base-content">
+              tailwind.png
+             </span>
+            </div>
+           </div>
+          </div>
+          <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+           <div class="flex items-center gap-x-3">
+            <span class="icon-[tabler--photo] text-base-content size-4 shrink-0">
+            </span>
+            <div class="grow">
+             <span class="text-base-content">
+              untitled.png
+             </span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div aria-expanded="false" class="accordion-item" id="basic-tree-sub-heading-three" role="treeitem">
+        <div class="accordion-heading flex w-full items-center gap-x-0.5 py-0.5">
+         <button aria-controls="basic-tree-sub-collapse-three" aria-expanded="false" aria-label="Expand Button" class="accordion-toggle btn btn-sm btn-circle btn-text">
+          <span class="icon-[tabler--plus] text-base-content/80 accordion-item-active:rotate-45 size-4 transition-all duration-300">
+          </span>
+         </button>
+         <div class="accordion-selectable accordion-selected:bg-base-300/40 grow cursor-pointer rounded-md px-1.5">
+          <div class="flex items-center gap-x-3">
+           <span class="icon-[tabler--folder] text-base-content size-4 shrink-0">
+           </span>
+           <div class="grow">
+            <span class="text-base-content">
+             js
+            </span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div aria-labelledby="basic-tree-sub-heading-three" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="basic-tree-sub-collapse-three" role="group">
+         <div class="tree-view-space">
+          <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+           <div class="flex items-center gap-x-3">
+            <span class="icon-[tabler--photo] text-base-content size-4 shrink-0">
+            </span>
+            <div class="grow">
+             <span class="text-base-content">
+              flyonui.js
+             </span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div aria-expanded="false" class="accordion-item" id="basic-tree-heading-two" role="treeitem">
+     <div class="accordion-heading flex w-full items-center gap-x-0.5 py-0.5">
+      <button aria-controls="basic-tree-collapse-two" aria-expanded="false" aria-label="Expand Button" class="accordion-toggle btn btn-sm btn-circle btn-text">
+       <span class="icon-[tabler--plus] text-base-content/80 accordion-item-active:rotate-45 size-4 transition-all duration-300">
+       </span>
+      </button>
+      <div class="accordion-selectable accordion-selected:bg-base-300/40 grow cursor-pointer rounded-md px-1.5">
+       <div class="flex items-center gap-x-3">
+        <span class="icon-[tabler--folder] text-base-content size-4 shrink-0">
+        </span>
+        <div class="grow">
+         <span class="text-base-content">
+          scripts
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div aria-labelledby="basic-tree-heading-two" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="basic-tree-collapse-two" role="group">
+      <div class="tree-view-space">
+       <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+        <div class="flex items-center gap-x-3">
+         <span class="icon-[tabler--file] text-base-content size-4 shrink-0">
+         </span>
+         <div class="grow">
+          <span class="text-base-content">
+           flyonui.js
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+        <div class="flex items-center gap-x-3">
+         <span class="icon-[tabler--file] text-base-content size-4 shrink-0">
+         </span>
+         <div class="grow">
+          <span class="text-base-content">
+           tailwind.js
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+        <div class="flex items-center gap-x-3">
+         <span class="icon-[tabler--file] text-base-content size-4 shrink-0">
+         </span>
+         <div class="grow">
+          <span class="text-base-content">
+           www.js
+          </span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div aria-expanded="false" class="accordion-item" id="basic-tree-heading-three" role="treeitem">
+     <div class="accordion-heading flex w-full items-center gap-x-0.5 py-0.5">
+      <button aria-controls="basic-tree-collapse-three" aria-expanded="false" aria-label="Expand Button" class="accordion-toggle btn btn-sm btn-circle btn-text">
+       <span class="icon-[tabler--plus] text-base-content/80 accordion-item-active:rotate-45 size-4 transition-all duration-300">
+       </span>
+      </button>
+      <div class="accordion-selectable accordion-selected:bg-base-300/40 grow cursor-pointer rounded-md px-1.5">
+       <div class="flex items-center gap-x-3">
+        <span class="icon-[tabler--folder] text-base-content size-4 shrink-0">
+        </span>
+        <div class="grow">
+         <span class="text-base-content">
+          templates
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div aria-labelledby="basic-tree-heading-three" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="basic-tree-collapse-three" role="group">
+      <div class="tree-view-space">
+       <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+        <div class="flex items-center gap-x-3">
+         <span class="icon-[tabler--file] text-base-content size-4 shrink-0">
+         </span>
+         <div class="grow">
+          <span class="text-base-content">
+           index.html
+          </span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+p:
+  - Remove thedata-accordion-always-openattribute to close the currently open element at the group level.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div aria-orientation="vertical" class="accordion-treeview-root" role="tree">
+   <div class="accordion" role="group">
+    <div aria-expanded="true" class="accordion-item active" id="cco-tree-heading-one" role="treeitem">
+     <div class="accordion-heading flex w-full items-center gap-x-0.5 py-0.5">
+      <button aria-controls="cco-tree-collapse-one" aria-expanded="true" aria-label="Expand Button" class="accordion-toggle btn btn-sm btn-circle btn-text">
+       <span class="icon-[tabler--plus] text-base-content/80 accordion-item-active:rotate-45 size-4 transition-all duration-300">
+       </span>
+      </button>
+      <div class="accordion-selectable accordion-selected:bg-base-300/40 grow cursor-pointer rounded-md px-1.5">
+       <div class="flex items-center gap-x-3">
+        <span class="icon-[tabler--folder] text-base-content size-4 shrink-0">
+        </span>
+        <div class="grow">
+         <span class="text-base-content">
+          assets
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div aria-labelledby="cco-tree-heading-one" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="cco-tree-collapse-one" role="group">
+      <div class="accordion tree-view-space">
+       <div aria-expanded="true" class="accordion-item active" id="cco-tree-sub-heading-one" role="treeitem">
+        <div class="accordion-heading flex w-full items-center gap-x-0.5 py-0.5">
+         <button aria-controls="cco-tree-sub-collapse-one" aria-expanded="true" aria-label="Expand Button" class="accordion-toggle btn btn-sm btn-circle btn-text">
+          <span class="icon-[tabler--plus] text-base-content/80 accordion-item-active:rotate-45 size-4 transition-all duration-300">
+          </span>
+         </button>
+         <div class="accordion-selectable accordion-selected:bg-base-300/40 grow cursor-pointer rounded-md px-1.5">
+          <div class="flex items-center gap-x-3">
+           <span class="icon-[tabler--folder] text-base-content size-4 shrink-0">
+           </span>
+           <div class="grow">
+            <span class="text-base-content">
+             css
+            </span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div aria-labelledby="cco-tree-sub-heading-one" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="cco-tree-sub-collapse-one" role="group">
+         <div class="accordion tree-view-space">
+          <div aria-expanded="true" class="accordion-item active" id="cco-tree-sub-level-two-heading-one" role="treeitem">
+           <div class="accordion-heading flex w-full items-center gap-x-0.5 py-0.5">
+            <button aria-controls="cco-tree-sub-level-two-collapse-one" aria-expanded="true" aria-label="Expand Button" class="accordion-toggle btn btn-sm btn-circle btn-text">
+             <span class="icon-[tabler--plus] text-base-content/80 accordion-item-active:rotate-45 size-4 transition-all duration-300">
+             </span>
+            </button>
+            <div class="accordion-selectable accordion-selected:bg-base-300/40 grow cursor-pointer rounded-md px-1.5">
+             <div class="flex items-center gap-x-3">
+              <span class="icon-[tabler--folder] text-base-content size-4 shrink-0">
+              </span>
+              <div class="grow">
+               <span class="text-base-content">
+                main
+               </span>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div aria-labelledby="cco-tree-sub-level-two-heading-one" class="accordion-content w-full overflow-hidden transition-[height] duration-300" id="cco-tree-sub-level-two-collapse-one" role="group">
+            <div class="tree-view-space">
+             <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+              <div class="flex items-center gap-x-3">
+               <span class="icon-[tabler--file] text-base-content size-4 shrink-0">
+               </span>
+               <div class="grow">
+                <span class="text-base-content">
+                 main.css
+                </span>
+               </div>
+              </div>
+             </div>
+             <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+              <div class="flex items-center gap-x-3">
+               <span class="icon-[tabler--file] text-base-content size-4 shrink-0">
+               </span>
+               <div class="grow">
+                <span class="text-base-content">
+                 docs.css
+                </span>
+               </div>
+              </div>
+             </div>
+             <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+              <div class="flex items-center gap-x-3">
+               <span class="icon-[tabler--file] text-base-content size-4 shrink-0">
+               </span>
+               <div class="grow">
+                <span class="text-base-content">
+                 README.txt
+                </span>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div aria-expanded="false" class="accordion-item" id="cco-tree-sub-level-two-heading-two" role="treeitem">
+           <div class="accordion-heading flex w-full items-center gap-x-0.5 py-0.5">
+            <button aria-controls="cco-tree-sub-level-two-collapse-two" aria-expanded="false" aria-label="Expand Button" class="accordion-toggle btn btn-sm btn-circle btn-text">
+             <span class="icon-[tabler--plus] text-base-content/80 accordion-item-active:rotate-45 size-4 transition-all duration-300">
+             </span>
+            </button>
+            <div class="accordion-selectable accordion-selected:bg-base-300/40 grow cursor-pointer rounded-md px-1.5">
+             <div class="flex items-center gap-x-3">
+              <span class="icon-[tabler--folder] text-base-content size-4 shrink-0">
+              </span>
+              <div class="grow">
+               <span class="text-base-content">
+                tailwind
+               </span>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div aria-labelledby="cco-tree-sub-level-two-heading-two" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="cco-tree-sub-level-two-collapse-two" role="group">
+            <div class="tree-view-space">
+             <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+              <div class="flex items-center gap-x-3">
+               <span class="icon-[tabler--file] text-base-content size-4 shrink-0">
+               </span>
+               <div class="grow">
+                <span class="text-base-content">
+                 input.css
+                </span>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+           <div class="flex items-center gap-x-3">
+            <span class="icon-[tabler--file] text-base-content size-4 shrink-0">
+            </span>
+            <div class="grow">
+             <span class="text-base-content">
+              .gitignore
+             </span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div aria-expanded="false" class="accordion-item" id="cco-tree-sub-heading-two" role="treeitem">
+        <div class="accordion-heading flex w-full items-center gap-x-0.5 py-0.5">
+         <button aria-controls="cco-tree-sub-collapse-two" aria-expanded="false" aria-label="Expand Button" class="accordion-toggle btn btn-sm btn-circle btn-text">
+          <span class="icon-[tabler--plus] text-base-content/80 accordion-item-active:rotate-45 size-4 transition-all duration-300">
+          </span>
+         </button>
+         <div class="accordion-selectable accordion-selected:bg-base-300/40 grow cursor-pointer rounded-md px-1.5">
+          <div class="flex items-center gap-x-3">
+           <span class="icon-[tabler--folder] text-base-content size-4 shrink-0">
+           </span>
+           <div class="grow">
+            <span class="text-base-content">
+             img
+            </span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div aria-labelledby="cco-tree-sub-heading-two" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="cco-tree-sub-collapse-two" role="group">
+         <div class="tree-view-space">
+          <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+           <div class="flex items-center gap-x-3">
+            <span class="icon-[tabler--photo] text-base-content size-4 shrink-0">
+            </span>
+            <div class="grow">
+             <span class="text-sm text-gray-800">
+              hero.jpg
+             </span>
+            </div>
+           </div>
+          </div>
+          <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+           <div class="flex items-center gap-x-3">
+            <span class="icon-[tabler--photo] text-base-content size-4 shrink-0">
+            </span>
+            <div class="grow">
+             <span class="text-base-content">
+              tailwind.png
+             </span>
+            </div>
+           </div>
+          </div>
+          <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+           <div class="flex items-center gap-x-3">
+            <span class="icon-[tabler--photo] text-base-content size-4 shrink-0">
+            </span>
+            <div class="grow">
+             <span class="text-base-content">
+              untitled.png
+             </span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div aria-expanded="false" class="accordion-item" id="cco-tree-sub-heading-three" role="treeitem">
+        <div class="accordion-heading flex w-full items-center gap-x-0.5 py-0.5">
+         <button aria-controls="cco-tree-sub-collapse-three" aria-expanded="false" aria-label="Expand Button" class="accordion-toggle btn btn-sm btn-circle btn-text">
+          <span class="icon-[tabler--plus] text-base-content/80 accordion-item-active:rotate-45 size-4 transition-all duration-300">
+          </span>
+         </button>
+         <div class="accordion-selectable accordion-selected:bg-base-300/40 grow cursor-pointer rounded-md px-1.5">
+          <div class="flex items-center gap-x-3">
+           <span class="icon-[tabler--folder] text-base-content size-4 shrink-0">
+           </span>
+           <div class="grow">
+            <span class="text-base-content">
+             js
+            </span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div aria-labelledby="cco-tree-sub-heading-three" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="cco-tree-sub-collapse-three" role="group">
+         <div class="tree-view-space">
+          <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+           <div class="flex items-center gap-x-3">
+            <span class="icon-[tabler--photo] text-base-content size-4 shrink-0">
+            </span>
+            <div class="grow">
+             <span class="text-base-content">
+              flyonui.js
+             </span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div aria-expanded="false" class="accordion-item" id="cco-tree-heading-two" role="treeitem">
+     <div class="accordion-heading flex w-full items-center gap-x-0.5 py-0.5">
+      <button aria-controls="cco-tree-collapse-two" aria-expanded="false" aria-label="Expand Button" class="accordion-toggle btn btn-sm btn-circle btn-text">
+       <span class="icon-[tabler--plus] text-base-content/80 accordion-item-active:rotate-45 size-4 transition-all duration-300">
+       </span>
+      </button>
+      <div class="accordion-selectable accordion-selected:bg-base-300/40 grow cursor-pointer rounded-md px-1.5">
+       <div class="flex items-center gap-x-3">
+        <span class="icon-[tabler--folder] text-base-content size-4 shrink-0">
+        </span>
+        <div class="grow">
+         <span class="text-base-content">
+          scripts
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div aria-labelledby="cco-tree-heading-two" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="cco-tree-collapse-two" role="group">
+      <div class="tree-view-space">
+       <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+        <div class="flex items-center gap-x-3">
+         <span class="icon-[tabler--file] text-base-content size-4 shrink-0">
+         </span>
+         <div class="grow">
+          <span class="text-base-content">
+           flyonui.js
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+        <div class="flex items-center gap-x-3">
+         <span class="icon-[tabler--file] text-base-content size-4 shrink-0">
+         </span>
+         <div class="grow">
+          <span class="text-base-content">
+           tailwind.js
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+        <div class="flex items-center gap-x-3">
+         <span class="icon-[tabler--file] text-base-content size-4 shrink-0">
+         </span>
+         <div class="grow">
+          <span class="text-base-content">
+           www.js
+          </span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div aria-expanded="false" class="accordion-item" id="cco-tree-heading-three" role="treeitem">
+     <div class="accordion-heading flex w-full items-center gap-x-0.5 py-0.5">
+      <button aria-controls="cco-tree-collapse-three" aria-expanded="false" aria-label="Expand Button" class="accordion-toggle btn btn-sm btn-circle btn-text">
+       <span class="icon-[tabler--plus] text-base-content/80 accordion-item-active:rotate-45 size-4 transition-all duration-300">
+       </span>
+      </button>
+      <div class="accordion-selectable accordion-selected:bg-base-300/40 grow cursor-pointer rounded-md px-1.5">
+       <div class="flex items-center gap-x-3">
+        <span class="icon-[tabler--folder] text-base-content size-4 shrink-0">
+        </span>
+        <div class="grow">
+         <span class="text-base-content">
+          templates
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div aria-labelledby="cco-tree-heading-three" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="cco-tree-collapse-three" role="group">
+      <div class="tree-view-space">
+       <div class="accordion-selectable accordion-selected:bg-base-300/40 cursor-pointer rounded-md px-2" role="treeitem">
+        <div class="flex items-center gap-x-3">
+         <span class="icon-[tabler--file] text-base-content size-4 shrink-0">
+         </span>
+         <div class="grow">
+          <span class="text-base-content">
+           index.html
+          </span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - JavaScript behavior
+
+h3:
+  - Options
+
+table:
+| PARAMETERS | DESCRIPTION | OPTIONS | DEFAULT VALUE |
+| --- | --- | --- | --- |
+| Data Options |
+| data-accordion-always-open | Makes accordion items stay open when another item is opened. | boolean | false |
+| Class Options |
+| [--stop-propagation:*] | Halts event processing when thetogglebutton is clicked, which can be beneficial in certain scenarios | boolean | false |
+| [--keep-one-open:*] | Ensure at least one accordion item is always open. This should be added toaccordion | boolean | false |
+
+h3:
+  - Methods
+
+p:
+  - TheHSAccordionobject is contained within the globalwindowobject.
+
+table:
+| METHOD | DESCRIPTION |
+| --- | --- |
+| PUBLIC METHODS |
+| show() | Open collapsed item. |
+| hide() | Collapse item. |
+| destroy() | Destroys the instance, removes generated markup (if any), removes added classes and attributes. |
+| STATIC METHODS |
+| HSAccordion.getInstance(target, isInstance) | Returns the element associated to thetarget.targetshould be a Node or string (valid selector).isInstanceboolean. Returns the instance instead of Node iftrue. |
+| HSAccordion.show(target) | Open collapsed item.targetshould be a Node. |
+| HSAccordion.hide(target) | Collapse item.targetshould be a Node. |
+
+p:
+  - Below, we demonstrate how to use the public methods. Assign an ID to theaccordion-itemas shown. To test the other methods, copy the provided code into your console and click the button.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose justify-between flex-wrap !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="accordion">
+   <div class="accordion-item --prevent-on-load-init" id="payment-method">
+    <button aria-controls="payment-method-collapse" aria-expanded="false" class="accordion-toggle inline-flex items-center gap-x-4 text-start" id="payment-method-btn">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     When is payment taken for my order?
+    </button>
+    <div aria-labelledby="payment-method" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="payment-method-collapse" role="region">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Payment is taken during the checkout process when you pay for your order. The order number that appears on the
+confirmation screen indicates payment has been successfully processed.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div>
+   <button class="btn btn-primary w-auto" id="show-btn">
+    Show
+   </button>
+   <button class="btn btn-primary w-auto" id="hide-btn">
+    Hide
+   </button>
+  </div>
+ </div>
+</div>
+
+p:
+  - Open item (public method).
+
+p:
+  - Open item (static method).
+
+p:
+  - Open item (mixed).
+
+p:
+  - Destroy instance
+
+h3:
+  - Events
+
+table:
+| METHOD | DESCRIPTION | RETURNING VALUE |
+| --- | --- | --- |
+| on:open | Fires after the accordion is opened. | Current accordion element. |
+| on:beforeOpen | Fires before the accordion was opened. | Current accordion element. |
+| on:close | Fires after accordion is closed. | Current accordion element. |
+| on:beforeClose | Fires before the accordion was closed. | Current accordion element. |
+
+p:
+  - Just like in the methods section, assign an ID to theaccordion-itemin events. Click on the accordion, and observe theconsoleoutput.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose justify-between flex-wrap !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="accordion">
+   <div class="accordion-item" id="payment-event">
+    <button aria-controls="payment-event-collapse" class="accordion-toggle inline-flex items-center gap-x-4 text-start" id="payment-event-btn">
+     <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0">
+     </span>
+     <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0">
+     </span>
+     When is payment taken for my order?
+    </button>
+    <div aria-labelledby="payment-event" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" id="payment-event-collapse">
+     <div class="px-5 pb-4">
+      <p class="text-base-content/80 font-normal">
+       Payment is taken during the checkout process when you pay for your order. The order number that appears on the
+confirmation screen indicates payment has been successfully processed.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+p:
+  - Open any accordion event example.
+
+h2:
+  - Accordion
+
+h3:
+  - On this page
+
+h2:
+  - Accordion
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

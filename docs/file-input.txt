@@ -1,0 +1,287 @@
+# Tailwind CSS File input - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - forms
+
+p:
+  - File inputs enable users to choose files from their device, allowing them to upload documents, images, or other types of files.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| input | Component | Base class for form input. |
+| input-floating | Component | Base class for floating form input. |
+| label-text | Part | Base class for title label text. |
+| input-floating-label | Part | Floats the label to the top. |
+| helper-text | Part | Base class for helper label text. |
+| is-valid | State | Adds success style to the input. |
+| is-invalid | State | Adds error style to the input. |
+| file:{tw-utility-class} | Modifier | Adds tailwind classes to update file input. |
+| input-xs | Size | Input with Extra small size. |
+| input-sm | Size | Input with Smaller size. |
+| input-md | Size | Input with medium(default) size. |
+| input-lg | Size | Input with Larger size. |
+| input-xl | Size | Input with Extra large size. |
+
+h2:
+  - Basic example
+
+h3:
+  - Default
+
+p:
+  - Basic file input example.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <input aria-label="file-input" class="input max-w-sm" type="file"/>
+ </div>
+</div>
+
+h3:
+  - Label
+
+p:
+  - Basic file input example with label.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="max-w-sm">
+   <label class="label-text" for="fileInputLabel">
+    Pick a file
+   </label>
+   <input class="input" id="fileInputLabel" type="file"/>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Size
+
+h3:
+  - File input sizes
+
+p:
+  - Add responsive classinput-{size}where{size} = xs|sm|md|lg|xlfor file input of different sizes.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <input aria-label="file-input" class="input max-w-sm input-xs" type="file"/>
+  <input aria-label="file-input" class="input max-w-sm input-sm" type="file"/>
+  <input aria-label="file-input" class="input max-w-sm" type="file"/>
+  <input aria-label="file-input" class="input max-w-sm input-lg" type="file"/>
+  <input aria-label="file-input" class="input max-w-sm input-xl" type="file"/>
+ </div>
+</div>
+
+h2:
+  - Types
+
+h3:
+  - Default
+
+p:
+  - Default type.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="max-w-sm">
+   <label class="label-text" for="inpuFileTypeDefault">
+    Pick a file
+   </label>
+   <input class="input" id="inpuFileTypeDefault" type="file"/>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Floating label
+
+p:
+  - Floating label example.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="max-w-sm input-floating">
+   <input class="input" id="inpuFileTypeFloating" placeholder="John Doe" type="file"/>
+   <label class="input-floating-label" for="inpuFileTypeFloating">
+    Upload
+   </label>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Validation states
+
+h3:
+  - Success state
+
+p:
+  - Success state can be show usingis-validclass.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="max-w-sm">
+   <label class="label-text" for="fileInputStateSuccess">
+    Pick a file
+   </label>
+   <input class="input is-valid" id="fileInputStateSuccess" type="file"/>
+   <span class="helper-text">
+    Helper text
+   </span>
+  </div>
+  <div class="input-floating max-w-sm">
+   <input class="input is-valid" id="fileInputStateSuccessFloating" placeholder="John Doe" type="file"/>
+   <label class="input-floating-label" for="fileInputStateSuccessFloating">
+    Upload
+   </label>
+   <span class="helper-text">
+    Helper text
+   </span>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Error state
+
+p:
+  - Error state can be show usingis-invalidclass.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="max-w-sm">
+   <label class="label-text" for="fileInputStateError">
+    Pick a file
+   </label>
+   <input class="input is-invalid" id="fileInputStateError" type="file"/>
+   <span class="helper-text">
+    Helper text
+   </span>
+  </div>
+  <div class="input-floating max-w-sm">
+   <input class="input is-invalid" id="fileInputStateErrorFloating" placeholder="John Doe" type="file"/>
+   <label class="input-floating-label" for="fileInputStateErrorFloating">
+    Upload
+   </label>
+   <span class="helper-text">
+    Helper text
+   </span>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Illustrations
+
+h3:
+  - File input with button
+
+p:
+  - Thefile:prefix in Tailwind allows us to style the::file-selector-button, and it can be combined with thebtnclass.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <input aria-label="file-input" class="block text-sm file:uppercase file:btn file:btn-primary file:me-3" type="file"/>
+ </div>
+</div>
+
+h3:
+  - Disabled
+
+p:
+  - Add thedisabledboolean attribute on an file input to remove pointer events, and prevent focusing.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <input aria-label="file-input" class="input max-w-sm" disabled="" type="file"/>
+ </div>
+</div>
+
+h3:
+  - Helper text and label
+
+p:
+  - Placement of helper text and label.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="max-w-sm">
+   <label class="label-text" for="fileInputHelperText">
+    Pick a file
+   </label>
+   <input class="input" id="fileInputHelperText" type="file"/>
+   <span class="helper-text">
+    Helper text
+   </span>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Multiple files
+
+p:
+  - Addmultipleattribute to select more then 1 file.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <input aria-label="file-input" class="input max-w-sm" multiple="" type="file"/>
+ </div>
+</div>
+
+h3:
+  - Avatar
+
+p:
+  - The following example showcases a file input with an avatar.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex items-center gap-2 max-sm:flex-wrap">
+   <div class="avatar">
+    <div class="size-14 rounded-full">
+     <img alt="Avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+    </div>
+   </div>
+   <input aria-label="file-input" class="file:btn file:btn-primary block text-sm file:me-3 file:rounded-full file:uppercase" type="file"/>
+  </div>
+ </div>
+</div>
+
+h2:
+  - File input
+
+h3:
+  - On this page
+
+h2:
+  - File input
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

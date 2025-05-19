@@ -1,0 +1,260 @@
+# Tailwind CSS Form Validation - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - third party plugins
+
+p:
+  - Form validation ensures inputs meet criteria before submission, enhancing data accuracy by providing instant feedback and preventing invalid data processing.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| success-message | Component | Displays a valid message for JavaScript validation |
+| error-message | Component | Displays an invalid message for JavaScript validation |
+
+h3:
+  - JS validation
+
+p:
+  - A fundamental form input with JavaScript validation.
+
+p:
+  - To implement custom validation messages , add thenovalidateboolean attribute to your<form>element. This will disable the browser’s default validation feedback tooltips while still allowing access to the form validation APIs via JavaScript. Try submitting the form below; JavaScript will intercept the submit action and provide feedback. When you attempt to submit, youâll see the:invalidand:validstyles.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="bg-base-100 w-full rounded-lg shadow-base-300/20 shadow-sm">
+   <h5 class="bg-base-300/10 rounded-t-lg p-4 text-xl font-bold">
+    JS Validation
+   </h5>
+   <div class="w-full p-4">
+    <form class="needs-validation peer grid gap-y-4" novalidate="">
+     <div class="w-full">
+      <h6 class="text-lg font-semibold">
+       1. Account Details
+      </h6>
+      <hr class="mb-4 mt-2"/>
+     </div>
+     <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div>
+       <label class="label-text" for="firstName">
+        First Name
+       </label>
+       <input class="input" id="firstName" placeholder="John" required="" type="text"/>
+       <span class="error-message">
+        Please enter your name.
+       </span>
+       <span class="success-message">
+        Looks good!
+       </span>
+      </div>
+      <div>
+       <label class="label-text" for="lastName">
+        Last Name
+       </label>
+       <input class="input" id="lastName" placeholder="Doe" required="" type="text"/>
+       <span class="error-message">
+        Please enter your last name.
+       </span>
+       <span class="success-message">
+        Looks good!
+       </span>
+      </div>
+     </div>
+     <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div>
+       <label class="label-text" for="userEmail">
+        Email
+       </label>
+       <input aria-label="john@gmail.com" class="input" id="userEmail" placeholder="john@gmail.com" required="" type="email"/>
+       <span class="error-message">
+        Please enter a valid email
+       </span>
+       <span class="success-message">
+        Looks good!
+       </span>
+      </div>
+      <div>
+       <label class="label-text" for="userPassword">
+        Password
+       </label>
+       <div class="input">
+        <input class="grow" id="userPassword" placeholder="Enter password" required="" type="password"/>
+        <button class="my-auto ms-4 block cursor-pointer" data-toggle-password='{ "target": "#userPassword" }' type="button">
+         <span class="icon-[tabler--eye] text-base-content/80 password-active:block hidden size-4 shrink-0">
+         </span>
+         <span class="icon-[tabler--eye-off] text-base-content/80 password-active:hidden block size-4 shrink-0">
+         </span>
+        </button>
+       </div>
+       <span class="error-message">
+        Please enter a valid password
+       </span>
+       <span class="success-message">
+        Looks good!
+       </span>
+      </div>
+     </div>
+     <div class="w-full">
+      <h6 class="text-lg font-semibold">
+       2. Personal Info
+      </h6>
+      <hr class="mb-4 mt-2"/>
+     </div>
+     <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div>
+       <label class="label-text" for="userProfile">
+        Profile Pic
+       </label>
+       <input class="input" id="userProfile" required="" type="file"/>
+       <span class="error-message">
+        Please select the file
+       </span>
+       <span class="success-message">
+        Looks good!
+       </span>
+      </div>
+      <div>
+       <label class="label-text" for="jsPickr">
+        DOB
+       </label>
+       <input class="input" id="jsPickr" placeholder="YYYY-MM-DD" required="" type="text"/>
+       <span class="error-message">
+        Please select your DOB
+       </span>
+       <span class="success-message">
+        Looks good!
+       </span>
+      </div>
+     </div>
+     <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div>
+       <label class="label-text" for="userCountry">
+        Pick your Country
+       </label>
+       <select aria-label="Select Country" class="select" id="userCountry" required="">
+        <option value="">
+         Select Country
+        </option>
+        <option value="usa">
+         USA
+        </option>
+        <option value="uk">
+         UK
+        </option>
+        <option value="france">
+         France
+        </option>
+        <option value="australia">
+         Australia
+        </option>
+        <option value="spain">
+         Spain
+        </option>
+       </select>
+       <span class="error-message">
+        Please select your country
+       </span>
+       <span class="success-message">
+        Looks good!
+       </span>
+      </div>
+      <div>
+       <div class="label-text">
+        Gender
+       </div>
+       <div class="flex items-center gap-2">
+        <input class="radio radio-primary" id="male" name="radio-0" required="" type="radio"/>
+        <label class="label-text text-base" for="male">
+         Male
+        </label>
+       </div>
+       <div class="flex items-center gap-2">
+        <input class="radio radio-primary" id="female" name="radio-0" required="" type="radio"/>
+        <label class="label-text text-base" for="female">
+         Female
+        </label>
+       </div>
+       <span class="error-message">
+        Please select your Gender
+       </span>
+       <span class="success-message">
+        Looks good!
+       </span>
+      </div>
+     </div>
+     <div class="w-full">
+      <label class="label-text" for="userBio">
+       Bio
+      </label>
+      <textarea class="textarea min-h-20 resize-none" id="userBio" placeholder="Hello!!!" required=""></textarea>
+      <span class="error-message">
+       Please write few words
+      </span>
+      <span class="success-message">
+       Looks good!
+      </span>
+     </div>
+     <div>
+      <div class="flex items-center gap-3">
+       <input class="switch switch-primary" id="userSwitch" required="" type="checkbox"/>
+       <label class="label-text text-base" for="userSwitch">
+        Send me related emails
+       </label>
+      </div>
+      <span class="error-message">
+       Please select your preference
+      </span>
+      <span class="success-message">
+       Looks good!
+      </span>
+     </div>
+     <div>
+      <div class="flex items-center gap-3">
+       <input class="checkbox checkbox-primary" id="userAgre" required="" type="checkbox"/>
+       <label class="label-text text-base" for="userAgre">
+        Agree to our terms and conditions
+       </label>
+      </div>
+      <span class="error-message">
+       Please confirm our T&amp;C
+      </span>
+      <span class="success-message">
+       Looks good!
+      </span>
+     </div>
+     <div class="mt-4">
+      <button class="btn btn-primary" name="submitButton" type="submit">
+       Submit
+      </button>
+     </div>
+    </form>
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Form Validation
+
+h3:
+  - On this page
+
+h2:
+  - Form Validation
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

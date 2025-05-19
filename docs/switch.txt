@@ -1,0 +1,796 @@
+# Tailwind CSS Switch - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - forms
+
+p:
+  - Utilize the switch component to toggle between two states (true or false) with a single click. The component comes in multiple sizes, variants, and colors.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| switch | Component | Component class for switch. |
+| label-text | Part | Base class for title label text. |
+| helper-text | Part | Base class for helper label text. |
+| switch-outline | Style | Component class outline switch. |
+| switch-primary | Color | Adds ‘primary’ color to switch. |
+| switch-secondary | Color | Adds ‘secondary’ color to switch. |
+| switch-accent | Color | Adds ‘accent’ color to switch. |
+| switch-info | Color | Adds ‘info’ color to switch. |
+| switch-success | Color | Adds ‘success’ color to switch. |
+| switch-warning | Color | Adds ‘warning’ color to switch. |
+| switch-error | Color | Adds ’error’ color to switch. |
+| is-valid | State | Adds success style to the input. |
+| is-invalid | State | Adds error style to the input. |
+| switch-xs | Size | Switch with extra small size. |
+| switch-sm | Size | Switch with small size. |
+| switch-md | Size | Switch with medium size. |
+| switch-lg | Size | Switch with large size. |
+| switch-xl | Size | Switch with extra large size. |
+
+h2:
+  - Basic example
+
+h3:
+  - Default
+
+p:
+  - Basic Switch example.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex items-center gap-1">
+   <input class="switch" id="defaultSwitch1" type="checkbox"/>
+   <label class="label-text text-base" for="defaultSwitch1">
+    Default
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch" id="defaultSwitch2" type="checkbox"/>
+   <label class="label-text text-base" for="defaultSwitch2">
+    Checked
+   </label>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Type
+
+h3:
+  - Solid (Default)
+
+p:
+  - For a switch style, apply theswitchcomponent class, whereas the default switch appearance is set to a solid color.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex items-center gap-1">
+   <input class="switch switch-primary" id="switchType1" type="checkbox"/>
+   <label class="label-text text-base" for="switchType1">
+    Default
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-primary" id="switchType2" type="checkbox"/>
+   <label class="label-text text-base" for="switchType2">
+    Checked
+   </label>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Outline
+
+p:
+  - To achieve an outline style for the switch, add component classswitch-outlinealongsideswitch.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex items-center gap-1">
+   <input class="switch switch-outline switch-primary" id="switchType3" type="checkbox"/>
+   <label class="label-text text-base" for="switchType3">
+    Default
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-outline switch-primary" id="switchType4" type="checkbox"/>
+   <label class="label-text text-base" for="switchType4">
+    Checked
+   </label>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Color
+
+h3:
+  - Semantic color
+
+p:
+  - Example of semantic color in default and outline switch.
+
+p:
+  - Solid switch with semantic-color usingswitch-{semantic-color}modifier class with the component classswitch.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-3 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch" id="switchDefault1" type="checkbox"/>
+   <label class="label-text text-base" for="switchDefault1">
+    Default
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-primary" id="switchPrimary1" type="checkbox"/>
+   <label class="label-text text-base" for="switchPrimary1">
+    Primary
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-secondary" id="switchSecondary1" type="checkbox"/>
+   <label class="label-text text-base" for="switchSecondary1">
+    Secondary
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-accent" id="switchAccent1" type="checkbox"/>
+   <label class="label-text text-base" for="switchAccent1">
+    Accent
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-info" id="switchInfo1" type="checkbox"/>
+   <label class="label-text text-base" for="switchInfo1">
+    Info
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-success" id="switchSuccess1" type="checkbox"/>
+   <label class="label-text text-base" for="switchSuccess1">
+    Success
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-warning" id="switchWarning1" type="checkbox"/>
+   <label class="label-text text-base" for="switchWarning1">
+    Warning
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-error" id="switchError1" type="checkbox"/>
+   <label class="label-text text-base" for="switchError1">
+    Error
+   </label>
+  </div>
+ </div>
+</div>
+
+p:
+  - Outline switch with semantic-color usingswitch-{semantic-color}modifier class with component classesswitch&switch-outline.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-3 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-outline" id="switchDefault2" type="checkbox"/>
+   <label class="label-text text-base" for="switchDefault2">
+    Default
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-outline switch-primary" id="switchPrimary2" type="checkbox"/>
+   <label class="label-text text-base" for="switchPrimary2">
+    Primary
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-outline switch-secondary" id="switchSecondary2" type="checkbox"/>
+   <label class="label-text text-base" for="switchSecondary2">
+    Secondary
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-outline switch-accent" id="switchAccent2" type="checkbox"/>
+   <label class="label-text text-base" for="switchAccent2">
+    Accent
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-outline switch-info" id="switchInfo2" type="checkbox"/>
+   <label class="label-text text-base" for="switchInfo2">
+    Info
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-outline switch-success" id="switchSuccess2" type="checkbox"/>
+   <label class="label-text text-base" for="switchSuccess2">
+    Success
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-outline switch-warning" id="switchWarning2" type="checkbox"/>
+   <label class="label-text text-base" for="switchWarning2">
+    Warning
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-outline switch-error" id="switchError2" type="checkbox"/>
+   <label class="label-text text-base" for="switchError2">
+    Error
+   </label>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Custom color
+
+p:
+  - Example of custom color in default and outline switch.
+
+p:
+  - Usechecked:text-*to customize the ball color andchecked:bg-*orchecked:border-*to change the background and border when the switch is checked. Alternatively, you can usechecked:[--input-color:...]to set both the background and border color when the switch is checked, simplifying customization. Supports hex, named colors, CSS variables, and Tailwind colors.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch checked:text-[#e4b0f8] checked:border-[#9b59b6] checked:bg-[#9b59b6]" id="switchCustomColor1" type="checkbox"/>
+   <label class="label-text text-base" for="switchCustomColor1">
+    Hex code
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch checked:text-[#8fff8f] checked:border-[green] checked:bg-[green]" id="switchCustomColor2" type="checkbox"/>
+   <label class="label-text text-base" for="switchCustomColor2">
+    Named color
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch checked:text-amber-100 checked:border-amber-600 checked:bg-amber-600" id="switchCustomColor4" type="checkbox"/>
+   <label class="label-text text-base" for="switchCustomColor4">
+    Tailwind utility colors
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch checked:text-blue-100 checked:[--input-color:blue]" id="switchCustomColor5" type="checkbox"/>
+   <label class="label-text text-base" for="switchCustomColor5">
+    FlyonUI variable
+   </label>
+  </div>
+ </div>
+</div>
+
+p:
+  - Forswitch-outline, use--input-colorto set both the border and text color when the switch is checked. This eliminates the need to applychecked:bg-*andchecked:border-*individually. You can still usetext-*andborder-*utilities to further customize the ball and border colors separately.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-outline checked:border-red-600 checked:text-blue-600" id="switchCustomColor6" type="checkbox"/>
+   <label class="label-text text-base" for="switchCustomColor6">
+    Tailwind utility colors
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-outline checked:[--input-color:#9b59b6]" id="switchCustomColor7" type="checkbox"/>
+   <label class="label-text text-base" for="switchCustomColor7">
+    With variable
+   </label>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Size
+
+h3:
+  - Solid switch
+
+p:
+  - Add responsive classswitch-{size}where{size} = xs|sm|md|lg|xlfor switch of different sizes.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex items-center">
+   <input checked="" class="switch switch-xs switch-primary" id="switchExtraSmall1" type="checkbox"/>
+   <label class="label-text text-xs" for="switchExtraSmall1">
+    Extra small switch
+   </label>
+  </div>
+  <div class="flex items-center gap-0.5">
+   <input checked="" class="switch switch-sm switch-primary" id="switchSmall1" type="checkbox"/>
+   <label class="label-text" for="switchSmall1">
+    Small switch
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-primary" id="switchSizeDefault1" type="checkbox"/>
+   <label class="label-text text-base" for="switchSizeDefault1">
+    Default switch
+   </label>
+  </div>
+  <div class="flex items-center gap-1.5">
+   <input checked="" class="switch switch-lg switch-primary" id="switchLarge1" type="checkbox"/>
+   <label class="label-text text-lg" for="switchLarge1">
+    Large switch
+   </label>
+  </div>
+  <div class="flex items-center gap-1.5">
+   <input checked="" class="switch switch-xl switch-primary" id="switchExtraLarge1" type="checkbox"/>
+   <label class="label-text text-xl" for="switchExtraLarge1">
+    Extra large switch
+   </label>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Outline switch
+
+p:
+  - Add responsive classswitch-{size}where{size} = xs|sm|md|lg|xlfor switch of different sizes.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex items-center">
+   <input checked="" class="switch switch-outline switch-xs switch-primary" id="switchExtraSmall2" type="checkbox"/>
+   <label class="label-text text-xs" for="switchExtraSmall2">
+    Extra small switch
+   </label>
+  </div>
+  <div class="flex items-center gap-0.5">
+   <input checked="" class="switch switch-outline switch-sm switch-primary" id="switchSmall2" type="checkbox"/>
+   <label class="label-text" for="switchSmall2">
+    Small switch
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="switch switch-outline switch-primary" id="switchSizeDefault2" type="checkbox"/>
+   <label class="label-text text-base" for="switchSizeDefault2">
+    Default switch
+   </label>
+  </div>
+  <div class="flex items-center gap-1.5">
+   <input checked="" class="switch switch-outline switch-lg switch-primary" id="switchLarge2" type="checkbox"/>
+   <label class="label-text text-lg" for="switchLarge2">
+    Large switch
+   </label>
+  </div>
+  <div class="flex items-center gap-1.5">
+   <input checked="" class="switch switch-outline switch-xl switch-primary" id="switchExtraLarge2" type="checkbox"/>
+   <label class="label-text text-xl" for="switchExtraLarge2">
+    Extra large switch
+   </label>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Validation states
+
+h3:
+  - Success state
+
+p:
+  - Success state can be show usingis-validclass.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex items-start gap-3">
+   <input checked="" class="switch switch-primary is-valid mt-2" id="switchStateSuccess1" type="checkbox"/>
+   <label class="label-text cursor-pointer flex flex-col" for="switchStateSuccess1">
+    <span class="text-base">
+     Email Notifications
+    </span>
+    <span>
+     Receive email notifications for updates
+    </span>
+   </label>
+  </div>
+  <div class="flex items-start gap-3">
+   <input checked="" class="switch switch-outline switch-primary is-valid mt-2" id="switchStateSuccess2" type="checkbox"/>
+   <label class="label-text cursor-pointer flex flex-col" for="switchStateSuccess2">
+    <span class="text-base">
+     Dark Mode
+    </span>
+    <span>
+     Enable dark mode for better readability
+    </span>
+   </label>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Error state
+
+p:
+  - Error state can be show usingis-invalidclass.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex items-start gap-3">
+   <input class="switch switch-primary is-invalid mt-2" id="switchStateError1" type="checkbox"/>
+   <label class="label-text cursor-pointer flex flex-col" for="switchStateError1">
+    <span class="text-base">
+     Email Notifications
+    </span>
+    <span>
+     Receive email notifications for updates
+    </span>
+   </label>
+  </div>
+  <div class="flex items-start gap-3">
+   <input class="switch switch-outline switch-primary is-invalid mt-2" id="switchStateError2" type="checkbox"/>
+   <label class="label-text cursor-pointer flex flex-col" for="switchStateError2">
+    <span class="text-base">
+     Dark Mode
+    </span>
+    <span>
+     Enable dark mode for better readability
+    </span>
+   </label>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Illustrations
+
+h3:
+  - Switch with icon
+
+p:
+  - You can also add additional elements, such as icons.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="space-x-3">
+   <label class="relative inline-block">
+    <input aria-label="default switch with icon" class="switch switch-primary peer" type="checkbox"/>
+    <span class="icon-[tabler--check] text-primary-content absolute start-1 top-1.5 hidden size-4 peer-checked:block">
+    </span>
+    <span class="icon-[tabler--x] text-neutral-content absolute end-1 top-1.5 block size-4 peer-checked:hidden">
+    </span>
+   </label>
+   <label class="relative inline-block">
+    <input aria-label="default switch with icon" checked="" class="switch switch-primary peer" type="checkbox"/>
+    <span class="icon-[tabler--check] text-primary-content absolute start-1 top-1.5 hidden size-4 peer-checked:block">
+    </span>
+    <span class="icon-[tabler--x] text-neutral-content absolute end-1 top-1.5 block size-4 peer-checked:hidden">
+    </span>
+   </label>
+  </div>
+  <div class="space-x-3">
+   <label class="relative inline-block">
+    <input aria-label="outline switch with icon" class="switch switch-primary switch-outline peer" type="checkbox"/>
+    <span class="icon-[tabler--check] text-primary absolute start-1 top-1.5 hidden size-4 peer-checked:block">
+    </span>
+    <span class="icon-[tabler--x] text-neutral absolute end-1 top-1.5 block size-4 peer-checked:hidden">
+    </span>
+   </label>
+   <label class="relative inline-block">
+    <input aria-label="outline switch with icon" checked="" class="switch switch-primary switch-outline peer" type="checkbox"/>
+    <span class="icon-[tabler--check] text-primary absolute start-1 top-1.5 hidden size-4 peer-checked:block">
+    </span>
+    <span class="icon-[tabler--x] text-neutral absolute end-1 top-1.5 block size-4 peer-checked:hidden">
+    </span>
+   </label>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Disabled
+
+p:
+  - Disabled switchPreviewHTMLCopy<divclass="space-x-3"><inputtype="checkbox"class="switch switch-primary"aria-label="disabled switch"disabled/><inputtype="checkbox"class="switch switch-primary"aria-label="disabled switch"checkeddisabled/></div><divclass="space-x-3"><inputtype="checkbox"class="switch switch-primary switch-outline"aria-label="outlined disabled switch"disabled/><inputtype="checkbox"class="switch switch-primary switch-outline"aria-label="outlined disabled switch"checkeddisabled/></div>
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="space-x-3">
+   <input aria-label="disabled switch" class="switch switch-primary" disabled="" type="checkbox"/>
+   <input aria-label="disabled switch" checked="" class="switch switch-primary" disabled="" type="checkbox"/>
+  </div>
+  <div class="space-x-3">
+   <input aria-label="outlined disabled switch" class="switch switch-primary switch-outline" disabled="" type="checkbox"/>
+   <input aria-label="outlined disabled switch" checked="" class="switch switch-primary switch-outline" disabled="" type="checkbox"/>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Indeterminate
+
+p:
+  - Theindeterminatestate can be configured using JavaScript. To gain further insight into this concept, you can explore more about ithere.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex items-center gap-1">
+   <input class="switch switch-primary" id="switchSolid" type="checkbox"/>
+   <label class="label-text text-base" for="switchSolid">
+    Solid switch
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input class="switch switch-primary switch-outline" id="switchOutline" type="checkbox"/>
+   <label class="label-text text-base" for="switchOutline">
+    Outline switch
+   </label>
+  </div>
+  <script>
+   document.getElementById("switchSolid").indeterminate=!0,document.getElementById("switchOutline").indeterminate=!0
+  </script>
+ </div>
+</div>
+
+h3:
+  - Inline switch group
+
+p:
+  - A group of switch components in single line.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex gap-4 flex-col sm:flex-row">
+   <div class="flex items-start gap-2">
+    <input class="switch switch-primary mt-2" id="switchInline1" type="checkbox"/>
+    <label class="label-text cursor-pointer flex flex-col" for="switchInline1">
+     <span class="text-base">
+      Email Notifications
+     </span>
+     <span>
+      Receive email notifications for updates
+     </span>
+    </label>
+   </div>
+   <div class="flex items-start gap-2">
+    <input checked="" class="switch switch-primary mt-2" id="switchInline2" type="checkbox"/>
+    <label class="label-text cursor-pointer flex flex-col" for="switchInline2">
+     <span class="text-base">
+      Dark Mode
+     </span>
+     <span>
+      Enable dark mode for better readability
+     </span>
+    </label>
+   </div>
+   <div class="flex items-start gap-2">
+    <input class="switch switch-primary mt-2" id="switchInline3" type="checkbox"/>
+    <label class="label-text cursor-pointer flex flex-col" for="switchInline3">
+     <span class="text-base">
+      Auto-Save
+     </span>
+     <span>
+      Automatically save changes as you edit
+     </span>
+    </label>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Vertical switch group
+
+p:
+  - A vertical group of switch components.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex flex-col">
+   <div class="flex items-start gap-4">
+    <input class="switch switch-primary mt-2" id="switchVertical1" type="checkbox"/>
+    <label class="label-text cursor-pointer flex flex-col" for="switchVertical1">
+     <span class="text-base">
+      Email Notifications
+     </span>
+     <span>
+      Receive email notifications for updates
+     </span>
+    </label>
+   </div>
+   <div class="flex items-start gap-4">
+    <input checked="" class="switch switch-primary mt-2" id="switchVertical2" type="checkbox"/>
+    <label class="label-text cursor-pointer flex flex-col" for="switchVertical2">
+     <span class="text-base">
+      Dark Mode
+     </span>
+     <span>
+      Enable dark mode for better readability
+     </span>
+    </label>
+   </div>
+   <div class="flex items-start gap-4">
+    <input class="switch switch-primary mt-2" id="switchVertical3" type="checkbox"/>
+    <label class="label-text cursor-pointer flex flex-col" for="switchVertical3">
+     <span class="text-base">
+      Auto-Save
+     </span>
+     <span>
+      Automatically save changes as you edit
+     </span>
+    </label>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Switch in dropdown
+
+p:
+  - Hereâs an example of a switch in dropdown.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="dropdown relative inline-flex [--auto-close:inside]">
+   <button aria-expanded="false" aria-haspopup="menu" aria-label="Dropdown" class="dropdown-switch btn btn-primary" id="dropdown-checkbox" type="button">
+    Dropdown switch
+    <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4">
+    </span>
+   </button>
+   <div aria-labelledby="dropdown-checkbox" aria-orientation="vertical" class="dropdown-menu dropdown-open:opacity-100 min-w-60 hidden" role="menu">
+    <div class="dropdown-item flex-col items-center gap-4 sm:flex-row sm:items-start">
+     <input class="switch switch-primary mt-2" id="switchDropdown1" type="checkbox"/>
+     <label class="label-text cursor-pointer flex flex-col" for="switchDropdown1">
+      <span class="text-base">
+       Email Notifications
+      </span>
+      <span>
+       Receive email notifications for updates
+      </span>
+     </label>
+    </div>
+    <div class="dropdown-item flex-col items-center gap-4 sm:flex-row sm:items-start">
+     <input checked="" class="switch switch-primary mt-2" id="switchDropdown2" type="checkbox"/>
+     <label class="label-text cursor-pointer flex flex-col" for="switchDropdown2">
+      <span class="text-base">
+       Dark Mode
+      </span>
+      <span>
+       Enable dark mode for better readability
+      </span>
+     </label>
+    </div>
+    <div class="dropdown-item flex-col items-center gap-4 sm:flex-row sm:items-start">
+     <input class="switch switch-primary mt-2" id="switchDropdown3" type="checkbox"/>
+     <label class="label-text cursor-pointer flex flex-col" for="switchDropdown3">
+      <span class="text-base">
+       Auto-Save
+      </span>
+      <span>
+       Automatically save changes as you edit
+      </span>
+     </label>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Switch list group
+
+p:
+  - This example can be used to show a list of switch inside a grouped list.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <h6 class="text-base-content mb-1 text-base">
+   Switch to your preferred languages:
+  </h6>
+  <ul class="border-base-content/25 divide-base-content/25 rounded-box max-w-sm divide-y border *:cursor-pointer">
+   <li>
+    <label class="flex items-center gap-3 p-3">
+     <input class="switch switch-primary" type="checkbox"/>
+     <span class="label-text text-base">
+      JavaScript
+     </span>
+    </label>
+   </li>
+   <li>
+    <label class="flex items-center gap-3 p-3">
+     <input checked="" class="switch switch-primary" type="checkbox"/>
+     <span class="label-text text-base">
+      Python
+     </span>
+    </label>
+   </li>
+   <li>
+    <label class="flex items-center gap-3 p-3">
+     <input class="switch switch-primary" type="checkbox"/>
+     <span class="label-text text-base">
+      Java
+     </span>
+    </label>
+   </li>
+  </ul>
+ </div>
+</div>
+
+h3:
+  - Horizontal list group
+
+p:
+  - Use this example to group up switch components inside a list.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block mb-1 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <h6 class="text-base-content mb-1 text-base">
+   Switch to your preferred languages:
+  </h6>
+  <ul class="border-base-content/25 divide-base-content/25 rounded-box border flex w-full flex-col *:w-full *:cursor-pointer max-sm:divide-y sm:flex-row sm:divide-x">
+   <li>
+    <label class="flex items-center gap-3 p-3">
+     <input class="switch switch-primary" type="checkbox"/>
+     <span class="label-text text-base">
+      JavaScript
+     </span>
+    </label>
+   </li>
+   <li>
+    <label class="flex items-center gap-3 p-3">
+     <input checked="" class="switch switch-primary" type="checkbox"/>
+     <span class="label-text text-base">
+      Python
+     </span>
+    </label>
+   </li>
+   <li>
+    <label class="flex items-center gap-3 p-3">
+     <input class="switch switch-primary" type="checkbox"/>
+     <span class="label-text text-base">
+      Java
+     </span>
+    </label>
+   </li>
+  </ul>
+ </div>
+</div>
+
+h2:
+  - Switch
+
+h3:
+  - On this page
+
+h2:
+  - Switch
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

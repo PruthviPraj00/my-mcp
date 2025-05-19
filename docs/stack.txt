@@ -1,0 +1,402 @@
+# Tailwind CSS Stack - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - components
+
+p:
+  - Stack elements positions them on top of each other in a visual manner.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| stack | Component | Stacks the child elements on top of each other. |
+| stack-start | Placement | Sets stacking direction to start. |
+| stack-end | Placement | Sets stacking direction to end. |
+| stack-bottom-start | Placement | Sets stacking direction to bottom-start. |
+| stack-bottom-end | Placement | Sets stacking direction to bottom-end. |
+| stack-top | Placement | Sets stacking direction to top. |
+| stack-top-start | Placement | Sets stacking direction to top-start. |
+| stack-top-end | Placement | Sets stacking direction to top-end. |
+| stack-animated | Placement | Adds animation to stack when hovered over. |
+
+h2:
+  - Variants
+
+h3:
+  - Without stack
+
+p:
+  - The following example displays div’s without stacking.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div>
+   <div class="bg-primary text-primary-content grid h-20 w-32 place-content-center rounded-sm">
+    1
+   </div>
+   <div class="bg-success text-success-content grid h-20 w-32 place-content-center rounded-sm">
+    2
+   </div>
+   <div class="bg-warning text-warning-content grid h-20 w-32 place-content-center rounded-sm">
+    3
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - With stack
+
+p:
+  - Wrap the stacked div’s with a wrapper div using the component classstack.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="stack h-20 w-32">
+   <div class="bg-primary text-primary-content grid place-content-center rounded-sm">
+    1
+   </div>
+   <div class="bg-success text-success-content grid place-content-center rounded-sm">
+    2
+   </div>
+   <div class="bg-warning text-warning-content grid place-content-center rounded-sm">
+    3
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Animated stack
+
+p:
+  - Apply the modifier class stack-animated to enable animation on hover.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="stack stack-bottom-start stack-animated h-20 w-32">
+   <div class="bg-primary text-primary-content grid place-content-center rounded-sm">
+    1
+   </div>
+   <div class="bg-success text-success-content grid place-content-center rounded-sm">
+    2
+   </div>
+   <div class="bg-warning text-warning-content grid place-content-center rounded-sm">
+    3
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Positions
+
+h3:
+  - Bottom (default)
+
+p:
+  - By default, the stacking direction is from the bottom.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="stack h-20 w-32">
+   <div class="bg-primary text-primary-content grid place-content-center rounded-sm">
+    1
+   </div>
+   <div class="bg-success text-success-content grid place-content-center rounded-sm">
+    2
+   </div>
+   <div class="bg-warning text-warning-content grid place-content-center rounded-sm">
+    3
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Bottom start
+
+p:
+  - Apply the modifier classstack-bottom-startto set the stack direction to bottom-start.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="stack stack-bottom-start h-20 w-32">
+   <div class="bg-primary text-primary-content grid place-content-center rounded-sm">
+    1
+   </div>
+   <div class="bg-success text-success-content grid place-content-center rounded-sm">
+    2
+   </div>
+   <div class="bg-warning text-warning-content grid place-content-center rounded-sm">
+    3
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Bottom end
+
+p:
+  - Apply the modifier classstack-bottom-endto set the stack direction to bottom-end.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="stack stack-bottom-end h-20 w-32">
+   <div class="bg-primary text-primary-content grid place-content-center rounded-sm">
+    1
+   </div>
+   <div class="bg-success text-success-content grid place-content-center rounded-sm">
+    2
+   </div>
+   <div class="bg-warning text-warning-content grid place-content-center rounded-sm">
+    3
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Top
+
+p:
+  - Apply the modifier classstack-topto set the stack direction to top.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="stack stack-top h-20 w-32">
+   <div class="bg-primary text-primary-content grid place-content-center rounded-sm">
+    1
+   </div>
+   <div class="bg-success text-success-content grid place-content-center rounded-sm">
+    2
+   </div>
+   <div class="bg-warning text-warning-content grid place-content-center rounded-sm">
+    3
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Top start
+
+p:
+  - Apply the modifier classstack-top-startto set the stack direction to top-start.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="stack stack-top-start h-20 w-32">
+   <div class="bg-primary text-primary-content grid place-content-center rounded-sm">
+    1
+   </div>
+   <div class="bg-success text-success-content grid place-content-center rounded-sm">
+    2
+   </div>
+   <div class="bg-warning text-warning-content grid place-content-center rounded-sm">
+    3
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Top end
+
+p:
+  - Apply the modifier classstack-top-endto set the stack direction to stack-end.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="stack stack-top-end h-20 w-32">
+   <div class="bg-primary text-primary-content grid place-content-center rounded-sm">
+    1
+   </div>
+   <div class="bg-success text-success-content grid place-content-center rounded-sm">
+    2
+   </div>
+   <div class="bg-warning text-warning-content grid place-content-center rounded-sm">
+    3
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Start
+
+p:
+  - Apply the modifier classstack-startto set the stack direction to start.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="stack stack-start h-20 w-32">
+   <div class="bg-primary text-primary-content grid place-content-center rounded-sm">
+    1
+   </div>
+   <div class="bg-success text-success-content grid place-content-center rounded-sm">
+    2
+   </div>
+   <div class="bg-warning text-warning-content grid place-content-center rounded-sm">
+    3
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - End
+
+p:
+  - Apply the modifier classstack-endto set the stack direction to end.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="stack stack-end h-20 w-32">
+   <div class="bg-primary text-primary-content grid place-content-center rounded-sm">
+    1
+   </div>
+   <div class="bg-success text-success-content grid place-content-center rounded-sm">
+    2
+   </div>
+   <div class="bg-warning text-warning-content grid place-content-center rounded-sm">
+    3
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Illustrations
+
+h3:
+  - Stacked images
+
+p:
+  - The example below demonstrates a stack with images.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="stack w-32">
+   <img alt="iphone" class="rounded-sm" src="https://cdn.flyonui.com/fy-assets/components/card/image-1.png"/>
+   <img alt="sydney" class="rounded-sm" src="https://cdn.flyonui.com/fy-assets/components/card/image-2.png"/>
+   <img alt="rome" class="rounded-sm" src="https://cdn.flyonui.com/fy-assets/components/card/image-3.png"/>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Stacked cards
+
+p:
+  - The example below demonstrates a stack with cards.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="stack w-32">
+   <div class="card border-base-content border shadow-none">
+    <div class="card-body text-center">
+     <p>
+      Card A
+     </p>
+    </div>
+   </div>
+   <div class="card border-base-content border shadow-none">
+    <div class="card-body text-center">
+     <p>
+      Card B
+     </p>
+    </div>
+   </div>
+   <div class="card border-base-content border shadow-none">
+    <div class="card-body text-center">
+     <p>
+      Card C
+     </p>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Stacked notifications
+
+p:
+  - The example below demonstrates a notifications stack.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="stack stack-animated">
+   <div class="card bg-primary text-primary-content shadow-none">
+    <div class="card-body">
+     <h5 class="card-title text-primary-content">
+      3 Notifications
+     </h5>
+     <p>
+      You have 3 unread messages. Tap here to see.
+     </p>
+    </div>
+   </div>
+   <div class="card bg-info text-info-content shadow-none">
+    <div class="card-body">
+     <h5 class="card-title text-info-content">
+      2 Notifications
+     </h5>
+     <p>
+      You have 2 unread messages. Tap here to see.
+     </p>
+    </div>
+   </div>
+   <div class="card bg-secondary text-secbg-secondary-content shadow-none">
+    <div class="card-body">
+     <h5 class="card-title text-secbg-secondary-content">
+      Notification 1
+     </h5>
+     <p>
+      You have an unread message. Tap here to see.
+     </p>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Stack
+
+h3:
+  - On this page
+
+h2:
+  - Stack
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

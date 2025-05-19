@@ -1,0 +1,113 @@
+# Tailwind CSS Diff - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - components
+
+p:
+  - The Diff component allows for a side-by-side comparison of two items, making it easy to identify their differences and similarities.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| diff | Component | Base class for the diff component |
+| diff-item-1 | Part | Base class for the first item in the diff |
+| diff-item-2 | Part | Base class for the second item in the diff |
+| diff-resizer | Part | Base class for the resizer in the diff |
+| blur-xs | Modifier | Adds a small blur effect to the image |
+
+h2:
+  - Type variants
+
+h3:
+  - Image diff
+
+p:
+  - The standard format for the diff is component classdiffwith two child div’s with classdiff-item-1anddiff-item-2respectively whereas thediff-resizerclass is used to resize the diff.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="diff aspect-video">
+   <div class="diff-item-1">
+    <img alt="mountains" src="https://cdn.flyonui.com/fy-assets/components/diff/image-1.png"/>
+   </div>
+   <div class="diff-item-2">
+    <img alt="flowers" src="https://cdn.flyonui.com/fy-assets/components/diff/image-2.png"/>
+   </div>
+   <div class="diff-resizer">
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Image diff with blur
+
+p:
+  - Use theblur-xsutility class to add a blur effect to the image. The intensity of the blur effect can be adjusted using the TailwindCSSBlurutility classes.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="diff aspect-video">
+   <div class="diff-item-1">
+    <img alt="mountain" src="https://cdn.flyonui.com/fy-assets/components/diff/image-1.png"/>
+   </div>
+   <div class="diff-item-2">
+    <img alt="mountain Blur" class="blur-xs" src="https://cdn.flyonui.com/fy-assets/components/diff/image-1.png"/>
+   </div>
+   <div class="diff-resizer">
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Text diff
+
+p:
+  - Use div’s with custom text and background color indiffto create a text diff.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="diff aspect-video">
+   <div class="diff-item-1">
+    <div class="bg-primary text-primary-content grid place-content-center text-4xl sm:text-7xl font-black">
+     FlyonUI
+    </div>
+   </div>
+   <div class="diff-item-2">
+    <div class="bg-base-200 grid place-content-center text-4xl sm:text-7xl font-black">
+     FlyonUI
+    </div>
+   </div>
+   <div class="diff-resizer">
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Diff
+
+h3:
+  - On this page
+
+h2:
+  - Diff
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

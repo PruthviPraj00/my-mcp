@@ -1,0 +1,672 @@
+# Tailwind CSS Avatar - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - components
+
+p:
+  - Avatars bring life to the interface, offering a small but vivid representation of individuals or businesses.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| avatar | Component | Container element |
+| avatar-group | Component | Container for grouping multiple avatars |
+| avatar-placeholder | Part | To show some letters as avatar placeholder |
+| pull-up | Style | Add pull up animation when used with avatar group |
+| avatar-online-top | Modifier | Shows a green dot at top as online indicator |
+| avatar-online-bottom | Modifier | Shows a green dot at bottom as online indicator |
+| avatar-away-top | Modifier | Shows a warning dot at top as away indicator |
+| avatar-away-bottom | Modifier | Shows a warning dot at bottom as away indicator |
+| avatar-busy-top | Modifier | Shows an error dot at top as busy indicator |
+| avatar-busy-bottom | Modifier | Shows an error dot at bottom as busy indicator |
+| avatar-offline-top | Modifier | Shows a neutral dot at top as offline indicator |
+| avatar-offline-bottom | Modifier | Shows a neutral dot at bottom as offline indicator |
+
+h2:
+  - Shape
+
+h3:
+  - Circular avatars
+
+p:
+  - Theavatarcomponent class serves as a wrapper for the image, while theSizeandBorder Radiusutility classes can be utilized to adjust its dimensions and radius.
+
+p:
+  - Userounded-fullutility class to make circular avatars.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose items-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="avatar">
+   <div class="size-6 rounded-full">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+  <div class="avatar">
+   <div class="size-10 rounded-full">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+  <div class="avatar">
+   <div class="size-14 rounded-full">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+  <div class="avatar">
+   <div class="size-16 rounded-full">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Rounded avatars
+
+p:
+  - Apply therounded-mdutility class to achieve rounded avatars.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose items-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="avatar">
+   <div class="size-6 rounded-md">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+  <div class="avatar">
+   <div class="size-10 rounded-md">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+  <div class="avatar">
+   <div class="size-14 rounded-md">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+  <div class="avatar">
+   <div class="size-16 rounded-md">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Masked avatars
+
+p:
+  - Themaskclass modifier can be applied to define the shape of the avatar.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose items-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="avatar">
+   <div class="size-16 mask mask-decagon">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+  <div class="avatar">
+   <div class="size-16 mask mask-hexagon-2">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+  <div class="avatar">
+   <div class="size-16 mask mask-heart">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Placeholder
+
+h3:
+  - Placeholder icon
+
+p:
+  - Useavatar-placeholdercomponent class withavatarfor placeholder styles.Design circular avatar elements featuring placeholder icons.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose items-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="avatar avatar-placeholder">
+   <div class="bg-neutral text-neutral-content w-6 rounded-full">
+    <span class="icon-[tabler--user] size-4">
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="bg-neutral text-neutral-content w-10 rounded-full">
+    <span class="icon-[tabler--user] size-6">
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="bg-neutral text-neutral-content w-14 rounded-full">
+    <span class="icon-[tabler--user] size-8">
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="bg-neutral text-neutral-content w-16 rounded-full">
+    <span class="icon-[tabler--user] size-10">
+    </span>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Placeholder initials
+
+p:
+  - Design circular avatar elements featuring placeholder initials.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose items-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="avatar avatar-placeholder">
+   <div class="bg-neutral text-neutral-content w-6 rounded-full">
+    <span class="text-xs uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="bg-neutral text-neutral-content w-10 rounded-full">
+    <span class="text-md uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="bg-neutral text-neutral-content w-14 rounded-full">
+    <span class="text-xl uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="bg-neutral text-neutral-content w-16 rounded-full">
+    <span class="text-2xl uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Color variants
+
+h3:
+  - Solid color
+
+p:
+  - Pre-configured solid color avatar designs.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose items-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="avatar avatar-placeholder">
+   <div class="bg-primary text-primary-content w-10 rounded-full">
+    <span class="text-md uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="bg-secondary text-secondary-content w-10 rounded-full">
+    <span class="text-md uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="bg-info text-info-content w-10 rounded-full">
+    <span class="text-md uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="bg-success text-success-content w-10 rounded-full">
+    <span class="text-md uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="bg-warning text-warning-content w-10 rounded-full">
+    <span class="text-md uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="bg-error text-error-content w-10 rounded-full">
+    <span class="text-md uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Soft color
+
+p:
+  - Pre-configured soft color avatar designs.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose items-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="avatar avatar-placeholder">
+   <div class="bg-primary/10 text-primary w-10 rounded-full">
+    <span class="text-md uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="bg-secondary/10 text-secondary w-10 rounded-full">
+    <span class="text-md uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="bg-info/10 text-info w-10 rounded-full">
+    <span class="text-md uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="bg-success/10 text-success w-10 rounded-full">
+    <span class="text-md uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="bg-warning/10 text-warning w-10 rounded-full">
+    <span class="text-md uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="bg-error/10 text-error w-10 rounded-full">
+    <span class="text-md uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Outline color
+
+p:
+  - Pre-configured outline color avatar designs.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose items-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="avatar avatar-placeholder">
+   <div class="border-primary text-primary w-10 rounded-full border">
+    <span class="text-md uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="border-secondary text-secondary w-10 rounded-full border">
+    <span class="text-md uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="border-info text-info w-10 rounded-full border">
+    <span class="text-md uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="border-success text-success w-10 rounded-full border">
+    <span class="text-md uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="border-warning text-warning w-10 rounded-full border">
+    <span class="text-md uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+  <div class="avatar avatar-placeholder">
+   <div class="border-error text-error w-10 rounded-full border">
+    <span class="text-md uppercase">
+     cl
+    </span>
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Status
+
+h3:
+  - Top status indicators
+
+p:
+  - Avatars featuring various status indicators at top.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose items-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="avatar avatar-online-top">
+   <div class="w-6 rounded-full">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+  <div class="avatar avatar-away-top">
+   <div class="w-10 rounded-full">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+  <div class="avatar avatar-busy-top">
+   <div class="w-14 rounded-full">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+  <div class="avatar avatar-offline-top">
+   <div class="w-16 rounded-full">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Bottom status indicators
+
+p:
+  - Avatars featuring various status indicators at bottom.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose items-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="avatar avatar-online-bottom">
+   <div class="w-6 rounded-full">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+  <div class="avatar avatar-away-bottom">
+   <div class="w-10 rounded-full">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+  <div class="avatar avatar-busy-bottom">
+   <div class="w-14 rounded-full">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+  <div class="avatar avatar-offline-bottom">
+   <div class="w-16 rounded-full">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Avatar with logo indicator
+
+p:
+  - Avatars featuring various status indicators at bottom.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose items-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="avatar">
+   <div class="w-10 rounded-full">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+   <span class="bg-base-100 absolute bottom-0 end-0 flex translate-x-2 translate-y-2 transform items-center rounded-full p-1">
+    <svg alt="Slack Logo" class="size-4" viewbox="0 0 60 60" xmlns="http://www.w3.org/1000/svg">
+     <path d="M22 12a6 6 0 116-6v6zm0 4a6 6 0 010 12H6a6 6 0 110-12" fill="#36c5f0">
+     </path>
+     <path d="M48 22a6 6 0 116 6h-6zM32 6a6 6 0 1112 0v16a6 6 0 01-12 0z" fill="#2eb67d">
+     </path>
+     <path d="M38 48a6 6 0 11-6 6v-6zM54 32a6 6 0 010 12H38a6 6 0 110-12" fill="#ecb22e">
+     </path>
+     <path d="M12 38a6 6 0 11-6-6h6zm4 0a6 6 0 1112 0v16a6 6 0 01-12 0z" fill="#e01e5a">
+     </path>
+    </svg>
+   </span>
+  </div>
+  <div class="avatar">
+   <div class="w-10 rounded-md">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+   <span class="bg-base-100 absolute bottom-0 end-0 flex translate-x-2 translate-y-2 transform items-center rounded-full p-1">
+    <svg aria-hidden="true" class="size-4" viewbox="0 0 16 16" width="24">
+     <path d="M8 0C3.58.0.0 3.58.0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38.0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95.0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12.0.0.67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15.0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48.0 1.07-.01 1.93-.01 2.2.0.21.15.46.55.38A8.013 8.013.0 0016 8c0-4.42-3.58-8-8-8z" fill-rule="evenodd">
+      <path>
+      </path>
+     </path>
+    </svg>
+   </span>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Avatar group
+
+h3:
+  - Basic circular avatar group
+
+p:
+  - Theavatar-groupclass acts as a container for avatars, allowing you to manage the spacing between them with the-space-x-4class.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose items-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="avatar-group -space-x-5">
+   <div class="avatar">
+    <div class="w-13">
+     <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+    </div>
+   </div>
+   <div class="avatar">
+    <div class="w-13">
+     <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-12.png"/>
+    </div>
+   </div>
+   <div class="avatar">
+    <div class="w-13">
+     <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-10.png"/>
+    </div>
+   </div>
+   <div class="avatar">
+    <div class="w-13">
+     <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png"/>
+    </div>
+   </div>
+  </div>
+  <div class="avatar-group -space-x-5">
+   <div class="avatar">
+    <div class="w-13">
+     <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-10.png"/>
+    </div>
+   </div>
+   <div class="avatar">
+    <div class="w-13">
+     <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-12.png"/>
+    </div>
+   </div>
+   <div class="avatar">
+    <div class="w-13">
+     <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png"/>
+    </div>
+   </div>
+   <div class="avatar avatar-placeholder">
+    <div class="bg-neutral text-neutral-content w-13">
+     <span>
+      +9
+     </span>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Pull up animation with tooltip
+
+p:
+  - Utilize thepull-upclass to enable hover functionality for the avatar.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose items-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="avatar-group pull-up -space-x-5">
+   <div class="tooltip">
+    <div class="tooltip-toggle avatar">
+     <div class="w-13">
+      <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+     </div>
+    </div>
+    <span class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="tooltip">
+     <span class="tooltip-body">
+      Jhon Doe
+     </span>
+    </span>
+   </div>
+   <div class="tooltip">
+    <div class="tooltip-toggle avatar">
+     <div class="w-13">
+      <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-10.png"/>
+     </div>
+    </div>
+    <span class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="tooltip">
+     <span class="tooltip-body">
+      Elliot Chen
+     </span>
+    </span>
+   </div>
+   <div class="tooltip">
+    <div class="tooltip-toggle avatar">
+     <div class="w-13">
+      <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-12.png"/>
+     </div>
+    </div>
+    <span class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="tooltip">
+     <span class="tooltip-body">
+      Maya Singh
+     </span>
+    </span>
+   </div>
+   <div class="tooltip">
+    <div class="tooltip-toggle avatar">
+     <div class="w-13">
+      <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png"/>
+     </div>
+    </div>
+    <span class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="tooltip">
+     <span class="tooltip-body">
+      Jasmine Rivera
+     </span>
+    </span>
+   </div>
+  </div>
+  <div class="avatar-group pull-up -space-x-5">
+   <div class="tooltip">
+    <div class="tooltip-toggle avatar">
+     <div class="w-13">
+      <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-10.png"/>
+     </div>
+    </div>
+    <span class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="tooltip">
+     <span class="tooltip-body">
+      Maya Singh
+     </span>
+    </span>
+   </div>
+   <div class="tooltip">
+    <div class="tooltip-toggle avatar">
+     <div class="w-13">
+      <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-12.png"/>
+     </div>
+    </div>
+    <span class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="tooltip">
+     <span class="tooltip-body">
+      Jasmine Rivera
+     </span>
+    </span>
+   </div>
+   <div class="tooltip">
+    <div class="tooltip-toggle avatar">
+     <div class="w-13">
+      <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png"/>
+     </div>
+    </div>
+    <span class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="tooltip">
+     <span class="tooltip-body">
+      Elliot Chen
+     </span>
+    </span>
+   </div>
+   <div class="tooltip cursor-default">
+    <div class="tooltip-toggle avatar avatar-placeholder">
+     <div class="bg-neutral text-neutral-content w-13">
+      <span>
+       +9
+      </span>
+     </div>
+    </div>
+    <span class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="tooltip">
+     <span class="tooltip-body">
+      9 more
+     </span>
+    </span>
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Avatar
+
+h3:
+  - On this page
+
+h2:
+  - Avatar
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

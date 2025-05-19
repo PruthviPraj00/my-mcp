@@ -1,0 +1,675 @@
+# Tailwind CSS Input - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - forms
+
+p:
+  - A fundamental tool for receiving user input is a text field, which allows data to be provided or altered using either the keyboard or mouse.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| input | Component | Base class for form input. |
+| input-floating | Component | Base class for floating form input. |
+| input-floating-label | Part | Floats the label to the top. |
+| label-text | Part | Base class for title label text. |
+| helper-text | Part | Base class for helper label text. |
+| no-focus | Modifier | remove default focus from input. |
+| is-valid | State | Adds success style to the input. |
+| is-invalid | State | Adds error style to the input. |
+| input-xs | Size | Input with Extra small size. |
+| input-sm | Size | Input with Smaller size. |
+| input-md | Size | Input with medium(default) size. |
+| input-lg | Size | Input with Larger size. |
+| input-xl | Size | Input with Extra large size. |
+
+h2:
+  - Basic examples
+
+h3:
+  - Default
+
+p:
+  - Utilize theinputcomponent class to style the input.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <input aria-label="input" class="input max-w-sm" type="text"/>
+ </div>
+</div>
+
+h3:
+  - Placeholder
+
+p:
+  - Basic input with placeholder.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <input class="input max-w-sm" placeholder="Type here" type="text"/>
+ </div>
+</div>
+
+h3:
+  - Label and helper text
+
+p:
+  - Please uselabel-textfor the label andhelper-textfor the text that appears at the bottom as helper text.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="w-96">
+   <label class="label-text" for="labelAndHelperText">
+    Full Name
+   </label>
+   <input class="input" id="labelAndHelperText" placeholder="John Doe" type="text"/>
+   <span class="helper-text">
+    Please write your full name
+   </span>
+  </div>
+  <div class="w-96">
+   <label class="label-text" for="labelAndHelperTextRight">
+    Full Name
+   </label>
+   <input class="input" id="labelAndHelperTextRight" placeholder="John Doe" type="text"/>
+   <span class="helper-text text-end">
+    Please write your full name
+   </span>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Hidden label
+
+p:
+  - labelelements hidden using the.sr-onlyclass.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="w-96">
+   <label class="label-text sr-only" for="hiddenLabel">
+    Full name
+   </label>
+   <input class="input" id="hiddenLabel" placeholder="John Doe" type="text"/>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Types
+
+h3:
+  - Default
+
+p:
+  - Default Input.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="w-96">
+   <label class="label-text" for="defaultInput">
+    Full name
+   </label>
+   <input class="input" id="defaultInput" placeholder="John Doe" type="text"/>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Floating label
+
+p:
+  - TheFloating Input Componentprovides a text input with a floating label. Use.input-floatingfor the wrapper,.inputfor the input field, and.input-floating-labelfor the label.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="input-floating w-96">
+   <input class="input" id="floatingInput" placeholder="John Doe" type="text"/>
+   <label class="input-floating-label" for="floatingInput">
+    Full name
+   </label>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Sizes
+
+h3:
+  - Default
+
+p:
+  - Add responsive classinput-{size}where{size} = xs|sm|md|lg|xlfor input of different sizes.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <input class="input input-xs max-w-sm" placeholder="John Doe" type="text"/>
+  <input class="input input-sm max-w-sm" placeholder="John Doe" type="text"/>
+  <input class="input max-w-sm" placeholder="John Doe" type="text"/>
+  <input class="input input-lg max-w-sm" placeholder="John Doe" type="text"/>
+  <input class="input input-xl max-w-sm" placeholder="John Doe" type="text"/>
+ </div>
+</div>
+
+h3:
+  - Floating label
+
+p:
+  - Add responsive classinput-{size}where{size} = xs|sm|md|lg|xlfor input of different sizes for floating label.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="input-floating max-w-sm">
+   <input class="input input-xs" id="floatingLabelExtraSmall" placeholder="John Doe" type="text"/>
+   <label class="input-floating-label" for="floatingLabelExtraSmall">
+    Full name
+   </label>
+  </div>
+  <div class="input-floating max-w-sm">
+   <input class="input input-sm" id="floatingLabelSmall" placeholder="John Doe" type="text"/>
+   <label class="input-floating-label" for="floatingLabelSmall">
+    Full name
+   </label>
+  </div>
+  <div class="input-floating max-w-sm">
+   <input class="input" id="floatingLabelDefault" placeholder="John Doe" type="text"/>
+   <label class="input-floating-label" for="floatingLabelDefault">
+    Full name
+   </label>
+  </div>
+  <div class="input-floating max-w-sm">
+   <input class="input input-lg" id="floatingLabelLarge" placeholder="John Doe" type="text"/>
+   <label class="input-floating-label" for="floatingLabelLarge">
+    Full Name
+   </label>
+  </div>
+  <div class="input-floating max-w-sm">
+   <input class="input input-xl" id="floatingLabelExtraLarge" placeholder="John Doe" type="text"/>
+   <label class="input-floating-label" for="floatingLabelExtraLarge">
+    Full Name
+   </label>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Validation State
+
+h3:
+  - Success state
+
+p:
+  - Success state can be show usingis-validclass.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="max-w-sm">
+   <label class="label-text" for="successInput">
+    Full Name
+   </label>
+   <input class="input is-valid" id="successInput" placeholder="John Doe" type="text"/>
+   <span class="helper-text">
+    Helper text
+   </span>
+  </div>
+  <div class="input-floating max-w-sm">
+   <input class="input is-valid" id="successFloatingInput" placeholder="John Doe" type="text"/>
+   <label class="input-floating-label" for="successFloatingInput">
+    Full name
+   </label>
+   <span class="helper-text ps-3">
+    Helper text
+   </span>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Error state
+
+p:
+  - Error state can be show usingis-invalidclass.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="max-w-sm">
+   <label class="label-text" for="errorInput">
+    Full Name
+   </label>
+   <input class="input is-invalid" id="errorInput" placeholder="John Doe" type="text"/>
+   <span class="helper-text">
+    Helper text
+   </span>
+  </div>
+  <div class="input-floating max-w-sm">
+   <input class="input is-invalid" id="errorFloatingInput" placeholder="John Doe" type="text"/>
+   <label class="input-floating-label" for="errorFloatingInput">
+    Full name
+   </label>
+   <span class="helper-text ps-3">
+    Helper text
+   </span>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Input Group
+
+h3:
+  - Inline label
+
+p:
+  - To create an input group, useinputas a wrapper. To align thelabeloricons, apply themy-autoclass. This ensures consistent vertical alignment within the group.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="input max-w-sm">
+   <label class="label-text my-auto me-3 p-0" for="inlineLabelName">
+    Name
+   </label>
+   <input class="grow" id="inlineLabelName" placeholder="FlyonUI" type="text"/>
+  </div>
+  <div class="input max-w-sm">
+   <label class="label-text my-auto me-3 p-0" for="inlineLabelEmail">
+    Email
+   </label>
+   <input class="grow" id="inlineLabelEmail" placeholder="admin@site.com" type="email"/>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Leading icon
+
+p:
+  - Add a leading icon inside input.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="input max-w-sm">
+   <span class="icon-[tabler--user] text-base-content/80 my-auto me-3 size-5 shrink-0">
+   </span>
+   <label class="sr-only" for="leadingIconDefault">
+    Full Name
+   </label>
+   <input class="grow" id="leadingIconDefault" placeholder="John Doe" type="text"/>
+  </div>
+  <div class="input max-w-sm">
+   <span class="icon-[tabler--user] text-base-content/80 my-auto size-5 shrink-0">
+   </span>
+   <div class="input-floating grow">
+    <input class="ps-3" id="leadingIconFloating" placeholder="John Doe" type="text"/>
+    <label class="input-floating-label" for="leadingIconFloating">
+     Full name
+    </label>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Trailing icon
+
+p:
+  - Add a trailing icon inside input.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="input max-w-sm">
+   <input class="grow" id="trailingIconDefault" placeholder="xxxx-xxxx-xxxx-xxxx" type="text"/>
+   <label class="sr-only" for="trailingIconDefault">
+    Card Number
+   </label>
+   <span class="icon-[tabler--brand-mastercard] text-base-content/80 my-auto ms-3 size-5 shrink-0">
+   </span>
+  </div>
+  <div class="input max-w-sm">
+   <div class="input-floating grow">
+    <input class="grow" id="trailingIconFloating" placeholder="xxxx-xxxx-xxxx-xxxx" type="text"/>
+    <label class="input-floating-label ms-0" for="trailingIconFloating">
+     Full name
+    </label>
+   </div>
+   <span class="icon-[tabler--brand-mastercard] text-base-content/80 my-auto ms-3 size-5 shrink-0">
+   </span>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Leading and trailing icon
+
+p:
+  - Add a leading and trailing icon inside input.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="input max-w-sm space-x-3">
+   <span class="label-text my-auto">
+    $
+   </span>
+   <input class="grow" id="trailingAndLeadingInput" placeholder="00.00" type="number"/>
+   <label class="sr-only" for="trailingAndLeadingInput">
+    Enter amount
+   </label>
+   <span class="label-text my-auto">
+    USD
+   </span>
+  </div>
+ </div>
+</div>
+
+h3:
+  - With keyboard shortcut
+
+p:
+  - Utilizeskbdcomponent class with input.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="input input-lg flex max-w-sm space-x-4">
+   <span class="icon-[tabler--search] text-base-content/80 my-auto size-6 shrink-0">
+   </span>
+   <input class="grow" id="kbdInput" placeholder="Search" type="search"/>
+   <label class="sr-only" for="kbdInput">
+    Search
+   </label>
+   <span class="my-auto flex gap-2">
+    <kbd class="kbd kbd-sm">
+     â
+    </kbd>
+    <kbd class="kbd kbd-sm">
+     K
+    </kbd>
+   </span>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Checkbox and radios
+
+p:
+  - Place any checkbox or radio option within an input groupâs addon instead of text.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="input max-w-sm">
+   <input class="checkbox checkbox-primary my-auto me-3" type="checkbox"/>
+   <input class="grow" placeholder="John Doe" type="text"/>
+  </div>
+  <div class="input max-w-sm">
+   <input class="radio radio-primary my-auto me-3" name="radio-1" type="radio"/>
+   <input class="grow" placeholder="John Doe" type="text"/>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Inline select
+
+p:
+  - This example demonstrates an inline select component. The.inputclass serves as a wrapper, incorporatingpe-0for padding reset anditems-centerfor vertical alignment. Additionally,ms-3is used to manage spacing.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="input items-center pe-0 max-w-sm">
+   <input class="grow" placeholder="Search"/>
+   <select aria-label="select" class="select ms-3">
+    <option disabled="" selected="">
+     Filter
+    </option>
+    <option>
+     Sci-fi
+    </option>
+    <option>
+     Drama
+    </option>
+    <option>
+     Action
+    </option>
+   </select>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Shape
+
+h3:
+  - Pill input
+
+p:
+  - We can manage the input’s radius using theroundedutility class provided by Tailwind CSS.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="max-w-sm">
+   <label class="label-text" for="pillInput">
+    Full Name
+   </label>
+   <input class="input rounded-full" id="pillInput" placeholder="John Doe" type="text"/>
+  </div>
+  <div class="input-floating max-w-sm">
+   <input class="input rounded-full" id="pillFloatingInput" placeholder="John Doe" type="text"/>
+   <label class="input-floating-label" for="pillFloatingInput">
+    Full name
+   </label>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Illustrations
+
+h3:
+  - Helper text
+
+p:
+  - Implement varying input styles accompanied by helper text.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="space-y-3">
+   <div class="relative">
+    <label class="label-text" for="helperTextInput">
+     Full Name
+    </label>
+    <input class="input max-w-sm" id="helperTextInput" placeholder="John Doe" type="text"/>
+    <span class="helper-text">
+     Please write your full name
+    </span>
+   </div>
+   <div class="input-floating max-w-sm">
+    <input class="input" id="helperTextFloatingInput" placeholder="John Doe" type="text"/>
+    <label class="input-floating-label" for="helperTextFloatingInput">
+     Full Name
+    </label>
+    <span class="helper-text ps-3">
+     Please write your full name
+    </span>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - No focus
+
+p:
+  - Disable the default focus on theinputusingno-focusclass when necessary.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <input class="input no-focus border-0 max-w-sm" placeholder="Type here" type="text"/>
+ </div>
+</div>
+
+h3:
+  - Disabled
+
+p:
+  - Add thedisabledboolean attribute on an input to remove pointer events, and prevent focusing.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block space-y-4 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="w-96">
+   <label class="label-text" for="disabledInput">
+    What is your name?
+   </label>
+   <input class="input" disabled="" id="disabledInput" placeholder="John Doe" type="text"/>
+  </div>
+  <div class="input-floating max-w-sm">
+   <input class="input" disabled="" id="disabledFloatingInput" placeholder="John Doe" type="text"/>
+   <label class="input-floating-label" for="disabledFloatingInput">
+    Full Name
+   </label>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Readonly
+
+p:
+  - Add thereadonlyboolean attribute on an input to prevent modification of the inputâs value.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="w-96">
+   <label class="label-text" for="readonlyInput">
+    What is your name?
+   </label>
+   <input class="input" id="readonlyInput" placeholder="John Doe" readonly="" type="text"/>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Join
+
+h3:
+  - Input with button
+
+p:
+  - Combine a button with the input field using thejoinmethod.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="join max-w-sm">
+   <input class="input join-item" placeholder="Search"/>
+   <button class="btn btn-outline btn-secondary join-item">
+    Search
+   </button>
+  </div>
+  <div class="join max-w-sm">
+   <button class="btn btn-outline btn-secondary join-item">
+    Search
+   </button>
+   <input class="input join-item" placeholder="Search"/>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Input group with button
+
+p:
+  - Combine a button with the input input.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="join w-96">
+   <div class="input join-item flex">
+    <span class="icon-[tabler--user] text-base-content/80 my-auto me-3 size-5 shrink-0">
+    </span>
+    <label class="sr-only" for="groupInput">
+     Full Name
+    </label>
+    <input class="grow" id="groupInput" placeholder="John Doe" type="text"/>
+   </div>
+   <button class="btn btn-outline btn-secondary join-item h-auto">
+    Search
+   </button>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Input with select
+
+p:
+  - Combine a select with the input input.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="join w-96">
+   <input class="input join-item" placeholder="Search"/>
+   <select aria-label="select" class="select join-item w-36">
+    <option disabled="" selected="">
+     Filter
+    </option>
+    <option>
+     Sci-fi
+    </option>
+    <option>
+     Drama
+    </option>
+    <option>
+     Action
+    </option>
+   </select>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Input
+
+h3:
+  - On this page
+
+h2:
+  - Input
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

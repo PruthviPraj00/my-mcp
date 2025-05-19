@@ -1,0 +1,380 @@
+# Tailwind CSS Divider - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - content
+
+p:
+  - A divider is employed to separate content either vertically or horizontally.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| divider | Component | Base class for divider components. |
+| divider-dashed | Style | Renders the divider line with a dashed pattern. |
+| divider-dotted | Style | Renders the divider line with a dotted pattern. |
+| divider-neutral | Color | Renders the divider line with a ’neutral’ color. |
+| divider-primary | Color | Renders the divider line with a ‘primary’ color. |
+| divider-secondary | Color | Renders the divider line with a ‘secondary’ color. |
+| divider-accent | Color | Renders the divider line with an ‘accent’ color. |
+| divider-success | Color | Renders the divider line with a ‘success’ color. |
+| divider-warning | Color | Renders the divider line with a ‘warning’ color. |
+| divider-info | Color | Renders the divider line with an ‘info’ color. |
+| divider-error | Color | Renders the divider line with an ’error’ color. |
+| divider-end | Placement | Aligns the divider text to the end. |
+| divider-start | Placement | Aligns the divider text to the start. |
+| divider-vertical | Direction | Positions elements vertically (default). |
+| divider-horizontal | Direction | Positions elements horizontally. |
+
+h2:
+  - Variants
+
+h3:
+  - Vertical divider
+
+p:
+  - Utilize the component classdividerto create vertical content divisions. Apply the modifier classdivider-{semantic-color}to specify different colors for the dividers.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-8 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="divider">
+  </div>
+  <div class="divider divider-neutral">
+  </div>
+  <div class="divider divider-primary">
+  </div>
+  <div class="divider divider-secondary">
+  </div>
+  <div class="divider divider-accent">
+  </div>
+  <div class="divider divider-info">
+  </div>
+  <div class="divider divider-success">
+  </div>
+  <div class="divider divider-warning">
+  </div>
+  <div class="divider divider-error">
+  </div>
+ </div>
+</div>
+
+h3:
+  - Horizontal divider
+
+p:
+  - Use the responsive classdivider-horizontalwith the component classdividerto create horizontal content divisions.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex h-60 flex-wrap gap-8">
+   <div class="divider divider-horizontal">
+   </div>
+   <div class="divider divider-horizontal divider-neutral">
+   </div>
+   <div class="divider divider-horizontal divider-primary">
+   </div>
+   <div class="divider divider-horizontal divider-secondary">
+   </div>
+   <div class="divider divider-horizontal divider-accent">
+   </div>
+   <div class="divider divider-horizontal divider-info">
+   </div>
+   <div class="divider divider-horizontal divider-success">
+   </div>
+   <div class="divider divider-horizontal divider-warning">
+   </div>
+   <div class="divider divider-horizontal divider-error">
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - With content (horizontal)
+
+p:
+  - Add text or icon within the divider markup to show it within the horizontal divider line.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex h-60 flex-wrap gap-5">
+   <div class="divider divider-horizontal">
+    Text
+   </div>
+   <div class="divider divider-horizontal">
+    <span class="flex items-center justify-center">
+     <span class="icon-[tabler--sun] size-5">
+     </span>
+    </span>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - With content (vertical)
+
+p:
+  - Insert icons or text into the divider markup following the examples below to display them within the divider line.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-5 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="divider">
+   Text
+  </div>
+  <div class="divider">
+   <span class="flex items-center justify-center">
+    <span class="icon-[tabler--crown] size-5">
+    </span>
+   </span>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Styles
+
+h3:
+  - Default
+
+p:
+  - The following example represents the default style for the divider line.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-0 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="divider">
+   Default
+  </div>
+ </div>
+</div>
+
+h3:
+  - Dotted
+
+p:
+  - Apply the modifier classdivider-dottedto display the divider line in a dotted pattern.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-0 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="divider divider-dotted">
+   Dotted
+  </div>
+ </div>
+</div>
+
+h3:
+  - Dashed
+
+p:
+  - Apply the modifier classdivider-dashedto display the divider line in a dashed pattern.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-0 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="divider divider-dashed">
+   Dashed
+  </div>
+ </div>
+</div>
+
+h3:
+  - Custom thickness
+
+p:
+  - Utilize the TailwindCSSstateclassesafter:andbefore:along with the border classesborder-e-*for vertical dividers andborder-t-*for horizontal dividers to customize their thickness.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-5 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="divider after:border-t-2 before:border-t-2">
+   Default
+  </div>
+  <div class="divider divider-dotted after:border-t-4 before:border-t-4">
+   Dotted
+  </div>
+  <div class="divider divider-dashed after:border-t-8 before:border-t-8">
+   Dashed
+  </div>
+ </div>
+</div>
+
+h2:
+  - Content positions
+
+h3:
+  - Vertical divider content
+
+p:
+  - Use the responsive classesdivider-startanddivider-endto position content at the start and end positions, respectively. By default, the content is centered.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-5 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="divider divider-start">
+   Start
+  </div>
+  <div class="divider">
+   Center
+  </div>
+  <div class="divider divider-end">
+   End
+  </div>
+ </div>
+</div>
+
+h3:
+  - Horizontal divider content
+
+p:
+  - Use the responsive classesdivider-startanddivider-endto position content at the start and end positions in horizontal divider, respectively. By default, the content is centered.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex h-60 gap-5">
+   <div class="divider divider-start divider-horizontal">
+    Start
+   </div>
+   <div class="divider divider-horizontal">
+    Center
+   </div>
+   <div class="divider divider-end divider-horizontal">
+    End
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Illustrations
+
+h3:
+  - Responsive
+
+p:
+  - The responsive dividers adapt according to breakpoints.
+
+p:
+  - Use TailwindCSS classes forresponsive design, such assm:,md:,lg:,xl:, and2xl:, along with the responsive classdivider-horizontal, to switch the divider alignment to horizontal at specific breakpoints.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex w-full flex-col gap-5 lg:flex-row">
+   <div class="shadow-base-300/20 bg-base-200 grid h-32 grow place-items-center shadow-sm">
+   </div>
+   <div class="divider lg:divider-horizontal">
+    OR
+   </div>
+   <div class="shadow-base-300/20 bg-base-200 grid h-32 grow place-items-center shadow-sm">
+   </div>
+  </div>
+ </div>
+</div>
+
+p:
+  - Utilize responsive breakpoint classes alongside the responsive classdivider-verticalto adjust the divider alignment to vertical at specific breakpoints.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex w-full gap-5 lg:flex-col">
+   <div class="shadow-base-300/20 bg-base-200 grid h-32 grow place-items-center shadow-sm">
+   </div>
+   <div class="divider divider-horizontal lg:divider-vertical">
+    OR
+   </div>
+   <div class="shadow-base-300/20 bg-base-200 grid h-32 grow place-items-center shadow-sm">
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Buttons with divider
+
+p:
+  - Use the example below to implement buttons with a responsive horizontal divider.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex w-fit flex-col gap-5 lg:flex-row">
+   <div class="grid grow place-items-center">
+    <button class="btn btn-soft [--btn-color:#1877F2] [--btn-fg:#1877F2]">
+     <span class="icon-[tabler--brand-facebook]">
+     </span>
+     Sign in with Facebook
+    </button>
+   </div>
+   <div class="divider lg:divider-horizontal">
+   </div>
+   <div class="grid grow place-items-center">
+    <button class="btn btn-soft [--btn-color:#1da1f2] [--btn-fg:#1da1f2]">
+     <span class="icon-[tabler--brand-x]">
+     </span>
+     Sign in with Twitter
+    </button>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Buttons with vertical divider
+
+p:
+  - Use the example below to implement buttons with a vertical divider.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex w-fit flex-col gap-5">
+   <div class="grid grow place-items-center">
+    <button class="btn btn-soft [--btn-color:#1877F2] [--btn-fg:#1877F2]">
+     <span class="icon-[tabler--brand-facebook]">
+     </span>
+     Sign in with Facebook
+    </button>
+   </div>
+   <div class="divider divider-vertical">
+   </div>
+   <div class="grid grow place-items-center">
+    <button class="btn btn-soft w-full [--btn-color:#1da1f2] [--btn-fg:#1da1f2]">
+     <span class="icon-[tabler--brand-x]">
+     </span>
+     Sign in with Twitter
+    </button>
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Divider
+
+h3:
+  - On this page
+
+h2:
+  - Divider
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

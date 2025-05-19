@@ -1,0 +1,226 @@
+# Tailwind CSS Join (Group Items) - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - forms
+
+p:
+  - Join acts as a container for grouping items like buttons and inputs, applying border radius to the first and last items for horizontal or vertical lists.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| join | Component | Container for grouping multiple items |
+| join-item | Part | Item inside join. Can be a button, input, etc. |
+| join-vertical | Direction | Show items vertically |
+| join-horizontal | Direction | Show items vertically |
+
+h2:
+  - Basic example
+
+h3:
+  - Default
+
+p:
+  - Basic join elements example.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="join">
+   <button class="btn btn-soft btn-primary join-item">
+    Button
+   </button>
+   <button class="btn btn-soft btn-primary join-item">
+    Button
+   </button>
+   <button class="btn btn-soft btn-primary join-item">
+    Button
+   </button>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Icons
+
+p:
+  - Basic join elements example using icons.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="join">
+   <button aria-label="join" class="btn btn-soft btn-primary btn-square join-item">
+    <span class="icon-[tabler--star]">
+    </span>
+   </button>
+   <button aria-label="join" class="btn btn-soft btn-primary btn-square join-item">
+    <span class="icon-[tabler--star]">
+    </span>
+   </button>
+   <button aria-label="join" class="btn btn-soft btn-primary btn-square join-item">
+    <span class="icon-[tabler--star]">
+    </span>
+   </button>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Illustrations
+
+h3:
+  - Vertical
+
+p:
+  - Group items vertically.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="join join-vertical drop-shadow-sm">
+   <button class="btn btn-soft btn-primary join-item">
+    Button
+   </button>
+   <button class="btn btn-soft btn-primary join-item">
+    Button
+   </button>
+   <button class="btn btn-soft btn-primary join-item">
+    Button
+   </button>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Responsive
+
+p:
+  - it’s vertical on small screen and horizontal on large screen.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="join max-sm:join-vertical">
+   <button class="btn btn-soft btn-primary join-item">
+    Button
+   </button>
+   <button class="btn btn-soft btn-primary join-item">
+    Button
+   </button>
+   <button class="btn btn-soft btn-primary join-item">
+    Button
+   </button>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Multiple elements
+
+p:
+  - Basic join example illustrating the integration of multiple elements.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="join max-w-sm">
+   <input class="input join-item" placeholder="Search"/>
+   <select aria-label="select" class="select join-item">
+    <option disabled="" selected="">
+     Filter
+    </option>
+    <option>
+     Sci-fi
+    </option>
+    <option>
+     Drama
+    </option>
+    <option>
+     Action
+    </option>
+   </select>
+   <button class="btn btn-soft btn-primary join-item">
+    Search
+   </button>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Pill shape
+
+p:
+  - The default shape of the join can be altered by using TailwindCSSBorder Radiusutility classes.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="join">
+   <input class="input join-item rounded-s-full" placeholder="Email"/>
+   <button class="btn btn-soft btn-primary join-item rounded-e-full">
+    Subscribe
+   </button>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Dropdown with input
+
+p:
+  - You can also joininputanddropdown.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="join">
+   <input class="input join-item shrink" placeholder="Email"/>
+   <div class="dropdown relative inline-flex max-sm:[--placement:bottom-end]">
+    <button aria-expanded="false" aria-haspopup="menu" aria-label="Dropdown" class="dropdown-toggle btn btn-soft btn-primary join-item" id="dropdown-input" type="button">
+     <span class="hidden sm:block">
+      Dropdown
+     </span>
+     <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4">
+     </span>
+    </button>
+    <ul aria-labelledby="dropdown-input" aria-orientation="vertical" class="dropdown-menu dropdown-open:opacity-100 hidden" role="menu">
+     <li>
+      <a class="dropdown-item" href="#">
+       Subscribe
+      </a>
+     </li>
+     <li>
+      <a class="dropdown-item" href="#">
+       Verify
+      </a>
+     </li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Join (Group Items)
+
+h3:
+  - On this page
+
+h2:
+  - Join (Group Items)
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

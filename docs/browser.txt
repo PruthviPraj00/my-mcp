@@ -1,0 +1,106 @@
+# Tailwind CSS Browser - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - mockups
+
+p:
+  - The browser mockup features a design that resembles a browser window, complete with typical interface elements and layout.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| mockup-browser | Component | Container element. |
+| mockup-browser-toolbar | Part | The toolbar that can include address bar or other things. |
+
+h2:
+  - Basic examples
+
+h3:
+  - Bordered
+
+p:
+  - Themockup-browserclass serves as a container for the browser mockup, whilemockup-browser-toolbaracts as a container for the header links within the mockup.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="mockup-browser border border-neutral/30">
+   <div class="mockup-browser-toolbar">
+    <div class="input border border-neutral/30">
+     https://flyonui.com
+    </div>
+   </div>
+   <div class="flex justify-center px-4 py-16 border-t border-neutral/30">
+    Hello!
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Background color
+
+p:
+  - Browser mockup featuring a customizable background color. Update it to your preference using thebg-*Tailwind utility class.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="mockup-browser bg-base-300/40">
+   <div class="mockup-browser-toolbar">
+    <div class="input bg-base-200">
+     https://flyonui.com
+    </div>
+   </div>
+   <div class="flex justify-center px-4 py-16 bg-base-200">
+    Hello!
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Image
+
+p:
+  - Browser mockup featuring a image.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="mockup-browser bg-base-300/40">
+   <div class="mockup-browser-toolbar">
+    <div class="input bg-base-200">
+     https://flyonui.com
+    </div>
+   </div>
+   <div class="flex h-80 justify-center">
+    <img alt="browser background" class="w-full object-cover" src="https://cdn.flyonui.com/fy-assets/components/carousel/image-14.png"/>
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Browser
+
+h3:
+  - On this page
+
+h2:
+  - Browser
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

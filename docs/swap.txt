@@ -1,0 +1,219 @@
+# Tailwind CSS Swap - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - components
+
+p:
+  - Swap enables you to toggle the visibility of two elements using either a checkbox or a class name.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| swap | Component | Base class for swap component. |
+| swap-js | Component | It targets the swap component working with JS instead of checkbox. |
+| swap-on | Part | It targets a child element that should be visible when the checkbox is checked or when the swap component is active. |
+| swap-off | Part | It targets a child element that should not be visible when the checkbox is not checked or when the swap component is inactive. |
+| swap-indeterminate | Part | It targets a child element that should be visible when checkbox is indeterminate. |
+| swap-flip | Style | Adds flip effect to swap content. |
+| swap-rotate | Style | Adds rotate effect to swap content. |
+| swap-active | State | Activates the swap (no need for checkbox). |
+
+h2:
+  - Variants
+
+h3:
+  - Swap text
+
+p:
+  - Utilize theswapcomponent class along with an empty checkbox input and child component classesswap-offandswap-onto create a swap component.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <label class="swap">
+   <input type="checkbox"/>
+   <span class="swap-off">
+    OFF
+   </span>
+   <span class="swap-on">
+    ON
+   </span>
+  </label>
+ </div>
+</div>
+
+h3:
+  - Swap volume icons
+
+p:
+  - Use below given example for volume/mute swap component.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <label class="swap">
+   <input type="checkbox"/>
+   <span class="swap-on icon-[tabler--volume] size-6">
+   </span>
+   <span class="swap-off icon-[tabler--volume-off] size-6">
+   </span>
+  </label>
+ </div>
+</div>
+
+h3:
+  - Swap icons with rotate effect
+
+p:
+  - Apply the modifier classswap-rotateto enable a rotate effect for the swap component.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <label class="swap swap-rotate">
+   <input type="checkbox"/>
+   <span class="swap-on icon-[tabler--sun] size-6">
+   </span>
+   <span class="swap-off icon-[tabler--moon] size-6">
+   </span>
+  </label>
+ </div>
+</div>
+
+h3:
+  - Hamburger button
+
+p:
+  - Use below given example for hamburger button.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <label class="btn btn-circle swap swap-rotate">
+   <input type="checkbox"/>
+   <span class="icon-[tabler--menu-2] swap-off">
+   </span>
+   <span class="icon-[tabler--x] swap-on">
+   </span>
+  </label>
+ </div>
+</div>
+
+h3:
+  - Emotes with flip effect
+
+p:
+  - Apply the modifier classswap-flipto enable a flip effect for the swap component.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <label class="swap swap-flip text-6xl">
+   <input type="checkbox"/>
+   <span class="swap-on">
+    ð
+   </span>
+   <span class="swap-off">
+    ð
+   </span>
+  </label>
+ </div>
+</div>
+
+h2:
+  - With JavaScript
+
+h3:
+  - Using class names
+
+p:
+  - Utilize the component classswap-jsto designate a specific swap component for JavaScript functionality, allowing the swap to function without a checkbox. Toggling the modifier classswap-activeon a click event of the swap component facilitates this behavior.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <label class="swap swap-js text-6xl">
+   <span class="swap-on">
+    ð¥µ
+   </span>
+   <span class="swap-off">
+    ð¥¶
+   </span>
+  </label>
+  <label class="swap swap-js text-6xl">
+   <span class="swap-on">
+    ð¥³
+   </span>
+   <span class="swap-off">
+    ð­
+   </span>
+  </label>
+ </div>
+</div>
+
+h2:
+  - Illustrations
+
+h3:
+  - RTL swap
+
+p:
+  - Use below given example for RTL swap.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <label class="swap">
+   <input type="checkbox"/>
+   <span class="swap-off font-medium">
+    LTR
+   </span>
+   <span class="swap-on font-medium">
+    RTL
+   </span>
+  </label>
+ </div>
+</div>
+
+h3:
+  - Play pause button
+
+p:
+  - Use below given example for play-pause button.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <label class="btn btn-circle swap swap-rotate">
+   <input type="checkbox"/>
+   <span class="icon-[tabler--player-play] swap-off">
+   </span>
+   <span class="icon-[tabler--player-pause] swap-on">
+   </span>
+  </label>
+ </div>
+</div>
+
+h2:
+  - Swap
+
+h3:
+  - On this page
+
+h2:
+  - Swap
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

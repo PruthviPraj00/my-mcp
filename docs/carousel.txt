@@ -1,0 +1,1278 @@
+# Tailwind CSS Carousel - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - components
+
+p:
+  - Utilize the carousel component to navigate through various elements and images with customized controls, indicators, intervals, and settings.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| carousel | Component | A wrapper for a collection of slides. It must contain theoverflow-hiddenclass, it is needed for the slider to work correctly. |
+| carousel-body | Part | Slides container. |
+| carousel-slide | Part | Single slide. |
+| carousel-prev | Part | Previous slide button. |
+| carousel-next | Part | Next slide button. |
+| carousel-pagination | Part | Base class for pagination container. |
+| carousel-dot | Style | Base class for rounded pagination indicators. |
+| carousel-box | Style | Base class for box shape pagination indicators. |
+| active | State | When it is applied, the slide becomes visible. |
+| carousel-active:{tw-utility-class} | Variant | It sets Tailwind classes when the active slide is shown. |
+| carousel-disabled:{tw-utility-class} | Variant | A modifier that allows you to set Tailwind classes for arrow buttons when the they aredisabled. |
+| carousel-dragging:{tw-utility-class} | Variant | A modifier that allows you to set Tailwind classes forcarousel-bodywhen dragging. |
+
+h2:
+  - Basic example
+
+h3:
+  - Default
+
+p:
+  - Below example shows the default carousel with three slides.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="relative w-full" data-carousel='{
+    "loadingClasses": "opacity-0",
+    "dotsItemClasses": "carousel-box carousel-active:bg-primary"
+  }'>
+   <div class="carousel h-80">
+    <div class="carousel-body h-full opacity-0">
+     <div class="carousel-slide">
+      <div class="bg-base-200/60 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        First slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide active">
+      <div class="bg-base-200/80 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Second slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Third slide
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <button class="carousel-prev" type="button">
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+    <span class="sr-only">
+     Previous
+    </span>
+   </button>
+   <button class="carousel-next" type="button">
+    <span class="sr-only">
+     Next
+    </span>
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+   </button>
+   <div class="carousel-pagination absolute bottom-3 end-0 start-0 flex justify-center gap-3">
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Indicators
+
+p:
+  - The example below demonstrates a carousel with indicators. UsedotsItemClasses:to style your custom indicators, and applycarousel-activeto style the active indicator.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="relative w-full" data-carousel='{ "loadingClasses": "opacity-0", "dotsItemClasses": "carousel-dot carousel-active:bg-primary" }' id="indicators">
+   <div class="carousel h-80">
+    <div class="carousel-body h-full opacity-0">
+     <div class="carousel-slide">
+      <div class="bg-base-200/60 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        First slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200/80 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Second slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Third slide
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="carousel-pagination absolute bottom-3 end-0 start-0 flex justify-center gap-3">
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Illustrations
+
+h3:
+  - Progress
+
+p:
+  - Below example shows carousel with progress.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="relative w-full" data-carousel='{ "loadingClasses": "opacity-0" }' id="carousel-progress">
+   <div class="carousel h-80 rounded-none">
+    <div class="carousel-body h-full opacity-0">
+     <div class="carousel-slide">
+      <div class="bg-base-200/40 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        First slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200/60 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Second slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200/60 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Third slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200/80 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Fourth slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Fifth slide
+       </span>
+      </div>
+     </div>
+    </div>
+    <div class="carousel-pagination absolute end-0 start-0 top-0 justify-start space-x-0">
+     <span class="carousel-pagination-item carousel-active:block carousel-active:bg-primary hidden h-1 w-1/5">
+     </span>
+     <span class="carousel-pagination-item carousel-active:block carousel-active:bg-primary hidden h-1 w-2/5">
+     </span>
+     <span class="carousel-pagination-item carousel-active:block carousel-active:bg-primary hidden h-1 w-3/5">
+     </span>
+     <span class="carousel-pagination-item carousel-active:block carousel-active:bg-primary hidden h-1 w-4/5">
+     </span>
+     <span class="carousel-pagination-item carousel-active:block carousel-active:bg-primary hidden h-1 w-full">
+     </span>
+    </div>
+   </div>
+   <button class="carousel-prev" type="button">
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+    <span class="sr-only">
+     Previous
+    </span>
+   </button>
+   <button class="carousel-next" type="button">
+    <span class="sr-only">
+     Next
+    </span>
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+   </button>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Image carousel
+
+p:
+  - Below example shows the carousel with images.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="relative w-full" data-carousel='{ "loadingClasses": "opacity-0" }' id="image">
+   <div class="carousel">
+    <div class="carousel-body h-full opacity-0">
+     <div class="carousel-slide">
+      <div class="flex h-full justify-center">
+       <img alt="game" class="size-full object-cover" src="https://cdn.flyonui.com/fy-assets/components/carousel/image-22.png"/>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="flex h-full justify-center">
+       <img alt="vrbox" class="size-full object-cover" src="https://cdn.flyonui.com/fy-assets/components/carousel/image-15.png"/>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="flex h-full justify-center">
+       <img alt="laptop" class="size-full object-cover" src="https://cdn.flyonui.com/fy-assets/components/carousel/image-16.png"/>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="flex h-full justify-center">
+       <img alt="VRBox" class="size-full object-cover" src="https://cdn.flyonui.com/fy-assets/components/carousel/image-8.png"/>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="flex h-full justify-center">
+       <img alt="iwatch" class="size-full object-cover" src="https://cdn.flyonui.com/fy-assets/components/carousel/image-23.png"/>
+      </div>
+     </div>
+    </div>
+   </div>
+   <button class="carousel-prev" type="button">
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+    <span class="sr-only">
+     Previous
+    </span>
+   </button>
+   <button class="carousel-next" type="button">
+    <span class="sr-only">
+     Next
+    </span>
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+   </button>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Thumbs gallery (Horizontal)
+
+p:
+  - Below example shows the carousel with horizontal thumbnails.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose max-sm:p-3 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="relative w-full" data-carousel='{ "loadingClasses": "opacity-0" }' id="horizontal-thumbnails">
+   <div class="carousel">
+    <div class="carousel-body h-3/4 opacity-0">
+     <div class="carousel-slide">
+      <div class="flex size-full justify-center">
+       <img alt="mountain" class="size-full object-cover" src="https://cdn.flyonui.com/fy-assets/components/carousel/image-21.png"/>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="flex size-full justify-center">
+       <img alt="sand" class="size-full object-cover" src="https://cdn.flyonui.com/fy-assets/components/carousel/image-14.png"/>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="flex size-full justify-center">
+       <img alt="cloud" class="size-full object-cover" src="https://cdn.flyonui.com/fy-assets/components/carousel/image-7.png"/>
+      </div>
+     </div>
+    </div>
+    <div class="carousel-pagination bg-base-100 absolute bottom-0 end-0 start-0 z-1 h-1/4 gap-2 flex justify-center gap-2 overflow-x-auto pt-2">
+     <img alt="mountain" class="carousel-pagination-item carousel-active:opacity-100 grow object-cover opacity-30" src="https://cdn.flyonui.com/fy-assets/components/carousel/image-21.png"/>
+     <img alt="sand" class="carousel-pagination-item carousel-active:opacity-100 grow object-cover opacity-30" src="https://cdn.flyonui.com/fy-assets/components/carousel/image-14.png"/>
+     <img alt="cloud" class="carousel-pagination-item carousel-active:opacity-100 grow object-cover opacity-30" src="https://cdn.flyonui.com/fy-assets/components/carousel/image-7.png"/>
+    </div>
+    <button class="carousel-prev" type="button">
+     <span aria-hidden="true" class="mb-15">
+      <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+       <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180">
+       </span>
+      </span>
+     </span>
+     <span class="sr-only">
+      Previous
+     </span>
+    </button>
+    <button class="carousel-next" type="button">
+     <span class="sr-only">
+      Next
+     </span>
+     <span aria-hidden="true" class="mb-15">
+      <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+       <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180">
+       </span>
+      </span>
+     </span>
+    </button>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Thumbs gallery (Vertical)
+
+p:
+  - Below example shows the carousel with vertical thumbnails.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose max-sm:p-3 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="relative w-full" data-carousel='{ "loadingClasses": "opacity-0" }' id="vertical-thumbnails">
+   <div class="carousel flex space-x-2 rounded-none">
+    <div class="flex-none">
+     <div class="carousel-pagination h-full max-sm:w-8 w-[200px] flex justify-between flex-col gap-y-2 overflow-hidden">
+      <img alt="mountain" class="carousel-pagination-item carousel-active:opacity-100 grow object-cover opacity-30 rounded-lg" src="https://cdn.flyonui.com/fy-assets/components/carousel/image-21.png"/>
+      <img alt="sand" class="carousel-pagination-item carousel-active:opacity-100 grow object-cover opacity-30 rounded-lg" src="https://cdn.flyonui.com/fy-assets/components/carousel/image-14.png"/>
+      <img alt="cloud" class="carousel-pagination-item carousel-active:opacity-100 grow object-cover opacity-30 rounded-lg" src="https://cdn.flyonui.com/fy-assets/components/carousel/image-7.png"/>
+     </div>
+    </div>
+    <div class="relative grow overflow-hidden rounded-2xl">
+     <div class="carousel-body h-80 opacity-0">
+      <div class="carousel-slide">
+       <div class="flex size-full justify-center">
+        <img alt="mountain" class="size-full object-cover" src="https://cdn.flyonui.com/fy-assets/components/carousel/image-21.png"/>
+       </div>
+      </div>
+      <div class="carousel-slide">
+       <div class="flex size-full justify-center">
+        <img alt="sand" class="size-full object-cover" src="https://cdn.flyonui.com/fy-assets/components/carousel/image-14.png"/>
+       </div>
+      </div>
+      <div class="carousel-slide">
+       <div class="flex size-full justify-center">
+        <img alt="cloud" class="size-full object-cover" src="https://cdn.flyonui.com/fy-assets/components/carousel/image-7.png"/>
+       </div>
+      </div>
+     </div>
+     <button class="carousel-prev" type="button">
+      <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+       <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180">
+       </span>
+      </span>
+      <span class="sr-only">
+       Previous
+      </span>
+     </button>
+     <button class="carousel-next" type="button">
+      <span class="sr-only">
+       Next
+      </span>
+      <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+       <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180">
+       </span>
+      </span>
+     </button>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Multi-Slide Carousel
+
+p:
+  - A carousel component displays multiple slides arranged side-by-side.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="relative w-full" data-carousel='{ "loadingClasses": "opacity-0", "slidesQty": { "xs": 1, "lg": 3 } }' id="multi-slide">
+   <div class="carousel h-80">
+    <div class="carousel-body h-full opacity-0">
+     <div class="carousel-slide">
+      <div class="bg-base-200/50 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        First slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Second slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Third slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200/50 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Fourth slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Fifth slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Sixth slide
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <button class="carousel-prev" type="button">
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+    <span class="sr-only">
+     Previous
+    </span>
+   </button>
+   <button class="carousel-next" type="button">
+    <span class="sr-only">
+     Next
+    </span>
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+   </button>
+  </div>
+ </div>
+</div>
+
+p:
+  - CenteredSetisCentered:trueto align the slides to the center of the carousel.
+
+h3:
+  - Centered
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="relative w-full" data-carousel='{ "loadingClasses": "opacity-0", "isCentered": true, "slidesQty": { "xs": 1, "lg": 2 } }' id="centered">
+   <div class="carousel h-80">
+    <div class="carousel-body h-full opacity-0">
+     <div class="carousel-slide px-1">
+      <div class="bg-base-200/50 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        First slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide px-1">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Second slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide px-1">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Third slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide px-1">
+      <div class="bg-base-200/50 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Fourth slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide px-1">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Fifth slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide px-1">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Sixth slide
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <button class="carousel-prev" type="button">
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+    <span class="sr-only">
+     Previous
+    </span>
+   </button>
+   <button class="carousel-next" type="button">
+    <span class="sr-only">
+     Next
+    </span>
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+   </button>
+  </div>
+ </div>
+</div>
+
+p:
+  - Draggable SlidesSetisDraggable:trueto enable the drag feature for slides. This doesn’t work ifisSnapis enabled.
+
+h3:
+  - Draggable Slides
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="relative w-full" data-carousel='{ "loadingClasses": "opacity-0","dotsItemClasses": "carousel-dot carousel-active:bg-primary", "slidesQty": { "xs": 1, "lg": 3 }, "isDraggable": true }' id="draggable">
+   <div class="carousel h-80">
+    <div class="carousel-body h-full carousel-dragging:transition-none carousel-dragging:cursor-grabbing cursor-grab opacity-0">
+     <div class="carousel-slide">
+      <div class="bg-base-200/50 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        First slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Second slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Third slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200/50 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Fourth slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Fifth slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Sixth slide
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="carousel-pagination absolute bottom-3 end-0 start-0 flex justify-center gap-3">
+   </div>
+  </div>
+ </div>
+</div>
+
+p:
+  - Snap Point ScrollingUse"isSnap": trueto allow slides to scroll and center relative to the carouselâs center. You need to addsnap-xandsnap-mandatoryclasses tocarouselandsnap-centerclasses to eachcarousel-slide.
+
+h3:
+  - Snap Point Scrolling
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="relative w-full" data-carousel='{ "loadingClasses": "opacity-0", "slidesQty": { "xs": 1, "lg": 3 }, "isCentered": true, "isSnap": true }' id="snap">
+   <div class="carousel h-80 flex overflow-y-auto snap-x snap-mandatory overflow-x-auto">
+    <div class="carousel-body h-full gap-2 opacity-0">
+     <div class="carousel-slide snap-center">
+      <div class="bg-base-200/50 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        First slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide snap-center">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Second slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide snap-center">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Third slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide snap-center">
+      <div class="bg-base-200/50 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Fourth slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide snap-center">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Fifth slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide snap-center">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Sixth slide
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <button class="carousel-prev" type="button">
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+    <span class="sr-only">
+     Previous
+    </span>
+   </button>
+   <button class="carousel-next" type="button">
+    <span class="sr-only">
+     Next
+    </span>
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+   </button>
+  </div>
+ </div>
+</div>
+
+p:
+  - Auto HeightSetisAutoHeight:trueto automatically adjust the carousel height with each slide change.
+
+h3:
+  - Auto Height
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="relative w-full" data-carousel='{ "isAutoHeight": true, "loadingClasses": "opacity-0" }' id="auto-height">
+   <div class="carousel">
+    <div class="carousel-body h-full relative opacity-0">
+     <div class="carousel-slide h-80 lg:h-96">
+      <div class="bg-base-200/50 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl transition duration-700">
+        First slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide h-80">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl transition duration-700">
+        Second slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide h-80 lg:h-64">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl transition duration-700">
+        Third slide
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <button class="carousel-prev" type="button">
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+    <span class="sr-only">
+     Previous
+    </span>
+   </button>
+   <button class="carousel-next" type="button">
+    <span class="sr-only">
+     Next
+    </span>
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+   </button>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Info
+
+p:
+  - Includecarousel-infowithindata-carouseland placecarousel-info-currentandcarousel-info-totalinsidecarousel-infoto show the current slide number and the total number of slides.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="relative w-full" data-carousel='{ "loadingClasses": "opacity-0", "isInfiniteLoop": true, "slidesQty": 1 }' id="info">
+   <div class="carousel h-80">
+    <div class="carousel-body h-full opacity-0">
+     <div class="carousel-slide">
+      <div class="bg-base-200/50 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        First slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Second slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Third slide
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <button class="carousel-prev" type="button">
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+    <span class="sr-only">
+     Previous
+    </span>
+   </button>
+   <button class="carousel-next" type="button">
+    <span class="sr-only">
+     Next
+    </span>
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+   </button>
+   <div class="carousel-info absolute bottom-3 start-[50%] inline-flex -translate-x-[50%] justify-center rounded-lg bg-base-100 px-4">
+    <span class="carousel-info-current me-1">
+     0
+    </span>
+    /
+    <span class="carousel-info-total ms-1">
+     0
+    </span>
+   </div>
+  </div>
+ </div>
+</div>
+
+p:
+  - Destroy/ReinitializeThedestroymethodis provided to facilitate the destruction of a carousel.
+
+h3:
+  - Destroy/Reinitialize
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="relative w-full" data-carousel='{ "loadingClasses": "opacity-0", "dotsItemClasses": "carousel-dot carousel-active:bg-primary", "slidesQty": { "xs": 1, "lg": 3 }, "isCentered": true, "isSnap": true }' id="carousel-to-destroy">
+   <div class="carousel overflow-y-auto flex h-80 snap-x snap-mandatory overflow-x-auto">
+    <div class="carousel-body h-full gap-2 opacity-0">
+     <div class="carousel-slide snap-center">
+      <div class="bg-base-200/50 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        First slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide snap-center">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Second slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide snap-center">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Third slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide snap-center">
+      <div class="bg-base-200/50 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Fourth slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide snap-center">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Fifth slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide snap-center">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-lg">
+        Sixth slide
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <button class="carousel-prev" type="button">
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+    <span class="sr-only">
+     Previous
+    </span>
+   </button>
+   <button class="carousel-next" type="button">
+    <span class="sr-only">
+     Next
+    </span>
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+   </button>
+   <div class="carousel-pagination absolute bottom-8 end-0 start-0 flex justify-center gap-3">
+   </div>
+  </div>
+  <div class="mt-4 flex gap-3">
+   <button class="btn btn-primary" id="destroy-btn">
+    Destroy
+   </button>
+   <button class="btn btn-primary" disabled="" id="reinit-btn">
+    Reinitialize
+   </button>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Options usage
+
+h3:
+  - Current index
+
+p:
+  - Assign the value of thedata-carouselattribute as an object. Within this object, set thecurrentIndexoption toindex-numberfor default active slide based on its index. By default, its value is0.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="relative w-full" data-carousel='{ "loadingClasses": "opacity-0", "currentIndex": 1 }' id="current-index">
+   <div class="carousel h-80">
+    <div class="carousel-body h-full opacity-0">
+     <div class="carousel-slide">
+      <div class="bg-base-200/60 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        First slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200/80 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Second slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Third slide
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <button class="carousel-prev" type="button">
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+    <span class="sr-only">
+     Previous
+    </span>
+   </button>
+   <button class="carousel-next" type="button">
+    <span class="sr-only">
+     Next
+    </span>
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+   </button>
+  </div>
+ </div>
+</div>
+
+h3:
+  - IsAutoPlay & speed
+
+p:
+  - Set thedata-carouselattribute’s value as an object. Inside this object, configure theisAutoPlayoption totrueto enable auto-play in the carousel. By default, its value isfalse.
+
+p:
+  - In addition toisAutoPlay, set thespeedoption tonumberwithin the configuration to determine the auto-play speed. The default value for this option is4000.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="relative w-full" data-carousel='{ "loadingClasses": "opacity-0", "isAutoPlay": true, "speed": 1000 }' id="auto-play">
+   <div class="carousel h-80">
+    <div class="carousel-body opacity-0 h-full">
+     <div class="carousel-slide">
+      <div class="bg-base-200/60 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        First slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200/80 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Second slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Third slide
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <button class="carousel-prev" type="button">
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+    <span class="sr-only">
+     Previous
+    </span>
+   </button>
+   <button class="carousel-next" type="button">
+    <span class="sr-only">
+     Next
+    </span>
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+   </button>
+  </div>
+ </div>
+</div>
+
+h3:
+  - IsInfiniteLoop
+
+p:
+  - Within thedata-carouselattribute’s value, create an object. Inside this object, set theisInfiniteLoopoption totrueto deactivate the infinite looping of slides in the carousel. The default value for this option isfalse.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="relative w-full" data-carousel='{ "loadingClasses": "opacity-0", "isInfiniteLoop": true }' id="infinite-loop">
+   <div class="carousel h-80">
+    <div class="carousel-body h-full opacity-0">
+     <div class="carousel-slide">
+      <div class="bg-base-200/60 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        First slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200/80 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Second slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Third slide
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <button class="carousel-prev" type="button">
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+    <span class="sr-only">
+     Previous
+    </span>
+   </button>
+   <button class="carousel-next" type="button">
+    <span class="sr-only">
+     Next
+    </span>
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+   </button>
+  </div>
+ </div>
+</div>
+
+h3:
+  - isRTL
+
+p:
+  - The following example demonstrates how to enable RTL mode in a carousel by setting"isRTL": true.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="relative w-full" data-carousel='{
+    "loadingClasses": "opacity-0",
+    "dotsItemClasses": "carousel-box carousel-active:bg-primary",
+    "isRTL": true
+  }' dir="rtl">
+   <div class="carousel h-80">
+    <div class="carousel-body h-full opacity-0">
+     <div class="carousel-slide">
+      <div class="bg-base-200/60 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        First slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200/80 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Second slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Third slide
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <button class="carousel-prev rtl:end-0" type="button">
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+    <span class="sr-only">
+     Previous
+    </span>
+   </button>
+   <button class="carousel-next rtl:start:0" type="button">
+    <span class="sr-only">
+     Next
+    </span>
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+   </button>
+   <div class="carousel-pagination absolute bottom-3 end-0 start-0 flex justify-center gap-3">
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - JavaScript behavior
+
+h3:
+  - Options
+
+table:
+| PARAMETERS | DESCRIPTION | OPTIONS | DEFAULT VALUE |
+| --- | --- | --- | --- |
+| data-carousel | Activates a carousel by specifying on an element. | â | â |
+| :currentIndex | Specifies the index of the current slide initially (from 0 to slides quantity). | number | 0 |
+| :loadingClasses | Specifies which classes should be removed after the carousel is loaded. CSS classes should be separated with space. | string | opacity-0 |
+| :dotsItemClasses | Defines the classes to be added to the automatically generated point elements. Separate each CSS class with a space. | string | â |
+| :isAutoHeight | Sets the height of the carousel to the height of the current slide. | boolean | false |
+| :isAutoPlay | Enables autoplay. | boolean | false |
+| :speed | Autoplay animation speed. Available ifisAutoplay: true. | number | 4000 |
+| :updateDelay | Allows you to delay the update function while resizing a window, making it well-suited for image sliders to achieve more accurate image size calculations. | number | 0 |
+| :isInfiniteLoop | Enables infinite loop. | boolean | false |
+| :isCentered | Enables centered mode, which adds space on the sides to keep slides centered. | boolean | false |
+| :isSnap | Activates a mode that lets you scroll the slider’s content along the x-axis, keeping the active slide centered within the slider. | boolean | false |
+| :isDraggable | Allows slide navigation via dragging by adding thecarousel-dragging:transition-noneclass to thecarousel-body. This feature is not compatible with theisSnap: truesetting. | boolean | false |
+| :isRTL | Turns on RTL mode. | boolean | false |
+| :hasSnapSpacers | Adds extra elements to achieve a steady, centered alignment effect. | boolean | true |
+| :slidesQty | Enables setting the number of slides to display based on screen resolution when the parameter is provided as an object. If a number is provided instead, that number of slides will display across all screen resolutions. | object {‘xs’ ‘sm’ ‘md’ ’lg’ ‘xl’ ‘2xl’, number: number}, number | 1 |
+
+h3:
+  - Methods
+
+p:
+  - TheHSCarouselobject is contained within the globalwindowobject.
+
+table:
+| METHOD | DESCRIPTION |
+| --- | --- |
+| PUBLIC METHODS |
+| goToPrev() | Go to the previous slide. |
+| goToNext() | Go to the next slide. |
+| goTo(index) | Go to the slide by index. Starts from 0. |
+| recalculateWidth() | Recalculate the width of the carousel. |
+| destroy() | Destroys the instance, removes generated markup (if any), removes added classes and attributes. |
+| STATIC METHODS |
+| HSCarousel.getInstance(target) | Returns the element associated to thetarget.targetshould be a Node or string (valid selector) |
+
+p:
+  - Below, we demonstrate how to use the methods. Apply the ID to thecarouselcontainer. To test the other method, copy the provided code into your console and click the button.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="relative w-full" data-carousel='{ "loadingClasses": "opacity-0" }' id="carouselTarget">
+   <div class="carousel h-80">
+    <div class="carousel-body h-full opacity-0">
+     <div class="carousel-slide">
+      <div class="bg-base-200/60 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        First slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200/80 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Second slide
+       </span>
+      </div>
+     </div>
+     <div class="carousel-slide">
+      <div class="bg-base-200 flex h-full justify-center p-6">
+       <span class="self-center text-2xl sm:text-4xl">
+        Third slide
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <button class="carousel-prev" type="button">
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+    <span class="sr-only">
+     Previous
+    </span>
+   </button>
+   <button class="carousel-next" type="button">
+    <span class="sr-only">
+     Next
+    </span>
+    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
+     <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180">
+     </span>
+    </span>
+   </button>
+  </div>
+  <div>
+   <button class="btn btn-primary" id="go-to-2-slide">
+    Go to slide 2
+   </button>
+  </div>
+ </div>
+</div>
+
+p:
+  - Go to certain slide by button click example (public method).
+
+p:
+  - Go to certain slide by button click example (mixed method).
+
+p:
+  - Destroy instance.
+
+h2:
+  - Carousel
+
+h3:
+  - On this page
+
+h2:
+  - Carousel
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

@@ -1,0 +1,743 @@
+# Tailwind CSS Toggle Count - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - advanced forms
+
+p:
+  - The Toggle Count Component simplifies switching between different values, aiding comparison and decision-making on pricing pages.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| switch | Component | Component class for switch. |
+
+h2:
+  - Basic example
+
+h3:
+  - With radio
+
+p:
+  - Basic example of toggle count with radio input.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="mb-3 flex justify-center">
+   <div class="border-base-content/20 flex gap-0.5 rounded-field border p-0.5" id="toggle-count">
+    <label class="btn btn-sm btn-text has-checked:btn-active" for="toggle-count-monthly">
+     <span>
+      Monthly
+     </span>
+     <input checked="" class="hidden" id="toggle-count-monthly" name="toggle-count" type="radio"/>
+    </label>
+    <label class="btn btn-sm btn-text has-checked:btn-active" for="toggle-count-annual">
+     <span>
+      Annually
+     </span>
+     <input class="hidden" id="toggle-count-annual" name="toggle-count" type="radio"/>
+    </label>
+   </div>
+  </div>
+  <div class="border-base-content/20 grid grid-cols-1 rounded-xl border sm:grid-cols-2 md:grid-cols-4">
+   <div class="flex flex-col items-center gap-2 p-4">
+    <p class="mb-1 font-medium">
+     Free
+    </p>
+    <div class="text-base-content flex gap-x-1 font-semibold">
+     <span class="text-xl">
+      $
+     </span>
+     <p class="text-3xl sm:text-5xl" data-toggle-count='{
+          "target": "#toggle-count",
+          "min": 0,
+          "max": 0
+        }'>
+      0
+     </p>
+    </div>
+    <p class="text-sm text-center">
+     All the basics for the business that are just getting started!
+    </p>
+   </div>
+   <div class="flex flex-col items-center gap-2 p-4">
+    <p class="mb-1 font-medium">
+     Essential
+    </p>
+    <div class="text-base-content flex gap-x-1 font-semibold">
+     <span class="text-xl">
+      $
+     </span>
+     <p class="text-3xl sm:text-5xl" data-toggle-count='{
+          "target": "#toggle-count",
+          "min": 15,
+          "max": 159
+        }'>
+      15
+     </p>
+    </div>
+    <p class="text-sm text-center">
+     All the essentials for the business that need some added support!
+    </p>
+   </div>
+   <div class="flex flex-col items-center gap-2 p-4">
+    <div class="flex justify-between">
+     <p class="mb-1 font-medium">
+      Standard
+     </p>
+    </div>
+    <div class="text-base-content flex gap-x-1 font-semibold">
+     <span class="text-xl">
+      $
+     </span>
+     <p class="text-3xl sm:text-5xl" data-toggle-count='{
+          "target": "#toggle-count",
+          "min": 60,
+          "max": 699
+        }'>
+      60
+     </p>
+    </div>
+    <p class="text-sm text-center">
+     All the standards for the businesses that need more growth.
+    </p>
+   </div>
+   <div class="flex flex-col items-center gap-2 p-4">
+    <p class="mb-1 font-medium">
+     Pro
+    </p>
+    <div class="text-base-content flex gap-x-1 font-semibold">
+     <span class="text-xl">
+      $
+     </span>
+     <p class="text-3xl sm:text-5xl" data-toggle-count='{
+          "target": "#toggle-count",
+          "min": 100,
+          "max": 999
+        }'>
+      100
+     </p>
+    </div>
+    <p class="text-sm text-center">
+     All the advanced features with pro support &amp; customizations!
+    </p>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - With switch
+
+p:
+  - Basic example of toggle count with switch(checkbox) input.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="mb-4 flex justify-center">
+   <div class="flex items-center">
+    <label class="inline-block p-2" for="toggle-count-switch">
+     <span class="text-sm cursor-pointer">
+      Monthly
+     </span>
+    </label>
+    <input class="switch" id="toggle-count-switch" name="toggle-count-switch" type="checkbox"/>
+    <label class="inline-block p-2" for="toggle-count-switch">
+     <span class="text-sm cursor-pointer">
+      Annually
+     </span>
+    </label>
+   </div>
+  </div>
+  <div class="border-base-content/20 grid grid-cols-1 rounded-xl border sm:grid-cols-2 md:grid-cols-4">
+   <div class="flex flex-col items-center gap-2 p-4">
+    <p class="mb-1 font-medium">
+     Free
+    </p>
+    <div class="text-base-content flex gap-x-1 font-semibold">
+     <span class="text-xl">
+      $
+     </span>
+     <p class="text-3xl sm:text-5xl" data-toggle-count='{
+          "target": "#toggle-count-switch",
+          "min": 0,
+          "max": 0
+        }'>
+      0
+     </p>
+    </div>
+    <p class="text-sm text-center">
+     All the basics for the business that are just getting started!
+    </p>
+   </div>
+   <div class="flex flex-col items-center gap-2 p-4">
+    <p class="mb-1 font-medium">
+     Essential
+    </p>
+    <div class="text-base-content flex gap-x-1 font-semibold">
+     <span class="text-xl">
+      $
+     </span>
+     <p class="text-3xl sm:text-5xl" data-toggle-count='{
+          "target": "#toggle-count-switch",
+          "min": 15,
+          "max": 159
+        }'>
+      15
+     </p>
+    </div>
+    <p class="text-sm text-center">
+     All the essentials for the business that need some added support!
+    </p>
+   </div>
+   <div class="flex flex-col items-center gap-2 p-4">
+    <div class="flex justify-between">
+     <p class="mb-1 font-medium">
+      Standard
+     </p>
+    </div>
+    <div class="text-base-content flex gap-x-1 font-semibold">
+     <span class="text-xl">
+      $
+     </span>
+     <p class="text-3xl sm:text-5xl" data-toggle-count='{
+          "target": "#toggle-count-switch",
+          "min": 60,
+          "max": 699
+        }'>
+      60
+     </p>
+    </div>
+    <p class="text-sm text-center">
+     All the standards for the businesses that need more growth.
+    </p>
+   </div>
+   <div class="flex flex-col items-center gap-2 p-4">
+    <p class="mb-1 font-medium">
+     Pro
+    </p>
+    <div class="text-base-content flex gap-x-1 font-semibold">
+     <span class="text-xl">
+      $
+     </span>
+     <p class="text-3xl sm:text-5xl" data-toggle-count='{
+          "target": "#toggle-count-switch",
+          "min": 100,
+          "max": 999
+        }'>
+      100
+     </p>
+    </div>
+    <p class="text-sm text-center">
+     All the advanced features with pro support &amp; customizations!
+    </p>
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Illustrations
+
+h3:
+  - Pricing cards
+
+p:
+  - Basic example demonstrates use of toggle count in pricing cards.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="mb-3 flex justify-center">
+   <div class="border-base-content/20 flex gap-0.5 rounded-field border p-0.5" id="toggle-price-count">
+    <label class="btn btn-sm btn-text has-checked:btn-active" for="toggle-price-count-monthly">
+     <span>
+      Monthly
+     </span>
+     <input checked="" class="hidden" id="toggle-price-count-monthly" name="toggle-price-count" type="radio"/>
+    </label>
+    <label class="btn btn-sm btn-text has-checked:btn-active" for="toggle-price-count-annual">
+     <span>
+      Annually
+     </span>
+     <input class="hidden" id="toggle-price-count-annual" name="toggle-price-count" type="radio"/>
+    </label>
+   </div>
+  </div>
+  <div class="grid grid-cols-1 items-center gap-2 sm:grid-cols-2 md:grid-cols-3">
+   <div class="card border-base-content/20 border shadow-none">
+    <div class="card-body gap-3 text-center">
+     <div>
+      <span class="text-base-content text-xl font-medium">
+       Basic
+      </span>
+      <p class="text-sm truncate">
+       A simple start for everyone
+      </p>
+     </div>
+     <div class="text-primary flex justify-center gap-x-1">
+      <span class="text-base-content/80 text-xl">
+       $
+      </span>
+      <span class="text-5xl font-semibold" data-toggle-count='{
+          "target": "#toggle-price-count",
+          "min": 3,
+          "max": 29
+        }'>
+       3
+      </span>
+     </div>
+     <ul class="text-sm space-y-3">
+      <li class="flex items-center space-x-3">
+       <span class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
+        <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180">
+        </span>
+       </span>
+       <span class="text-base-content/80 truncate">
+        100 responses a month
+       </span>
+      </li>
+      <li class="flex items-center space-x-3">
+       <span class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
+        <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180">
+        </span>
+       </span>
+       <span class="text-base-content/80 truncate">
+        Unlimited forms &amp; surveys
+       </span>
+      </li>
+      <li class="flex items-center space-x-3">
+       <span class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
+        <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180">
+        </span>
+       </span>
+       <span class="text-base-content/80 truncate">
+        Unlimited fields
+       </span>
+      </li>
+      <li class="flex items-center space-x-3">
+       <span class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
+        <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180">
+        </span>
+       </span>
+       <span class="text-base-content/80 truncate">
+        Basic form creation tools
+       </span>
+      </li>
+      <li class="flex items-center space-x-3">
+       <span class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
+        <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180">
+        </span>
+       </span>
+       <span class="text-base-content/80 truncate">
+        Up to 2 subdomains
+       </span>
+      </li>
+     </ul>
+     <button class="btn btn-outline btn-sm btn-primary mt-4">
+      UPGRADE
+     </button>
+    </div>
+   </div>
+   <div class="card border-primary border shadow-none">
+    <div class="relative">
+     <span class="badge badge-soft badge-sm badge-primary absolute end-2 top-2">
+      Popular
+     </span>
+    </div>
+    <div class="card-body gap-3 text-center">
+     <div>
+      <span class="text-base-content text-xl font-medium">
+       Standard
+      </span>
+      <p class="text-sm">
+       For small to medium businesses
+      </p>
+     </div>
+     <div class="text-primary flex justify-center gap-x-1">
+      <span class="text-base-content/80 text-xl">
+       $
+      </span>
+      <span class="text-5xl font-semibold" data-toggle-count='{
+          "target": "#toggle-price-count",
+          "min": 15,
+          "max": 159
+        }'>
+       15
+      </span>
+     </div>
+     <ul class="text-sm space-y-3">
+      <li class="flex items-center space-x-3">
+       <span class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
+        <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180">
+        </span>
+       </span>
+       <span class="text-base-content/80 truncate">
+        Unlimited responses
+       </span>
+      </li>
+      <li class="flex items-center space-x-3">
+       <span class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
+        <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180">
+        </span>
+       </span>
+       <span class="text-base-content/80 truncate">
+        Unlimited forms &amp; surveys
+       </span>
+      </li>
+      <li class="flex items-center space-x-3">
+       <span class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
+        <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180">
+        </span>
+       </span>
+       <span class="text-base-content/80 truncate">
+        Instagram profile page
+       </span>
+      </li>
+      <li class="flex items-center space-x-3">
+       <span class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
+        <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180">
+        </span>
+       </span>
+       <span class="text-base-content/80 truncate">
+        Google Docs integration
+       </span>
+      </li>
+      <li class="flex items-center space-x-3">
+       <span class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
+        <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180">
+        </span>
+       </span>
+       <span class="text-base-content/80 truncate">
+        Custom Landing page
+       </span>
+      </li>
+     </ul>
+     <button class="btn btn-sm btn-primary mt-4">
+      UPGRADE
+     </button>
+    </div>
+   </div>
+   <div class="card border-base-content/20 border shadow-none">
+    <div class="card-body gap-3 text-center">
+     <div>
+      <span class="text-base-content text-xl font-medium">
+       Enterprise
+      </span>
+      <p class="text-sm truncate">
+       Solution for big organizations
+      </p>
+     </div>
+     <div class="text-primary flex justify-center gap-x-1">
+      <span class="text-base-content/80 text-xl">
+       $
+      </span>
+      <span class="text-5xl font-semibold" data-toggle-count='{
+          "target": "#toggle-price-count",
+          "min": 79,
+          "max": 999
+        }'>
+       79
+      </span>
+     </div>
+     <ul class="text-sm space-y-3">
+      <li class="flex items-center space-x-3">
+       <span class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
+        <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180">
+        </span>
+       </span>
+       <span class="text-base-content/80 truncate">
+        PayPal payments
+       </span>
+      </li>
+      <li class="flex items-center space-x-3">
+       <span class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
+        <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180">
+        </span>
+       </span>
+       <span class="text-base-content/80 truncate">
+        Logic Jumps
+       </span>
+      </li>
+      <li class="flex items-center space-x-3">
+       <span class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
+        <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180">
+        </span>
+       </span>
+       <span class="text-base-content/80 truncate">
+        File upload with 5GB storage
+       </span>
+      </li>
+      <li class="flex items-center space-x-3">
+       <span class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
+        <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180">
+        </span>
+       </span>
+       <span class="text-base-content/80 truncate">
+        Custom domain support
+       </span>
+      </li>
+      <li class="flex items-center space-x-3">
+       <span class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
+        <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180">
+        </span>
+       </span>
+       <span class="text-base-content/80 truncate">
+        Stripe integration
+       </span>
+      </li>
+     </ul>
+     <button class="btn btn-outline btn-sm btn-primary mt-4">
+      UPGRADE
+     </button>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+p:
+  - Destroy/ReinitializeThedestroymethodis provided to facilitate the destruction of a toggle count.
+
+h3:
+  - Destroy/Reinitialize
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div id="toggle-count-destroy">
+   <div class="mb-3 flex justify-center">
+    <div class="border-base-content/20 flex gap-0.5 rounded-field border p-0.5" id="toggle-count-example">
+     <label class="btn btn-sm btn-text has-checked:btn-active" for="toggle-count-monthly-based">
+      <span>
+       Monthly
+      </span>
+      <input checked="" class="hidden" id="toggle-count-monthly-based" name="toggle-count-example" type="radio"/>
+     </label>
+     <label class="btn btn-sm btn-text has-checked:btn-active" for="toggle-count-annual-based">
+      <span>
+       Annually
+      </span>
+      <input class="hidden" id="toggle-count-annual-based" name="toggle-count-example" type="radio"/>
+     </label>
+    </div>
+   </div>
+   <div class="border-base-content/20 grid grid-cols-1 rounded-xl border sm:grid-cols-2 md:grid-cols-4">
+    <div class="flex flex-col items-center gap-2 p-4">
+     <p class="mb-1 font-medium">
+      Free
+     </p>
+     <div class="text-base-content flex gap-x-1 font-semibold">
+      <span class="text-xl">
+       $
+      </span>
+      <p class="text-3xl sm:text-5xl" data-toggle-count='{
+            "target": "#toggle-count-example",
+            "min": 0,
+            "max": 0
+          }'>
+       0
+      </p>
+     </div>
+     <p class="text-sm text-center">
+      All the basics for the business that are just getting started!
+     </p>
+    </div>
+    <div class="flex flex-col items-center gap-2 p-4">
+     <p class="mb-1 font-medium">
+      Essential
+     </p>
+     <div class="text-base-content flex gap-x-1 font-semibold">
+      <span class="text-xl">
+       $
+      </span>
+      <p class="text-3xl sm:text-5xl" data-toggle-count='{
+            "target": "#toggle-count-example",
+            "min": 15,
+            "max": 159
+          }'>
+       15
+      </p>
+     </div>
+     <p class="text-sm text-center">
+      All the essentials for the business that need some added support!
+     </p>
+    </div>
+    <div class="flex flex-col items-center gap-2 p-4">
+     <div class="flex justify-between">
+      <p class="mb-1 font-medium">
+       Standard
+      </p>
+     </div>
+     <div class="text-base-content flex gap-x-1 font-semibold">
+      <span class="text-xl">
+       $
+      </span>
+      <p class="text-3xl sm:text-5xl" data-toggle-count='{
+            "target": "#toggle-count-example",
+            "min": 60,
+            "max": 699
+          }'>
+       60
+      </p>
+     </div>
+     <p class="text-sm text-center">
+      All the standards for the businesses that need more growth.
+     </p>
+    </div>
+    <div class="flex flex-col items-center gap-2 p-4">
+     <p class="mb-1 font-medium">
+      Pro
+     </p>
+     <div class="text-base-content flex gap-x-1 font-semibold">
+      <span class="text-xl">
+       $
+      </span>
+      <p class="text-3xl sm:text-5xl" data-toggle-count='{
+            "target": "#toggle-count-example",
+            "min": 100,
+            "max": 999
+          }'>
+       100
+      </p>
+     </div>
+     <p class="text-sm text-center">
+      All the advanced features with pro support &amp; customizations!
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="mt-4 flex gap-3">
+   <button class="btn btn-primary" id="destroy-btn">
+    Destroy
+   </button>
+   <button class="btn btn-primary" disabled="" id="reinit-btn">
+    Reinitialize
+   </button>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Options usage
+
+h3:
+  - Duration
+
+p:
+  - Assign the value of thedata-toggle-countattribute as an object. Within this object, set thedurationoption tonumberto set counting speed(animation). By default, its value is700.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="card w-40">
+   <div class="text-base-content card-body font-semibold">
+    <p class="mb-2 text-center text-5xl" data-toggle-count='{
+        "target": "#toggle-duration-usage",
+        "min": 10,
+        "max": 100,
+        "duration":100
+      }'>
+     10
+    </p>
+    <input aria-label="toggle count" class="switch switch-primary mx-auto" id="toggle-duration-usage" name="toggle-count-method" type="checkbox"/>
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - JavaScript behavior
+
+h3:
+  - Options
+
+table:
+| PARAMETERS | DESCRIPTION | OPTIONS | DEFAULT VALUE |
+| --- | --- | --- | --- |
+| data-toggle-count | Activate a Toggle Count by specifying on an element. | - | - |
+| :target(required) | Specifies default number. | string | - |
+| :min | Specifies the target element to copy. The value must be a valid selector. | number | 0 |
+| :max | Specifies the number to which the count up will go. | number | 0 |
+| :duration | Counting speed (animation). | number | 700 |
+
+h3:
+  - Methods
+
+p:
+  - TheHSToggleCountobject is contained within the globalwindowobject.
+
+table:
+| METHOD | DESCRIPTION |
+| --- | --- |
+| PUBLIC METHODS |
+| countUp() | Force count up. |
+| countDown() | Force count down. |
+| destroy() | Destroys the instance, removes generated markup (if any), removes added classes and attributes. |
+| STATIC METHODS |
+| HSToggleCount.getInstance(target, isInstance) | Returns the element associated to thetarget.targetshould be a Node or string (valid selector).isInstanceboolean. Returns the instance instead of Node iftrue. |
+
+p:
+  - Assign an ID to the button containing thedata-toggle-countattribute, as demonstrated in the public method. To explore additional methods, you can copy them into the console.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="card w-40">
+   <div class="text-base-content card-body font-semibold">
+    <input class="hidden" id="toggle-input-method" name="toggle-count-method" type="checkbox"/>
+    <p class="text-center text-5xl" data-toggle-count='{
+        "target": "#toggle-input-method",
+        "min": 10,
+        "max": 100
+      }' id="toggle-count-method">
+     10
+    </p>
+   </div>
+   <div class="flex justify-between p-2 pt-0">
+    <button aria-label="decrement" class="btn btn-soft btn-error btn-square" id="count-down-method">
+     <span class="icon-[tabler--minus]">
+     </span>
+    </button>
+    <button aria-label="increment" class="btn btn-soft btn-primary btn-square" id="count-up-method">
+     <span class="icon-[tabler--plus]">
+     </span>
+    </button>
+   </div>
+  </div>
+ </div>
+</div>
+
+p:
+  - Force count up (public method).
+
+p:
+  - Force count up (mixed).
+
+p:
+  - Destroy instance.
+
+h2:
+  - Toggle Count
+
+h3:
+  - On this page
+
+h2:
+  - Toggle Count
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

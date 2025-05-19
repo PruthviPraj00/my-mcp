@@ -1,0 +1,432 @@
+# Tailwind CSS Breadcrumb - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - navigations
+
+p:
+  - A breadcrumb is a secondary navigation scheme that reveals the user's location in a website or web application.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| breadcrumbs | Component | Base class for breadcrumb component. |
+| breadcrumbs-separator | Part | Used to separate icons or text within breadcrumbs. |
+
+h2:
+  - Variants
+
+h3:
+  - With chevrons
+
+p:
+  - Utilize the component classbreadcrumbsto generate a breadcrumb component. By integrating a chevron icon within thebreadcrumbs-separatorcomponent class, you can create breadcrumbs with chevrons as separators.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="breadcrumbs">
+   <ul>
+    <li>
+     <a href="#">
+      Home
+     </a>
+    </li>
+    <li class="breadcrumbs-separator rtl:rotate-180">
+     <span class="icon-[tabler--chevron-right]">
+     </span>
+    </li>
+    <li>
+     <a href="#">
+      Components
+     </a>
+    </li>
+    <li class="breadcrumbs-separator rtl:rotate-180">
+     <span class="icon-[tabler--chevron-right]">
+     </span>
+    </li>
+    <li aria-current="page">
+     Breadcrumb
+    </li>
+   </ul>
+  </div>
+ </div>
+</div>
+
+h3:
+  - With slashes
+
+p:
+  - Using/in thebreadcrumbs-separatorclass creates breadcrumbs with chevron separators, while thertl:Tailwind modifier ensures smooth RTL mode operation.
+
+p:
+  - For more information, check out the TailwindCSSRTL supportdocumentation.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="breadcrumbs">
+   <ul>
+    <li>
+     <a href="#">
+      Home
+     </a>
+    </li>
+    <li class="breadcrumbs-separator rtl:-rotate-[40deg]">
+     /
+    </li>
+    <li>
+     <a href="#">
+      Components
+     </a>
+    </li>
+    <li class="breadcrumbs-separator rtl:-rotate-[40deg]">
+     /
+    </li>
+    <li aria-current="page">
+     Breadcrumb
+    </li>
+   </ul>
+  </div>
+ </div>
+</div>
+
+h3:
+  - With icons
+
+p:
+  - Add icons in<a>tag to create breadcrumbs with icons.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="breadcrumbs">
+   <ol>
+    <li>
+     <a href="#">
+      <span class="icon-[tabler--star-filled] size-5">
+      </span>
+      Home
+     </a>
+    </li>
+    <li class="breadcrumbs-separator rtl:rotate-180">
+     <span class="icon-[tabler--chevron-right]">
+     </span>
+    </li>
+    <li>
+     <a href="#">
+      <span class="icon-[tabler--star-filled] size-5">
+      </span>
+      Components
+     </a>
+    </li>
+    <li class="breadcrumbs-separator rtl:rotate-180">
+     <span class="icon-[tabler--chevron-right]">
+     </span>
+    </li>
+    <li aria-current="page">
+     <span class="icon-[tabler--star-filled] me-1 size-5">
+     </span>
+     Breadcrumb
+    </li>
+   </ol>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Functionality
+
+h3:
+  - Multiple pages
+
+p:
+  - Use the below given example to show breadcrumbs with multiple pages.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="breadcrumbs">
+   <ol>
+    <li>
+     <a href="#">
+      <span class="icon-[tabler--folder] size-5">
+      </span>
+      Home
+     </a>
+    </li>
+    <li class="breadcrumbs-separator rtl:rotate-180">
+     <span class="icon-[tabler--chevron-right]">
+     </span>
+    </li>
+    <li>
+     <a aria-label="More Pages" href="#">
+      <span class="icon-[tabler--dots]">
+      </span>
+     </a>
+    </li>
+    <li class="breadcrumbs-separator rtl:rotate-180">
+     <span class="icon-[tabler--chevron-right]">
+     </span>
+    </li>
+    <li aria-current="page">
+     <span class="icon-[tabler--file] me-1 size-5">
+     </span>
+     Breadcrumb
+    </li>
+   </ol>
+  </div>
+ </div>
+</div>
+
+h3:
+  - With dropdown
+
+p:
+  - Use dropdowns with breadcrumbs for versatile navigation.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="breadcrumbs">
+   <ol>
+    <li>
+     <a href="#">
+      Home
+     </a>
+    </li>
+    <li class="breadcrumbs-separator rtl:-rotate-[40deg]">
+     /
+    </li>
+    <li>
+     <div class="dropdown relative inline-flex">
+      <button aria-expanded="false" aria-haspopup="menu" aria-label="Dropdown" class="dropdown-toggle btn btn-text font-normal" id="dropdown-default" type="button">
+       Components
+       <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4">
+       </span>
+      </button>
+      <ul aria-labelledby="dropdown-default" aria-orientation="vertical" class="dropdown-menu dropdown-open:opacity-100 hidden min-w-10" role="menu">
+       <li>
+        <a class="dropdown-item" href="#">
+         Overlay
+        </a>
+       </li>
+       <li>
+        <a class="dropdown-item" href="#">
+         Navigation
+        </a>
+       </li>
+       <li>
+        <a class="dropdown-item" href="#">
+         Collapse
+        </a>
+       </li>
+       <li>
+        <a class="dropdown-item" href="#">
+         Form
+        </a>
+       </li>
+      </ul>
+     </div>
+    </li>
+    <li class="breadcrumbs-separator rtl:-rotate-[40deg]">
+     /
+    </li>
+    <li aria-current="page">
+     <div class="dropdown relative inline-flex">
+      <button aria-expanded="false" aria-haspopup="menu" aria-label="Dropdown" class="dropdown-toggle btn btn-text btn-secondary" id="dropdown-default" type="button">
+       Component
+       <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4">
+       </span>
+      </button>
+      <ul aria-labelledby="dropdown-default" aria-orientation="vertical" class="dropdown-menu dropdown-open:opacity-100 hidden min-w-10" role="menu">
+       <li>
+        <a class="dropdown-item" href="#">
+         Modal
+        </a>
+       </li>
+       <li>
+        <a class="dropdown-item" href="#">
+         Breadcrumb
+        </a>
+       </li>
+       <li>
+        <a class="dropdown-item" href="#">
+         Accordion
+        </a>
+       </li>
+       <li>
+        <a class="dropdown-item" href="#">
+         Input
+        </a>
+       </li>
+      </ul>
+     </div>
+    </li>
+   </ol>
+  </div>
+ </div>
+</div>
+
+h3:
+  - With max-width
+
+p:
+  - Apply the responsive utility classmax-w-xsto the breadcrumb, enabling a fixed width that allows horizontal scrolling while occupying less space.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="breadcrumbs h-fit max-w-xs">
+   <ul>
+    <li>
+     <a href="#">
+      <span class="icon-[tabler--folder] size-5">
+      </span>
+      Home
+     </a>
+    </li>
+    <li class="breadcrumbs-separator rtl:-rotate-[40deg]">
+     /
+    </li>
+    <li>
+     <a href="#">
+      <span class="icon-[tabler--folder] size-5">
+      </span>
+      App
+     </a>
+    </li>
+    <li class="breadcrumbs-separator rtl:-rotate-[40deg]">
+     /
+    </li>
+    <li>
+     <a href="#">
+      <span class="icon-[tabler--folder] size-5">
+      </span>
+      Components
+     </a>
+    </li>
+    <li class="breadcrumbs-separator rtl:-rotate-[40deg]">
+     /
+    </li>
+    <li>
+     <a href="#">
+      <span class="icon-[tabler--folder] size-5">
+      </span>
+      Navigation
+     </a>
+    </li>
+    <li class="breadcrumbs-separator rtl:-rotate-[40deg]">
+     /
+    </li>
+    <li>
+     <span class="icon-[tabler--file] me-1 size-5">
+     </span>
+     Breadcrumb
+    </li>
+   </ul>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Illustrations
+
+h3:
+  - With background
+
+p:
+  - Use the below given example for breadcrumb with background.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="w-full rounded-lg border px-4 py-2">
+   <div class="breadcrumbs">
+    <ul>
+     <li>
+      <a href="#">
+       Home
+      </a>
+     </li>
+     <li class="breadcrumbs-separator rtl:-rotate-[40deg]">
+      /
+     </li>
+     <li>
+      <a href="#">
+       Components
+      </a>
+     </li>
+     <li class="breadcrumbs-separator rtl:-rotate-[40deg]">
+      /
+     </li>
+     <li aria-current="page">
+      <span class="bg-primary/20 !text-primary rounded-xs px-1.5 py-0.5">
+       Breadcrumb
+      </span>
+     </li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Bordered breadcrumb
+
+p:
+  - Use the below given example for breadcrumb with border.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="border-base-content/25 w-full rounded-lg border px-4 py-2">
+   <div class="breadcrumbs">
+    <ul>
+     <li>
+      <a href="#">
+       Home
+      </a>
+     </li>
+     <li class="breadcrumbs-separator rtl:-rotate-[40deg]">
+      /
+     </li>
+     <li>
+      <a href="#">
+       Components
+      </a>
+     </li>
+     <li class="breadcrumbs-separator rtl:-rotate-[40deg]">
+      /
+     </li>
+     <li aria-current="page">
+      Breadcrumb
+     </li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Breadcrumb
+
+h3:
+  - On this page
+
+h2:
+  - Breadcrumb
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

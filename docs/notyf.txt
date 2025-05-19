@@ -1,0 +1,227 @@
+# Tailwind CSS Notyf (Toasts) - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - third party plugins
+
+p:
+  - Transform Your User Experience with Seamlessly Integrated and Customizable Toast Notifications, Tailored for Modern Web Applications.
+
+h2:
+  - Getting started
+
+h3:
+  - Setup
+
+p:
+  - Below are the comprehensively outlined steps you can follow to seamlessly integrateNotyf JSwith FlyonUI.
+
+p:
+  - Installnotyfusing npm:
+
+p:
+  - Add the following CSS and JavaScript to your page:
+
+p:
+  - Note:A CDN link will not work here because we need to customize the default Vendor CSS to align with FlyonUI's design.
+
+p:
+  - Update yourtailwind.cssfile to incorporate the path for the FlyonUI Notyf override CSS.
+
+p:
+  - Add the initialization JavaScript code for Notyf after including the Notyf JS library. Set up an event listener on any element to trigger the Notyf instance. Ensure this Notyf JS file is monitored by TailwindCSS, as described in step 3.
+
+p:
+  - For more options and detailed configurations, refer to the Notyf JSdocumentation.
+
+h2:
+  - Basic example
+
+h3:
+  - Default notyf
+
+p:
+  - Use the example below for default notification, initialized with the JS code provided below.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <button class="btn btn-primary" id="notyf-default-example">
+   Default notyf
+  </button>
+ </div>
+</div>
+
+h3:
+  - Custom notyf
+
+p:
+  - Use the example below for custom notification, initialized with the JS code provided below.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <button class="btn btn-primary" id="notyf-custom-example">
+   Custom notyf
+  </button>
+ </div>
+</div>
+
+h2:
+  - Advance options
+
+h3:
+  - Notyf generator
+
+p:
+  - Use theNotyf generatorbelow to create custom notifications according to your requirements for position, type, behavior, message, and duration.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose justify-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="card mt-6 max-w-lg max-sm:w-64">
+   <form id="notificationForm">
+    <div class="card-body">
+     <div>
+      <label class="label-text" for="notyf-value">
+       Message
+      </label>
+      <input autofocus="" class="input" id="notyf-value" placeholder="Notification message" type="text"/>
+     </div>
+     <div>
+      <label class="label-text" for="notyf-number">
+       Duration
+      </label>
+      <input class="input" id="notyf-number" min="1000" placeholder="1000 (Milliseconds)" type="number"/>
+     </div>
+     <div class="flex flex-col">
+      <h6 class="text-sm text-base-content mb-1">
+       Position - X
+      </h6>
+      <div class="flex flex-wrap gap-3">
+       <div class="flex items-center gap-1">
+        <input checked="" class="radio radio-primary" id="positionXLeft" name="radio-x" type="radio" value="left"/>
+        <label class="label-text text-base" for="positionXLeft">
+         Left
+        </label>
+       </div>
+       <div class="flex items-center gap-1">
+        <input class="radio radio-primary" id="positionXcenter" name="radio-x" type="radio" value="center"/>
+        <label class="label-text text-base" for="positionXcenter">
+         Center
+        </label>
+       </div>
+       <div class="flex items-center gap-1">
+        <input class="radio radio-primary" id="positionXright" name="radio-x" type="radio" value="right"/>
+        <label class="label-text text-base" for="positionXright">
+         Right
+        </label>
+       </div>
+      </div>
+     </div>
+     <div class="flex flex-col">
+      <h6 class="text-sm text-base-content mb-1">
+       Position - Y
+      </h6>
+      <div class="flex flex-wrap gap-3">
+       <div class="flex items-center gap-1">
+        <input checked="" class="radio radio-primary" id="positionYtop" name="radio-y" type="radio" value="top"/>
+        <label class="label-text text-base" for="positionYtop">
+         Top
+        </label>
+       </div>
+       <div class="flex items-center gap-1">
+        <input class="radio radio-primary" id="positionYcenter" name="radio-y" type="radio" value="center"/>
+        <label class="label-text text-base" for="positionYcenter">
+         Center
+        </label>
+       </div>
+       <div class="flex items-center gap-1">
+        <input class="radio radio-primary" id="positionYbottom" name="radio-y" type="radio" value="bottom"/>
+        <label class="label-text text-base" for="positionYbottom">
+         Bottom
+        </label>
+       </div>
+      </div>
+     </div>
+     <div class="flex flex-col">
+      <h6 class="text-sm text-base-content mb-1">
+       Behavior
+      </h6>
+      <div class="flex flex-col gap-2 sm:flex-row sm:gap-4">
+       <div class="flex items-center gap-1">
+        <input checked="" class="checkbox checkbox-primary" id="notyf-ripple" type="checkbox"/>
+        <label class="label-text text-base" for="notyf-ripple">
+         With Ripple effect
+        </label>
+       </div>
+       <div class="flex items-center gap-1">
+        <input class="checkbox checkbox-primary" id="notyf-dismiss" type="checkbox"/>
+        <label class="label-text text-base" for="notyf-dismiss">
+         Dismissible
+        </label>
+       </div>
+      </div>
+     </div>
+     <div class="flex flex-col">
+      <h6 class="text-sm text-base-content mb-1">
+       Type
+      </h6>
+      <div class="flex flex-col gap-2 sm:flex-row sm:gap-4">
+       <div class="flex items-center gap-1">
+        <input checked="" class="radio radio-primary" id="typeSuccess" name="radio-type" type="radio" value="success"/>
+        <label class="label-text text-base" for="typeSuccess">
+         Success
+        </label>
+       </div>
+       <div class="flex items-center gap-1">
+        <input class="radio radio-primary" id="typeInfo" name="radio-type" type="radio" value="info"/>
+        <label class="label-text text-base" for="typeInfo">
+         Info
+        </label>
+       </div>
+       <div class="flex items-center gap-1">
+        <input class="radio radio-primary" id="typeWarning" name="radio-type" type="radio" value="warning"/>
+        <label class="label-text text-base" for="typeWarning">
+         Warning
+        </label>
+       </div>
+       <div class="flex items-center gap-1">
+        <input class="radio radio-primary" id="typeError" name="radio-type" type="radio" value="error"/>
+        <label class="label-text text-base" for="typeError">
+         Error
+        </label>
+       </div>
+      </div>
+     </div>
+     <button class="btn btn-primary" id="notyf-submit" type="submit">
+      Show Notification
+     </button>
+    </div>
+   </form>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Notyf (Toasts)
+
+h3:
+  - On this page
+
+h2:
+  - Notyf (Toasts)
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

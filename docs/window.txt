@@ -1,0 +1,90 @@
+# Tailwind CSS Window - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - mockups
+
+p:
+  - The window mockup features a design that resembles a typical operating system window interface.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| mockup-window | Component | Container element. |
+
+h2:
+  - Basic examples
+
+h3:
+  - Bordered
+
+p:
+  - Wtilize themockup-windowclass as a container for the window mockup and apply Tailwind utility classes such asborderandbackground-colorfor styling.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="mockup-window border border-base-content/20">
+   <div class="flex justify-center px-4 py-16 border-t border-base-content/20">
+    Hello!
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Background color
+
+p:
+  - Window mockup featuring a customizable background color. Update it to your preference using thebg-*Tailwind utility class.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="mockup-window border border-base-content/20 bg-base-300/40">
+   <div class="flex justify-center px-4 py-16 bg-base-200">
+    Hello!
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Image
+
+p:
+  - Window mockup featuring a image.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="mockup-window border border-base-content/20 bg-base-200">
+   <div class="flex justify-center h-80">
+    <img alt="window background" class="w-full object-cover" src="https://cdn.flyonui.com/fy-assets/components/carousel/image-21.png"/>
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Window
+
+h3:
+  - On this page
+
+h2:
+  - Window
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

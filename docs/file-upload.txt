@@ -1,0 +1,482 @@
+# Tailwind CSS File Upload - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - third party plugins
+
+p:
+  - File Upload enhances web forms with a Tailwind CSS interface, offering drag-and-drop, previews, progress bars, multiple uploads, and file validation.
+
+h2:
+  - Getting started
+
+h3:
+  - Setup
+
+p:
+  - Below are the comprehensively outlined steps you can follow to seamlessly integrateDropzone JSwith FlyonUI.
+
+p:
+  - InstallDropzoneandlodashusing npm. Certain JavaScript helpers for Dropzone require the lodash plugin, so make sure to install it as well.
+
+p:
+  - Include the necessary CSS and JavaScript files in your project at the specified locations:
+
+p:
+  - Insert the following JavaScript and CSS CDN links into their respective sections:
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| file-upload-complete:{tw-utility-class} | Variant | A modifier that allows you to set Tailwind classes to items that successfully uploaded. |
+
+h2:
+  - File Upload Structure
+
+h3:
+  - Basic outline
+
+p:
+  - Prefer to create your own style? Here is a completely unstylized example.
+
+h2:
+  - Basic example
+
+h3:
+  - Default
+
+p:
+  - Using the most basic file upload markup, here’s how file upload look.
+
+p:
+  - Use<template>to style your file upload output. The following example demonstrates the default template layout.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div data-file-upload='{
+    "url": "/upload",
+    "extensions": {
+      "csv": {
+        "icon": "&lt;svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"&gt;&lt;path d=\"M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4\"/&gt;&lt;path d=\"M14 2v4a2 2 0 0 0 2 2h4\"/&gt;&lt;path d=\"m5 12-3 3 3 3\"/&gt;&lt;path d=\"m9 18 3-3-3-3\"/&gt;&lt;/svg&gt;",
+        "class": "shrink-0 size-5"
+      }
+    }
+  }'>
+   <div class="bg-base-200/60 rounded-box flex flex-col justify-center border-2 border-base-content/20 border-dashed">
+    <div class="text-center cursor-pointer p-12" data-file-upload-trigger="">
+     <p class="text-base-content/50 mb-3 text-sm">
+      Choose a file with a size up to 2MB.
+     </p>
+     <button class="btn btn-soft btn-sm btn-primary text-nowrap">
+      <span class="icon-[tabler--file-upload] size-4.5 shrink-0">
+      </span>
+      Drag &amp; Drop to Upload
+     </button>
+     <p class="text-base-content/50 my-2 text-xs">
+      or
+     </p>
+     <p class="link link-animated link-primary font-medium text-sm">
+      Browse
+     </p>
+    </div>
+    <div class="mx-12 mb-8 space-y-2 empty:m-0" data-file-upload-previews="">
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Error state
+
+p:
+  - The system will throw an error if the file size exceeds 1 MB.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div data-file-upload='{
+  "url": "/upload",
+  "maxFilesize": 1,
+  "extensions": {
+    "csv": {
+      "icon": "&lt;svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"&gt;&lt;path d=\"M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4\"/&gt;&lt;path d=\"M14 2v4a2 2 0 0 0 2 2h4\"/&gt;&lt;path d=\"m5 12-3 3 3 3\"/&gt;&lt;path d=\"m9 18 3-3-3-3\"/&gt;&lt;/svg&gt;",
+      "class": "shrink-0 size-5"
+    }
+  }
+}' id="file-upload-limit">
+   <template data-file-upload-preview="">
+    <div class="rounded-box bg-base-100 shadow-base-300/20 p-3 shadow-lg">
+     <div class="mb-1 flex items-center justify-between">
+      <div class="flex items-center gap-x-3">
+       <span class="text-base-content/80 border-base-content/20 flex size-8 items-center justify-center rounded-lg border p-0.5" data-file-upload-file-icon="">
+        <img class="hidden rounded-md" data-dz-thumbnail=""/>
+       </span>
+       <div>
+        <p class="text-base-content text-sm font-medium">
+         <span class="inline-block truncate align-bottom" data-file-upload-file-name="">
+         </span>
+         .
+         <span data-file-upload-file-ext="">
+         </span>
+        </p>
+        <p class="text-base-content/50 text-xs" data-file-upload-file-size="" data-file-upload-file-success="">
+        </p>
+        <p class="text-error text-xs" data-file-upload-file-error="" style="display:none">
+         File exceeds size limit.
+        </p>
+       </div>
+      </div>
+      <div class="flex items-center">
+       <div class="tooltip [--placement:top]" data-file-upload-file-error="" style="display:none">
+        <button class="tooltip-toggle btn btn-sm btn-circle btn-text btn-error" type="button">
+         <span class="icon-[tabler--alert-circle] size-4 shrink-0">
+         </span>
+        </button>
+        <span class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="tooltip">
+         <span class="tooltip-body">
+          Please try to upload a file smaller than 1MB.
+         </span>
+        </span>
+       </div>
+       <button class="btn btn-sm btn-circle btn-text" data-file-upload-reload="" type="button">
+        <span class="icon-[tabler--refresh] size-4 shrink-0">
+        </span>
+       </button>
+       <button class="btn btn-sm btn-circle btn-text" data-file-upload-remove="" type="button">
+        <span class="icon-[tabler--trash] size-4 shrink-0">
+        </span>
+       </button>
+      </div>
+     </div>
+     <div class="flex items-center gap-x-3 whitespace-nowrap">
+      <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress h-2" data-file-upload-progress-bar="" role="progressbar">
+       <div class="progress-bar progress-primary file-upload-complete:progress-success transition-all duration-500" data-file-upload-progress-bar-pane="" style="width:0">
+       </div>
+      </div>
+      <span class="text-base-content mb-0.5 text-sm">
+       <span data-file-upload-progress-bar-value="">
+        0
+       </span>
+       %
+      </span>
+     </div>
+    </div>
+   </template>
+   <div class="bg-base-200/60 rounded-box flex flex-col justify-center border-2 border-base-content/20 border-dashed">
+    <div class="text-center cursor-pointer p-12" data-file-upload-trigger="">
+     <p class="text-base-content/50 mb-3 text-sm">
+      Choose a file no larger than 1MB.
+     </p>
+     <button class="btn btn-soft btn-sm btn-primary text-nowrap">
+      <span class="icon-[tabler--file-upload] size-4.5 shrink-0">
+      </span>
+      Drag &amp; Drop to Upload
+     </button>
+     <p class="text-base-content/50 my-2 text-xs">
+      or
+     </p>
+     <p class="link link-animated link-primary font-medium text-sm">
+      Browse
+     </p>
+    </div>
+    <div class="mx-12 mb-8 space-y-2 empty:m-0" data-file-upload-previews="">
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Illustrations
+
+h3:
+  - Gallery
+
+p:
+  - Using file upload as a gallery.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div data-file-upload='{
+  "url": "/upload",
+  "acceptedFiles": "image/*",
+  "autoHideTrigger": false,
+  "extensions": {
+    "csv": {
+      "icon": "&lt;svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"&gt;&lt;path d=\"M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4\"/&gt;&lt;path d=\"M14 2v4a2 2 0 0 0 2 2h4\"/&gt;&lt;path d=\"m5 12-3 3 3 3\"/&gt;&lt;path d=\"m9 18 3-3-3-3\"/&gt;&lt;/svg&gt;",
+      "class": "shrink-0 size-5"
+    }
+  }
+}'>
+   <template data-file-upload-preview="">
+    <div class="rounded-box bg-base-100 shadow-base-300/20 relative mt-2 p-2 shadow-lg">
+     <img class="mb-2 w-full rounded-lg object-cover" data-dz-thumbnail=""/>
+     <div class="mb-1 flex items-center justify-between gap-x-3 whitespace-nowrap">
+      <div class="w-10">
+       <span class="text-base-content mb-0.5 text-sm">
+        <span data-file-upload-progress-bar-value="">
+         0
+        </span>
+        %
+       </span>
+      </div>
+      <div class="flex items-center gap-x-2">
+       <button class="btn btn-sm btn-circle btn-text" data-file-upload-remove="" type="button">
+        <span class="icon-[tabler--trash] size-4 shrink-0">
+        </span>
+       </button>
+      </div>
+     </div>
+     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress h-2" data-file-upload-progress-bar="" role="progressbar">
+      <div class="progress-bar progress-primary file-upload-complete:progress-success transition-all duration-500" data-file-upload-progress-bar-pane="" style="width:0">
+      </div>
+     </div>
+    </div>
+   </template>
+   <div class="bg-base-200/60 rounded-box flex flex-col justify-center border-2 border-base-content/20 border-dashed">
+    <div class="text-center cursor-pointer p-12" data-file-upload-trigger="">
+     <p class="text-base-content/50 mb-3 text-sm">
+      Choose a file with a size up to 2MB.
+     </p>
+     <button class="btn btn-soft btn-sm btn-primary text-nowrap">
+      <span class="icon-[tabler--file-upload] size-4.5 shrink-0">
+      </span>
+      Drag &amp; Drop to Upload
+     </button>
+     <p class="text-base-content/50 my-2 text-xs">
+      or
+     </p>
+     <p class="link link-animated link-primary font-medium text-sm">
+      Browse
+     </p>
+    </div>
+    <div class="mx-12 mb-8 empty:m-0 grid grid-cols-4 gap-2 empty:gap-0 max-sm:grid-cols-2" data-file-upload-previews="">
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Upload single image
+
+p:
+  - Use file upload for a single image.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div data-file-upload='{
+  "url": "/upload",
+  "acceptedFiles": "image/*",
+  "maxFiles": 1,
+  "singleton": true
+}'>
+   <template data-file-upload-preview="">
+    <div class="size-20">
+     <img class="w-full rounded-full object-contain" data-dz-thumbnail=""/>
+    </div>
+   </template>
+   <div class="flex flex-wrap items-center gap-3 sm:gap-5">
+    <div class="group" data-file-upload-previews="" data-file-upload-pseudo-trigger="">
+     <span class="border-base-content/30 text-base-content/50 flex size-17 shrink-0 cursor-pointer items-center justify-center rounded-box border-2 border-dotted hover:bg-base-200/60 group-has-[div]:hidden">
+      <span class="icon-[tabler--user-square] size-9 shrink-0">
+      </span>
+     </span>
+    </div>
+    <div class="grow">
+     <div class="flex items-center gap-x-2">
+      <button class="btn btn-primary" data-file-upload-trigger="" type="button">
+       <span class="icon-[tabler--upload] size-4 shrink-0">
+       </span>
+       Upload photo
+      </button>
+      <button class="btn btn-outline btn-error" data-file-upload-clear="" type="button">
+       Delete
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Input file
+
+p:
+  - Using file upload as a simple file upload.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div data-file-upload='{
+  "url": "/upload",
+  "maxFiles": 1,
+  "singleton": true
+}'>
+   <template data-file-upload-preview="">
+    <div class="flex w-full items-center">
+     <span class="grow-0 overflow-hidden truncate" data-file-upload-file-name="">
+     </span>
+     <span class="grow-0">
+      .
+     </span>
+     <span class="grow-0" data-file-upload-file-ext="">
+     </span>
+    </div>
+   </template>
+   <button class="relative flex w-full overflow-hidden rounded-lg border border-base-content/20 text-sm focus:z-10 focus:ring-1 focus:border-primary focus:ring-primary focus:outline-none disabled:pointer-events-none disabled:opacity-50" type="button">
+    <span class="h-full text-nowrap bg-primary text-primary-content rounded-s-lg px-4 py-3">
+     Choose File
+    </span>
+    <span class="group flex h-full grow overflow-hidden px-4 py-3 text-base-content" data-file-upload-previews="">
+     <span class="group-has-[div]:hidden">
+      No Chosen File
+     </span>
+    </span>
+    <span class="absolute left-0 top-0 h-full w-full" data-file-upload-trigger="">
+    </span>
+   </button>
+  </div>
+ </div>
+</div>
+
+p:
+  - Destroy/ReinitializeThedestroymethodis provided to facilitate the destruction of a file upload.
+
+h3:
+  - Destroy/Reinitialize
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div data-file-upload='{
+    "url": "/upload",
+    "extensions": {
+      "csv": {
+        "icon": "&lt;svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"&gt;&lt;path d=\"M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4\"/&gt;&lt;path d=\"M14 2v4a2 2 0 0 0 2 2h4\"/&gt;&lt;path d=\"m5 12-3 3 3 3\"/&gt;&lt;path d=\"m9 18 3-3-3-3\"/&gt;&lt;/svg&gt;",
+        "class": "shrink-0 size-5"
+      }
+    }
+  }' id="file-upload-to-destroy">
+   <div class="bg-base-200/60 rounded-box flex flex-col justify-center border-2 border-base-content/20 border-dashed">
+    <div class="text-center cursor-pointer p-12" data-file-upload-trigger="">
+     <p class="text-base-content/50 mb-3 text-sm">
+      Choose a file with a size up to 2MB.
+     </p>
+     <button class="btn btn-soft btn-sm btn-primary text-nowrap">
+      <span class="icon-[tabler--file-upload] size-4.5 shrink-0">
+      </span>
+      Drag &amp; Drop to Upload
+     </button>
+     <p class="text-base-content/50 my-2 text-xs">
+      or
+     </p>
+     <p class="link link-animated link-primary font-medium text-sm">
+      Browse
+     </p>
+    </div>
+    <div class="mx-12 mb-8 space-y-2 empty:m-0" data-file-upload-previews="">
+    </div>
+   </div>
+  </div>
+  <div class="mt-4 flex gap-3">
+   <button class="btn btn-primary" id="destroy-btn">
+    Destroy
+   </button>
+   <button class="btn btn-primary" disabled="" id="reinit-btn">
+    Reinitialize
+   </button>
+  </div>
+ </div>
+</div>
+
+h2:
+  - JavaScript behavior
+
+h3:
+  - Options
+
+p:
+  - Please understand that this component requires theDropzone.jsplugin. Most of the plugin’s options are also available in our wrapper.
+
+p:
+  - View Options
+
+table:
+| PARAMETERS | DESCRIPTION | OPTIONS | DEFAULT VALUE |
+| --- | --- | --- | --- |
+| data-file-upload | Activate a File Upload by specifying on an element. | - | - |
+| :extensions | A list of extensions and their corresponding icons will be added to the container with thedata-file-upload-file-iconselector if they match the extension name. | object | Includes markup. See the code. |
+| :autoHideTrigger | If the attribute value istrue, thendata-file-upload-triggerwill disappear if at least one item is added to the upload and will appear if more than one item is not in the upload. | boolean | false |
+| :singleton | If the attribute value istrue, the plugin will remove any previously uploaded files. This is necessary to emulate the behavior of a simple file input. | boolean | false |
+
+h3:
+  - Selector
+
+table:
+| Name | Description |
+| --- | --- |
+| data-file-upload-trigger | Specifies which element within the initialized container will serve as the clickable element. |
+| data-file-upload-previews | Specifies which element within the initialized container will act as a wrapper for uploaded items. |
+| data-file-upload-clear | Specifies which element within the initialized container will serve as the button to delete all files. |
+| data-file-upload-preview | Specifies which element within the initialized container will act as a template for the uploading item. This should be an HTMLtemplateelement. |
+| data-file-upload-file-icon | Specifies which element within the uploading item will act as a wrapper for the file icon defined in theextensionsproperty. |
+| data-file-upload-file-name | Specifies which element within the uploading item will act as a wrapper for the file name. |
+| data-file-upload-file-ext | Specifies which element within the uploading item will act as a wrapper for the file extension. |
+| data-file-upload-file-size | Specifies which element within the uploading item will act as a wrapper for the file size. |
+| data-file-upload-remove | Specifies which element within the uploading item will act as the remove button. |
+| data-file-upload-reload | Specifies which element within the uploading item will act as the re-upload button. |
+| data-file-upload-progress-bar | Specifies which element within the uploading item will act as the progress bar. |
+| data-file-upload-progress-bar-pane | Specifies which element within the uploading item will act as the progress bar pane, whose width will dynamically increase during the upload process. |
+| data-file-upload-progress-bar-value | Specifies which element within the uploading item will display the current progress value, which will dynamically increase during the upload process. |
+
+h3:
+  - Methods
+
+p:
+  - TheHSRemoveElementobject is contained within the globalwindowobject.
+
+table:
+| METHOD | DESCRIPTION |
+| --- | --- |
+| PUBLIC METHODS |
+| destroy() | Destroys the instance, removes generated markup (if any), removes added classes and attributes. |
+| STATIC METHODS |
+| HSRemoveElement.getInstance(target, isInstance) | Returns the element associated to thetarget.targetshould be a Node or string (valid selector).isInstanceboolean. Returns the instance instead of Node iftrue. |
+
+p:
+  - Destroy instance.
+
+h3:
+  - Events
+
+p:
+  - Example of an event triggered when an item is successfully uploaded to the server.
+
+h2:
+  - File Upload
+
+h3:
+  - On this page
+
+h2:
+  - File Upload
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

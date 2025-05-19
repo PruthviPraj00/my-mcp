@@ -1,0 +1,133 @@
+# Tailwind CSS Code - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - mockups
+
+p:
+  - Code mockup is used to show a block of code in a box that looks like a code editor.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| mockup-code | Component | Container element. |
+
+h2:
+  - Basic examples
+
+h3:
+  - Mockup code with line prefix
+
+p:
+  - Themockup-codeclass is tailored to enhance the presentation of your code with a stylish layout. Usedata-prefixto incorporate additional prefixes before text, such as$,>, or numeric indicators.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="mockup-code">
+   <pre data-prefix="$"><code>npm i -D flyonui@latest</code></pre>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Multi line
+
+p:
+  - Code spanning multiple lines.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="mockup-code">
+   <pre data-prefix="$"><code>npm i -D flyonui@latest</code></pre>
+   <pre class="text-warning" data-prefix="&gt;"><code>installing...</code></pre>
+   <pre class="text-success" data-prefix="&gt;"><code>Done!</code></pre>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Highlighted line
+
+p:
+  - Code example that highlights syntax.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="mockup-code">
+   <pre data-prefix="1"><code>npm i -D flyonui@latest</code></pre>
+   <pre data-prefix="2"><code>installing...</code></pre>
+   <pre class="bg-warning text-warning-content" data-prefix="3"><code>Warning!</code></pre>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Scrollable body
+
+p:
+  - Example of a scrollable code container.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="mockup-code">
+   <pre data-prefix="~"><code>Magnam dolore beatae necessitatibus nemopsum itaque sit. Et porro quae qui et et dolore ratione.</code></pre>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Without prefix
+
+p:
+  - Example of code without a prefix.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="mockup-code">
+   <pre><code>without prefix</code></pre>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Semantic color
+
+p:
+  - You can modify both the background and text colors.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="mockup-code bg-primary/20 text-primary rounded-xl">
+   <pre><code>can be any color!</code></pre>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Code
+
+h3:
+  - On this page
+
+h2:
+  - Code
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

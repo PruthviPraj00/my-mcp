@@ -1,0 +1,424 @@
+# Tailwind CSS Pin Input - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - advanced forms
+
+p:
+  - The Pin Input component enables quick entry for scenarios such as multi-factor authentication, offering features like regex validation and clipboard pasting.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| pin-input | Component | Container style class. |
+| pin-input-underline | Style | Underline style. |
+| pin-input-active:{tw-utility-class} | Variant | Adds tailwind classes when the pin input is active (triggered when the PIN has set up). |
+| pin-input-xs | Size | Pin input with extra small size. |
+| pin-input-sm | Size | Pin input with small size. |
+| pin-input-md | Size | Pin input with medium(default) size. |
+| pin-input-lg | Size | Pin input with large size. |
+| pin-input-xl | Size | Pin input with large size. |
+
+h2:
+  - Basic example
+
+h3:
+  - Default
+
+p:
+  - Basic pin input example.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex space-x-3" data-pin-input="">
+   <input aria-label="pin input" autofocus="" class="pin-input" data-pin-input-item="" type="text"/>
+   <input aria-label="pin input" class="pin-input" data-pin-input-item="" type="text"/>
+   <input aria-label="pin input" class="pin-input" data-pin-input-item="" type="text"/>
+   <input aria-label="pin input" class="pin-input" data-pin-input-item="" type="text"/>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Placeholder
+
+p:
+  - Pin input with placeholder.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex space-x-3" data-pin-input="">
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Types
+
+h3:
+  - Outline
+
+p:
+  - Default pin input example.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex space-x-3" data-pin-input="">
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Underline
+
+p:
+  - Apply thepin-input-underlineclass to change the pin input style to an underline.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex space-x-3" data-pin-input="">
+   <input class="pin-input pin-input-underline" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-underline" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-underline" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-underline" data-pin-input-item="" placeholder="â" type="text"/>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Sizes
+
+h3:
+  - Outline
+
+p:
+  - Add responsive classpin-input-{size}where{size} = xs|sm|md|lg|xlfor pin input of different sizes.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex space-x-3" data-pin-input="">
+   <input class="pin-input pin-input-xs" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-xs" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-xs" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-xs" data-pin-input-item="" placeholder="â" type="text"/>
+  </div>
+  <div class="flex space-x-3" data-pin-input="">
+   <input class="pin-input pin-input-sm" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-sm" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-sm" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-sm" data-pin-input-item="" placeholder="â" type="text"/>
+  </div>
+  <div class="flex space-x-3" data-pin-input="">
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+  </div>
+  <div class="flex space-x-3" data-pin-input="">
+   <input class="pin-input pin-input-lg" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-lg" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-lg" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-lg" data-pin-input-item="" placeholder="â" type="text"/>
+  </div>
+  <div class="flex space-x-3" data-pin-input="">
+   <input class="pin-input pin-input-xl" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-xl" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-xl" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-xl" data-pin-input-item="" placeholder="â" type="text"/>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Underline
+
+p:
+  - Underline pin input sizes example.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex space-x-3" data-pin-input="">
+   <input class="pin-input pin-input-underline pin-input-xs" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-underline pin-input-xs" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-underline pin-input-xs" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-underline pin-input-xs" data-pin-input-item="" placeholder="â" type="text"/>
+  </div>
+  <div class="flex space-x-3" data-pin-input="">
+   <input class="pin-input pin-input-underline pin-input-sm" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-underline pin-input-sm" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-underline pin-input-sm" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-underline pin-input-sm" data-pin-input-item="" placeholder="â" type="text"/>
+  </div>
+  <div class="flex space-x-3" data-pin-input="">
+   <input class="pin-input pin-input-underline" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-underline" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-underline" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-underline" data-pin-input-item="" placeholder="â" type="text"/>
+  </div>
+  <div class="flex space-x-3" data-pin-input="">
+   <input class="pin-input pin-input-underline pin-input-lg" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-underline pin-input-lg" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-underline pin-input-lg" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-underline pin-input-lg" data-pin-input-item="" placeholder="â" type="text"/>
+  </div>
+  <div class="flex space-x-3" data-pin-input="">
+   <input class="pin-input pin-input-underline pin-input-xl" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-underline pin-input-xl" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-underline pin-input-xl" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input pin-input-underline pin-input-xl" data-pin-input-item="" placeholder="â" type="text"/>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Illustrations
+
+h3:
+  - Disabled
+
+p:
+  - To disable pointer events and prevent focusing, add thedisabledboolean attribute to an input.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex space-x-3" data-pin-input="">
+   <input class="pin-input" data-pin-input-item="" disabled="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" disabled="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" disabled="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" disabled="" placeholder="â" type="text"/>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Length
+
+p:
+  - Control the number of pin input as per you preference.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex space-x-3" data-pin-input="">
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+  </div>
+  <div class="flex space-x-3" data-pin-input="">
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+  </div>
+  <div class="flex space-x-3" data-pin-input="">
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Input type
+
+p:
+  - By default, this accepts both letters and numbers. To restrict input to numbers/letters only, set"availableCharsRE"to"^[a-z]+$"/"^[0-9]+$".
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex space-x-3" data-pin-input='{"availableCharsRE": "^[a-z]+$"}'>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Regex type
+
+p:
+  - To restrict the pin input to accept only specific numbers, you can use a regular expression. For example, to ensure the pin input accepts only the numbers 1 to 5, set"availableCharsRE"to"^[1-5]+$".
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex space-x-3" data-pin-input='{"availableCharsRE": "^[1-5]+$"}'>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Protected
+
+p:
+  - Conceal the entered value by setting the type attribute to “password”.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex space-x-3" data-pin-input="">
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="password"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="password"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="password"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="password"/>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Display number keyboard
+
+p:
+  - To display a numeric keyboard on iOS (note: this does not apply for Android), Useautocomplete="one-time-code"andtype="tel".
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex space-x-3" data-pin-input='{"availableCharsRE": "^[0-9]+$"}'>
+   <input autocomplete="one-time-code" class="pin-input" data-pin-input-item="" placeholder="â" type="tel"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="tel"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="tel"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="tel"/>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Destroy/Reinitialize
+
+p:
+  - Thedestroymethodis provided to facilitate the destruction of a pin-input element.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex space-x-3" data-pin-input="" id="pin-input-to-destroy">
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+   <input class="pin-input" data-pin-input-item="" placeholder="â" type="text"/>
+  </div>
+  <div class="mt-4 flex gap-3">
+   <button class="btn btn-primary" id="destroy-btn">
+    Destroy
+   </button>
+   <button class="btn btn-primary" disabled="" id="reinit-btn">
+    Reinitialize
+   </button>
+  </div>
+ </div>
+</div>
+
+h2:
+  - JavaScript behavior
+
+h3:
+  - Options
+
+table:
+| PARAMETERS | DESCRIPTION | OPTIONS | DEFAULT VALUE |
+| --- | --- | --- | --- |
+| data-pin-input | Activate a Pin Input by specifying on an element. | - | - |
+| :availableCharsRE | String of regular expression for allowed characters. | RegExp | ^[a-zA-Z0-9]+$ |
+| data-pin-input-item | Identifies the element in the container responsible for data entry. | - | - |
+
+h3:
+  - Class Options
+
+table:
+| PARAMETERS | DESCRIPTION | OPTIONS | DEFAULT VALUE |
+| --- | --- | --- | --- |
+| autofocus | If one of the fields has this class, it will be focused when the page loads. | - | - |
+
+p:
+  - MethodsTheHSPinInputobject is contained within the globalwindowobject.
+
+h3:
+  - Methods
+
+table:
+| METHOD | DESCRIPTION |
+| --- | --- |
+| PUBLIC METHODS |
+| destroy() | Destroys the instance, removes generated markup (if any), removes added classes and attributes. |
+| STATIC METHODS |
+| HSPinInput.getInstance(target, isInstance) | Returns the element associated to thetarget.targetshould be a Node or string (valid selector).isInstanceboolean. Returns the instance instead of Node iftrue. |
+
+p:
+  - Destroy instance.
+
+h3:
+  - Events
+
+table:
+| METHOD | DESCRIPTION | RETURNING VALUE |
+| --- | --- | --- |
+| on:completed | The event is triggered when the PIN has set up. | Current value |
+
+p:
+  - Assign an ID todata-pin-input, and you can then trigger an event using that ID.
+
+p:
+  - Below is a demonstration of how to use the event. We’ve included JavaScript to handle the events, allowing it to execute when the corresponding event is fired. To test these events, monitor your console.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose justify-between flex-wrap flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex space-x-3" data-pin-input="" id="pin-input-log">
+   <input aria-label="pin input" autofocus="" class="pin-input" data-pin-input-item="" type="text"/>
+   <input aria-label="pin input" class="pin-input" data-pin-input-item="" type="text"/>
+   <input aria-label="pin input" class="pin-input" data-pin-input-item="" type="text"/>
+   <input aria-label="pin input" class="pin-input" data-pin-input-item="" type="text"/>
+  </div>
+ </div>
+</div>
+
+p:
+  - When pin input is completed example.
+
+h2:
+  - Pin Input
+
+h3:
+  - On this page
+
+h2:
+  - Pin Input
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

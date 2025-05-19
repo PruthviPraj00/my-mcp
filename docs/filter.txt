@@ -1,0 +1,73 @@
+# Tailwind CSS Filter - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - forms
+
+p:
+  - A group of radio buttons that lets you pick one option, hiding the rest, with a reset button to change your choice.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| filter | Component | Applies toformsordivscontaining radio buttons for item filtering. |
+| filter-reset | Part | Reset button alternative for non-form elements. |
+
+h3:
+  - Filter with HTML form: radio buttons and reset button
+
+p:
+  - A HTML form for filtering with radio buttons and a reset option.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose justify-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <form class="filter">
+   <input class="btn btn-square" type="reset" value="Ã"/>
+   <input aria-label="Tea" class="btn" name="drink" type="radio"/>
+   <input aria-label="Coffee" class="btn" name="drink" type="radio"/>
+   <input aria-label="Smoothie" class="btn" name="drink" type="radio"/>
+  </form>
+ </div>
+</div>
+
+h3:
+  - Implementing filter without HTML forms
+
+p:
+  - Use this method when HTML forms are not an option.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose justify-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="filter">
+   <input aria-label="All" class="btn filter-reset" name="destination" type="radio"/>
+   <input aria-label="Jungle" class="btn" name="destination" type="radio"/>
+   <input aria-label="Beach" class="btn" name="destination" type="radio"/>
+   <input aria-label="Mountain" class="btn" name="destination" type="radio"/>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Filter
+
+h3:
+  - On this page
+
+h2:
+  - Filter
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

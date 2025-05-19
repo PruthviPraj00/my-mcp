@@ -1,0 +1,607 @@
+# Tailwind CSS Badge - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - components
+
+p:
+  - Badges serve to communicate the status of particular data to the user.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| badge | Component | Base class for the badge component. |
+| badge-soft | Style | Soft colored badge. |
+| badge-outline | Style | Transparent badge with colored border. |
+| badge-primary | Color | Badge with ‘primary’ color. |
+| badge-secondary | Color | Badge with ‘secondary’ color. |
+| badge-accent | Color | Badge with ‘accent’ color. |
+| badge-info | Color | Badge with ‘info’ color. |
+| badge-success | Color | Badge with ‘success’ color. |
+| badge-warning | Color | Badge with ‘warning’ color. |
+| badge-error | Color | Badge with ’error’ color. |
+| badge-xs | Size | Badge with extra small size. |
+| badge-sm | Size | Badge with small size. |
+| badge-md | Size | Badge with medium(default) size. |
+| badge-lg | Size | Badge with large size. |
+| badge-xl | Size | Badge with extra-large size. |
+
+h2:
+  - Variants
+
+h3:
+  - Solid badges
+
+p:
+  - The standard format for badge is component classbadge, accompanied by modifier classbadge-{semantic-color}.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <span class="badge">
+   Default
+  </span>
+  <span class="badge badge-primary">
+   Primary
+  </span>
+  <span class="badge badge-secondary">
+   Secondary
+  </span>
+  <span class="badge badge-accent">
+   Accent
+  </span>
+  <span class="badge badge-info">
+   Info
+  </span>
+  <span class="badge badge-success">
+   Success
+  </span>
+  <span class="badge badge-warning">
+   Warning
+  </span>
+  <span class="badge badge-error">
+   Error
+  </span>
+ </div>
+</div>
+
+h3:
+  - Soft badges
+
+p:
+  - Add modifier classbadge-softfor soft colored badges.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <span class="badge badge-soft">
+   Default
+  </span>
+  <span class="badge badge-soft badge-primary">
+   Primary
+  </span>
+  <span class="badge badge-soft badge-secondary">
+   Secondary
+  </span>
+  <span class="badge badge-soft badge-accent">
+   Accent
+  </span>
+  <span class="badge badge-soft badge-info">
+   Info
+  </span>
+  <span class="badge badge-soft badge-success">
+   Success
+  </span>
+  <span class="badge badge-soft badge-warning">
+   Warning
+  </span>
+  <span class="badge badge-soft badge-error">
+   Error
+  </span>
+ </div>
+</div>
+
+h3:
+  - Outline badges
+
+p:
+  - Add modifier classbadge-outlinefor outline badges.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <span class="badge badge-outline">
+   Default
+  </span>
+  <span class="badge badge-outline badge-primary">
+   Primary
+  </span>
+  <span class="badge badge-outline badge-secondary">
+   Secondary
+  </span>
+  <span class="badge badge-outline badge-accent">
+   Accent
+  </span>
+  <span class="badge badge-outline badge-info">
+   Info
+  </span>
+  <span class="badge badge-outline badge-success">
+   Success
+  </span>
+  <span class="badge badge-outline badge-warning">
+   Warning
+  </span>
+  <span class="badge badge-outline badge-error">
+   Error
+  </span>
+ </div>
+</div>
+
+h2:
+  - Shapes
+
+h3:
+  - Pill badges
+
+p:
+  - Use therounded-fullutility class to make badges pilled. The default shape of the badges but can be altered by using
+TailwindCSSBorder Radiusutility classes.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <span class="badge badge-primary rounded-full">
+   Primary
+  </span>
+  <span class="badge badge-soft badge-primary rounded-full">
+   Primary
+  </span>
+  <span class="badge badge-outline badge-primary rounded-full">
+   Primary
+  </span>
+ </div>
+</div>
+
+h3:
+  - Rounded badges
+
+p:
+  - This is the Default shape of the badge.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <span class="badge badge-primary">
+   Primary
+  </span>
+  <span class="badge badge-soft badge-primary">
+   Primary
+  </span>
+  <span class="badge badge-outline badge-primary">
+   Primary
+  </span>
+ </div>
+</div>
+
+h2:
+  - Sizes
+
+h3:
+  - Size variants
+
+p:
+  - Add responsive classbadge-{size}where{size} = xs|sm|md|lg|xlfor badges of different sizes.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose items-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <span class="badge badge-primary badge-xs">
+   1
+  </span>
+  <span class="badge badge-primary badge-sm">
+   2
+  </span>
+  <span class="badge badge-primary">
+   3
+  </span>
+  <span class="badge badge-primary badge-lg">
+   4
+  </span>
+  <span class="badge badge-primary badge-xl">
+   5
+  </span>
+ </div>
+</div>
+
+h2:
+  - Illustrations
+
+h3:
+  - Badge links
+
+p:
+  - Use badges in anchor tags for clickable badge links.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <a href="#">
+   <span class="badge badge-primary">
+    Primary
+   </span>
+  </a>
+  <a href="#">
+   <span class="badge badge-secondary">
+    Secondary
+   </span>
+  </a>
+  <a href="#">
+   <span class="badge badge-success">
+    Success
+   </span>
+  </a>
+  <a href="#">
+   <span class="badge badge-error">
+    Error
+   </span>
+  </a>
+  <a href="#">
+   <span class="badge badge-warning">
+    Warning
+   </span>
+  </a>
+  <a href="#">
+   <span class="badge badge-info">
+    Info
+   </span>
+  </a>
+ </div>
+</div>
+
+h3:
+  - Dot style badges
+
+p:
+  - Use badge with utility classesheight(h),width(w)orsize&p-0for dot style badges.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex items-center justify-center gap-1.5 text-base">
+   <span class="badge size-2 p-0">
+   </span>
+   Default
+  </div>
+  <div class="flex items-center justify-center gap-1.5 text-base">
+   <span class="badge badge-primary size-2 p-0">
+   </span>
+   Primary
+  </div>
+  <div class="flex items-center justify-center gap-1.5 text-base">
+   <span class="badge badge-secondary size-2 p-0">
+   </span>
+   Secondary
+  </div>
+  <div class="flex items-center justify-center gap-1.5 text-base">
+   <span class="badge badge-success size-2 p-0">
+   </span>
+   Success
+  </div>
+  <div class="flex items-center justify-center gap-1.5 text-base">
+   <span class="badge badge-error size-2 p-0">
+   </span>
+   Error
+  </div>
+  <div class="flex items-center justify-center gap-1.5 text-base">
+   <span class="badge badge-warning size-2 p-0">
+   </span>
+   Warning
+  </div>
+  <div class="flex items-center justify-center gap-1.5 text-base">
+   <span class="badge badge-info size-2 p-0">
+   </span>
+   Info
+  </div>
+ </div>
+</div>
+
+h3:
+  - Dashed badges
+
+p:
+  - You can achieve this style by combining theborder-dashedutility class with thebadge-outlinemodifier class.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <span class="badge badge-outline border-dashed">
+   Default
+  </span>
+  <span class="badge badge-outline border-dashed badge-primary">
+   Primary
+  </span>
+  <span class="badge badge-outline border-dashed badge-secondary">
+   Secondary
+  </span>
+  <span class="badge badge-outline border-dashed badge-accent">
+   Accent
+  </span>
+  <span class="badge badge-outline border-dashed badge-info">
+   Info
+  </span>
+  <span class="badge badge-outline border-dashed badge-success">
+   Success
+  </span>
+  <span class="badge badge-outline border-dashed badge-warning">
+   Warning
+  </span>
+  <span class="badge badge-outline border-dashed badge-error">
+   Error
+  </span>
+ </div>
+</div>
+
+h3:
+  - Badge with icons
+
+p:
+  - Usesvgoriconsinside badges for icon badges.
+
+p:
+  - Add utility classessize&p-0for square icon badges.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <span class="badge size-6 p-0">
+   <span class="icon-[tabler--user]">
+   </span>
+  </span>
+  <span class="badge badge-primary size-6 p-0">
+   <span class="icon-[tabler--star]">
+   </span>
+  </span>
+  <span class="badge badge-secondary size-6 p-0">
+   <span class="icon-[tabler--sun]">
+   </span>
+  </span>
+  <span class="badge badge-accent size-6 p-0">
+   <span class="icon-[tabler--moon]">
+   </span>
+  </span>
+  <span class="badge badge-info size-6 p-0">
+   <span class="icon-[tabler--folder]">
+   </span>
+  </span>
+  <span class="badge badge-success size-6 p-0">
+   <span class="icon-[tabler--check]">
+   </span>
+  </span>
+  <span class="badge badge-warning size-6 p-0">
+   <span class="icon-[tabler--cloud]">
+   </span>
+  </span>
+  <span class="badge badge-error size-6 p-0">
+   <span class="icon-[tabler--clock]">
+   </span>
+  </span>
+ </div>
+</div>
+
+p:
+  - Add utility classesrounded-full,size&p-0for circular Icon badges.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <span class="badge size-6 rounded-full p-0">
+   <span class="icon-[tabler--user]">
+   </span>
+  </span>
+  <span class="badge badge-primary size-6 rounded-full p-0">
+   <span class="icon-[tabler--star]">
+   </span>
+  </span>
+  <span class="badge badge-secondary size-6 rounded-full p-0">
+   <span class="icon-[tabler--sun]">
+   </span>
+  </span>
+  <span class="badge badge-accent size-6 rounded-full p-0">
+   <span class="icon-[tabler--moon]">
+   </span>
+  </span>
+  <span class="badge badge-info size-6 rounded-full p-0">
+   <span class="icon-[tabler--folder]">
+   </span>
+  </span>
+  <span class="badge badge-success size-6 rounded-full p-0">
+   <span class="icon-[tabler--check]">
+   </span>
+  </span>
+  <span class="badge badge-warning size-6 rounded-full p-0">
+   <span class="icon-[tabler--cloud]">
+   </span>
+  </span>
+  <span class="badge badge-error size-6 rounded-full p-0">
+   <span class="icon-[tabler--clock]">
+   </span>
+  </span>
+ </div>
+</div>
+
+h3:
+  - Badge in a text
+
+p:
+  - Badges used in textinheritthe font size of the immediate parent element.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <p class="text-xl">
+   Heading
+   <span class="badge badge-outline badge-secondary badge-xl ms-1 rounded-full">
+    NEW
+   </span>
+  </p>
+  <p class="text-lg">
+   Heading
+   <span class="badge badge-outline badge-secondary badge-lg ms-1 rounded-full">
+    NEW
+   </span>
+  </p>
+  <p class="text-base">
+   Heading
+   <span class="badge badge-outline badge-secondary ms-1 rounded-full">
+    NEW
+   </span>
+  </p>
+  <p class="text-sm">
+   Heading
+   <span class="badge badge-outline badge-secondary badge-sm ms-1 rounded-full">
+    NEW
+   </span>
+  </p>
+  <p class="text-xs">
+   Heading
+   <span class="badge badge-outline badge-secondary badge-xs ms-1 rounded-full">
+    NEW
+   </span>
+  </p>
+ </div>
+</div>
+
+h3:
+  - Badge in a button
+
+p:
+  - Add badges to buttons to display additional information in buttons.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <button class="btn btn-primary btn-soft">
+   Inbox
+   <span class="badge badge-primary badge-sm">
+    +99
+   </span>
+  </button>
+  <button class="btn btn-primary btn-soft">
+   Send
+   <span class="badge badge-primary size-6 p-0">
+    <span class="icon-[tabler--send]">
+    </span>
+   </span>
+  </button>
+ </div>
+</div>
+
+h3:
+  - Avatar badges
+
+p:
+  - Use theimgtag to display avatar badges with an image.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <span class="badge badge-primary badge-lg">
+   <img alt="John" class="size-4.5 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   John
+  </span>
+  <span class="badge badge-soft badge-primary badge-lg">
+   <img alt="Anna" class="size-4.5 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png"/>
+   Anna
+  </span>
+  <span class="badge badge-outline badge-primary badge-lg">
+   <img alt="Sophia" class="size-4.5 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-10.png"/>
+   Sophia
+  </span>
+ </div>
+</div>
+
+h2:
+  - Dismissible badges
+
+h3:
+  - Default chips
+
+p:
+  - Dismissible badges are also referred as chips.
+
+p:
+  - Include thedata-remove-elementattribute in the close button element and set its value to#idto specify the element to be removed. Customize the removal animation by incorporating theremoving:modifier, as illustrated below.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <span class="badge badge-primary badge-lg removing:translate-x-5 removing:opacity-0 transition duration-300 ease-in-out" id="badge-1">
+   Badge
+   <button aria-label="Dismiss Button" class="icon-[tabler--circle-x-filled] size-5 min-h-0 cursor-pointer px-0" data-remove-element="#badge-1">
+   </button>
+  </span>
+  <span class="badge badge-soft badge-primary badge-lg removing:translate-x-5 removing:opacity-0 transition duration-300 ease-in-out" id="badge-2">
+   Badge
+   <button aria-label="Dismiss Button" class="icon-[tabler--circle-x-filled] size-5 min-h-0 cursor-pointer px-0" data-remove-element="#badge-2">
+   </button>
+  </span>
+  <span class="badge badge-outline badge-primary badge-lg removing:translate-x-5 removing:opacity-0 transition duration-300 ease-in-out" id="badge-3">
+   Badge
+   <button aria-label="Dismiss Button" class="icon-[tabler--circle-x-filled] size-5 min-h-0 cursor-pointer px-0" data-remove-element="#badge-3">
+   </button>
+  </span>
+ </div>
+</div>
+
+h3:
+  - Avatar chips
+
+p:
+  - A simple example of dismissible avatar badges.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <span class="badge badge-primary badge-lg removing:translate-x-5 removing:opacity-0 transition duration-300 ease-in-out" id="badge-4">
+   <img alt="John" class="size-4.5 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   John
+   <button aria-label="Dismiss Button" class="icon-[tabler--circle-x-filled] size-5 min-h-0 cursor-pointer px-0" data-remove-element="#badge-4">
+   </button>
+  </span>
+  <span class="badge badge-soft badge-primary badge-lg removing:translate-x-5 removing:opacity-0 transition duration-300 ease-in-out" id="badge-5">
+   <img alt="Anna" class="size-4.5 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png"/>
+   Anna
+   <button aria-label="Dismiss Button" class="icon-[tabler--circle-x-filled] size-5 min-h-0 cursor-pointer px-0" data-remove-element="#badge-5">
+   </button>
+  </span>
+  <span class="badge badge-outline badge-primary badge-lg removing:translate-x-5 removing:opacity-0 transition duration-300 ease-in-out" id="badge-6">
+   <img alt="Sophia" class="size-4.5 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-10.png"/>
+   Sophia
+   <button aria-label="Dismiss Button" class="icon-[tabler--circle-x-filled] size-5 min-h-0 cursor-pointer px-0" data-remove-element="#badge-6">
+   </button>
+  </span>
+ </div>
+</div>
+
+h2:
+  - Badge
+
+h3:
+  - On this page
+
+h2:
+  - Badge
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

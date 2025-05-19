@@ -1,0 +1,406 @@
+# Tailwind CSS Copy Markup - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - advanced forms
+
+p:
+  - The Copy Markup Component adds extra fields, like address entries, simplifying form expansion and making it ideal for dynamic surveys and registrations.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| input | Component | Base class for input field. |
+| select | Component | Base class for select field. |
+
+h2:
+  - Default
+
+h3:
+  - Basic example
+
+p:
+  - Thedata-copy-markupattribute defines the configuration for copying content. It has three key properties:
+
+p:
+  - In this setup, the “Add Technology” button copies the content from#content-for-copyinto the#wrapper-for-copycontainer, allowing a maximum of three copies. If the limit is reached, further copies are not allowed.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <p class="mb-4">
+   Which technologies have you primarily used?
+   <span class="text-base-content font-medium">
+    (Maximum three)
+   </span>
+  </p>
+  <div class="max-w-xs space-y-3" id="wrapper-for-copy">
+   <input class="input" id="content-for-copy" placeholder="Enter Technology Name" type="text"/>
+  </div>
+  <div class="mt-4 flex max-w-xs justify-end">
+   <button class="btn btn-sm btn-primary" data-copy-markup='{
+    "targetSelector": "#content-for-copy",
+    "wrapperSelector": "#wrapper-for-copy",
+    "limit": 3
+    }' id="copy-content" type="button">
+    <span class="icon-[tabler--plus]">
+    </span>
+    Add Technology
+   </button>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Illustrations
+
+h3:
+  - With select
+
+p:
+  - Below example shows copy markup with select.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="space-y-3" id="wrapper-select-for-copy">
+   <div class="flex items-end gap-3 max-sm:flex-col" id="content-select-for-copy">
+    <div class="w-full sm:w-1/4">
+     <label class="label-text" for="select">
+      Options
+     </label>
+     <select aria-label="select option" class="select" id="select">
+      <option disabled="" selected="">
+       Choose option
+      </option>
+      <option value="size">
+       Size
+      </option>
+      <option value="color">
+       Color
+      </option>
+      <option value="weight">
+       Weight
+      </option>
+      <option value="smell">
+       Smell
+      </option>
+     </select>
+    </div>
+    <input class="input w-full sm:w-3/4" placeholder="Enter Value" type="text"/>
+   </div>
+  </div>
+  <p class="mt-4 text-end">
+   <button class="btn btn-sm btn-primary" data-copy-markup='{
+      "targetSelector": "#content-select-for-copy",
+      "wrapperSelector": "#wrapper-select-for-copy",
+      "limit": 4
+    }' id="copy-select-content" type="button">
+    Add another option
+   </button>
+  </p>
+ </div>
+</div>
+
+h3:
+  - Modals
+
+p:
+  - Below example shows copy markup with select in modals.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <button aria-controls="modal-with-copy-markup" aria-expanded="false" aria-haspopup="dialog" class="btn btn-primary" data-overlay="#modal-with-copy-markup" type="button">
+   Open modal
+  </button>
+  <div class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 hidden" id="modal-with-copy-markup" role="dialog" tabindex="-1">
+   <div class="modal-dialog overlay-open:opacity-100 overlay-open:duration-300">
+    <div class="modal-content">
+     <div class="modal-header">
+      <h3 class="modal-title">
+       Skill survey
+      </h3>
+      <button aria-label="Close" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" data-overlay="#modal-with-copy-markup" type="button">
+       <span class="icon-[tabler--x] size-4">
+       </span>
+      </button>
+     </div>
+     <div class="modal-body grow space-y-3">
+      <p>
+       Which technologies have you primarily used?
+       <br/>
+       <span class="text-base-content font-medium">
+        (Maximum four)
+       </span>
+      </p>
+      <div class="space-y-3" id="modal-wrapper-select-for-copy">
+       <div id="modal-content-select-for-copy">
+        <select class="select">
+         <option disabled="" selected="">
+          Choose Technology
+         </option>
+         <option value="html">
+          HTML
+         </option>
+         <option value="css">
+          CSS
+         </option>
+         <option value="javascript">
+          JavaScript
+         </option>
+         <option value="tailwindcss">
+          TailwindCSS
+         </option>
+        </select>
+       </div>
+      </div>
+      <p class="text-end">
+       <button class="btn btn-sm btn-primary" data-copy-markup='{
+              "targetSelector": "#modal-content-select-for-copy",
+              "wrapperSelector": "#modal-wrapper-select-for-copy",
+              "limit": 4
+            }' id="copy-select-with-modal-content" type="button">
+        Add another option
+       </button>
+      </p>
+     </div>
+     <div class="modal-footer mt-16">
+      <button class="btn btn-soft btn-secondary" data-overlay="#modal-with-copy-markup" type="button">
+       Close
+      </button>
+      <button class="btn btn-primary" type="button">
+       Save changes
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - With remove option
+
+p:
+  - Add an attribute nameddata-copy-markup-delete-itemto any button within a component identified by a specific ID. This attribute will enable the button to delete the component when clicked.
+
+p:
+  - Below example shows copy markup with remove(delete) option.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <p class="mb-4">
+   Which technologies have you primarily used?
+   <span class="text-base-content font-medium">
+    (Maximum three)
+   </span>
+  </p>
+  <div class="max-w-sm space-y-3" id="wrapper-remove-for-copy-target">
+   <div class="flex items-center gap-2" id="content-remove-for-copy-target">
+    <input class="input" placeholder="Enter Technology Name" type="text"/>
+    <button aria-label="delete button" class="btn btn-square btn-outline btn-error" data-copy-markup-delete-item="">
+     <span class="icon-[tabler--x]">
+     </span>
+    </button>
+   </div>
+  </div>
+  <div class="flex max-w-sm justify-end gap-2 mt-4">
+   <button class="btn btn-sm btn-primary" data-copy-markup='{
+    "targetSelector": "#content-remove-for-copy-target",
+    "wrapperSelector": "#wrapper-remove-for-copy-target",
+    "limit": 3
+    }' id="copy-content-rem-btn" type="button">
+    <span class="icon-[tabler--plus]">
+    </span>
+    Add Technology
+   </button>
+  </div>
+ </div>
+</div>
+
+p:
+  - Destroy/ReinitializeThedestroymethodis provided to facilitate the destruction of a copy markup.
+
+h3:
+  - Destroy/Reinitialize
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <p class="mb-4">
+   Which technologies have you primarily used?
+   <span class="text-base-content font-medium">
+    (Maximum three)
+   </span>
+  </p>
+  <div class="w-full space-y-3" id="wrapper-for-copy-to-destroy">
+   <input class="input" id="content-for-copy-to-destroy" placeholder="Enter Technology Name" type="text"/>
+  </div>
+  <div class="mt-4 flex w-full justify-end">
+   <button class="btn btn-sm btn-primary" data-copy-markup='{
+    "targetSelector": "#content-for-copy-to-destroy",
+    "wrapperSelector": "#wrapper-for-copy-to-destroy",
+    "limit": 3
+    }' id="copy-markup-to-destroy" type="button">
+    <span class="icon-[tabler--plus]">
+    </span>
+    Add Technology
+   </button>
+  </div>
+  <div class="mt-4 flex gap-3">
+   <button class="btn btn-primary" id="destroy-btn">
+    Destroy
+   </button>
+   <button class="btn btn-primary" disabled="" id="reinit-btn">
+    Reinitialize
+   </button>
+  </div>
+ </div>
+</div>
+
+h2:
+  - JavaScript behavior
+
+h3:
+  - Options
+
+table:
+| PARAMETERS | DESCRIPTION | OPTIONS | DEFAULT VALUE |
+| --- | --- | --- | --- |
+| data-copy-markup | Activate a Copy Markup by specifying on an element. | - | - |
+| data-copy-markup-delete-item | Deletes targeted markup element on click. | - | - |
+| :targetSelector | Specifies the target element to copy. The value must be a valid selector. | string | - |
+| :wrapperSelector | Specifies which element should be used for copying. The value must be a valid selector. | string | - |
+| :limit | Specifies how many items you can copy until the button is disabled. | number | null |
+
+h3:
+  - Methods
+
+p:
+  - TheHSCopyMarkupobject is contained within the globalwindowobject.
+
+table:
+| METHOD | DESCRIPTION |
+| --- | --- |
+| PUBLIC METHODS |
+| delete(target) | Remove the element associated to thetarget.targetshould be a Node. |
+| destroy() | Destroys the instance, removes generated markup (if any), removes added classes and attributes. |
+| STATIC METHODS |
+| HSCopyMarkup.getInstance(target, isInstance) | Returns the element associated to thetarget.targetshould be a Node or string (valid selector).isInstanceboolean. Returns the instance instead of Node iftrue. |
+
+p:
+  - Assign an ID to the button containing thedata-copy-markupattribute, as demonstrated in the public method. To explore additional methods, you can copy them into the console.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <p class="mb-4">
+   Which technologies have you primarily used?
+   <span class="text-base-content font-medium">
+    (Maximum two)
+   </span>
+  </p>
+  <div class="max-w-sm space-y-3" id="wrapper-method">
+   <div class="flex gap-2" id="content-method">
+    <input class="input" placeholder="Enter Technology Name" type="text"/>
+   </div>
+  </div>
+  <div class="mt-4 flex max-w-sm flex-wrap justify-end gap-2">
+   <button class="btn btn-sm btn-primary" data-copy-markup='{
+    "targetSelector": "#content-method",
+    "wrapperSelector": "#wrapper-method",
+    "limit": 2
+    }' id="copy-method" type="button">
+    <span class="icon-[tabler--plus]">
+    </span>
+    Add Technology
+   </button>
+   <button class="btn btn-sm btn-soft btn-error" id="delete-method">
+    <span class="icon-[tabler--minus]">
+    </span>
+    Remove Technology
+   </button>
+  </div>
+ </div>
+</div>
+
+p:
+  - Toggle the field to type text (public method).
+
+p:
+  - Toggle the field to type text (mixed).
+
+p:
+  - Destroy instance.
+
+h3:
+  - Events
+
+table:
+| METHOD | DESCRIPTION | RETURNING VALUE |
+| --- | --- | --- |
+| on:copy | Called after target element is copied. | Copied element |
+| on:delete | Called after target element is deleted. | Deleted element |
+
+p:
+  - Assign an ID to the button containing thedata-copy-markupattribute, and then use that ID to attach an event.
+The example below demonstrates a use case of event usage. You can view the output in the console.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <p class="mb-4">
+   Which technologies have you primarily used?
+   <span class="text-base-content font-medium">
+    (Maximum two)
+   </span>
+  </p>
+  <div class="max-w-sm space-y-3" id="wrapper-event">
+   <input class="input --prevent-on-load-init" id="content-event" placeholder="Enter Technology Name" type="text"/>
+  </div>
+  <div class="mt-4 flex max-w-sm flex-wrap justify-end gap-2">
+   <button class="btn btn-sm btn-primary" data-copy-markup='{
+    "targetSelector": "#content-event",
+    "wrapperSelector": "#wrapper-event",
+    "limit": 2
+    }' id="copy-event" type="button">
+    <span class="icon-[tabler--plus]">
+    </span>
+    Add Technology
+   </button>
+   <button class="btn btn-sm btn-soft btn-error" id="delete-event">
+    <span class="icon-[tabler--minus]">
+    </span>
+    Remove Technology
+   </button>
+  </div>
+ </div>
+</div>
+
+p:
+  - Call any function on `copy` or `delete` example.
+
+h2:
+  - Copy Markup
+
+h3:
+  - On this page
+
+h2:
+  - Copy Markup
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

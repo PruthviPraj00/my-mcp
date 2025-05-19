@@ -1,0 +1,259 @@
+# Tailwind CSS Wave Effect - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - third party plugins
+
+p:
+  - Add smooth wave effects to your components with Nodewave for better interaction.
+
+h2:
+  - Getting started
+
+h3:
+  - Setup
+
+p:
+  - Below are the comprehensively outlined steps you can follow to seamlessly integrateWaveswith FlyonUI.
+
+p:
+  - Installwavesusing npm:
+
+p:
+  - Add the following CSS and JavaScript to your page:
+
+p:
+  - Note:A CDN link won't work here because we need to modify the default Vendor CSS to fit FlyonUI's design.
+
+p:
+  - Update yourtailwind.cssfile to incorporate the path for the FlyonUI Waves override CSS.
+
+p:
+  - Add the initialization JavaScript code for Waves after including the Waves JS library. Set up an event listener on any element to trigger the Waves instance. Ensure this Waves JS file is monitored by TailwindCSS, as described in step 3.
+
+p:
+  - For more options and detailed configurations, refer to the Wavesdocumentation.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| waves | Component | Base class for the waves. |
+| waves-light | Color | Waves with `white’ color. |
+| waves-primary | Color | Waves with ‘primary’ color. |
+| waves-secondary | Color | Waves with ‘secondary’ color. |
+| waves-accent | Color | Waves with ‘accent’ color. |
+| waves-info | Color | Waves with ‘info’ color. |
+| waves-success | Color | Waves with ‘success’ color. |
+| waves-warning | Color | Waves with ‘warning’ color. |
+| waves-error | Color | Waves with ’error’ color. |
+
+h2:
+  - Basic example
+
+h3:
+  - Default
+
+p:
+  - Use thewavesclass to implement the default ripple effect.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <button class="btn btn-outline waves">
+   Default
+  </button>
+ </div>
+</div>
+
+h2:
+  - Color
+
+h3:
+  - Semantic colors
+
+p:
+  - Combine thewavesclass withwaves-{semantic color}to implement colored wave effects.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <button class="btn btn-soft waves">
+   Default
+  </button>
+  <button class="btn btn-soft btn-primary waves waves-primary">
+   <span class="waves-ripple">
+   </span>
+   Primary
+  </button>
+  <button class="btn btn-soft btn-secondary waves waves-secondary">
+   Secondary
+  </button>
+  <button class="btn btn-soft btn-accent waves waves-accent">
+   Accent
+  </button>
+  <button class="btn btn-soft btn-info waves waves-info">
+   Info
+  </button>
+  <button class="btn btn-soft btn-success waves waves-success">
+   Success
+  </button>
+  <button class="btn btn-soft btn-warning waves waves-warning">
+   Warning
+  </button>
+  <button class="btn btn-soft btn-error waves waves-error">
+   Error
+  </button>
+ </div>
+</div>
+
+h3:
+  - Custom colors
+
+p:
+  - To customize the ripple color, apply thewavesclass alongside the--wave-colorCSS variable.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <button class="btn waves [--btn-color:#1877F2] text-white [--wave-color:#ffffff5e]">
+   <span class="icon-[tabler--brand-facebook] size-4.5 shrink-0">
+   </span>
+   Facebook
+   <span class="waves-ripple">
+   </span>
+  </button>
+  <button class="btn waves btn-soft [--btn-color:#1da1f2] [--btn-fg:#1da1f2] [--wave-color:#4a87d766]">
+   <span class="icon-[tabler--brand-x] size-4.5 shrink-0">
+   </span>
+   Twitter
+  </button>
+  <button class="btn waves btn-outline [--btn-color:#0a66c2] [--btn-fg:#0a66c2] [--wave-color:#0a66c250]">
+   <span class="icon-[tabler--brand-linkedin] size-4.5 shrink-0">
+   </span>
+   LinkedIn
+  </button>
+ </div>
+</div>
+
+h2:
+  - Illustration
+
+h3:
+  - Buttons
+
+p:
+  - Example of wave effect applied to buttons.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <button class="btn btn-primary waves waves-light">
+   Default
+  </button>
+  <button class="btn btn-primary btn-soft waves waves-primary">
+   Default
+  </button>
+  <button class="btn btn-primary btn-outline waves waves-primary">
+   Default
+  </button>
+  <button class="btn btn-primary btn-text waves waves-primary">
+   Default
+  </button>
+  <button class="btn btn-primary btn-gradient waves waves-light">
+   Default
+  </button>
+ </div>
+</div>
+
+h3:
+  - Icons
+
+p:
+  - Example of wave effect applied to icon buttons.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <button aria-label="Icon Button" class="btn btn-square waves waves-light btn-primary">
+   <span class="icon-[tabler--star] size-4.5">
+   </span>
+  </button>
+  <button aria-label="Soft Icon Button" class="btn btn-square waves waves-primary btn-soft btn-primary">
+   <span class="icon-[tabler--star] size-4.5">
+   </span>
+  </button>
+  <button aria-label="Outline Icon Button" class="btn btn-square waves waves-primary btn-outline btn-primary">
+   <span class="icon-[tabler--star] size-4.5">
+   </span>
+  </button>
+  <button aria-label="Outline Icon Button" class="btn btn-square waves waves-primary btn-text btn-primary">
+   <span class="icon-[tabler--star] size-4.5">
+   </span>
+  </button>
+  <button aria-label="Gradient Icon Button" class="btn btn-square waves waves-light btn-gradient btn-primary">
+   <span class="icon-[tabler--star] size-4.5">
+   </span>
+  </button>
+ </div>
+</div>
+
+h3:
+  - Card
+
+p:
+  - Example of wave effect applied to card.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="card waves waves-primary sm:max-w-sm">
+   <div class="card-body">
+    <h5 class="card-title mb-2.5">
+     Welcome to Our Service
+    </h5>
+    <p>
+     Discover the features and benefits that our service offers. Enhance your experience with our user-friendly
+platform designed to meet all your needs.
+    </p>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Image
+
+p:
+  - Example of wave effect applied to images.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="waves waves-info">
+   <img alt="flower image" src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png"/>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Wave Effect
+
+h3:
+  - On this page
+
+h2:
+  - Wave Effect
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel

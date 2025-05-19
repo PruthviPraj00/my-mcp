@@ -1,0 +1,761 @@
+# Tailwind CSS Checkbox - FlyonUI
+
+h3:
+  - FlyonUI
+
+p:
+  - forms
+
+p:
+  - The checkbox component allows users to select one or more options by ticking a square box, available in various styles, sizes, colors, and variants.
+
+table:
+| Class Name | Type | Description |
+| --- | --- | --- |
+| checkbox | Component | Component class for checkbox. |
+| custom-option | Component | For custom option container. |
+| custom-soft-option | Component | For custom option container with background. |
+| label-text | Part | Base class for title label text. |
+| helper-text | Part | Base class for helper label text. |
+| checkbox-primary | Color | Adds ‘primary’ color to checkbox. |
+| checkbox-secondary | Color | Adds ‘secondary’ color to checkbox. |
+| checkbox-accent | Color | Adds ‘accent’ color to checkbox. |
+| checkbox-info | Color | Adds ‘info’ color to checkbox. |
+| checkbox-success | Color | Adds ‘success’ color to checkbox. |
+| checkbox-warning | Color | Adds ‘warning’ color to checkbox. |
+| checkbox-error | Color | Adds ’error’ color to checkbox. |
+| is-valid | State | Adds success style to the input. |
+| is-invalid | State | Adds error style to the input. |
+| checkbox-xs | Size | Checkbox with extra small size. |
+| checkbox-sm | Size | Checkbox with small size. |
+| checkbox-md | Size | Checkbox with medium(default) size. |
+| checkbox-lg | Size | Checkbox with large size. |
+| checkbox-xl | Size | Checkbox with extra large size. |
+
+h2:
+  - Basic example
+
+h3:
+  - Default
+
+p:
+  - Basic checkbox example.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex items-center gap-1">
+   <input class="checkbox" id="defaultCheckbox1" type="checkbox"/>
+   <label class="label-text text-base" for="defaultCheckbox1">
+    Default
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="checkbox" id="defaultCheckbox2" type="checkbox"/>
+   <label class="label-text text-base" for="defaultCheckbox2">
+    Checked
+   </label>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Label and helper text
+
+p:
+  - Please uselabel-textfor the label andhelper-textfor the text that appears at the bottom as helper text.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex gap-2">
+   <input class="checkbox checkbox-primary mt-2" id="checkboxLabel1" type="checkbox"/>
+   <label class="label-text cursor-pointer flex flex-col" for="checkboxLabel1">
+    <span class="text-base">
+     Delete
+    </span>
+    <span>
+     Notify me when this action happens.
+    </span>
+   </label>
+  </div>
+  <div class="flex gap-2">
+   <input checked="" class="checkbox checkbox-primary mt-2" id="checkboxLabel" type="checkbox"/>
+   <label class="label-text cursor-pointer flex flex-col" for="checkboxLabel">
+    <span class="text-base">
+     Archive
+    </span>
+    <span>
+     Notify me when this action happens.
+    </span>
+   </label>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Color
+
+h3:
+  - Semantic colors
+
+p:
+  - Apply a semantic color to the checkbox by using thecheckbox-{semantic-color}modifier class together with thecheckboxcomponent class.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-3 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex items-center gap-1">
+   <input checked="" class="checkbox" id="checkboxDefault" type="checkbox"/>
+   <label class="label-text text-base" for="checkboxDefault">
+    Default
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="checkbox checkbox-primary" id="checkboxPrimary" type="checkbox"/>
+   <label class="label-text text-base" for="checkboxPrimary">
+    Primary
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="checkbox checkbox-secondary" id="checkboxSecondary" type="checkbox"/>
+   <label class="label-text text-base" for="checkboxSecondary">
+    Secondary
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="checkbox checkbox-accent" id="checkboxAccent" type="checkbox"/>
+   <label class="label-text text-base" for="checkboxAccent">
+    Accent
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="checkbox checkbox-info" id="checkboxInfo" type="checkbox"/>
+   <label class="label-text text-base" for="checkboxInfo">
+    Info
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="checkbox checkbox-success" id="checkboxSuccess" type="checkbox"/>
+   <label class="label-text text-base" for="checkboxSuccess">
+    Success
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="checkbox checkbox-warning" id="checkboxWarning" type="checkbox"/>
+   <label class="label-text text-base" for="checkboxWarning">
+    Warning
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="checkbox checkbox-error" id="checkboxError" type="checkbox"/>
+   <label class="label-text text-base" for="checkboxError">
+    Error
+   </label>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Custom colors
+
+p:
+  - To create custom checkboxes, you can use Tailwind CSS utilities likebg-*,text-*(for the tick), andborder-*to style both the checked and unchecked states. With the--input-colorvalue, you can easily modify the background and border color when the checkbox is checked. However, this will not affect the tick color, which by default uses theneutral-contenttext color. If you want to change the tick color, you will need to update the text color specifically for the checked state by using thechecked:text-*utility.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-3 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex items-center gap-1">
+   <input checked="" class="checkbox checked:border-[#f0f] checked:bg-[#f0f] checked:text-[#fff]" id="checkboxCustomColor1" type="checkbox"/>
+   <label class="label-text text-base" for="checkboxCustomColor1">
+    hex code
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="checkbox checked:border-[green] checked:bg-[green] checked:text-white" id="checkboxCustomColor2" type="checkbox"/>
+   <label class="label-text text-base" for="checkboxCustomColor2">
+    Named color
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="checkbox checked:border-amber-400 checked:bg-amber-400 checked:text-amber-800" id="checkboxCustomColor5" type="checkbox"/>
+   <label class="label-text text-base" for="checkboxCustomColor5">
+    Tailwind utility colors
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="checkbox [--input-color:blue] checked:text-white" id="checkboxCustomColor5" type="checkbox"/>
+   <label class="label-text text-base" for="checkboxCustomColor5">
+    FlyonUI variable
+   </label>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Size
+
+h3:
+  - Checkbox sizes
+
+p:
+  - Add responsive classcheckbox-{size}where{size} = xs|sm|md|lg|xlfor checkbox of different sizes.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex items-center">
+   <input checked="" class="checkbox checkbox-primary checkbox-xs" id="checkboxExtraSmall" type="checkbox"/>
+   <label class="label-text text-xs" for="checkboxExtraSmall">
+    Extra small
+   </label>
+  </div>
+  <div class="flex items-center gap-0.5">
+   <input checked="" class="checkbox checkbox-primary checkbox-sm" id="checkboxSmall" type="checkbox"/>
+   <label class="label-text" for="checkboxSmall">
+    Small
+   </label>
+  </div>
+  <div class="flex items-center gap-1">
+   <input checked="" class="checkbox checkbox-primary" id="checkboxSizeDefault" type="checkbox"/>
+   <label class="label-text text-base" for="checkboxSizeDefault">
+    Default
+   </label>
+  </div>
+  <div class="flex items-center gap-1.5">
+   <input checked="" class="checkbox checkbox-primary checkbox-lg" id="checkboxLarge" type="checkbox"/>
+   <label class="label-text text-lg" for="checkboxLarge">
+    Large
+   </label>
+  </div>
+  <div class="flex items-center gap-1.5">
+   <input checked="" class="checkbox checkbox-primary checkbox-xl" id="checkboxExtraLarge" type="checkbox"/>
+   <label class="label-text text-xl" for="checkboxExtraLarge">
+    Extra Large
+   </label>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Validation states
+
+h3:
+  - Success state
+
+p:
+  - Success state can be show usingis-validclass.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex gap-2">
+   <input checked="" class="checkbox checkbox-primary is-valid mt-2" id="checkboxStateSuccess" type="checkbox"/>
+   <label class="label-text cursor-pointer flex flex-col" for="checkboxStateSuccess">
+    <span class="text-base">
+     Delete
+    </span>
+    <span>
+     Notify me when this action happens.
+    </span>
+   </label>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Error state
+
+p:
+  - Error state can be show usingis-invalidclass.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex gap-2">
+   <input class="checkbox checkbox-primary is-invalid mt-2" id="checkboxStateError" type="checkbox"/>
+   <label class="label-text cursor-pointer flex flex-col" for="checkboxStateError">
+    <span class="text-base">
+     Delete
+    </span>
+    <span>
+     Notify me when this action happens.
+    </span>
+   </label>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Illustrations
+
+h3:
+  - Disabled
+
+p:
+  - Prevent user interaction with the checkbox by adding thedisabledattribute to make it non-selectable.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <input aria-label="disabled checkbox" checked="" class="checkbox" disabled="" type="checkbox"/>
+  <input aria-label="disabled checkbox" class="checkbox" disabled="" type="checkbox"/>
+ </div>
+</div>
+
+h3:
+  - Indeterminate
+
+p:
+  - Theindeterminatestate can be configured using JavaScript. To gain further insight into this concept, you can explore more about ithere.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex items-center gap-1">
+   <input class="checkbox checkbox-primary" id="check2" type="checkbox"/>
+   <label class="label-text text-base" for="check2">
+    Indeterminate
+   </label>
+  </div>
+  <script>
+   document.getElementById("check2").indeterminate=!0
+  </script>
+ </div>
+</div>
+
+h3:
+  - Inline checkbox group
+
+p:
+  - A group of checkbox components.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex gap-4 overflow-x-auto">
+   <div class="flex items-center gap-2">
+    <input class="checkbox checkbox-primary" id="checkboxInline1" type="checkbox"/>
+    <label class="label-text text-base" for="checkboxInline1">
+     Vue
+    </label>
+   </div>
+   <div class="flex items-center gap-2">
+    <input checked="" class="checkbox checkbox-primary" id="checkboxInline2" type="checkbox"/>
+    <label class="label-text text-base" for="checkboxInline2">
+     Angular
+    </label>
+   </div>
+   <div class="flex items-center gap-2">
+    <input class="checkbox checkbox-primary" id="checkboxInline3" type="checkbox"/>
+    <label class="label-text text-base" for="checkboxInline3">
+     React
+    </label>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Vertical checkbox group
+
+p:
+  - A vertical group of checkbox components.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex flex-col gap-2">
+   <div class="flex items-center gap-2">
+    <input class="checkbox checkbox-primary" id="checkboxVertical1" type="checkbox"/>
+    <label class="label-text text-base" for="checkboxVertical1">
+     Vue
+    </label>
+   </div>
+   <div class="flex items-center gap-2">
+    <input checked="" class="checkbox checkbox-primary" id="checkboxVertical2" type="checkbox"/>
+    <label class="label-text text-base" for="checkboxVertical2">
+     Angular
+    </label>
+   </div>
+   <div class="flex items-center gap-2">
+    <input class="checkbox checkbox-primary" id="checkboxVertical3" type="checkbox"/>
+    <label class="label-text text-base" for="checkboxVertical3">
+     React
+    </label>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Checkbox in dropdown
+
+p:
+  - Below example shows a checkbox in dropdown.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="dropdown relative inline-flex [--auto-close:inside]">
+   <button aria-expanded="false" aria-haspopup="menu" aria-label="Dropdown" class="dropdown-toggle btn btn-primary" id="dropdown-checkbox" type="button">
+    Dropdown checkbox
+    <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4">
+    </span>
+   </button>
+   <div aria-labelledby="dropdown-checkbox" aria-orientation="vertical" class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60 space-y-0.5" role="menu">
+    <div class="dropdown-item flex-col items-center gap-4 sm:flex-row sm:items-start">
+     <input checked="" class="checkbox checkbox-primary mt-2" id="checkboxDropdown1" type="checkbox"/>
+     <label class="label-text cursor-pointer flex flex-col" for="checkboxDropdown1">
+      <span class="font-semibold">
+       Rename
+      </span>
+      <span class="text-base-content/50 text-base">
+       Notify me when this action happens.
+      </span>
+     </label>
+    </div>
+    <div class="dropdown-item flex-col items-center gap-4 sm:flex-row sm:items-start">
+     <input class="checkbox checkbox-primary mt-2" id="checkboxDropdown2" type="checkbox"/>
+     <label class="label-text cursor-pointer flex flex-col" for="checkboxDropdown2">
+      <span class="font-semibold">
+       Move
+      </span>
+      <span class="text-base-content/50 text-base">
+       Notify me when this action happens.
+      </span>
+     </label>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Checkbox list group
+
+p:
+  - This example can be used to show a list of checkbox buttons inside a grouped list.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <h6 class="text-base-content mb-1 text-base">
+   Select your favorite language:
+  </h6>
+  <ul class="border-base-content/25 divide-base-content/25 rounded-box max-w-sm divide-y border *:cursor-pointer">
+   <li>
+    <label class="flex items-center gap-3 p-3">
+     <input class="checkbox checkbox-primary" type="checkbox"/>
+     <span class="label-text text-base">
+      C++
+     </span>
+    </label>
+   </li>
+   <li>
+    <label class="flex items-center gap-3 p-3">
+     <input checked="" class="checkbox checkbox-primary" type="checkbox"/>
+     <span class="label-text text-base">
+      Ruby
+     </span>
+    </label>
+   </li>
+   <li>
+    <label class="flex items-center gap-3 p-3">
+     <input class="checkbox checkbox-primary" type="checkbox"/>
+     <span class="label-text text-base">
+      Swift
+     </span>
+    </label>
+   </li>
+  </ul>
+ </div>
+</div>
+
+h3:
+  - Horizontal list group
+
+p:
+  - Use this example to group up checkbox button components inside a list.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <h6 class="text-base-content mb-1 text-base">
+   Select your favorite language:
+  </h6>
+  <ul class="border-base-content/25 divide-base-content/25 rounded-box flex w-full flex-col border *:w-full *:cursor-pointer max-sm:divide-y sm:flex-row sm:divide-x">
+   <li class="w-full">
+    <label class="flex items-center gap-3 p-3">
+     <input class="checkbox checkbox-primary" type="checkbox"/>
+     <span class="label-text text-base">
+      Python
+     </span>
+    </label>
+   </li>
+   <li class="w-full">
+    <label class="flex items-center gap-3 p-3">
+     <input checked="" class="checkbox checkbox-primary" type="checkbox"/>
+     <span class="label-text text-base">
+      JavaScript
+     </span>
+    </label>
+   </li>
+   <li class="w-full">
+    <label class="flex items-center gap-3 p-3">
+     <input class="checkbox checkbox-primary" type="checkbox"/>
+     <span class="label-text text-base">
+      Java
+     </span>
+    </label>
+   </li>
+  </ul>
+ </div>
+</div>
+
+h2:
+  - Custom options
+
+h3:
+  - Basic checkbox
+
+p:
+  - Thecustom-optioncomponent is a flexible element with an associated label and background color, which can include text, icons, or images. It allows customization for layout, appearance, and interaction, providing various ways to enhance option designs.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex w-full flex-wrap items-start gap-3 sm:flex-nowrap">
+   <label class="custom-option flex flex-row items-start gap-3 sm:w-1/2">
+    <input checked="" class="checkbox checkbox-primary mt-2" required="" type="checkbox"/>
+    <span class="label-text w-full text-start">
+     <span class="flex justify-between mb-1">
+      <span class="text-base">
+       Basic
+      </span>
+      <span class="text-base-content/50 text-base">
+       Free
+      </span>
+     </span>
+     <span>
+      Get 1 project with 1 teams members.
+     </span>
+    </span>
+   </label>
+   <label class="custom-option flex flex-row items-start gap-3 sm:w-1/2">
+    <input class="checkbox checkbox-primary mt-2" required="" type="checkbox"/>
+    <span class="label-text w-full text-start">
+     <span class="flex justify-between mb-1">
+      <span class="text-base">
+       Premium
+      </span>
+      <span class="text-base-content/50 text-base">
+       $ 5.00
+      </span>
+     </span>
+     <span>
+      Get 5 projects with 5 team members.
+     </span>
+    </span>
+   </label>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Hidden checkbox button
+
+p:
+  - Utilize thehiddenutility class to conceal the checkbox button.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex w-full flex-wrap items-start gap-3 sm:flex-nowrap">
+   <label class="custom-option flex flex-row items-start gap-4 sm:w-1/2">
+    <input checked="" class="checkbox hidden" type="checkbox"/>
+    <span class="label-text w-full text-start">
+     <span class="flex justify-between mb-1">
+      <span class="text-base">
+       Basic
+      </span>
+      <span class="text-base-content/50 text-base">
+       Free
+      </span>
+     </span>
+     <span>
+      Get 1 project with 1 teams members.
+     </span>
+    </span>
+   </label>
+   <label class="custom-option flex flex-row items-start gap-4 sm:w-1/2">
+    <input class="checkbox hidden" type="checkbox"/>
+    <span class="label-text w-full text-start">
+     <span class="flex justify-between mb-1">
+      <span class="text-base">
+       Premium
+      </span>
+      <span class="text-base-content/50 text-base">
+       $ 5.00
+      </span>
+     </span>
+     <span>
+      Get 5 projects with 5 team members.
+     </span>
+    </span>
+   </label>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Basic label checkbox
+
+p:
+  - Thecustom-soft-optioncomponent is a flexible element that includes a background color, which becomes active when the option is selected. It can be used with any form of input, providing a visually distinct way to highlight the selected option.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex w-full flex-wrap items-start gap-3 sm:flex-nowrap">
+   <label class="custom-soft-option flex flex-row items-start gap-3 sm:w-1/2">
+    <input checked="" class="checkbox checkbox-primary mt-2" type="checkbox"/>
+    <span class="label-text w-full text-start">
+     <span class="flex justify-between mb-1">
+      <span class="text-base">
+       Basic
+      </span>
+      <span class="text-base-content/50 text-base">
+       Free
+      </span>
+     </span>
+     <span>
+      Get 1 project with 1 teams members.
+     </span>
+    </span>
+   </label>
+   <label class="custom-soft-option flex flex-row items-start gap-3 sm:w-1/2">
+    <input class="checkbox checkbox-primary mt-2" type="checkbox"/>
+    <span class="label-text w-full text-start">
+     <span class="flex justify-between mb-1">
+      <span class="text-base">
+       Premium
+      </span>
+      <span class="text-base-content/50 text-base">
+       $ 5.00
+      </span>
+     </span>
+     <span>
+      Get 5 projects with 5 team members.
+     </span>
+    </span>
+   </label>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Iconic custom checkbox
+
+p:
+  - Customize the checkbox styling using utility classes according to your preferences, as illustrated below.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex w-full items-start gap-3 flex-wrap sm:flex-nowrap">
+   <label class="custom-option flex sm:w-1/2 flex-col items-center gap-3">
+    <span class="icon-[tabler--rocket] size-10">
+    </span>
+    <span class="label-text p-0">
+     <span class="text-base">
+      Starter
+     </span>
+     <span>
+      Cake sugar plum fruitcake I love sweet roll jelly-o
+     </span>
+    </span>
+    <input class="checkbox checkbox-primary" type="checkbox"/>
+   </label>
+   <label class="custom-option flex sm:w-1/2 flex-col items-center gap-3">
+    <span class="icon-[tabler--user] size-10">
+    </span>
+    <span class="label-text p-0">
+     <span class="text-base">
+      Personal
+     </span>
+     <span>
+      Cake sugar plum fruitcake I love sweet roll jelly-o.
+     </span>
+    </span>
+    <input checked="" class="checkbox checkbox-primary" type="checkbox"/>
+   </label>
+   <label class="custom-option flex sm:w-1/2 flex-col items-center gap-3">
+    <span class="icon-[tabler--crown] size-10">
+    </span>
+    <span class="label-text p-0">
+     <span class="text-base">
+      Enterprise
+     </span>
+     <span>
+      Cake sugar plum fruitcake I love sweet roll jelly-o.
+     </span>
+    </span>
+    <input class="checkbox checkbox-primary" type="checkbox"/>
+   </label>
+  </div>
+ </div>
+</div>
+
+h3:
+  - Image as checkbox
+
+p:
+  - This example displays an image as a checkbox button.
+
+Code:
+<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
+ <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
+  <div class="flex flex-nowrap items-start gap-3">
+   <label class="custom-option relative p-0">
+    <span class="w-full">
+     <img alt="checkbox image" class="bg-contain" src="https://cdn.flyonui.com/fy-assets/components/radio/image-6.png"/>
+    </span>
+    <input class="checkbox checkbox-primary absolute end-0 top-0 m-3 hidden checked:block hover:block" type="checkbox"/>
+   </label>
+   <label class="custom-option relative p-0">
+    <span class="w-full">
+     <img alt="checkbox image" class="bg-contain" src="https://cdn.flyonui.com/fy-assets/components/radio/image-3.png"/>
+    </span>
+    <input checked="" class="checkbox checkbox-primary absolute end-0 top-0 m-3 hidden checked:block hover:block" type="checkbox"/>
+   </label>
+   <label class="custom-option relative p-0">
+    <span class="w-full">
+     <img alt="checkbox image" class="bg-contain" src="https://cdn.flyonui.com/fy-assets/components/radio/image-5.png"/>
+    </span>
+    <input class="checkbox checkbox-primary absolute end-0 top-0 m-3 hidden checked:block hover:block" type="checkbox"/>
+   </label>
+  </div>
+ </div>
+</div>
+
+h2:
+  - Checkbox
+
+h3:
+  - On this page
+
+h2:
+  - Checkbox
+
+p:
+  - FlyonUI is an open-sourceTailwind CSS components librarywith UI examples, blocks, templates, plugins, and a Figma design system.
+
+h3:
+  - Innovative Offerings
+
+p:
+  - Discover other Tools & Brands in our Ecosystem
+
+p:
+  - Building in public by@Ajay Patel, designed by@Anand Patel
