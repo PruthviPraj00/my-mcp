@@ -29,6 +29,9 @@ qdrant_client = QdrantClient(host="localhost", port=6333)
 # Collection name for the documentation
 COLLECTION_NAME = "flyonui_docs"
 
+# Store component names for later use
+ALL_COMPONENT_NAMES = []
+
 
 # Define the structure for documentation chunks
 class DocChunk(BaseModel):
@@ -57,6 +60,11 @@ def load_and_index_docs():
         # Load documentation files
         doc_files = glob.glob("docs/*.txt")
         doc_chunks = []
+        
+        # Store all component names globally
+        global ALL_COMPONENT_NAMES
+        ALL_COMPONENT_NAMES = [os.path.basename(f).replace(".txt", "") for f in doc_files]
+        print(f"Found {len(ALL_COMPONENT_NAMES)} components")
 
         for file_path in doc_files:
             component_name = os.path.basename(file_path).replace(".txt", "")
@@ -163,12 +171,37 @@ async def call_tool(
             description = description[4:]
         elif description.startswith("/ui"):
             description = description[3:]
+            
+        # Identify potential components from the description
+        potential_components = []
+        
+        # Check for component mentions using ALL_COMPONENT_NAMES
+        for component in ALL_COMPONENT_NAMES:
+            # Skip non-component files like introduction, license, etc.
+            if component in ['introduction', 'license', 'quick-start', 'javascript']:
+                continue
+                
+            # Replace hyphens with spaces for natural language matching
+            component_name = component.replace('-', ' ')
+            
+            # Check if component is mentioned in the description
+            if component_name in description.lower() or component in description.lower():
+                potential_components.append(component)
+        
+        # Add any explicitly mentioned components
+        for component in components:
+            if component not in potential_components:
+                potential_components.append(component)
 
         # Search for relevant documentation
         search_query = description
+        # Add identified components to the search query
+        if potential_components:
+            search_query += " " + " ".join(potential_components)
+        # Add explicitly specified components
         if components:
             search_query += " " + " ".join(components)
-
+            
         doc_results = search_docs(search_query)
 
         # Prepare the response with relevant documentation
