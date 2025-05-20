@@ -134,7 +134,7 @@ doc_links_url = "https://flyonui.com/components/"
 doc_links = get_doc_links(doc_links_url)
 
 # Create the directory for saving outputs if it doesn't exist
-output_dir = "./all"
+output_dir = "./docs"
 os.makedirs(output_dir, exist_ok=True)
 
 # Scrape each document link
