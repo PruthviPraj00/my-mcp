@@ -18,13 +18,24 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# Read from environment
+qdrant_mode = os.getenv("QDRANT_MODE", "docker")  # Default to docker
+
+
 # Initialize the server
 app = Server("flyonui-mcp-server")
 
 # Initialize the vector database
 model = SentenceTransformer("all-MiniLM-L6-v2")
 # Connect to the persistent Qdrant instance running in Docker
-qdrant_client = QdrantClient(host="localhost", port=6333)
+if qdrant_mode == "docker":
+    # Your existing Docker setup
+    qdrant_client = QdrantClient(host="localhost", port=6333)
+else:
+    # Cloud setup
+    qdrant_host = os.getenv("QDRANT_HOST")
+    qdrant_api_key = os.getenv("QDRANT_API_KEY")
+    qdrant_client = QdrantClient(host=qdrant_host, api_key=qdrant_api_key)
 
 # Collection name for the documentation
 COLLECTION_NAME = "flyonui_docs"
@@ -60,10 +71,12 @@ def load_and_index_docs():
         # Load documentation files
         doc_files = glob.glob("docs/*.txt")
         doc_chunks = []
-        
+
         # Store all component names globally
         global ALL_COMPONENT_NAMES
-        ALL_COMPONENT_NAMES = [os.path.basename(f).replace(".txt", "") for f in doc_files]
+        ALL_COMPONENT_NAMES = [
+            os.path.basename(f).replace(".txt", "") for f in doc_files
+        ]
         print(f"Found {len(ALL_COMPONENT_NAMES)} components")
 
         for file_path in doc_files:
@@ -171,23 +184,26 @@ async def call_tool(
             description = description[4:]
         elif description.startswith("/ui"):
             description = description[3:]
-            
+
         # Identify potential components from the description
         potential_components = []
-        
+
         # Check for component mentions using ALL_COMPONENT_NAMES
         for component in ALL_COMPONENT_NAMES:
             # Skip non-component files like introduction, license, etc.
-            if component in ['introduction', 'license', 'quick-start', 'javascript']:
+            if component in ["introduction", "license", "quick-start", "javascript"]:
                 continue
-                
+
             # Replace hyphens with spaces for natural language matching
-            component_name = component.replace('-', ' ')
-            
+            component_name = component.replace("-", " ")
+
             # Check if component is mentioned in the description
-            if component_name in description.lower() or component in description.lower():
+            if (
+                component_name in description.lower()
+                or component in description.lower()
+            ):
                 potential_components.append(component)
-        
+
         # Add any explicitly mentioned components
         for component in components:
             if component not in potential_components:
@@ -201,7 +217,7 @@ async def call_tool(
         # Add explicitly specified components
         if components:
             search_query += " " + " ".join(components)
-            
+
         doc_results = search_docs(search_query)
 
         # Prepare the response with relevant documentation
