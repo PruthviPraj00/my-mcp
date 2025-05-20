@@ -40,32 +40,29 @@ p:
 to represent the progress width. Refer TailwindCSSwidthdocumentation for more
 info.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div aria-label="0% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress w-56" role="progressbar">
-   <div class="progress-bar w-0">
-   </div>
-  </div>
-  <div aria-label="25% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress w-56" role="progressbar">
-   <div class="progress-bar w-1/4">
-   </div>
-  </div>
-  <div aria-label="50% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress w-56" role="progressbar">
-   <div class="progress-bar w-1/2">
-   </div>
-  </div>
-  <div aria-label="75% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar w-3/4">
-   </div>
-  </div>
-  <div aria-label="100% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress w-56" role="progressbar">
-   <div class="progress-bar w-full">
-   </div>
-  </div>
+```html
+<div aria-label="0% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress w-56" role="progressbar">
+ <div class="progress-bar w-0">
+ </div>
+</div>
+<div aria-label="25% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress w-56" role="progressbar">
+ <div class="progress-bar w-1/4">
+ </div>
+</div>
+<div aria-label="50% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress w-56" role="progressbar">
+ <div class="progress-bar w-1/2">
+ </div>
+</div>
+<div aria-label="75% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar w-3/4">
+ </div>
+</div>
+<div aria-label="100% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress w-56" role="progressbar">
+ <div class="progress-bar w-full">
  </div>
 </div>
 
+```
 h3:
   - Vertical
 
@@ -73,32 +70,29 @@ p:
   - Use modifier classprogress-verticalfor vertical progress component. Use theh-{number}utility class to represent
 the progress height. Refer TailwindCSSheightdocumentation for more info.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-5 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div aria-label="0% Vertical Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress progress-vertical h-56" role="progressbar">
-   <div class="progress-bar h-0">
-   </div>
-  </div>
-  <div aria-label="25% Vertical Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress progress-vertical h-56" role="progressbar">
-   <div class="progress-bar h-1/4">
-   </div>
-  </div>
-  <div aria-label="50% Vertical Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress progress-vertical h-56" role="progressbar">
-   <div class="progress-bar h-1/2">
-   </div>
-  </div>
-  <div aria-label="75% Vertical Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress progress-vertical h-56" role="progressbar">
-   <div class="progress-bar h-3/4">
-   </div>
-  </div>
-  <div aria-label="100% Vertical Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress progress-vertical h-56" role="progressbar">
-   <div class="progress-bar h-full">
-   </div>
-  </div>
+```html
+<div aria-label="0% Vertical Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress progress-vertical h-56" role="progressbar">
+ <div class="progress-bar h-0">
+ </div>
+</div>
+<div aria-label="25% Vertical Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress progress-vertical h-56" role="progressbar">
+ <div class="progress-bar h-1/4">
+ </div>
+</div>
+<div aria-label="50% Vertical Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress progress-vertical h-56" role="progressbar">
+ <div class="progress-bar h-1/2">
+ </div>
+</div>
+<div aria-label="75% Vertical Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress progress-vertical h-56" role="progressbar">
+ <div class="progress-bar h-3/4">
+ </div>
+</div>
+<div aria-label="100% Vertical Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress progress-vertical h-56" role="progressbar">
+ <div class="progress-bar h-full">
  </div>
 </div>
 
+```
 h2:
   - Variants
 
@@ -108,32 +102,29 @@ h3:
 p:
   - Use TailwindCSS utility classh-{number}for custom height(thickness) of progress bar.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress w-56" role="progressbar">
-   <div class="progress-bar w-1/2">
-   </div>
-  </div>
-  <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress h-2 w-56" role="progressbar">
-   <div class="progress-bar w-1/2">
-   </div>
-  </div>
-  <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress h-2.5 w-56" role="progressbar">
-   <div class="progress-bar w-1/2">
-   </div>
-  </div>
-  <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress h-3 w-56" role="progressbar">
-   <div class="progress-bar w-1/2">
-   </div>
-  </div>
-  <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress h-4 w-56" role="progressbar">
-   <div class="progress-bar w-1/2">
-   </div>
-  </div>
+```html
+<div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress w-56" role="progressbar">
+ <div class="progress-bar w-1/2">
+ </div>
+</div>
+<div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress h-2 w-56" role="progressbar">
+ <div class="progress-bar w-1/2">
+ </div>
+</div>
+<div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress h-2.5 w-56" role="progressbar">
+ <div class="progress-bar w-1/2">
+ </div>
+</div>
+<div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress h-3 w-56" role="progressbar">
+ <div class="progress-bar w-1/2">
+ </div>
+</div>
+<div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress h-4 w-56" role="progressbar">
+ <div class="progress-bar w-1/2">
  </div>
 </div>
 
+```
 h3:
   - With labels (Horizontal)
 
@@ -143,189 +134,177 @@ p:
 p:
   - Embedding values directly into theprogress-barwill display them within the bars.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div aria-label="25% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress h-4" role="progressbar">
-   <div class="progress-bar w-1/4 font-normal">
-    25%
-   </div>
-  </div>
-  <div aria-label="50% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress h-4" role="progressbar">
-   <div class="progress-bar w-1/2 font-normal">
-    50%
-   </div>
-  </div>
-  <div aria-label="75% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress h-4" role="progressbar">
-   <div class="progress-bar w-3/4 font-normal">
-    75%
-   </div>
-  </div>
-  <div aria-label="100% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress h-4" role="progressbar">
-   <div class="progress-bar w-full font-normal">
-    100%
-   </div>
-  </div>
+```html
+<div aria-label="25% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress h-4" role="progressbar">
+ <div class="progress-bar w-1/4 font-normal">
+  25%
+ </div>
+</div>
+<div aria-label="50% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress h-4" role="progressbar">
+ <div class="progress-bar w-1/2 font-normal">
+  50%
+ </div>
+</div>
+<div aria-label="75% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress h-4" role="progressbar">
+ <div class="progress-bar w-3/4 font-normal">
+  75%
+ </div>
+</div>
+<div aria-label="100% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress h-4" role="progressbar">
+ <div class="progress-bar w-full font-normal">
+  100%
  </div>
 </div>
 
+```
 p:
   - Use the following example to showcase labels positioned at the end of the progress bar.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex w-52 items-center gap-2">
-   <div aria-label="25% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress" role="progressbar">
-    <div class="progress-bar w-1/4">
-    </div>
-   </div>
-   <span class="text-base-content text-xs font-light">
-    25%
-   </span>
-  </div>
-  <div class="flex w-52 items-center gap-2">
-   <div aria-label="50% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress" role="progressbar">
-    <div class="progress-bar w-1/2">
-    </div>
-   </div>
-   <span class="text-base-content text-xs font-light">
-    50%
-   </span>
-  </div>
-  <div class="flex w-52 items-center gap-2">
-   <div aria-label="75% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress" role="progressbar">
-    <div class="progress-bar w-3/4">
-    </div>
-   </div>
-   <span class="text-base-content text-xs font-light">
-    75%
-   </span>
-  </div>
-  <div class="flex w-52 items-center gap-2">
-   <div aria-label="100% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress" role="progressbar">
-    <div class="progress-bar w-full">
-    </div>
-   </div>
-   <span class="text-base-content text-xs font-light">
-    100%
-   </span>
+```html
+<div class="flex w-52 items-center gap-2">
+ <div aria-label="25% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress" role="progressbar">
+  <div class="progress-bar w-1/4">
   </div>
  </div>
+ <span class="text-base-content text-xs font-light">
+  25%
+ </span>
+</div>
+<div class="flex w-52 items-center gap-2">
+ <div aria-label="50% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress" role="progressbar">
+  <div class="progress-bar w-1/2">
+  </div>
+ </div>
+ <span class="text-base-content text-xs font-light">
+  50%
+ </span>
+</div>
+<div class="flex w-52 items-center gap-2">
+ <div aria-label="75% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress" role="progressbar">
+  <div class="progress-bar w-3/4">
+  </div>
+ </div>
+ <span class="text-base-content text-xs font-light">
+  75%
+ </span>
+</div>
+<div class="flex w-52 items-center gap-2">
+ <div aria-label="100% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress" role="progressbar">
+  <div class="progress-bar w-full">
+  </div>
+ </div>
+ <span class="text-base-content text-xs font-light">
+  100%
+ </span>
 </div>
 
+```
 p:
   - Use the following example to showcase progress bar with title label.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="w-52">
-   <div class="mb-1 flex items-end justify-between">
-    <p class="text-base-content text-xs font-medium">
-     Title
-    </p>
-    <span class="text-base-content text-xs font-light">
-     25%
-    </span>
-   </div>
-   <div aria-label="25% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress" role="progressbar">
-    <div class="progress-bar w-1/4">
-    </div>
-   </div>
+```html
+<div class="w-52">
+ <div class="mb-1 flex items-end justify-between">
+  <p class="text-base-content text-xs font-medium">
+   Title
+  </p>
+  <span class="text-base-content text-xs font-light">
+   25%
+  </span>
+ </div>
+ <div aria-label="25% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress" role="progressbar">
+  <div class="progress-bar w-1/4">
   </div>
-  <div class="w-52">
-   <div class="mb-1 flex items-end justify-between">
-    <p class="text-base-content text-xs font-medium">
-     Title
-    </p>
-    <span class="text-base-content text-xs font-light">
-     50%
-    </span>
-   </div>
-   <div aria-label="50% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress" role="progressbar">
-    <div class="progress-bar w-1/2">
-    </div>
-   </div>
+ </div>
+</div>
+<div class="w-52">
+ <div class="mb-1 flex items-end justify-between">
+  <p class="text-base-content text-xs font-medium">
+   Title
+  </p>
+  <span class="text-base-content text-xs font-light">
+   50%
+  </span>
+ </div>
+ <div aria-label="50% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress" role="progressbar">
+  <div class="progress-bar w-1/2">
   </div>
-  <div class="w-52">
-   <div class="mb-1 flex items-end justify-between">
-    <p class="text-base-content text-xs font-medium">
-     Title
-    </p>
-    <span class="text-base-content text-xs font-light">
-     75%
-    </span>
-   </div>
-   <div aria-label="75% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress" role="progressbar">
-    <div class="progress-bar w-3/4">
-    </div>
-   </div>
+ </div>
+</div>
+<div class="w-52">
+ <div class="mb-1 flex items-end justify-between">
+  <p class="text-base-content text-xs font-medium">
+   Title
+  </p>
+  <span class="text-base-content text-xs font-light">
+   75%
+  </span>
+ </div>
+ <div aria-label="75% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress" role="progressbar">
+  <div class="progress-bar w-3/4">
   </div>
-  <div class="w-52">
-   <div class="mb-1 flex items-end justify-between">
-    <p class="text-base-content text-xs font-medium">
-     Title
-    </p>
-    <span class="text-base-content text-xs font-light">
-     100%
-    </span>
-   </div>
-   <div aria-label="100% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress" role="progressbar">
-    <div class="progress-bar w-full">
-    </div>
-   </div>
+ </div>
+</div>
+<div class="w-52">
+ <div class="mb-1 flex items-end justify-between">
+  <p class="text-base-content text-xs font-medium">
+   Title
+  </p>
+  <span class="text-base-content text-xs font-light">
+   100%
+  </span>
+ </div>
+ <div aria-label="100% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress" role="progressbar">
+  <div class="progress-bar w-full">
   </div>
  </div>
 </div>
 
+```
 p:
   - Use the following example to showcase floating labels for progress bar. Use modifier classprogress-labelfor basic
 floating label & position it using arbitrary classms-[calc(X% - Yrem)], whereXis progress bar width(%) &Yis
 half the width of floating label.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex w-52 flex-col gap-1">
-   <span class="progress-label ms-[calc(25%-1.25rem)]">
-    25%
-   </span>
-   <div aria-label="25% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress h-2" role="progressbar">
-    <div class="progress-bar w-1/4">
-    </div>
-   </div>
+```html
+<div class="flex w-52 flex-col gap-1">
+ <span class="progress-label ms-[calc(25%-1.25rem)]">
+  25%
+ </span>
+ <div aria-label="25% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress h-2" role="progressbar">
+  <div class="progress-bar w-1/4">
   </div>
-  <div class="flex w-52 flex-col gap-1">
-   <span class="progress-label ms-[calc(50%-1.25rem)]">
-    50%
-   </span>
-   <div aria-label="50% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress h-2" role="progressbar">
-    <div class="progress-bar w-1/2">
-    </div>
-   </div>
+ </div>
+</div>
+<div class="flex w-52 flex-col gap-1">
+ <span class="progress-label ms-[calc(50%-1.25rem)]">
+  50%
+ </span>
+ <div aria-label="50% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress h-2" role="progressbar">
+  <div class="progress-bar w-1/2">
   </div>
-  <div class="flex w-52 flex-col gap-1">
-   <span class="progress-label ms-[calc(75%-1.25rem)]">
-    75%
-   </span>
-   <div aria-label="75% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress h-2" role="progressbar">
-    <div class="progress-bar w-3/4">
-    </div>
-   </div>
+ </div>
+</div>
+<div class="flex w-52 flex-col gap-1">
+ <span class="progress-label ms-[calc(75%-1.25rem)]">
+  75%
+ </span>
+ <div aria-label="75% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress h-2" role="progressbar">
+  <div class="progress-bar w-3/4">
   </div>
-  <div class="flex w-52 flex-col gap-1">
-   <span class="progress-label ms-[calc(100%-1.4rem)]">
-    100%
-   </span>
-   <div aria-label="100% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress h-2" role="progressbar">
-    <div class="progress-bar w-full">
-    </div>
-   </div>
+ </div>
+</div>
+<div class="flex w-52 flex-col gap-1">
+ <span class="progress-label ms-[calc(100%-1.4rem)]">
+  100%
+ </span>
+ <div aria-label="100% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress h-2" role="progressbar">
+  <div class="progress-bar w-full">
   </div>
  </div>
 </div>
 
+```
 h3:
   - With labels (Vertical)
 
@@ -335,201 +314,189 @@ p:
 p:
   - Use below given examples to showcase labels within squared progress bars in center.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-5 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div aria-label="25% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress progress-vertical h-56 w-4 rounded-none" role="progressbar">
-   <div class="progress-bar h-1/4 rounded-none font-normal">
-    <span class="-rotate-90">
-     25%
-    </span>
-   </div>
-  </div>
-  <div aria-label="50% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress progress-vertical h-56 w-4 rounded-none" role="progressbar">
-   <div class="progress-bar h-1/2 rounded-none font-normal">
-    <span class="-rotate-90">
-     50%
-    </span>
-   </div>
-  </div>
-  <div aria-label="75% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress progress-vertical h-56 w-4 rounded-none" role="progressbar">
-   <div class="progress-bar h-3/4 rounded-none font-normal">
-    <span class="-rotate-90">
-     75%
-    </span>
-   </div>
-  </div>
-  <div aria-label="100% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress progress-vertical h-56 w-4 rounded-none" role="progressbar">
-   <div class="progress-bar h-full rounded-none font-normal">
-    <span class="-rotate-90">
-     100%
-    </span>
-   </div>
-  </div>
+```html
+<div aria-label="25% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress progress-vertical h-56 w-4 rounded-none" role="progressbar">
+ <div class="progress-bar h-1/4 rounded-none font-normal">
+  <span class="-rotate-90">
+   25%
+  </span>
+ </div>
+</div>
+<div aria-label="50% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress progress-vertical h-56 w-4 rounded-none" role="progressbar">
+ <div class="progress-bar h-1/2 rounded-none font-normal">
+  <span class="-rotate-90">
+   50%
+  </span>
+ </div>
+</div>
+<div aria-label="75% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress progress-vertical h-56 w-4 rounded-none" role="progressbar">
+ <div class="progress-bar h-3/4 rounded-none font-normal">
+  <span class="-rotate-90">
+   75%
+  </span>
+ </div>
+</div>
+<div aria-label="100% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress progress-vertical h-56 w-4 rounded-none" role="progressbar">
+ <div class="progress-bar h-full rounded-none font-normal">
+  <span class="-rotate-90">
+   100%
+  </span>
  </div>
 </div>
 
+```
 p:
   - Use below given examples to showcase labels at top of vertical progress bars.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-5 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex h-56 flex-col items-center gap-2">
-   <span class="text-base-content text-xs font-light">
-    25%
-   </span>
-   <div aria-label="25% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress progress-vertical w-4" role="progressbar">
-    <div class="progress-bar h-1/4">
-    </div>
-   </div>
+```html
+<div class="flex h-56 flex-col items-center gap-2">
+ <span class="text-base-content text-xs font-light">
+  25%
+ </span>
+ <div aria-label="25% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress progress-vertical w-4" role="progressbar">
+  <div class="progress-bar h-1/4">
   </div>
-  <div class="flex h-56 flex-col items-center gap-2">
-   <span class="text-base-content text-xs font-light">
-    50%
-   </span>
-   <div aria-label="50% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress progress-vertical w-4" role="progressbar">
-    <div class="progress-bar h-1/2">
-    </div>
-   </div>
+ </div>
+</div>
+<div class="flex h-56 flex-col items-center gap-2">
+ <span class="text-base-content text-xs font-light">
+  50%
+ </span>
+ <div aria-label="50% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress progress-vertical w-4" role="progressbar">
+  <div class="progress-bar h-1/2">
   </div>
-  <div class="flex h-56 flex-col items-center gap-2">
-   <span class="text-base-content text-xs font-light">
-    75%
-   </span>
-   <div aria-label="75% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress progress-vertical w-4" role="progressbar">
-    <div class="progress-bar h-3/4">
-    </div>
-   </div>
+ </div>
+</div>
+<div class="flex h-56 flex-col items-center gap-2">
+ <span class="text-base-content text-xs font-light">
+  75%
+ </span>
+ <div aria-label="75% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress progress-vertical w-4" role="progressbar">
+  <div class="progress-bar h-3/4">
   </div>
-  <div class="flex h-56 flex-col items-center gap-2">
-   <span class="text-base-content text-xs font-light">
-    100%
-   </span>
-   <div aria-label="100% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress progress-vertical w-4" role="progressbar">
-    <div class="progress-bar h-full">
-    </div>
-   </div>
+ </div>
+</div>
+<div class="flex h-56 flex-col items-center gap-2">
+ <span class="text-base-content text-xs font-light">
+  100%
+ </span>
+ <div aria-label="100% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress progress-vertical w-4" role="progressbar">
+  <div class="progress-bar h-full">
   </div>
  </div>
 </div>
 
+```
 p:
   - Use below given examples to showcase labels with title in vertical progress bars.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-5 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex h-56 flex-col items-center justify-between gap-1">
-   <span class="text-base-content text-xs font-light">
-    25%
-   </span>
-   <div aria-label="25% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress progress-vertical w-4" role="progressbar">
-    <div class="progress-bar h-1/4">
-    </div>
-   </div>
-   <p class="text-base-content text-xs font-medium">
-    Title
-   </p>
-  </div>
-  <div class="flex h-56 flex-col items-center justify-between gap-1">
-   <span class="text-base-content text-xs font-light">
-    50%
-   </span>
-   <div aria-label="50% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress progress-vertical w-4" role="progressbar">
-    <div class="progress-bar h-1/2">
-    </div>
-   </div>
-   <p class="text-base-content text-xs font-medium">
-    Title
-   </p>
-  </div>
-  <div class="flex h-56 flex-col items-center justify-between gap-1">
-   <span class="text-base-content text-xs font-light">
-    75%
-   </span>
-   <div aria-label="75% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress progress-vertical w-4" role="progressbar">
-    <div class="progress-bar h-3/4">
-    </div>
-   </div>
-   <p class="text-base-content text-xs font-medium">
-    Title
-   </p>
-  </div>
-  <div class="flex h-56 flex-col items-center justify-between gap-1">
-   <span class="text-base-content text-xs font-light">
-    100%
-   </span>
-   <div aria-label="100% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress progress-vertical w-4" role="progressbar">
-    <div class="progress-bar h-full">
-    </div>
-   </div>
-   <p class="text-base-content text-xs font-medium">
-    Title
-   </p>
+```html
+<div class="flex h-56 flex-col items-center justify-between gap-1">
+ <span class="text-base-content text-xs font-light">
+  25%
+ </span>
+ <div aria-label="25% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress progress-vertical w-4" role="progressbar">
+  <div class="progress-bar h-1/4">
   </div>
  </div>
+ <p class="text-base-content text-xs font-medium">
+  Title
+ </p>
+</div>
+<div class="flex h-56 flex-col items-center justify-between gap-1">
+ <span class="text-base-content text-xs font-light">
+  50%
+ </span>
+ <div aria-label="50% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress progress-vertical w-4" role="progressbar">
+  <div class="progress-bar h-1/2">
+  </div>
+ </div>
+ <p class="text-base-content text-xs font-medium">
+  Title
+ </p>
+</div>
+<div class="flex h-56 flex-col items-center justify-between gap-1">
+ <span class="text-base-content text-xs font-light">
+  75%
+ </span>
+ <div aria-label="75% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress progress-vertical w-4" role="progressbar">
+  <div class="progress-bar h-3/4">
+  </div>
+ </div>
+ <p class="text-base-content text-xs font-medium">
+  Title
+ </p>
+</div>
+<div class="flex h-56 flex-col items-center justify-between gap-1">
+ <span class="text-base-content text-xs font-light">
+  100%
+ </span>
+ <div aria-label="100% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress progress-vertical w-4" role="progressbar">
+  <div class="progress-bar h-full">
+  </div>
+ </div>
+ <p class="text-base-content text-xs font-medium">
+  Title
+ </p>
 </div>
 
+```
 p:
   - Implement floating labels for vertical progress bars using the provided example. Utilize theprogress-labelmodifier
 class for the basic floating label and position it with thebottom-[calc(X% - Yrem)]class alongside classesabsolute start-0. Here,Xrepresents the progress bar height percentage, andYsignifies half the height of the floating
 label within the relative TailwindCSS position class.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-5 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex gap-5">
-   <div class="flex h-56 gap-1">
-    <div class="relative w-10">
-     <span class="progress-label absolute bottom-[calc(25%-0.75rem)] start-0">
-      25%
-     </span>
-    </div>
-    <div aria-label="25% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress progress-vertical w-2" role="progressbar">
-     <div class="progress-bar h-1/4">
-     </div>
-    </div>
-   </div>
-   <div class="flex h-56 gap-1">
-    <div aria-label="50% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress progress-vertical w-2" role="progressbar">
-     <div class="progress-bar h-1/2">
-     </div>
-    </div>
-    <div class="relative w-10">
-     <span class="progress-label absolute bottom-[calc(50%-0.75rem)] start-0">
-      50%
-     </span>
-    </div>
+```html
+<div class="flex gap-5">
+ <div class="flex h-56 gap-1">
+  <div class="relative w-10">
+   <span class="progress-label absolute bottom-[calc(25%-0.75rem)] start-0">
+    25%
+   </span>
+  </div>
+  <div aria-label="25% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress progress-vertical w-2" role="progressbar">
+   <div class="progress-bar h-1/4">
    </div>
   </div>
-  <div class="flex gap-5">
-   <div class="flex h-56 gap-1">
-    <div class="relative w-10">
-     <span class="progress-label border-primary text-primary absolute bottom-[calc(75%-0.75rem)] start-0">
-      75%
-     </span>
-    </div>
-    <div aria-label="75% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress progress-vertical w-2" role="progressbar">
-     <div class="progress-bar progress-primary h-3/4">
-     </div>
-    </div>
+ </div>
+ <div class="flex h-56 gap-1">
+  <div aria-label="50% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress progress-vertical w-2" role="progressbar">
+   <div class="progress-bar h-1/2">
    </div>
-   <div class="flex h-56 gap-1">
-    <div aria-label="100% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress progress-vertical w-2" role="progressbar">
-     <div class="progress-bar progress-primary h-full">
-     </div>
-    </div>
-    <div class="relative w-11">
-     <span class="progress-label border-primary text-primary absolute bottom-[calc(100%-0.75rem)] start-0">
-      100%
-     </span>
-    </div>
+  </div>
+  <div class="relative w-10">
+   <span class="progress-label absolute bottom-[calc(50%-0.75rem)] start-0">
+    50%
+   </span>
+  </div>
+ </div>
+</div>
+<div class="flex gap-5">
+ <div class="flex h-56 gap-1">
+  <div class="relative w-10">
+   <span class="progress-label border-primary text-primary absolute bottom-[calc(75%-0.75rem)] start-0">
+    75%
+   </span>
+  </div>
+  <div aria-label="75% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress progress-vertical w-2" role="progressbar">
+   <div class="progress-bar progress-primary h-3/4">
    </div>
+  </div>
+ </div>
+ <div class="flex h-56 gap-1">
+  <div aria-label="100% Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress progress-vertical w-2" role="progressbar">
+   <div class="progress-bar progress-primary h-full">
+   </div>
+  </div>
+  <div class="relative w-11">
+   <span class="progress-label border-primary text-primary absolute bottom-[calc(100%-0.75rem)] start-0">
+    100%
+   </span>
   </div>
  </div>
 </div>
 
+```
 h2:
   - Backgrounds
 
@@ -539,132 +506,123 @@ h3:
 p:
   - To apply semantic colors to progress bars, utilize theprogress-{semantic-color}class alongside the component classprogress-bar.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div aria-label="Neutral Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar w-3/4">
-   </div>
-  </div>
-  <div aria-label="Primary Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-primary w-3/4">
-   </div>
-  </div>
-  <div aria-label="Secondary Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-secondary w-3/4">
-   </div>
-  </div>
-  <div aria-label="Accent Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-accent w-3/4">
-   </div>
-  </div>
-  <div aria-label="Info Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-info w-3/4">
-   </div>
-  </div>
-  <div aria-label="Success Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-success w-3/4">
-   </div>
-  </div>
-  <div aria-label="Warning Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-warning w-3/4">
-   </div>
-  </div>
-  <div aria-label="Error Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-error w-3/4">
-   </div>
-  </div>
+```html
+<div aria-label="Neutral Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar w-3/4">
+ </div>
+</div>
+<div aria-label="Primary Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-primary w-3/4">
+ </div>
+</div>
+<div aria-label="Secondary Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-secondary w-3/4">
+ </div>
+</div>
+<div aria-label="Accent Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-accent w-3/4">
+ </div>
+</div>
+<div aria-label="Info Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-info w-3/4">
+ </div>
+</div>
+<div aria-label="Success Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-success w-3/4">
+ </div>
+</div>
+<div aria-label="Warning Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-warning w-3/4">
+ </div>
+</div>
+<div aria-label="Error Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-error w-3/4">
  </div>
 </div>
 
+```
 h3:
   - Striped bars
 
 p:
   - Include the modifier classprogress-stripedwith theprogress-barcomponent class for striped progress bars.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div aria-label="Neutral Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-striped w-3/4">
-   </div>
-  </div>
-  <div aria-label="Primary Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-primary progress-striped w-3/4">
-   </div>
-  </div>
-  <div aria-label="Secondary Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-secondary progress-striped w-3/4">
-   </div>
-  </div>
-  <div aria-label="Accent Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-accent progress-striped w-3/4">
-   </div>
-  </div>
-  <div aria-label="Info Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-info progress-striped w-3/4">
-   </div>
-  </div>
-  <div aria-label="Success Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-success progress-striped w-3/4">
-   </div>
-  </div>
-  <div aria-label="Warning Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-warning progress-striped w-3/4">
-   </div>
-  </div>
-  <div aria-label="Error Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-error progress-striped w-3/4">
-   </div>
-  </div>
+```html
+<div aria-label="Neutral Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-striped w-3/4">
+ </div>
+</div>
+<div aria-label="Primary Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-primary progress-striped w-3/4">
+ </div>
+</div>
+<div aria-label="Secondary Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-secondary progress-striped w-3/4">
+ </div>
+</div>
+<div aria-label="Accent Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-accent progress-striped w-3/4">
+ </div>
+</div>
+<div aria-label="Info Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-info progress-striped w-3/4">
+ </div>
+</div>
+<div aria-label="Success Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-success progress-striped w-3/4">
+ </div>
+</div>
+<div aria-label="Warning Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-warning progress-striped w-3/4">
+ </div>
+</div>
+<div aria-label="Error Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-error progress-striped w-3/4">
  </div>
 </div>
 
+```
 h3:
   - Animated bars
 
 p:
   - Utilize the modifier classesprogress-stripedandprogress-animatedin conjunction with the component classprogress-barto create animated striped bars.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div aria-label="Neutral Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-striped progress-animated w-3/4">
-   </div>
-  </div>
-  <div aria-label="Primary Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-primary progress-striped progress-animated w-3/4">
-   </div>
-  </div>
-  <div aria-label="Secondary Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-secondary progress-striped progress-animated w-3/4">
-   </div>
-  </div>
-  <div aria-label="Accent Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-accent progress-striped progress-animated w-3/4">
-   </div>
-  </div>
-  <div aria-label="Info Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-info progress-striped progress-animated w-3/4">
-   </div>
-  </div>
-  <div aria-label="Success Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-success progress-striped progress-animated w-3/4">
-   </div>
-  </div>
-  <div aria-label="Warning Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-warning progress-striped progress-animated w-3/4">
-   </div>
-  </div>
-  <div aria-label="Error Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-error progress-striped progress-animated w-3/4">
-   </div>
-  </div>
+```html
+<div aria-label="Neutral Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-striped progress-animated w-3/4">
+ </div>
+</div>
+<div aria-label="Primary Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-primary progress-striped progress-animated w-3/4">
+ </div>
+</div>
+<div aria-label="Secondary Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-secondary progress-striped progress-animated w-3/4">
+ </div>
+</div>
+<div aria-label="Accent Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-accent progress-striped progress-animated w-3/4">
+ </div>
+</div>
+<div aria-label="Info Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-info progress-striped progress-animated w-3/4">
+ </div>
+</div>
+<div aria-label="Success Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-success progress-striped progress-animated w-3/4">
+ </div>
+</div>
+<div aria-label="Warning Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-warning progress-striped progress-animated w-3/4">
+ </div>
+</div>
+<div aria-label="Error Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-error progress-striped progress-animated w-3/4">
  </div>
 </div>
 
+```
 h2:
   - Shape
 
@@ -674,16 +632,13 @@ h3:
 p:
   - This is the default shape of progress bars. Refer TailwindCSSborder radiusdocumentation for more options.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div aria-label="Rounded Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
-   <div class="progress-bar progress-primary w-3/4">
-   </div>
-  </div>
+```html
+<div aria-label="Rounded Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56" role="progressbar">
+ <div class="progress-bar progress-primary w-3/4">
  </div>
 </div>
 
+```
 h3:
   - Squared
 
@@ -691,16 +646,13 @@ p:
   - Apply the TailwindCSS utility classrounded-noneto both the component classesprogressandprogress-barto create
 a squared progress bar.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div aria-label="Squared Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56 rounded-none" role="progressbar">
-   <div class="progress-bar progress-primary w-3/4 rounded-none">
-   </div>
-  </div>
+```html
+<div aria-label="Squared Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress w-56 rounded-none" role="progressbar">
+ <div class="progress-bar progress-primary w-3/4 rounded-none">
  </div>
 </div>
 
+```
 h2:
   - Illustrations
 
@@ -711,51 +663,48 @@ p:
   - Utilize the provided examples to implement multiple progress bars along with corresponding options such as default,
 striped, and animated.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div>
-   <div class="text-base-content mb-1 text-sm font-semibold">
-    Default
-   </div>
-   <div class="progress h-3">
-    <div class="progress-bar progress-primary w-1/4 rounded-e-none">
-    </div>
-    <div class="progress-bar progress-success w-1/4 rounded-none">
-    </div>
-    <div class="progress-bar progress-error w-1/4 rounded-s-none">
-    </div>
-   </div>
+```html
+<div>
+ <div class="text-base-content mb-1 text-sm font-semibold">
+  Default
+ </div>
+ <div class="progress h-3">
+  <div class="progress-bar progress-primary w-1/4 rounded-e-none">
   </div>
-  <div>
-   <div class="text-base-content mb-1 text-sm font-semibold">
-    Striped
-   </div>
-   <div class="progress h-3">
-    <div class="progress-bar progress-primary progress-striped w-1/4 rounded-e-none">
-    </div>
-    <div class="progress-bar progress-success progress-striped w-1/4 rounded-none">
-    </div>
-    <div class="progress-bar progress-error progress-striped w-1/4 rounded-s-none">
-    </div>
-   </div>
+  <div class="progress-bar progress-success w-1/4 rounded-none">
   </div>
-  <div>
-   <div class="text-base-content mb-1 text-sm font-semibold">
-    Animated
-   </div>
-   <div class="progress h-3">
-    <div class="progress-bar progress-primary progress-striped progress-animated w-1/4 rounded-e-none">
-    </div>
-    <div class="progress-bar progress-success progress-striped progress-animated w-1/4 rounded-none">
-    </div>
-    <div class="progress-bar progress-error progress-striped progress-animated w-1/4 rounded-s-none">
-    </div>
-   </div>
+  <div class="progress-bar progress-error w-1/4 rounded-s-none">
+  </div>
+ </div>
+</div>
+<div>
+ <div class="text-base-content mb-1 text-sm font-semibold">
+  Striped
+ </div>
+ <div class="progress h-3">
+  <div class="progress-bar progress-primary progress-striped w-1/4 rounded-e-none">
+  </div>
+  <div class="progress-bar progress-success progress-striped w-1/4 rounded-none">
+  </div>
+  <div class="progress-bar progress-error progress-striped w-1/4 rounded-s-none">
+  </div>
+ </div>
+</div>
+<div>
+ <div class="text-base-content mb-1 text-sm font-semibold">
+  Animated
+ </div>
+ <div class="progress h-3">
+  <div class="progress-bar progress-primary progress-striped progress-animated w-1/4 rounded-e-none">
+  </div>
+  <div class="progress-bar progress-success progress-striped progress-animated w-1/4 rounded-none">
+  </div>
+  <div class="progress-bar progress-error progress-striped progress-animated w-1/4 rounded-s-none">
   </div>
  </div>
 </div>
 
+```
 h3:
   - Indeterminate
 
@@ -763,186 +712,180 @@ p:
   - Apply the modifier classprogress-indeterminateto the component classprogress-barto create a progress bar without
 a specific value.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="progress w-56">
-   <div class="progress-bar progress-indeterminate">
-   </div>
-  </div>
-  <div class="progress w-56">
-   <div class="progress-bar progress-indeterminate progress-primary">
-   </div>
-  </div>
-  <div class="progress w-56">
-   <div class="progress-bar progress-indeterminate progress-secondary">
-   </div>
-  </div>
-  <div class="progress w-56">
-   <div class="progress-bar progress-indeterminate progress-accent">
-   </div>
-  </div>
-  <div class="progress w-56">
-   <div class="progress-bar progress-indeterminate progress-info">
-   </div>
-  </div>
-  <div class="progress w-56">
-   <div class="progress-bar progress-indeterminate progress-success">
-   </div>
-  </div>
-  <div class="progress w-56">
-   <div class="progress-bar progress-indeterminate progress-warning">
-   </div>
-  </div>
-  <div class="progress w-56">
-   <div class="progress-bar progress-indeterminate progress-error">
-   </div>
-  </div>
+```html
+<div class="progress w-56">
+ <div class="progress-bar progress-indeterminate">
+ </div>
+</div>
+<div class="progress w-56">
+ <div class="progress-bar progress-indeterminate progress-primary">
+ </div>
+</div>
+<div class="progress w-56">
+ <div class="progress-bar progress-indeterminate progress-secondary">
+ </div>
+</div>
+<div class="progress w-56">
+ <div class="progress-bar progress-indeterminate progress-accent">
+ </div>
+</div>
+<div class="progress w-56">
+ <div class="progress-bar progress-indeterminate progress-info">
+ </div>
+</div>
+<div class="progress w-56">
+ <div class="progress-bar progress-indeterminate progress-success">
+ </div>
+</div>
+<div class="progress w-56">
+ <div class="progress-bar progress-indeterminate progress-warning">
+ </div>
+</div>
+<div class="progress w-56">
+ <div class="progress-bar progress-indeterminate progress-error">
  </div>
 </div>
 
+```
 h3:
   - Stepped bars
 
 p:
   - Implement the component classprogress-stepfor the steps of the progress bar according to the provided examples.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex max-w-40 items-center gap-x-1">
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-primary" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-primary/10" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-primary/10" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-primary/10" role="progressbar">
-   </div>
-   <p class="text-xs text-primary ms-1 font-medium">
-    25%
-   </p>
-  </div>
-  <div class="flex items-center gap-x-1">
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-primary" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-primary/10" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-primary/10" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-primary/10" role="progressbar">
-   </div>
-   <p class="text-xs text-primary ms-1 font-medium">
-    25%
-   </p>
-  </div>
-  <div class="flex max-w-40 items-center gap-x-1">
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-warning" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-warning" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step" role="progressbar">
-   </div>
-   <p class="text-xs text-warning ms-1 font-medium">
-    50%
-   </p>
-  </div>
-  <div class="flex items-center gap-x-1">
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-warning" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-warning" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step" role="progressbar">
-   </div>
-   <p class="text-xs text-warning ms-1 font-medium">
-    50%
-   </p>
-  </div>
-  <div class="flex max-w-40 items-center gap-x-1">
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-success" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-success" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-success" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-success" role="progressbar">
-   </div>
-   <p class="text-xs text-success ms-1 font-medium">
-    100%
-   </p>
-  </div>
-  <div class="flex items-center gap-x-1">
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-success" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-success" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-success" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-success" role="progressbar">
-   </div>
-   <p class="text-xs text-success ms-1 font-medium">
-    100%
-   </p>
-  </div>
-  <div class="flex max-w-40 items-center gap-x-1">
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <p class="size-6">
-    <span class="icon-[tabler--circle-check-filled] text-info size-6">
-    </span>
-   </p>
-  </div>
-  <div class="flex items-center gap-x-1">
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
-   </div>
-   <p class="size-6">
-    <span class="icon-[tabler--circle-check-filled] text-info size-6">
-    </span>
-   </p>
-  </div>
+```html
+<div class="flex max-w-40 items-center gap-x-1">
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-primary" role="progressbar">
  </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-primary/10" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-primary/10" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-primary/10" role="progressbar">
+ </div>
+ <p class="text-xs text-primary ms-1 font-medium">
+  25%
+ </p>
+</div>
+<div class="flex items-center gap-x-1">
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-primary" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-primary/10" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-primary/10" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-primary/10" role="progressbar">
+ </div>
+ <p class="text-xs text-primary ms-1 font-medium">
+  25%
+ </p>
+</div>
+<div class="flex max-w-40 items-center gap-x-1">
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-warning" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-warning" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step" role="progressbar">
+ </div>
+ <p class="text-xs text-warning ms-1 font-medium">
+  50%
+ </p>
+</div>
+<div class="flex items-center gap-x-1">
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-warning" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-warning" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step" role="progressbar">
+ </div>
+ <p class="text-xs text-warning ms-1 font-medium">
+  50%
+ </p>
+</div>
+<div class="flex max-w-40 items-center gap-x-1">
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-success" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-success" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-success" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-success" role="progressbar">
+ </div>
+ <p class="text-xs text-success ms-1 font-medium">
+  100%
+ </p>
+</div>
+<div class="flex items-center gap-x-1">
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-success" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-success" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-success" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-step bg-success" role="progressbar">
+ </div>
+ <p class="text-xs text-success ms-1 font-medium">
+  100%
+ </p>
+</div>
+<div class="flex max-w-40 items-center gap-x-1">
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <p class="size-6">
+  <span class="icon-[tabler--circle-check-filled] text-info size-6">
+  </span>
+ </p>
+</div>
+<div class="flex items-center gap-x-1">
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <div aria-label="Progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress-step bg-info" role="progressbar">
+ </div>
+ <p class="size-6">
+  <span class="icon-[tabler--circle-check-filled] text-info size-6">
+  </span>
+ </p>
 </div>
 
+```
 h2:
   - Progress
 

@@ -33,45 +33,36 @@ h3:
 p:
   - Thelinkcomponent class serves as the standard class for the basic anchor tag.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <a class="link" href="#">
-   Default link
-  </a>
- </div>
-</div>
+```html
+<a class="link" href="#">
+ Default link
+</a>
 
+```
 h3:
   - Underline on hover
 
 p:
   - Apply thelink-hovermodifier class to make links underlined when hovered over.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <a class="link link-hover" href="#">
-   Underline when hovered over.
-  </a>
- </div>
-</div>
+```html
+<a class="link link-hover" href="#">
+ Underline when hovered over.
+</a>
 
+```
 h3:
   - Animated underline
 
 p:
   - Apply thelink-animatedmodifier class to make links underlined with animation on hovered over.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <a class="link link-animated" href="#">
-   Animated underline when hovered over.
-  </a>
- </div>
-</div>
+```html
+<a class="link link-animated" href="#">
+ Animated underline when hovered over.
+</a>
 
+```
 h2:
   - Colors
 
@@ -81,57 +72,51 @@ h3:
 p:
   - Utilize thelink-{semantic-color}modifier class to assign specific semantic colors to links.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col items-start flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <a class="link link-neutral" href="#">
-   Neutral link
-  </a>
-  <a class="link link-primary" href="#">
-   Primary link
-  </a>
-  <a class="link link-secondary" href="#">
-   Secondary link
-  </a>
-  <a class="link link-accent" href="#">
-   Accent link
-  </a>
-  <a class="link link-info" href="#">
-   Info link
-  </a>
-  <a class="link link-success" href="#">
-   Success link
-  </a>
-  <a class="link link-warning" href="#">
-   Warning link
-  </a>
-  <a class="link link-error" href="#">
-   Error link
-  </a>
- </div>
-</div>
+```html
+<a class="link link-neutral" href="#">
+ Neutral link
+</a>
+<a class="link link-primary" href="#">
+ Primary link
+</a>
+<a class="link link-secondary" href="#">
+ Secondary link
+</a>
+<a class="link link-accent" href="#">
+ Accent link
+</a>
+<a class="link link-info" href="#">
+ Info link
+</a>
+<a class="link link-success" href="#">
+ Success link
+</a>
+<a class="link link-warning" href="#">
+ Warning link
+</a>
+<a class="link link-error" href="#">
+ Error link
+</a>
 
+```
 h3:
   - Custom Color
 
 p:
   - Use the--link-colorfor the custom color of the link.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col items-start flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <a class="link [--link-color:purple]" href="#">
-   Default
-  </a>
-  <a class="link link-hover [--link-color:purple]" href="#">
-   Underline on Hover
-  </a>
-  <a class="link link-animated [--link-color:purple]" href="#">
-   Animated Underline
-  </a>
- </div>
-</div>
+```html
+<a class="link [--link-color:purple]" href="#">
+ Default
+</a>
+<a class="link link-hover [--link-color:purple]" href="#">
+ Underline on Hover
+</a>
+<a class="link link-animated [--link-color:purple]" href="#">
+ Animated Underline
+</a>
 
+```
 h2:
   - Illustrations
 
@@ -141,73 +126,64 @@ h3:
 p:
   - Below is an example demonstrating how to use links within paragraph.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <p>
-   Tailwind CSS resets the appearance of links by default.
-   <br/>
-   To restore them to a standard look, add the 'link' class, making it appear as a
-   <a class="link" href="#">
-    normal link
-   </a>
-   once more.
-  </p>
- </div>
-</div>
+```html
+<p>
+ Tailwind CSS resets the appearance of links by default.
+ <br/>
+ To restore them to a standard look, add the 'link' class, making it appear as a
+ <a class="link" href="#">
+  normal link
+ </a>
+ once more.
+</p>
 
+```
 h3:
   - In cards
 
 p:
   - Below is an example demonstrating how to use links in card.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card max-w-sm">
-   <div class="card-body">
-    <h5 class="card-title mb-0">
-     Card title
-    </h5>
-    <div class="text-base-content/50 mb-3">
-     Card subtitle
-    </div>
-    <p class="mb-4">
-     Some quick example text to build on the card title and make up the bulk of the card's content.
-    </p>
-    <div class="card-actions">
-     <a class="link link-primary link-hover" href="#">
-      Card link
-     </a>
-     <a class="link link-primary link-animated" href="#">
-      Another link
-     </a>
-    </div>
-   </div>
+```html
+<div class="card max-w-sm">
+ <div class="card-body">
+  <h5 class="card-title mb-0">
+   Card title
+  </h5>
+  <div class="text-base-content/50 mb-3">
+   Card subtitle
+  </div>
+  <p class="mb-4">
+   Some quick example text to build on the card title and make up the bulk of the card's content.
+  </p>
+  <div class="card-actions">
+   <a class="link link-primary link-hover" href="#">
+    Card link
+   </a>
+   <a class="link link-primary link-animated" href="#">
+    Another link
+   </a>
   </div>
  </div>
 </div>
 
+```
 h3:
   - In alerts
 
 p:
   - Below is an example demonstrating how to use links in alert.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="alert alert-soft" role="alert">
-   Please read the support
-   <a class="link" href="#">
-    policy
-   </a>
-   .
-  </div>
- </div>
+```html
+<div class="alert alert-soft" role="alert">
+ Please read the support
+ <a class="link" href="#">
+  policy
+ </a>
+ .
 </div>
 
+```
 h2:
   - Link
 

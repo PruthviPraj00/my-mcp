@@ -29,156 +29,147 @@ h3:
 p:
   - A static stepper usage.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <ul class="relative flex w-full gap-x-2">
-   <li class="group flex-1 shrink basis-0">
-    <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
-      1
-     </span>
-     <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </div>
-    <div class="mt-2.5">
-     <span class="text-base-content block">
-      Step
-     </span>
-    </div>
-   </li>
-   <li class="group flex-1 shrink basis-0">
-    <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
-      2
-     </span>
-     <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </div>
-    <div class="mt-2.5">
-     <span class="text-base-content block">
-      Step
-     </span>
-    </div>
-   </li>
-   <li class="group flex-1 shrink basis-0">
-    <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
-      3
-     </span>
-     <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </div>
-    <div class="mt-2.5">
-     <span class="text-base-content block">
-      Step
-     </span>
-    </div>
-   </li>
-  </ul>
- </div>
-</div>
+```html
+<ul class="relative flex w-full gap-x-2">
+ <li class="group flex-1 shrink basis-0">
+  <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
+    1
+   </span>
+   <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </div>
+  <div class="mt-2.5">
+   <span class="text-base-content block">
+    Step
+   </span>
+  </div>
+ </li>
+ <li class="group flex-1 shrink basis-0">
+  <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
+    2
+   </span>
+   <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </div>
+  <div class="mt-2.5">
+   <span class="text-base-content block">
+    Step
+   </span>
+  </div>
+ </li>
+ <li class="group flex-1 shrink basis-0">
+  <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
+    3
+   </span>
+   <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </div>
+  <div class="mt-2.5">
+   <span class="text-base-content block">
+    Step
+   </span>
+  </div>
+ </li>
+</ul>
 
+```
 h3:
   - Vertical
 
 p:
   - Vertical navigation example.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <ul class="relative flex h-96 flex-col gap-y-2">
-   <li class="group flex flex-1 shrink basis-0 flex-col w-fit">
-    <div class="flex items-center justify-center gap-2.5 text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
-      1
-     </span>
-     <div class="text-base-content block">
-      Step
-     </div>
-    </div>
-    <div class="bg-neutral/20 ms-3.5 mt-2 h-full w-px justify-self-start group-last:hidden">
-    </div>
-   </li>
-   <li class="group flex flex-1 shrink basis-0 flex-col w-fit">
-    <div class="flex items-center justify-center gap-2.5 text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
-      2
-     </span>
-     <div class="text-base-content block">
-      Step
-     </div>
-    </div>
-    <div class="bg-neutral/20 ms-3.5 mt-2 h-full w-px justify-self-start group-last:hidden">
-    </div>
-   </li>
-   <li class="group flex flex-1 shrink basis-0 flex-col w-fit">
-    <div class="flex items-center justify-center gap-2.5 text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
-      3
-     </span>
-     <div class="text-base-content block">
-      Step
-     </div>
-    </div>
-    <div class="bg-neutral/20 ms-3.5 mt-2 h-full w-px justify-self-start group-last:hidden">
-    </div>
-   </li>
-  </ul>
- </div>
-</div>
+```html
+<ul class="relative flex h-96 flex-col gap-y-2">
+ <li class="group flex flex-1 shrink basis-0 flex-col w-fit">
+  <div class="flex items-center justify-center gap-2.5 text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
+    1
+   </span>
+   <div class="text-base-content block">
+    Step
+   </div>
+  </div>
+  <div class="bg-neutral/20 ms-3.5 mt-2 h-full w-px justify-self-start group-last:hidden">
+  </div>
+ </li>
+ <li class="group flex flex-1 shrink basis-0 flex-col w-fit">
+  <div class="flex items-center justify-center gap-2.5 text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
+    2
+   </span>
+   <div class="text-base-content block">
+    Step
+   </div>
+  </div>
+  <div class="bg-neutral/20 ms-3.5 mt-2 h-full w-px justify-self-start group-last:hidden">
+  </div>
+ </li>
+ <li class="group flex flex-1 shrink basis-0 flex-col w-fit">
+  <div class="flex items-center justify-center gap-2.5 text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
+    3
+   </span>
+   <div class="text-base-content block">
+    Step
+   </div>
+  </div>
+  <div class="bg-neutral/20 ms-3.5 mt-2 h-full w-px justify-self-start group-last:hidden">
+  </div>
+ </li>
+</ul>
 
+```
 h3:
   - Linear
 
 p:
   - Linear navigation example.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <ul class="relative flex w-full gap-x-2">
-   <li class="group flex flex-1 shrink basis-0 items-center gap-x-2">
-    <div class="min-h-7.5 min-w-7.5 inline-flex items-center justify-center align-middle text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
-      1
-     </span>
-     <span class="text-base-content ms-2 block max-sm:hidden">
-      Step
-     </span>
-    </div>
-    <div class="bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-    </div>
-   </li>
-   <li class="group flex flex-1 shrink basis-0 items-center gap-x-2">
-    <div class="min-h-7.5 min-w-7.5 inline-flex items-center justify-center align-middle text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
-      2
-     </span>
-     <span class="text-base-content ms-2 block max-sm:hidden">
-      Step
-     </span>
-    </div>
-    <div class="bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-    </div>
-   </li>
-   <li class="group flex flex-1 shrink basis-0 items-center gap-x-2">
-    <div class="min-h-7.5 min-w-7.5 inline-flex items-center justify-center align-middle text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
-      3
-     </span>
-     <span class="text-base-content ms-2 block max-sm:hidden">
-      Step
-     </span>
-    </div>
-    <div class="bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-    </div>
-   </li>
-  </ul>
- </div>
-</div>
+```html
+<ul class="relative flex w-full gap-x-2">
+ <li class="group flex flex-1 shrink basis-0 items-center gap-x-2">
+  <div class="min-h-7.5 min-w-7.5 inline-flex items-center justify-center align-middle text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
+    1
+   </span>
+   <span class="text-base-content ms-2 block max-sm:hidden">
+    Step
+   </span>
+  </div>
+  <div class="bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+  </div>
+ </li>
+ <li class="group flex flex-1 shrink basis-0 items-center gap-x-2">
+  <div class="min-h-7.5 min-w-7.5 inline-flex items-center justify-center align-middle text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
+    2
+   </span>
+   <span class="text-base-content ms-2 block max-sm:hidden">
+    Step
+   </span>
+  </div>
+  <div class="bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+  </div>
+ </li>
+ <li class="group flex flex-1 shrink basis-0 items-center gap-x-2">
+  <div class="min-h-7.5 min-w-7.5 inline-flex items-center justify-center align-middle text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
+    3
+   </span>
+   <span class="text-base-content ms-2 block max-sm:hidden">
+    Step
+   </span>
+  </div>
+  <div class="bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+  </div>
+ </li>
+</ul>
 
+```
 h2:
   - Types
 
@@ -188,112 +179,106 @@ h3:
 p:
   - Outlined stepper example.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <ul class="relative flex w-full gap-x-2">
-   <li class="group flex-1 shrink basis-0">
-    <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
-     <span class="border border-neutral-200 text-base-content size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
-      1
-     </span>
-     <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </div>
-    <div class="mt-2.5">
-     <span class="text-base-content block">
-      Step
-     </span>
-    </div>
-   </li>
-   <li class="group flex-1 shrink basis-0">
-    <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
-     <span class="border border-neutral-200 text-base-content size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
-      2
-     </span>
-     <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </div>
-    <div class="mt-2.5">
-     <span class="text-base-content block">
-      Step
-     </span>
-    </div>
-   </li>
-   <li class="group flex-1 shrink basis-0">
-    <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
-     <span class="border border-neutral-200 text-base-content size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
-      3
-     </span>
-     <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </div>
-    <div class="mt-2.5">
-     <span class="text-base-content block">
-      Step
-     </span>
-    </div>
-   </li>
-  </ul>
- </div>
-</div>
+```html
+<ul class="relative flex w-full gap-x-2">
+ <li class="group flex-1 shrink basis-0">
+  <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
+   <span class="border border-neutral-200 text-base-content size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
+    1
+   </span>
+   <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </div>
+  <div class="mt-2.5">
+   <span class="text-base-content block">
+    Step
+   </span>
+  </div>
+ </li>
+ <li class="group flex-1 shrink basis-0">
+  <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
+   <span class="border border-neutral-200 text-base-content size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
+    2
+   </span>
+   <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </div>
+  <div class="mt-2.5">
+   <span class="text-base-content block">
+    Step
+   </span>
+  </div>
+ </li>
+ <li class="group flex-1 shrink basis-0">
+  <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
+   <span class="border border-neutral-200 text-base-content size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
+    3
+   </span>
+   <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </div>
+  <div class="mt-2.5">
+   <span class="text-base-content block">
+    Step
+   </span>
+  </div>
+ </li>
+</ul>
 
+```
 h3:
   - Solid
 
 p:
   - Solid stepper example.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <ul class="relative flex w-full gap-x-2">
-   <li class="group flex-1 shrink basis-0">
-    <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
-     <span class="text-bg-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
-      1
-     </span>
-     <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </div>
-    <div class="mt-2.5">
-     <span class="text-base-content block">
-      Step
-     </span>
-    </div>
-   </li>
-   <li class="group flex-1 shrink basis-0">
-    <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
-     <span class="text-bg-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
-      2
-     </span>
-     <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </div>
-    <div class="mt-2.5">
-     <span class="text-base-content block">
-      Step
-     </span>
-    </div>
-   </li>
-   <li class="group flex-1 shrink basis-0">
-    <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
-     <span class="text-bg-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
-      3
-     </span>
-     <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </div>
-    <div class="mt-2.5">
-     <span class="text-base-content block">
-      Step
-     </span>
-    </div>
-   </li>
-  </ul>
- </div>
-</div>
+```html
+<ul class="relative flex w-full gap-x-2">
+ <li class="group flex-1 shrink basis-0">
+  <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
+   <span class="text-bg-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
+    1
+   </span>
+   <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </div>
+  <div class="mt-2.5">
+   <span class="text-base-content block">
+    Step
+   </span>
+  </div>
+ </li>
+ <li class="group flex-1 shrink basis-0">
+  <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
+   <span class="text-bg-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
+    2
+   </span>
+   <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </div>
+  <div class="mt-2.5">
+   <span class="text-base-content block">
+    Step
+   </span>
+  </div>
+ </li>
+ <li class="group flex-1 shrink basis-0">
+  <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
+   <span class="text-bg-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
+    3
+   </span>
+   <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </div>
+  <div class="mt-2.5">
+   <span class="text-base-content block">
+    Step
+   </span>
+  </div>
+ </li>
+</ul>
 
+```
 h2:
   - Shapes
 
@@ -303,112 +288,106 @@ h3:
 p:
   - Use therounded-*utility class to make stepper rounded. The default shape of the stepper but can be altered by using TailwindCSSBorder Radiusutility classes.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <ul class="relative flex w-full gap-x-2">
-   <li class="group flex-1 shrink basis-0">
-    <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-field text-sm font-medium">
-      1
-     </span>
-     <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </div>
-    <div class="mt-2.5">
-     <span class="text-base-content block">
-      Step
-     </span>
-    </div>
-   </li>
-   <li class="group flex-1 shrink basis-0">
-    <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-field text-sm font-medium">
-      2
-     </span>
-     <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </div>
-    <div class="mt-2.5">
-     <span class="text-base-content block">
-      Step
-     </span>
-    </div>
-   </li>
-   <li class="group flex-1 shrink basis-0">
-    <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-field text-sm font-medium">
-      3
-     </span>
-     <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </div>
-    <div class="mt-2.5">
-     <span class="text-base-content block">
-      Step
-     </span>
-    </div>
-   </li>
-  </ul>
- </div>
-</div>
+```html
+<ul class="relative flex w-full gap-x-2">
+ <li class="group flex-1 shrink basis-0">
+  <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-field text-sm font-medium">
+    1
+   </span>
+   <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </div>
+  <div class="mt-2.5">
+   <span class="text-base-content block">
+    Step
+   </span>
+  </div>
+ </li>
+ <li class="group flex-1 shrink basis-0">
+  <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-field text-sm font-medium">
+    2
+   </span>
+   <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </div>
+  <div class="mt-2.5">
+   <span class="text-base-content block">
+    Step
+   </span>
+  </div>
+ </li>
+ <li class="group flex-1 shrink basis-0">
+  <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-field text-sm font-medium">
+    3
+   </span>
+   <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </div>
+  <div class="mt-2.5">
+   <span class="text-base-content block">
+    Step
+   </span>
+  </div>
+ </li>
+</ul>
 
+```
 h3:
   - Circle (Default)
 
 p:
   - This is the default stepper.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <ul class="relative flex w-full gap-x-2">
-   <li class="group flex-1 shrink basis-0">
-    <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
-      1
-     </span>
-     <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </div>
-    <div class="mt-2.5">
-     <span class="text-base-content block">
-      Step
-     </span>
-    </div>
-   </li>
-   <li class="group flex-1 shrink basis-0">
-    <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
-      2
-     </span>
-     <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </div>
-    <div class="mt-2.5">
-     <span class="text-base-content block">
-      Step
-     </span>
-    </div>
-   </li>
-   <li class="group flex-1 shrink basis-0">
-    <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
-      3
-     </span>
-     <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </div>
-    <div class="mt-2.5">
-     <span class="text-base-content block">
-      Step
-     </span>
-    </div>
-   </li>
-  </ul>
- </div>
-</div>
+```html
+<ul class="relative flex w-full gap-x-2">
+ <li class="group flex-1 shrink basis-0">
+  <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
+    1
+   </span>
+   <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </div>
+  <div class="mt-2.5">
+   <span class="text-base-content block">
+    Step
+   </span>
+  </div>
+ </li>
+ <li class="group flex-1 shrink basis-0">
+  <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
+    2
+   </span>
+   <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </div>
+  <div class="mt-2.5">
+   <span class="text-base-content block">
+    Step
+   </span>
+  </div>
+ </li>
+ <li class="group flex-1 shrink basis-0">
+  <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
+    3
+   </span>
+   <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </div>
+  <div class="mt-2.5">
+   <span class="text-base-content block">
+    Step
+   </span>
+  </div>
+ </li>
+</ul>
 
+```
 h2:
   - Illustrations
 
@@ -418,109 +397,103 @@ h3:
 p:
   - Navigation align centered.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <ul class="relative mx-auto flex w-96 gap-x-2">
-   <li class="group flex-1 shrink basis-0">
-    <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
-      1
-     </span>
-     <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </div>
-    <div class="mt-2.5">
-     <span class="text-base-content block">
-      Step
-     </span>
-    </div>
-   </li>
-   <li class="group flex-1 shrink basis-0">
-    <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
-      2
-     </span>
-     <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </div>
-    <div class="mt-2.5">
-     <span class="text-base-content block">
-      Step
-     </span>
-    </div>
-   </li>
-   <li class="group flex-1 shrink basis-0">
-    <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
-      3
-     </span>
-     <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </div>
-    <div class="mt-2.5">
-     <span class="text-base-content block">
-      Step
-     </span>
-    </div>
-   </li>
-  </ul>
- </div>
-</div>
+```html
+<ul class="relative mx-auto flex w-96 gap-x-2">
+ <li class="group flex-1 shrink basis-0">
+  <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
+    1
+   </span>
+   <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </div>
+  <div class="mt-2.5">
+   <span class="text-base-content block">
+    Step
+   </span>
+  </div>
+ </li>
+ <li class="group flex-1 shrink basis-0">
+  <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
+    2
+   </span>
+   <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </div>
+  <div class="mt-2.5">
+   <span class="text-base-content block">
+    Step
+   </span>
+  </div>
+ </li>
+ <li class="group flex-1 shrink basis-0">
+  <div class="min-h-7.5 min-w-7.5 inline-flex w-full items-center align-middle text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full text-sm font-medium">
+    3
+   </span>
+   <div class="bg-neutral/20 ms-2 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </div>
+  <div class="mt-2.5">
+   <span class="text-base-content block">
+    Step
+   </span>
+  </div>
+ </li>
+</ul>
 
+```
 h3:
   - Utilizing icons and avatars
 
 p:
   - You can also include extra elements like an avatar image or icons.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <ul class="relative flex w-full gap-x-2">
-   <li class="group flex flex-1 shrink basis-0 items-center gap-x-2">
-    <div class="min-h-7.5 min-w-7.5 inline-flex items-center justify-center align-middle text-sm">
-     <img alt="Image Description" class="size-7.5 shrink-0 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
-     <span class="text-base-content ms-2 block max-sm:hidden">
-      Step
+```html
+<ul class="relative flex w-full gap-x-2">
+ <li class="group flex flex-1 shrink basis-0 items-center gap-x-2">
+  <div class="min-h-7.5 min-w-7.5 inline-flex items-center justify-center align-middle text-sm">
+   <img alt="Image Description" class="size-7.5 shrink-0 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   <span class="text-base-content ms-2 block max-sm:hidden">
+    Step
+   </span>
+  </div>
+  <div class="bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+  </div>
+ </li>
+ <li class="group flex flex-1 shrink basis-0 items-center gap-x-2">
+  <div class="min-h-7.5 min-w-7.5 inline-flex items-center justify-center align-middle text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
+    <span class="icon-[tabler--arrow-bear-left-2] size-4 shrink-0">
+    </span>
+   </span>
+   <span class="text-base-content ms-2 block max-sm:hidden">
+    Step
+   </span>
+  </div>
+  <div class="bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+  </div>
+ </li>
+ <li class="group flex flex-1 shrink basis-0 items-center gap-x-2">
+  <div class="min-h-7.5 min-w-7.5 inline-flex items-center justify-center align-middle text-sm">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
+    <span aria-label="loading" class="text-primary inline-block size-4 animate-spin rounded-full border-[3px] border-current border-t-transparent" role="status">
+     <span class="sr-only">
+      Loading...
      </span>
-    </div>
-    <div class="bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-    </div>
-   </li>
-   <li class="group flex flex-1 shrink basis-0 items-center gap-x-2">
-    <div class="min-h-7.5 min-w-7.5 inline-flex items-center justify-center align-middle text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
-      <span class="icon-[tabler--arrow-bear-left-2] size-4 shrink-0">
-      </span>
-     </span>
-     <span class="text-base-content ms-2 block max-sm:hidden">
-      Step
-     </span>
-    </div>
-    <div class="bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-    </div>
-   </li>
-   <li class="group flex flex-1 shrink basis-0 items-center gap-x-2">
-    <div class="min-h-7.5 min-w-7.5 inline-flex items-center justify-center align-middle text-sm">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
-      <span aria-label="loading" class="text-primary inline-block size-4 animate-spin rounded-full border-[3px] border-current border-t-transparent" role="status">
-       <span class="sr-only">
-        Loading...
-       </span>
-      </span>
-     </span>
-     <span class="text-base-content ms-2 block max-sm:hidden">
-      Step
-     </span>
-    </div>
-    <div class="bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-    </div>
-   </li>
-  </ul>
- </div>
-</div>
+    </span>
+   </span>
+   <span class="text-base-content ms-2 block max-sm:hidden">
+    Step
+   </span>
+  </div>
+  <div class="bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+  </div>
+ </li>
+</ul>
 
+```
 h2:
   - Responsive
 
@@ -530,115 +503,109 @@ h3:
 p:
   - This stepper navigation example aligns horizontally for screen sizes above themdbreakpoint and vertically for smaller screen sizes.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <ul class="relative flex w-full flex-col gap-2 md:flex-row">
-   <li class="group flex flex-1 gap-x-2 md:block md:shrink md:basis-0">
-    <div class="min-h-7.5 min-w-7.5 flex flex-col items-center align-middle text-sm md:inline-flex md:w-full md:flex-row md:flex-wrap">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
-      1
-     </span>
-     <div class="bg-neutral/20 mt-2 h-full w-px group-last:hidden md:ms-2 md:mt-0 md:h-px md:w-full md:flex-1">
-     </div>
-    </div>
-    <div class="grow pb-5 md:mt-2.5 md:grow-0">
-     <span class="text-base-content block">
-      Step
-     </span>
-     <p class="text-base-content/50 text-sm">
-      This is a description text.
-     </p>
-    </div>
-   </li>
-   <li class="group flex flex-1 gap-x-2 md:block md:shrink md:basis-0">
-    <div class="min-h-7.5 min-w-7.5 flex flex-col items-center align-middle text-sm md:inline-flex md:w-full md:flex-row md:flex-wrap">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
-      2
-     </span>
-     <div class="bg-neutral/20 mt-2 h-full w-px group-last:hidden md:ms-2 md:mt-0 md:h-px md:w-full md:flex-1">
-     </div>
-    </div>
-    <div class="grow pb-5 md:mt-2.5 md:grow-0">
-     <span class="text-base-content block">
-      Step
-     </span>
-     <p class="text-base-content/50 text-sm">
-      This is a description text.
-     </p>
-    </div>
-   </li>
-   <li class="group flex flex-1 gap-x-2 md:block md:shrink md:basis-0">
-    <div class="min-h-7.5 min-w-7.5 flex flex-col items-center align-middle text-sm md:inline-flex md:w-full md:flex-row md:flex-wrap">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
-      3
-     </span>
-     <div class="bg-neutral/20 mt-2 h-full w-px group-last:hidden md:ms-2 md:mt-0 md:h-px md:w-full md:flex-1">
-     </div>
-    </div>
-    <div class="grow pb-5 md:mt-2.5 md:grow-0">
-     <span class="text-base-content block">
-      Step
-     </span>
-     <p class="text-base-content/50 text-sm">
-      This is a description text.
-     </p>
-    </div>
-   </li>
-  </ul>
- </div>
-</div>
+```html
+<ul class="relative flex w-full flex-col gap-2 md:flex-row">
+ <li class="group flex flex-1 gap-x-2 md:block md:shrink md:basis-0">
+  <div class="min-h-7.5 min-w-7.5 flex flex-col items-center align-middle text-sm md:inline-flex md:w-full md:flex-row md:flex-wrap">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
+    1
+   </span>
+   <div class="bg-neutral/20 mt-2 h-full w-px group-last:hidden md:ms-2 md:mt-0 md:h-px md:w-full md:flex-1">
+   </div>
+  </div>
+  <div class="grow pb-5 md:mt-2.5 md:grow-0">
+   <span class="text-base-content block">
+    Step
+   </span>
+   <p class="text-base-content/50 text-sm">
+    This is a description text.
+   </p>
+  </div>
+ </li>
+ <li class="group flex flex-1 gap-x-2 md:block md:shrink md:basis-0">
+  <div class="min-h-7.5 min-w-7.5 flex flex-col items-center align-middle text-sm md:inline-flex md:w-full md:flex-row md:flex-wrap">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
+    2
+   </span>
+   <div class="bg-neutral/20 mt-2 h-full w-px group-last:hidden md:ms-2 md:mt-0 md:h-px md:w-full md:flex-1">
+   </div>
+  </div>
+  <div class="grow pb-5 md:mt-2.5 md:grow-0">
+   <span class="text-base-content block">
+    Step
+   </span>
+   <p class="text-base-content/50 text-sm">
+    This is a description text.
+   </p>
+  </div>
+ </li>
+ <li class="group flex flex-1 gap-x-2 md:block md:shrink md:basis-0">
+  <div class="min-h-7.5 min-w-7.5 flex flex-col items-center align-middle text-sm md:inline-flex md:w-full md:flex-row md:flex-wrap">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
+    3
+   </span>
+   <div class="bg-neutral/20 mt-2 h-full w-px group-last:hidden md:ms-2 md:mt-0 md:h-px md:w-full md:flex-1">
+   </div>
+  </div>
+  <div class="grow pb-5 md:mt-2.5 md:grow-0">
+   <span class="text-base-content block">
+    Step
+   </span>
+   <p class="text-base-content/50 text-sm">
+    This is a description text.
+   </p>
+  </div>
+ </li>
+</ul>
 
+```
 h3:
   - Linear
 
 p:
   - The linear example is horizontally aligned for resolutions larger than or equal to ‘md’ and vertically aligned for resolutions below that.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <ul class="relative flex w-full flex-col gap-2 md:flex-row">
-   <li class="group flex flex-1 shrink basis-0 flex-col gap-x-2 md:flex-row md:items-center">
-    <div class="min-h-7.5 min-w-7.5 inline-flex grow items-center align-middle text-sm md:grow-0">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
-      1
-     </span>
-     <span class="text-base-content ms-2 block grow md:grow-0">
-      Step
-     </span>
-    </div>
-    <div class="bg-neutral/20 ms-3.5 mt-2 h-4 w-px group-last:hidden md:ms-0 md:mt-0 md:h-px md:w-full md:flex-1">
-    </div>
-   </li>
-   <li class="group flex flex-1 shrink basis-0 flex-col gap-x-2 md:flex-row md:items-center">
-    <div class="min-h-7.5 min-w-7.5 inline-flex grow items-center align-middle text-sm md:grow-0">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
-      2
-     </span>
-     <span class="text-base-content ms-2 block grow md:grow-0">
-      Step
-     </span>
-    </div>
-    <div class="bg-neutral/20 ms-3.5 mt-2 h-4 w-px group-last:hidden md:ms-0 md:mt-0 md:h-px md:w-full md:flex-1">
-    </div>
-   </li>
-   <li class="group flex flex-1 shrink basis-0 flex-col gap-x-2 md:flex-row md:items-center">
-    <div class="min-h-7.5 min-w-7.5 inline-flex grow items-center align-middle text-sm md:grow-0">
-     <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
-      3
-     </span>
-     <span class="text-base-content ms-2 block grow md:grow-0">
-      Step
-     </span>
-    </div>
-    <div class="bg-neutral/20 ms-3.5 mt-2 h-4 w-px group-last:hidden md:ms-0 md:mt-0 md:h-px md:w-full md:flex-1">
-    </div>
-   </li>
-  </ul>
- </div>
-</div>
+```html
+<ul class="relative flex w-full flex-col gap-2 md:flex-row">
+ <li class="group flex flex-1 shrink basis-0 flex-col gap-x-2 md:flex-row md:items-center">
+  <div class="min-h-7.5 min-w-7.5 inline-flex grow items-center align-middle text-sm md:grow-0">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
+    1
+   </span>
+   <span class="text-base-content ms-2 block grow md:grow-0">
+    Step
+   </span>
+  </div>
+  <div class="bg-neutral/20 ms-3.5 mt-2 h-4 w-px group-last:hidden md:ms-0 md:mt-0 md:h-px md:w-full md:flex-1">
+  </div>
+ </li>
+ <li class="group flex flex-1 shrink basis-0 flex-col gap-x-2 md:flex-row md:items-center">
+  <div class="min-h-7.5 min-w-7.5 inline-flex grow items-center align-middle text-sm md:grow-0">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
+    2
+   </span>
+   <span class="text-base-content ms-2 block grow md:grow-0">
+    Step
+   </span>
+  </div>
+  <div class="bg-neutral/20 ms-3.5 mt-2 h-4 w-px group-last:hidden md:ms-0 md:mt-0 md:h-px md:w-full md:flex-1">
+  </div>
+ </li>
+ <li class="group flex flex-1 shrink basis-0 flex-col gap-x-2 md:flex-row md:items-center">
+  <div class="min-h-7.5 min-w-7.5 inline-flex grow items-center align-middle text-sm md:grow-0">
+   <span class="text-bg-soft-neutral size-7.5 flex shrink-0 items-center justify-center rounded-full font-medium">
+    3
+   </span>
+   <span class="text-base-content ms-2 block grow md:grow-0">
+    Step
+   </span>
+  </div>
+  <div class="bg-neutral/20 ms-3.5 mt-2 h-4 w-px group-last:hidden md:ms-0 md:mt-0 md:h-px md:w-full md:flex-1">
+  </div>
+ </li>
+</ul>
 
+```
 h2:
   - Dynamic form
 
@@ -657,823 +624,802 @@ p:
 p:
   - Additionally,data-stepper-back-btnanddata-stepper-next-btncontrol the navigation between steps,data-stepper-finish-btnis used to complete the process on the final step, anddata-stepper-reset-btnallows users to reset the stepper. These data attributes work together to provide a smooth and guided user experience through the multi-step process.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="w-full" data-stepper="">
-   <ul class="relative flex flex-row gap-x-2">
-    <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 1 }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-completed:hidden">
-        1
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
+```html
+<div class="w-full" data-stepper="">
+ <ul class="relative flex flex-row gap-x-2">
+  <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 1 }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-completed:hidden">
+      1
      </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-    <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 2 }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-completed:hidden">
-        2
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
      </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-    <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 3 }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-completed:hidden">
-        3
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
-     </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-   </ul>
-   <div class="mt-5 sm:mt-8">
-    <div data-stepper-content-item='{ "index": 1 }'>
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       First content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "index": 2 }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Second content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "index": 3 }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Third content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "isFinal": true }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Final content
-      </h3>
-     </div>
-    </div>
-    <div class="mt-5 flex items-center justify-between gap-x-2">
-     <button class="btn btn-primary" data-stepper-back-btn="" type="button">
-      <span class="icon-[tabler--chevron-left] text-primary-content rtl:rotate-180">
-      </span>
-      Back
-     </button>
-     <button class="btn btn-primary" data-stepper-next-btn="" type="button">
-      Next
-      <span class="icon-[tabler--chevron-right] text-primary-content rtl:rotate-180">
-      </span>
-     </button>
-     <button class="btn btn-primary" data-stepper-finish-btn="" style="display:none" type="button">
-      Finish
-     </button>
-     <button class="btn btn-primary" data-stepper-reset-btn="" style="display:none" type="reset">
-      Reset
-     </button>
-    </div>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
    </div>
+  </li>
+  <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 2 }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-completed:hidden">
+      2
+     </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
+     </span>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </li>
+  <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 3 }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-completed:hidden">
+      3
+     </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
+     </span>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </li>
+ </ul>
+ <div class="mt-5 sm:mt-8">
+  <div data-stepper-content-item='{ "index": 1 }'>
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     First content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "index": 2 }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Second content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "index": 3 }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Third content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "isFinal": true }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Final content
+    </h3>
+   </div>
+  </div>
+  <div class="mt-5 flex items-center justify-between gap-x-2">
+   <button class="btn btn-primary" data-stepper-back-btn="" type="button">
+    <span class="icon-[tabler--chevron-left] text-primary-content rtl:rotate-180">
+    </span>
+    Back
+   </button>
+   <button class="btn btn-primary" data-stepper-next-btn="" type="button">
+    Next
+    <span class="icon-[tabler--chevron-right] text-primary-content rtl:rotate-180">
+    </span>
+   </button>
+   <button class="btn btn-primary" data-stepper-finish-btn="" style="display:none" type="button">
+    Finish
+   </button>
+   <button class="btn btn-primary" data-stepper-reset-btn="" style="display:none" type="reset">
+    Reset
+   </button>
   </div>
  </div>
 </div>
 
+```
 h3:
   - Non-linear
 
 p:
   - Featuring a “Complete Step” button, the Stepper component can be enhanced with"mode": "non-linear"in thedata-stepperattribute, allowing users to click on navigation items to switch steps. Thedata-stepper-complete-step-btnattribute is used for the complete button.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="w-full" data-stepper='{ "mode": "non-linear" }'>
-   <ul class="relative flex flex-row gap-x-2">
-    <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 1 }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-completed:hidden">
-        1
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
+```html
+<div class="w-full" data-stepper='{ "mode": "non-linear" }'>
+ <ul class="relative flex flex-row gap-x-2">
+  <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 1 }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-completed:hidden">
+      1
      </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-    <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 2 }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-completed:hidden">
-        2
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
      </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-    <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 3 }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-completed:hidden">
-        3
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
-     </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-   </ul>
-   <div class="mt-5 sm:mt-8">
-    <div data-stepper-content-item='{ "index": 1 }'>
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       First content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "index": 2 }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Second content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "index": 3 }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Third content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "isFinal": true }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Final content
-      </h3>
-     </div>
-    </div>
-    <div class="mt-5 flex items-center justify-center sm:justify-between gap-x-2">
-     <button class="btn btn-primary" data-stepper-back-btn="" type="button">
-      <span class="icon-[tabler--chevron-left] text-primary-content rtl:rotate-180">
-      </span>
-      <span class="max-sm:hidden">
-       Back
-      </span>
-     </button>
-     <button class="btn btn-primary" data-stepper-complete-step-btn=' { "completedText": "This step is completed" }' type="button">
-      Complete Step
-     </button>
-     <button class="btn btn-primary" data-stepper-next-btn="" type="button">
-      <span class="max-sm:hidden">
-       Next
-      </span>
-      <span class="icon-[tabler--chevron-right] text-primary-content rtl:rotate-180">
-      </span>
-     </button>
-     <button class="btn btn-primary" data-stepper-finish-btn="" style="display:none" type="button">
-      Finish
-     </button>
-     <button class="btn btn-primary" data-stepper-reset-btn="" style="display:none" type="reset">
-      Reset
-     </button>
-    </div>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
    </div>
+  </li>
+  <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 2 }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-completed:hidden">
+      2
+     </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
+     </span>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </li>
+  <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 3 }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-completed:hidden">
+      3
+     </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
+     </span>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </li>
+ </ul>
+ <div class="mt-5 sm:mt-8">
+  <div data-stepper-content-item='{ "index": 1 }'>
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     First content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "index": 2 }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Second content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "index": 3 }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Third content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "isFinal": true }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Final content
+    </h3>
+   </div>
+  </div>
+  <div class="mt-5 flex items-center justify-center sm:justify-between gap-x-2">
+   <button class="btn btn-primary" data-stepper-back-btn="" type="button">
+    <span class="icon-[tabler--chevron-left] text-primary-content rtl:rotate-180">
+    </span>
+    <span class="max-sm:hidden">
+     Back
+    </span>
+   </button>
+   <button class="btn btn-primary" data-stepper-complete-step-btn=' { "completedText": "This step is completed" }' type="button">
+    Complete Step
+   </button>
+   <button class="btn btn-primary" data-stepper-next-btn="" type="button">
+    <span class="max-sm:hidden">
+     Next
+    </span>
+    <span class="icon-[tabler--chevron-right] text-primary-content rtl:rotate-180">
+    </span>
+   </button>
+   <button class="btn btn-primary" data-stepper-finish-btn="" style="display:none" type="button">
+    Finish
+   </button>
+   <button class="btn btn-primary" data-stepper-reset-btn="" style="display:none" type="reset">
+    Reset
+   </button>
   </div>
  </div>
 </div>
 
+```
 h3:
   - Skip
 
 p:
   - Example of a Step with a Skip Button: To incorporate a skip button, utilizedata-stepper-skip-btnto designate the button that allows skipping the step. Specify the index for this button by includingdata-stepper-nav-item='{ "isOptional": true }'.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="w-full" data-stepper="">
-   <ul class="relative flex flex-row gap-x-2">
-    <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 1,  "isOptional": true }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-completed:hidden">
-        1
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
+```html
+<div class="w-full" data-stepper="">
+ <ul class="relative flex flex-row gap-x-2">
+  <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 1,  "isOptional": true }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-completed:hidden">
+      1
      </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-    <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 2,  "isOptional": true }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-completed:hidden">
-        2
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
      </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-    <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 3 }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-completed:hidden">
-        3
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
-     </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-   </ul>
-   <div class="mt-5 sm:mt-8">
-    <div data-stepper-content-item='{ "index": 1 }'>
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       First content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "index": 2 }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Second content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "index": 3 }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Third content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "isFinal": true }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Final content
-      </h3>
-     </div>
-    </div>
-    <div class="mt-5 flex items-center justify-center sm:justify-between gap-x-2">
-     <button class="btn btn-primary" data-stepper-back-btn="" type="button">
-      <span class="icon-[tabler--chevron-left] text-primary-content rtl:rotate-180">
-      </span>
-      Back
-     </button>
-     <button class="btn btn-primary" data-stepper-skip-btn="" style="display:none" type="button">
-      Skip
-     </button>
-     <button class="btn btn-primary" data-stepper-next-btn="" type="button">
-      Next
-      <span class="icon-[tabler--chevron-right] text-primary-content rtl:rotate-180">
-      </span>
-     </button>
-     <button class="btn btn-primary" data-stepper-finish-btn="" style="display:none" type="button">
-      Finish
-     </button>
-     <button class="btn btn-primary" data-stepper-reset-btn="" style="display:none" type="reset">
-      Reset
-     </button>
-    </div>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
    </div>
+  </li>
+  <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 2,  "isOptional": true }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-completed:hidden">
+      2
+     </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
+     </span>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </li>
+  <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 3 }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-completed:hidden">
+      3
+     </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
+     </span>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </li>
+ </ul>
+ <div class="mt-5 sm:mt-8">
+  <div data-stepper-content-item='{ "index": 1 }'>
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     First content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "index": 2 }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Second content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "index": 3 }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Third content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "isFinal": true }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Final content
+    </h3>
+   </div>
+  </div>
+  <div class="mt-5 flex items-center justify-center sm:justify-between gap-x-2">
+   <button class="btn btn-primary" data-stepper-back-btn="" type="button">
+    <span class="icon-[tabler--chevron-left] text-primary-content rtl:rotate-180">
+    </span>
+    Back
+   </button>
+   <button class="btn btn-primary" data-stepper-skip-btn="" style="display:none" type="button">
+    Skip
+   </button>
+   <button class="btn btn-primary" data-stepper-next-btn="" type="button">
+    Next
+    <span class="icon-[tabler--chevron-right] text-primary-content rtl:rotate-180">
+    </span>
+   </button>
+   <button class="btn btn-primary" data-stepper-finish-btn="" style="display:none" type="button">
+    Finish
+   </button>
+   <button class="btn btn-primary" data-stepper-reset-btn="" style="display:none" type="reset">
+    Reset
+   </button>
   </div>
  </div>
 </div>
 
+```
 h3:
   - Active
 
 p:
   - Active stepper example.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="w-full" data-stepper='{ "currentIndex": 2 }'>
-   <ul class="relative flex flex-row gap-x-2">
-    <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 1,  "isCompleted": true }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-completed:hidden">
-        1
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
+```html
+<div class="w-full" data-stepper='{ "currentIndex": 2 }'>
+ <ul class="relative flex flex-row gap-x-2">
+  <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 1,  "isCompleted": true }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-completed:hidden">
+      1
      </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-    <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 2 }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-completed:hidden">
-        2
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
      </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-    <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 3 }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-completed:hidden">
-        3
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
-     </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-   </ul>
-   <div class="mt-5 sm:mt-8">
-    <div data-stepper-content-item='{ "index": 1 }'>
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       First content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "index": 2 }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Second content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "index": 3 }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Third content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "isFinal": true }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Final content
-      </h3>
-     </div>
-    </div>
-    <div class="mt-5 flex items-center justify-between gap-x-2">
-     <button class="btn btn-primary" data-stepper-back-btn="" type="button">
-      <span class="icon-[tabler--chevron-left] text-primary-content rtl:rotate-180">
-      </span>
-      Back
-     </button>
-     <button class="btn btn-primary" data-stepper-next-btn="" type="button">
-      Next
-      <span class="icon-[tabler--chevron-right] text-primary-content rtl:rotate-180">
-      </span>
-     </button>
-     <button class="btn btn-primary" data-stepper-finish-btn="" style="display:none" type="button">
-      Finish
-     </button>
-     <button class="btn btn-primary" data-stepper-reset-btn="" style="display:none" type="reset">
-      Reset
-     </button>
-    </div>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
    </div>
+  </li>
+  <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 2 }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-completed:hidden">
+      2
+     </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
+     </span>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </li>
+  <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 3 }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-completed:hidden">
+      3
+     </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
+     </span>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </li>
+ </ul>
+ <div class="mt-5 sm:mt-8">
+  <div data-stepper-content-item='{ "index": 1 }'>
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     First content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "index": 2 }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Second content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "index": 3 }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Third content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "isFinal": true }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Final content
+    </h3>
+   </div>
+  </div>
+  <div class="mt-5 flex items-center justify-between gap-x-2">
+   <button class="btn btn-primary" data-stepper-back-btn="" type="button">
+    <span class="icon-[tabler--chevron-left] text-primary-content rtl:rotate-180">
+    </span>
+    Back
+   </button>
+   <button class="btn btn-primary" data-stepper-next-btn="" type="button">
+    Next
+    <span class="icon-[tabler--chevron-right] text-primary-content rtl:rotate-180">
+    </span>
+   </button>
+   <button class="btn btn-primary" data-stepper-finish-btn="" style="display:none" type="button">
+    Finish
+   </button>
+   <button class="btn btn-primary" data-stepper-reset-btn="" style="display:none" type="reset">
+    Reset
+   </button>
   </div>
  </div>
 </div>
 
+```
 h3:
   - Success
 
 p:
   - Example of a Successful Stepper: This example demonstrates what a properly completed stepper should look like.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="completed w-full" data-stepper='{ "isCompleted": true }'>
-   <ul class="relative flex flex-row gap-x-2">
-    <li class="is-valid group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 1,  "isCompleted": true }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-completed:hidden">
-        1
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
+```html
+<div class="completed w-full" data-stepper='{ "isCompleted": true }'>
+ <ul class="relative flex flex-row gap-x-2">
+  <li class="is-valid group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 1,  "isCompleted": true }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-completed:hidden">
+      1
      </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-    <li class="is-valid group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 2,  "isCompleted": true }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-completed:hidden">
-        2
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
      </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-    <li class="is-valid group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 3,  "isCompleted": true }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-completed:hidden">
-        3
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
-     </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-   </ul>
-   <div class="mt-5 sm:mt-8">
-    <div data-stepper-content-item='{ "index": 1,  "isCompleted": true }'>
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       First content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "index": 2,  "isCompleted": true }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Second content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "index": 3,  "isCompleted": true }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Third content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "isFinal": true }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Final content
-      </h3>
-     </div>
-    </div>
-    <div class="mt-5 flex items-center justify-between gap-x-2">
-     <button class="btn btn-primary" data-stepper-back-btn="" style="display:none" type="button">
-      <span class="icon-[tabler--chevron-left] text-primary-content rtl:rotate-180">
-      </span>
-      Back
-     </button>
-     <button class="btn btn-primary" data-stepper-next-btn="" style="display:none" type="button">
-      Next
-      <span class="icon-[tabler--chevron-right] text-primary-content rtl:rotate-180">
-      </span>
-     </button>
-     <button class="btn btn-primary" data-stepper-finish-btn="" style="display:none" type="button">
-      Finish
-     </button>
-     <button class="btn btn-primary" data-stepper-reset-btn="" type="reset">
-      Reset
-     </button>
-    </div>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
    </div>
+  </li>
+  <li class="is-valid group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 2,  "isCompleted": true }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-completed:hidden">
+      2
+     </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
+     </span>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </li>
+  <li class="is-valid group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 3,  "isCompleted": true }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-completed:hidden">
+      3
+     </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
+     </span>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </li>
+ </ul>
+ <div class="mt-5 sm:mt-8">
+  <div data-stepper-content-item='{ "index": 1,  "isCompleted": true }'>
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     First content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "index": 2,  "isCompleted": true }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Second content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "index": 3,  "isCompleted": true }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Third content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "isFinal": true }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Final content
+    </h3>
+   </div>
+  </div>
+  <div class="mt-5 flex items-center justify-between gap-x-2">
+   <button class="btn btn-primary" data-stepper-back-btn="" style="display:none" type="button">
+    <span class="icon-[tabler--chevron-left] text-primary-content rtl:rotate-180">
+    </span>
+    Back
+   </button>
+   <button class="btn btn-primary" data-stepper-next-btn="" style="display:none" type="button">
+    Next
+    <span class="icon-[tabler--chevron-right] text-primary-content rtl:rotate-180">
+    </span>
+   </button>
+   <button class="btn btn-primary" data-stepper-finish-btn="" style="display:none" type="button">
+    Finish
+   </button>
+   <button class="btn btn-primary" data-stepper-reset-btn="" type="reset">
+    Reset
+   </button>
   </div>
  </div>
 </div>
 
+```
 h3:
   - Error
 
 p:
   - Error stepper example.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="w-full" data-stepper="" id="error-stepper">
-   <ul class="relative flex flex-row gap-x-2">
-    <li class="is-invalid group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 1, "isInvalid": true  }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error stepper-processed:bg-base-200 text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-error:hidden stepper-completed:hidden stepper-processed:hidden">
-        1
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-       <span class="icon-[tabler--x] stepper-error:block hidden size-4 shrink-0">
-       </span>
-       <span aria-label="loading" class="text-error stepper-processed:inline-block hidden size-4 animate-spin rounded-full border-[3px] border-current border-t-transparent" role="status">
-        <span class="sr-only">
-         Loading...
-        </span>
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
+```html
+<div class="w-full" data-stepper="" id="error-stepper">
+ <ul class="relative flex flex-row gap-x-2">
+  <li class="is-invalid group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 1, "isInvalid": true  }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error stepper-processed:bg-base-200 text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-error:hidden stepper-completed:hidden stepper-processed:hidden">
+      1
+     </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
+     </span>
+     <span class="icon-[tabler--x] stepper-error:block hidden size-4 shrink-0">
+     </span>
+     <span aria-label="loading" class="text-error stepper-processed:inline-block hidden size-4 animate-spin rounded-full border-[3px] border-current border-t-transparent" role="status">
+      <span class="sr-only">
+       Loading...
       </span>
      </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-    <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 2 }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error stepper-processed:bg-base-200 text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-error:hidden stepper-completed:hidden stepper-processed:hidden">
-        2
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-       <span class="icon-[tabler--x] stepper-error:block hidden size-4 shrink-0">
-       </span>
-       <span aria-label="loading" class="text-error stepper-processed:inline-block hidden size-4 animate-spin rounded-full border-[3px] border-current border-t-transparent" role="status">
-        <span class="sr-only">
-         Loading...
-        </span>
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
-     </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-    <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 3 }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error stepper-processed:bg-base-200 text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-error:hidden stepper-completed:hidden">
-        3
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-       <span class="icon-[tabler--x] stepper-error:block hidden size-4 shrink-0">
-       </span>
-       <span aria-label="loading" class="text-error stepper-processed:inline-block hidden size-4 animate-spin rounded-full border-[3px] border-current border-t-transparent" role="status">
-        <span class="sr-only">
-         Loading...
-        </span>
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
-     </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-   </ul>
-   <div class="mt-5 sm:mt-8">
-    <div data-stepper-content-item='{ "index": 1 }'>
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       First content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "index": 2 }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Second content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "index": 3 }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Third content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "isFinal": true }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Final content
-      </h3>
-     </div>
-    </div>
-    <div class="mt-5 flex items-center justify-between gap-x-2">
-     <button class="btn btn-primary" data-stepper-back-btn="" type="button">
-      <span class="icon-[tabler--chevron-left] text-primary-content rtl:rotate-180">
-      </span>
-      Back
-     </button>
-     <button class="btn btn-primary" data-stepper-next-btn="" type="button">
-      Next
-      <span class="icon-[tabler--chevron-right] text-primary-content rtl:rotate-180">
-      </span>
-     </button>
-     <button class="btn btn-primary" data-stepper-finish-btn="" style="display:none" type="button">
-      Finish
-     </button>
-     <button class="btn btn-primary" data-stepper-reset-btn="" style="display:none" type="reset">
-      Reset
-     </button>
-    </div>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
    </div>
+  </li>
+  <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 2 }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error stepper-processed:bg-base-200 text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-error:hidden stepper-completed:hidden stepper-processed:hidden">
+      2
+     </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
+     </span>
+     <span class="icon-[tabler--x] stepper-error:block hidden size-4 shrink-0">
+     </span>
+     <span aria-label="loading" class="text-error stepper-processed:inline-block hidden size-4 animate-spin rounded-full border-[3px] border-current border-t-transparent" role="status">
+      <span class="sr-only">
+       Loading...
+      </span>
+     </span>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </li>
+  <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 3 }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error stepper-processed:bg-base-200 text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-error:hidden stepper-completed:hidden">
+      3
+     </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
+     </span>
+     <span class="icon-[tabler--x] stepper-error:block hidden size-4 shrink-0">
+     </span>
+     <span aria-label="loading" class="text-error stepper-processed:inline-block hidden size-4 animate-spin rounded-full border-[3px] border-current border-t-transparent" role="status">
+      <span class="sr-only">
+       Loading...
+      </span>
+     </span>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </li>
+ </ul>
+ <div class="mt-5 sm:mt-8">
+  <div data-stepper-content-item='{ "index": 1 }'>
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     First content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "index": 2 }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Second content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "index": 3 }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Third content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "isFinal": true }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Final content
+    </h3>
+   </div>
+  </div>
+  <div class="mt-5 flex items-center justify-between gap-x-2">
+   <button class="btn btn-primary" data-stepper-back-btn="" type="button">
+    <span class="icon-[tabler--chevron-left] text-primary-content rtl:rotate-180">
+    </span>
+    Back
+   </button>
+   <button class="btn btn-primary" data-stepper-next-btn="" type="button">
+    Next
+    <span class="icon-[tabler--chevron-right] text-primary-content rtl:rotate-180">
+    </span>
+   </button>
+   <button class="btn btn-primary" data-stepper-finish-btn="" style="display:none" type="button">
+    Finish
+   </button>
+   <button class="btn btn-primary" data-stepper-reset-btn="" style="display:none" type="reset">
+    Reset
+   </button>
   </div>
  </div>
 </div>
 
+```
 h3:
   - Destroy/Reinitialize
 
 p:
   - Thedestroymethodis provided to facilitate the destruction of a stepper element.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="w-full" data-stepper="" id="stepper-to-destroy">
-   <ul class="relative flex flex-row gap-x-2">
-    <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 1 }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-completed:hidden">
-        1
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
+```html
+<div class="w-full" data-stepper="" id="stepper-to-destroy">
+ <ul class="relative flex flex-row gap-x-2">
+  <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 1 }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-completed:hidden">
+      1
      </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-    <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 2 }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-completed:hidden">
-        2
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
      </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-    <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 3 }'>
-     <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
-      <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
-       <span class="stepper-success:hidden stepper-completed:hidden">
-        3
-       </span>
-       <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
-       </span>
-      </span>
-      <span class="text-base-content ms-2 max-sm:hidden">
-       Step
-      </span>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </li>
+  <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 2 }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-completed:hidden">
+      2
      </span>
-     <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
-     </div>
-    </li>
-   </ul>
-   <div class="mt-5 sm:mt-8">
-    <div data-stepper-content-item='{ "index": 1 }'>
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       First content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "index": 2 }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Second content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "index": 3 }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Third content
-      </h3>
-     </div>
-    </div>
-    <div data-stepper-content-item='{ "isFinal": true }' style="display:none">
-     <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
-      <h3 class="text-base-content/50 text-2xl">
-       Final content
-      </h3>
-     </div>
-    </div>
-    <div class="mt-5 flex items-center justify-between gap-x-2">
-     <button class="btn btn-primary" data-stepper-back-btn="" type="button">
-      <span class="icon-[tabler--chevron-left] text-primary-content rtl:rotate-180">
-      </span>
-      Back
-     </button>
-     <button class="btn btn-primary" data-stepper-next-btn="" type="button">
-      Next
-      <span class="icon-[tabler--chevron-right] text-primary-content rtl:rotate-180">
-      </span>
-     </button>
-     <button class="btn btn-primary" data-stepper-finish-btn="" style="display:none" type="button">
-      Finish
-     </button>
-     <button class="btn btn-primary" data-stepper-reset-btn="" style="display:none" type="reset">
-      Reset
-     </button>
-    </div>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
+     </span>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </li>
+  <li class="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 3 }'>
+   <span class="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
+    <span class="stepper-active:text-bg-primary stepper-active:shadow-sm shadow-base-300/20 stepper-success:text-bg-primary stepper-success:shadow-sm stepper-completed:text-bg-success stepper-error:text-bg-error text-bg-soft-neutral flex size-7.5 shrink-0 items-center justify-center rounded-full font-medium">
+     <span class="stepper-success:hidden stepper-completed:hidden">
+      3
+     </span>
+     <span class="icon-[tabler--check] stepper-success:block hidden size-4 shrink-0">
+     </span>
+    </span>
+    <span class="text-base-content ms-2 max-sm:hidden">
+     Step
+    </span>
+   </span>
+   <div class="stepper-success:bg-primary stepper-completed:bg-success bg-neutral/20 h-px w-full flex-1 group-last:hidden">
+   </div>
+  </li>
+ </ul>
+ <div class="mt-5 sm:mt-8">
+  <div data-stepper-content-item='{ "index": 1 }'>
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     First content
+    </h3>
    </div>
   </div>
-  <div class="mt-4 flex gap-3">
-   <button class="btn btn-primary" id="destroy-btn">
-    Destroy
+  <div data-stepper-content-item='{ "index": 2 }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Second content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "index": 3 }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Third content
+    </h3>
+   </div>
+  </div>
+  <div data-stepper-content-item='{ "isFinal": true }' style="display:none">
+   <div class="border-base-content/40 bg-base-200/50 flex h-48 items-center justify-center rounded-xl border border-dashed p-4">
+    <h3 class="text-base-content/50 text-2xl">
+     Final content
+    </h3>
+   </div>
+  </div>
+  <div class="mt-5 flex items-center justify-between gap-x-2">
+   <button class="btn btn-primary" data-stepper-back-btn="" type="button">
+    <span class="icon-[tabler--chevron-left] text-primary-content rtl:rotate-180">
+    </span>
+    Back
    </button>
-   <button class="btn btn-primary" disabled="" id="reinit-btn">
-    Reinitialize
+   <button class="btn btn-primary" data-stepper-next-btn="" type="button">
+    Next
+    <span class="icon-[tabler--chevron-right] text-primary-content rtl:rotate-180">
+    </span>
+   </button>
+   <button class="btn btn-primary" data-stepper-finish-btn="" style="display:none" type="button">
+    Finish
+   </button>
+   <button class="btn btn-primary" data-stepper-reset-btn="" style="display:none" type="reset">
+    Reset
    </button>
   </div>
  </div>
 </div>
+<div class="mt-4 flex gap-3">
+ <button class="btn btn-primary" id="destroy-btn">
+  Destroy
+ </button>
+ <button class="btn btn-primary" disabled="" id="reinit-btn">
+  Reinitialize
+ </button>
+</div>
 
+```
 h2:
   - JavaScript behavior
 

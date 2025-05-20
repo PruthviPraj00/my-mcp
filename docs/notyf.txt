@@ -45,30 +45,24 @@ h3:
 p:
   - Use the example below for default notification, initialized with the JS code provided below.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <button class="btn btn-primary" id="notyf-default-example">
-   Default notyf
-  </button>
- </div>
-</div>
+```html
+<button class="btn btn-primary" id="notyf-default-example">
+ Default notyf
+</button>
 
+```
 h3:
   - Custom notyf
 
 p:
   - Use the example below for custom notification, initialized with the JS code provided below.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <button class="btn btn-primary" id="notyf-custom-example">
-   Custom notyf
-  </button>
- </div>
-</div>
+```html
+<button class="btn btn-primary" id="notyf-custom-example">
+ Custom notyf
+</button>
 
+```
 h2:
   - Advance options
 
@@ -78,133 +72,130 @@ h3:
 p:
   - Use theNotyf generatorbelow to create custom notifications according to your requirements for position, type, behavior, message, and duration.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose justify-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card mt-6 max-w-lg max-sm:w-64">
-   <form id="notificationForm">
-    <div class="card-body">
-     <div>
-      <label class="label-text" for="notyf-value">
-       Message
+```html
+<div class="card mt-6 max-w-lg max-sm:w-64">
+ <form id="notificationForm">
+  <div class="card-body">
+   <div>
+    <label class="label-text" for="notyf-value">
+     Message
+    </label>
+    <input autofocus="" class="input" id="notyf-value" placeholder="Notification message" type="text"/>
+   </div>
+   <div>
+    <label class="label-text" for="notyf-number">
+     Duration
+    </label>
+    <input class="input" id="notyf-number" min="1000" placeholder="1000 (Milliseconds)" type="number"/>
+   </div>
+   <div class="flex flex-col">
+    <h6 class="text-sm text-base-content mb-1">
+     Position - X
+    </h6>
+    <div class="flex flex-wrap gap-3">
+     <div class="flex items-center gap-1">
+      <input checked="" class="radio radio-primary" id="positionXLeft" name="radio-x" type="radio" value="left"/>
+      <label class="label-text text-base" for="positionXLeft">
+       Left
       </label>
-      <input autofocus="" class="input" id="notyf-value" placeholder="Notification message" type="text"/>
      </div>
-     <div>
-      <label class="label-text" for="notyf-number">
-       Duration
+     <div class="flex items-center gap-1">
+      <input class="radio radio-primary" id="positionXcenter" name="radio-x" type="radio" value="center"/>
+      <label class="label-text text-base" for="positionXcenter">
+       Center
       </label>
-      <input class="input" id="notyf-number" min="1000" placeholder="1000 (Milliseconds)" type="number"/>
      </div>
-     <div class="flex flex-col">
-      <h6 class="text-sm text-base-content mb-1">
-       Position - X
-      </h6>
-      <div class="flex flex-wrap gap-3">
-       <div class="flex items-center gap-1">
-        <input checked="" class="radio radio-primary" id="positionXLeft" name="radio-x" type="radio" value="left"/>
-        <label class="label-text text-base" for="positionXLeft">
-         Left
-        </label>
-       </div>
-       <div class="flex items-center gap-1">
-        <input class="radio radio-primary" id="positionXcenter" name="radio-x" type="radio" value="center"/>
-        <label class="label-text text-base" for="positionXcenter">
-         Center
-        </label>
-       </div>
-       <div class="flex items-center gap-1">
-        <input class="radio radio-primary" id="positionXright" name="radio-x" type="radio" value="right"/>
-        <label class="label-text text-base" for="positionXright">
-         Right
-        </label>
-       </div>
-      </div>
+     <div class="flex items-center gap-1">
+      <input class="radio radio-primary" id="positionXright" name="radio-x" type="radio" value="right"/>
+      <label class="label-text text-base" for="positionXright">
+       Right
+      </label>
      </div>
-     <div class="flex flex-col">
-      <h6 class="text-sm text-base-content mb-1">
-       Position - Y
-      </h6>
-      <div class="flex flex-wrap gap-3">
-       <div class="flex items-center gap-1">
-        <input checked="" class="radio radio-primary" id="positionYtop" name="radio-y" type="radio" value="top"/>
-        <label class="label-text text-base" for="positionYtop">
-         Top
-        </label>
-       </div>
-       <div class="flex items-center gap-1">
-        <input class="radio radio-primary" id="positionYcenter" name="radio-y" type="radio" value="center"/>
-        <label class="label-text text-base" for="positionYcenter">
-         Center
-        </label>
-       </div>
-       <div class="flex items-center gap-1">
-        <input class="radio radio-primary" id="positionYbottom" name="radio-y" type="radio" value="bottom"/>
-        <label class="label-text text-base" for="positionYbottom">
-         Bottom
-        </label>
-       </div>
-      </div>
-     </div>
-     <div class="flex flex-col">
-      <h6 class="text-sm text-base-content mb-1">
-       Behavior
-      </h6>
-      <div class="flex flex-col gap-2 sm:flex-row sm:gap-4">
-       <div class="flex items-center gap-1">
-        <input checked="" class="checkbox checkbox-primary" id="notyf-ripple" type="checkbox"/>
-        <label class="label-text text-base" for="notyf-ripple">
-         With Ripple effect
-        </label>
-       </div>
-       <div class="flex items-center gap-1">
-        <input class="checkbox checkbox-primary" id="notyf-dismiss" type="checkbox"/>
-        <label class="label-text text-base" for="notyf-dismiss">
-         Dismissible
-        </label>
-       </div>
-      </div>
-     </div>
-     <div class="flex flex-col">
-      <h6 class="text-sm text-base-content mb-1">
-       Type
-      </h6>
-      <div class="flex flex-col gap-2 sm:flex-row sm:gap-4">
-       <div class="flex items-center gap-1">
-        <input checked="" class="radio radio-primary" id="typeSuccess" name="radio-type" type="radio" value="success"/>
-        <label class="label-text text-base" for="typeSuccess">
-         Success
-        </label>
-       </div>
-       <div class="flex items-center gap-1">
-        <input class="radio radio-primary" id="typeInfo" name="radio-type" type="radio" value="info"/>
-        <label class="label-text text-base" for="typeInfo">
-         Info
-        </label>
-       </div>
-       <div class="flex items-center gap-1">
-        <input class="radio radio-primary" id="typeWarning" name="radio-type" type="radio" value="warning"/>
-        <label class="label-text text-base" for="typeWarning">
-         Warning
-        </label>
-       </div>
-       <div class="flex items-center gap-1">
-        <input class="radio radio-primary" id="typeError" name="radio-type" type="radio" value="error"/>
-        <label class="label-text text-base" for="typeError">
-         Error
-        </label>
-       </div>
-      </div>
-     </div>
-     <button class="btn btn-primary" id="notyf-submit" type="submit">
-      Show Notification
-     </button>
     </div>
-   </form>
+   </div>
+   <div class="flex flex-col">
+    <h6 class="text-sm text-base-content mb-1">
+     Position - Y
+    </h6>
+    <div class="flex flex-wrap gap-3">
+     <div class="flex items-center gap-1">
+      <input checked="" class="radio radio-primary" id="positionYtop" name="radio-y" type="radio" value="top"/>
+      <label class="label-text text-base" for="positionYtop">
+       Top
+      </label>
+     </div>
+     <div class="flex items-center gap-1">
+      <input class="radio radio-primary" id="positionYcenter" name="radio-y" type="radio" value="center"/>
+      <label class="label-text text-base" for="positionYcenter">
+       Center
+      </label>
+     </div>
+     <div class="flex items-center gap-1">
+      <input class="radio radio-primary" id="positionYbottom" name="radio-y" type="radio" value="bottom"/>
+      <label class="label-text text-base" for="positionYbottom">
+       Bottom
+      </label>
+     </div>
+    </div>
+   </div>
+   <div class="flex flex-col">
+    <h6 class="text-sm text-base-content mb-1">
+     Behavior
+    </h6>
+    <div class="flex flex-col gap-2 sm:flex-row sm:gap-4">
+     <div class="flex items-center gap-1">
+      <input checked="" class="checkbox checkbox-primary" id="notyf-ripple" type="checkbox"/>
+      <label class="label-text text-base" for="notyf-ripple">
+       With Ripple effect
+      </label>
+     </div>
+     <div class="flex items-center gap-1">
+      <input class="checkbox checkbox-primary" id="notyf-dismiss" type="checkbox"/>
+      <label class="label-text text-base" for="notyf-dismiss">
+       Dismissible
+      </label>
+     </div>
+    </div>
+   </div>
+   <div class="flex flex-col">
+    <h6 class="text-sm text-base-content mb-1">
+     Type
+    </h6>
+    <div class="flex flex-col gap-2 sm:flex-row sm:gap-4">
+     <div class="flex items-center gap-1">
+      <input checked="" class="radio radio-primary" id="typeSuccess" name="radio-type" type="radio" value="success"/>
+      <label class="label-text text-base" for="typeSuccess">
+       Success
+      </label>
+     </div>
+     <div class="flex items-center gap-1">
+      <input class="radio radio-primary" id="typeInfo" name="radio-type" type="radio" value="info"/>
+      <label class="label-text text-base" for="typeInfo">
+       Info
+      </label>
+     </div>
+     <div class="flex items-center gap-1">
+      <input class="radio radio-primary" id="typeWarning" name="radio-type" type="radio" value="warning"/>
+      <label class="label-text text-base" for="typeWarning">
+       Warning
+      </label>
+     </div>
+     <div class="flex items-center gap-1">
+      <input class="radio radio-primary" id="typeError" name="radio-type" type="radio" value="error"/>
+      <label class="label-text text-base" for="typeError">
+       Error
+      </label>
+     </div>
+    </div>
+   </div>
+   <button class="btn btn-primary" id="notyf-submit" type="submit">
+    Show Notification
+   </button>
   </div>
- </div>
+ </form>
 </div>
 
+```
 h2:
   - Notyf (Toasts)
 

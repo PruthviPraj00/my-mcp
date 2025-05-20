@@ -38,78 +38,72 @@ p:
 p:
   - Please refer to theBasic optionsection for all basic functionalities.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
     "placeholder": "Select option...",
-    "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
     "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
     "dropdownClasses": "advance-select-menu",
     "optionClasses": "advance-select-option selected:select-active",
-    "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-    "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+    "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+    "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }'>
-    <option value="">
-     Choose
-    </option>
-    <option value="name">
-     Full Name
-    </option>
-    <option value="email">
-     Email Address
-    </option>
-    <option value="description">
-     Project Description
-    </option>
-    <option value="user_id">
-     User Identification Number
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option value="name">
+   Full Name
+  </option>
+  <option value="email">
+   Email Address
+  </option>
+  <option value="description">
+   Project Description
+  </option>
+  <option value="user_id">
+   User Identification Number
+  </option>
+ </select>
 </div>
 
+```
 h3:
   - Placeholder
 
 p:
   - To customize the placeholder with either an icon or plain text, you can provide custom HTML within the"placeholder:"option as demonstrated below.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
-    "placeholder": "&lt;span class=\"inline-flex items-center\"&gt;&lt;span class=\"icon-[tabler--filter] shrink-0 size-4 me-2\"&gt;&lt;/span&gt; Filter&lt;/span&gt;",
-    "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
+    "placeholder": "<span class=\"inline-flex items-center\"><span class=\"icon-[tabler--filter] shrink-0 size-4 me-2\"></span> Filter</span>",
+    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
     "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
     "dropdownClasses": "advance-select-menu",
     "optionClasses": "advance-select-option selected:select-active",
-    "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-    "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+    "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+    "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
   }'>
-    <option value="">
-     Choose
-    </option>
-    <option value="name">
-     Full Name
-    </option>
-    <option value="email">
-     Email Address
-    </option>
-    <option value="description">
-     Project Description
-    </option>
-    <option value="user_id">
-     User Identification Number
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option value="name">
+   Full Name
+  </option>
+  <option value="email">
+   Email Address
+  </option>
+  <option value="description">
+   Project Description
+  </option>
+  <option value="user_id">
+   User Identification Number
+  </option>
+ </select>
 </div>
 
+```
 h2:
   - Size
 
@@ -119,141 +113,138 @@ h3:
 p:
   - Add responsive classadvance-select-{size}where{size} = xs|sm|md|lg|xlfor advance select of different sizes. The size is now determined by the elementâs height instead of its padding.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-80 overflow-y-auto flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm space-y-4">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm space-y-4">
+ <select class="hidden" data-select='{
       "placeholder": "Select option...",
-      "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+      "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
       "toggleClasses": "advance-select-toggle advance-select-xs select-disabled:pointer-events-none select-disabled:opacity-40",
       "dropdownClasses": "advance-select-menu",
       "dropdownSpace": 5,
       "optionClasses": "advance-select-option selected:select-active",
-      "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-      "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-3.5 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+      "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+      "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-3.5 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
       }'>
-    <option value="">
-     Choose
-    </option>
-    <option value="name">
-     Full Name
-    </option>
-    <option value="email">
-     Email Address
-    </option>
-    <option value="description">
-     Project Description
-    </option>
-    <option value="user_id">
-     User Identification Number
-    </option>
-   </select>
-   <select class="hidden" data-select='{
+  <option value="">
+   Choose
+  </option>
+  <option value="name">
+   Full Name
+  </option>
+  <option value="email">
+   Email Address
+  </option>
+  <option value="description">
+   Project Description
+  </option>
+  <option value="user_id">
+   User Identification Number
+  </option>
+ </select>
+ <select class="hidden" data-select='{
     "placeholder": "Select option...",
-    "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
     "toggleClasses": "advance-select-toggle advance-select-sm select-disabled:pointer-events-none select-disabled:opacity-40",
     "dropdownClasses": "advance-select-menu",
     "dropdownSpace": 8,
     "optionClasses": "advance-select-option selected:select-active",
-    "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-    "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-3.5 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+    "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+    "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-3.5 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }'>
-    <option value="">
-     Choose
-    </option>
-    <option value="name">
-     Full Name
-    </option>
-    <option value="email">
-     Email Address
-    </option>
-    <option value="description">
-     Project Description
-    </option>
-    <option value="user_id">
-     User Identification Number
-    </option>
-   </select>
-   <select class="hidden" data-select='{
+  <option value="">
+   Choose
+  </option>
+  <option value="name">
+   Full Name
+  </option>
+  <option value="email">
+   Email Address
+  </option>
+  <option value="description">
+   Project Description
+  </option>
+  <option value="user_id">
+   User Identification Number
+  </option>
+ </select>
+ <select class="hidden" data-select='{
     "placeholder": "Select option...",
-    "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
     "toggleClasses": "advance-select-toggle advance-select-md select-disabled:pointer-events-none select-disabled:opacity-40",
     "dropdownClasses": "advance-select-menu",
     "optionClasses": "advance-select-option selected:select-active",
-    "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-    "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+    "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+    "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }'>
-    <option value="">
-     Choose
-    </option>
-    <option value="name">
-     Full Name
-    </option>
-    <option value="email">
-     Email Address
-    </option>
-    <option value="description">
-     Project Description
-    </option>
-    <option value="user_id">
-     User Identification Number
-    </option>
-   </select>
-   <select class="hidden" data-select='{
+  <option value="">
+   Choose
+  </option>
+  <option value="name">
+   Full Name
+  </option>
+  <option value="email">
+   Email Address
+  </option>
+  <option value="description">
+   Project Description
+  </option>
+  <option value="user_id">
+   User Identification Number
+  </option>
+ </select>
+ <select class="hidden" data-select='{
   "placeholder": "Select option...",
-  "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+  "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
   "toggleClasses": "advance-select-toggle advance-select-lg select-disabled:pointer-events-none select-disabled:opacity-40",
   "dropdownClasses": "advance-select-menu",
   "optionClasses": "advance-select-option selected:select-active",
-  "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-5 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-  "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-5 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+  "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-5 text-primary hidden selected:block \"></span></div>",
+  "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-5 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
   }'>
-    <option value="">
-     Choose
-    </option>
-    <option value="name">
-     Full Name
-    </option>
-    <option value="email">
-     Email Address
-    </option>
-    <option value="description">
-     Project Description
-    </option>
-    <option value="user_id">
-     User Identification Number
-    </option>
-   </select>
-   <select class="hidden" data-select='{
+  <option value="">
+   Choose
+  </option>
+  <option value="name">
+   Full Name
+  </option>
+  <option value="email">
+   Email Address
+  </option>
+  <option value="description">
+   Project Description
+  </option>
+  <option value="user_id">
+   User Identification Number
+  </option>
+ </select>
+ <select class="hidden" data-select='{
   "placeholder": "Select option...",
-  "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+  "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
   "toggleClasses": "advance-select-toggle advance-select-xl select-disabled:pointer-events-none select-disabled:opacity-40",
   "dropdownClasses": "advance-select-menu",
   "optionClasses": "advance-select-option selected:select-active",
-  "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-6 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-  "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-5 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+  "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-6 text-primary hidden selected:block \"></span></div>",
+  "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-5 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
   }'>
-    <option value="">
-     Choose
-    </option>
-    <option value="name">
-     Full Name
-    </option>
-    <option value="email">
-     Email Address
-    </option>
-    <option value="description">
-     Project Description
-    </option>
-    <option value="user_id">
-     User Identification Number
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option value="name">
+   Full Name
+  </option>
+  <option value="email">
+   Email Address
+  </option>
+  <option value="description">
+   Project Description
+  </option>
+  <option value="user_id">
+   User Identification Number
+  </option>
+ </select>
 </div>
 
+```
 h2:
   - Validation states
 
@@ -263,94 +254,88 @@ h3:
 p:
   - Success state can be show usingis-validclass.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-80 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <div>
-    <label class="label-text" for="validSelect">
-     Choose your option
-    </label>
-    <select class="is-valid hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <div>
+  <label class="label-text" for="validSelect">
+   Choose your option
+  </label>
+  <select class="is-valid hidden" data-select='{
       "placeholder": "Select option...",
-      "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+      "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
       "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
       "dropdownClasses": "advance-select-menu",
       "optionClasses": "advance-select-option selected:select-active",
-      "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-      "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+      "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+      "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
       }' id="validSelect">
-     <option value="">
-      Choose
-     </option>
-     <option value="name">
-      Full Name
-     </option>
-     <option value="email">
-      Email Address
-     </option>
-     <option value="description">
-      Project Description
-     </option>
-     <option value="user_id">
-      User Identification Number
-     </option>
-    </select>
-    <span class="helper-text">
-     Helper text
-    </span>
-   </div>
-  </div>
+   <option value="">
+    Choose
+   </option>
+   <option value="name">
+    Full Name
+   </option>
+   <option value="email">
+    Email Address
+   </option>
+   <option value="description">
+    Project Description
+   </option>
+   <option value="user_id">
+    User Identification Number
+   </option>
+  </select>
+  <span class="helper-text">
+   Helper text
+  </span>
  </div>
 </div>
 
+```
 h3:
   - Error state
 
 p:
   - Error state can be show usingis-invalidclass.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-80 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <div>
-    <label class="label-text" for="invalidSelect">
-     Choose your option
-    </label>
-    <select class="is-invalid hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <div>
+  <label class="label-text" for="invalidSelect">
+   Choose your option
+  </label>
+  <select class="is-invalid hidden" data-select='{
       "placeholder": "Select option...",
-      "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+      "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
       "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
       "dropdownClasses": "advance-select-menu",
       "optionClasses": "advance-select-option selected:select-active",
-      "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-      "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+      "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+      "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
       }' id="invalidSelect">
-     <option value="">
-      Choose
-     </option>
-     <option value="name">
-      Full Name
-     </option>
-     <option value="email">
-      Email Address
-     </option>
-     <option value="description">
-      Project Description
-     </option>
-     <option value="user_id">
-      User Identification Number
-     </option>
-    </select>
-    <span class="helper-text">
-     Helper text
-    </span>
-   </div>
-  </div>
+   <option value="">
+    Choose
+   </option>
+   <option value="name">
+    Full Name
+   </option>
+   <option value="email">
+    Email Address
+   </option>
+   <option value="description">
+    Project Description
+   </option>
+   <option value="user_id">
+    User Identification Number
+   </option>
+  </select>
+  <span class="helper-text">
+   Helper text
+  </span>
  </div>
 </div>
 
+```
 h2:
   - Illustrations
 
@@ -360,79 +345,73 @@ h3:
 p:
   - To fix the dropdown’s vertical placement, you can specify thedropdownVerticalFixedPlacement:option and define the desired position, as demonstrated in the example below.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-80 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
     "placeholder": "Select option...",
-    "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
     "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
     "dropdownClasses": "advance-select-menu",
     "dropdownVerticalFixedPlacement": "bottom",
     "optionClasses": "advance-select-option selected:select-active",
-    "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-    "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+    "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+    "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }'>
-    <option value="">
-     Choose
-    </option>
-    <option value="name">
-     Full Name
-    </option>
-    <option value="email">
-     Email Address
-    </option>
-    <option value="description">
-     Project Description
-    </option>
-    <option value="user_id">
-     User Identification Number
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option value="name">
+   Full Name
+  </option>
+  <option value="email">
+   Email Address
+  </option>
+  <option value="description">
+   Project Description
+  </option>
+  <option value="user_id">
+   User Identification Number
+  </option>
+ </select>
 </div>
 
+```
 h3:
   - Disabled
 
 p:
   - To render selects as inactive, include the disabled boolean attribute within theselectelement and utilize the classselect-disabled:*within the"toggleClasses":section for styling purposes.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
     "placeholder": "Select option...",
-    "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
     "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
     "dropdownClasses": "advance-select-menu",
     "optionClasses": "advance-select-option selected:select-active",
-    "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-    "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content/50 absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+    "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+    "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content/50 absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }' disabled="">
-    <option value="">
-     Choose
-    </option>
-    <option value="name">
-     Full Name
-    </option>
-    <option value="email">
-     Email Address
-    </option>
-    <option value="description">
-     Project Description
-    </option>
-    <option value="user_id">
-     User Identification Number
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option value="name">
+   Full Name
+  </option>
+  <option value="email">
+   Email Address
+  </option>
+  <option value="description">
+   Project Description
+  </option>
+  <option value="user_id">
+   User Identification Number
+  </option>
+ </select>
 </div>
 
+```
 h3:
   - Multiple
 
@@ -442,132 +421,121 @@ p:
 p:
   - Please refer to theMultiple optionsection for all multiple related functionalities.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
     "placeholder": "Select multiple options...",
-    "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
     "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
     "dropdownClasses": "advance-select-menu",
     "optionClasses": "advance-select-option selected:select-active",
-    "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-    "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+    "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+    "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }' multiple="">
-    <option value="">
-     Choose
-    </option>
-    <option value="name">
-     Full Name
-    </option>
-    <option value="email">
-     Email Address
-    </option>
-    <option value="description">
-     Project Description
-    </option>
-    <option value="user_id">
-     User Identification Number
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option value="name">
+   Full Name
+  </option>
+  <option value="email">
+   Email Address
+  </option>
+  <option value="description">
+   Project Description
+  </option>
+  <option value="user_id">
+   User Identification Number
+  </option>
+ </select>
 </div>
 
+```
 h3:
   - Multiple with option template
 
 p:
   - Select multiple options and add an option template.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
     "placeholder": "Select multiple options...",
-    "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
     "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
     "dropdownClasses": "advance-select-menu",
     "optionClasses": "advance-select-option selected:select-active",
-    "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;div class=\"me-2\" data-icon&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=\"text-sm text-base-content \" data-title&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\"ms-auto\"&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;",
-    "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+    "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><div class=\"me-2\" data-icon></div><div><div class=\"text-sm text-base-content \" data-title></div></div><div class=\"ms-auto\"><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div></div>",
+    "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
   }' multiple="">
-    <option value="">
-     Choose
-    </option>
-    <option data-select-option='{ "icon": "&lt;img class=\"shrink-0 size-6 rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-5.png\" alt=\"Ethan Caldwell\" /&gt;"}' selected="" value="1">
-     Ethan Caldwell
-    </option>
-    <option data-select-option='{ "icon": "&lt;img class=\"shrink-0 size-6 rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png\" alt=\"Isabella Martinez\" /&gt;"}' value="2">
-     Isabella Martinez
-    </option>
-    <option data-select-option='{ "icon": "&lt;img class=\"shrink-0 size-6 rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Ava Thompson\" /&gt;"}' value="3">
-     Ava Thompson
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option data-select-option='{ "icon": "<img class=\"shrink-0 size-6 rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-5.png\" alt=\"Ethan Caldwell\" />"}' selected="" value="1">
+   Ethan Caldwell
+  </option>
+  <option data-select-option='{ "icon": "<img class=\"shrink-0 size-6 rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png\" alt=\"Isabella Martinez\" />"}' value="2">
+   Isabella Martinez
+  </option>
+  <option data-select-option='{ "icon": "<img class=\"shrink-0 size-6 rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Ava Thompson\" />"}' value="3">
+   Ava Thompson
+  </option>
+ </select>
 </div>
 
+```
 h3:
   - Multiple with counter
 
 p:
   - If you only want to display the number of the selected option in multiple select. then use"toggleCountText":.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
     "placeholder": "Select multiple options...",
-    "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
     "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
     "toggleCountText": "selected",
     "toggleCountTextMinItems": 2,
     "dropdownClasses": "advance-select-menu",
     "optionClasses": "advance-select-option selected:select-active",
-    "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-    "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+    "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+    "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }' multiple="">
-    <option value="">
-     Choose
-    </option>
-    <option value="name">
-     Full Name
-    </option>
-    <option value="email">
-     Email Address
-    </option>
-    <option value="description">
-     Project Description
-    </option>
-    <option value="user_id">
-     User Identification Number
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option value="name">
+   Full Name
+  </option>
+  <option value="email">
+   Email Address
+  </option>
+  <option value="description">
+   Project Description
+  </option>
+  <option value="user_id">
+   User Identification Number
+  </option>
+ </select>
 </div>
 
+```
 h3:
   - Multiple with conditional counter
 
 p:
   - Usemultipletag to enable counter option that counts the number of selected options.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
       "placeholder": "Select multiple options...",
-      "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+      "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
       "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
       "toggleSeparators": {
-        "betweenItemsAndCounter": "&amp;"
+        "betweenItemsAndCounter": "&"
       },
       "toggleCountText": "+",
       "toggleCountTextPlacement": "prefix-no-space",
@@ -575,43 +543,42 @@ Code:
       "toggleCountTextMode": "nItemsAndCount",
       "dropdownClasses": "advance-select-menu max-h-44 overflow-y-auto",
       "optionClasses": "advance-select-option selected:select-active",
-      "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-      "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+      "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+      "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }' id="multi-cond-count" multiple="">
-    <option value="">
-     Choose
-    </option>
-    <option>
-     Name
-    </option>
-    <option>
-     Email address
-    </option>
-    <option>
-     Description
-    </option>
-    <option>
-     User ID
-    </option>
-    <option>
-     Address
-    </option>
-    <option>
-     City
-    </option>
-    <option>
-     Country
-    </option>
-   </select>
-  </div>
-  <div class="mt-4 flex flex-wrap gap-2">
-   <button class="btn btn-outline btn-primary btn-sm" id="clear-btn" type="button">
-    Clear
-   </button>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option>
+   Name
+  </option>
+  <option>
+   Email address
+  </option>
+  <option>
+   Description
+  </option>
+  <option>
+   User ID
+  </option>
+  <option>
+   Address
+  </option>
+  <option>
+   City
+  </option>
+  <option>
+   Country
+  </option>
+ </select>
+</div>
+<div class="mt-4 flex flex-wrap gap-2">
+ <button class="btn btn-outline btn-primary btn-sm" id="clear-btn" type="button">
+  Clear
+ </button>
 </div>
 
+```
 h3:
   - Search
 
@@ -621,461 +588,449 @@ p:
 p:
   - Please refer to theSearch optionsection for all search-related functionalities.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
     "placeholder": "Select your sign",
-    "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
     "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
     "hasSearch": true,
     "dropdownClasses": "advance-select-menu max-h-52 pt-0 overflow-y-auto",
     "optionClasses": "advance-select-option selected:select-active",
-    "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-    "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+    "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+    "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }'>
-    <option value="">
-     Choose
-    </option>
-    <option value="aries">
-     Aries
-    </option>
-    <option value="taurus">
-     Taurus
-    </option>
-    <option value="gemini">
-     Gemini
-    </option>
-    <option value="cancer">
-     Cancer
-    </option>
-    <option value="leo">
-     Leo
-    </option>
-    <option value="virgo">
-     Virgo
-    </option>
-    <option value="libra">
-     Libra
-    </option>
-    <option value="scorpio">
-     Scorpio
-    </option>
-    <option value="sagittarius">
-     Sagittarius
-    </option>
-    <option value="capricorn">
-     Capricorn
-    </option>
-    <option value="aquarius">
-     Aquarius
-    </option>
-    <option value="pisces">
-     Pisces
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option value="aries">
+   Aries
+  </option>
+  <option value="taurus">
+   Taurus
+  </option>
+  <option value="gemini">
+   Gemini
+  </option>
+  <option value="cancer">
+   Cancer
+  </option>
+  <option value="leo">
+   Leo
+  </option>
+  <option value="virgo">
+   Virgo
+  </option>
+  <option value="libra">
+   Libra
+  </option>
+  <option value="scorpio">
+   Scorpio
+  </option>
+  <option value="sagittarius">
+   Sagittarius
+  </option>
+  <option value="capricorn">
+   Capricorn
+  </option>
+  <option value="aquarius">
+   Aquarius
+  </option>
+  <option value="pisces">
+   Pisces
+  </option>
+ </select>
 </div>
 
+```
 h3:
   - Search result limit
 
 p:
   - Set a maximum limit for search results by using the parametersearchLimit: 5.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
       "hasSearch": true,
       "searchLimit": 5,
       "placeholder": "Select your sign",
-      "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+      "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
       "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
       "dropdownClasses": "advance-select-menu max-h-52 pt-0 overflow-y-auto",
       "optionClasses": "advance-select-option selected:select-active",
-      "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-      "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+      "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+      "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }'>
-    <option value="">
-     Choose
-    </option>
-    <option value="aries">
-     Aries
-    </option>
-    <option value="taurus">
-     Taurus
-    </option>
-    <option value="gemini">
-     Gemini
-    </option>
-    <option value="cancer">
-     Cancer
-    </option>
-    <option value="leo">
-     Leo
-    </option>
-    <option value="virgo">
-     Virgo
-    </option>
-    <option value="libra">
-     Libra
-    </option>
-    <option value="scorpio">
-     Scorpio
-    </option>
-    <option value="sagittarius">
-     Sagittarius
-    </option>
-    <option value="capricorn">
-     Capricorn
-    </option>
-    <option value="aquarius">
-     Aquarius
-    </option>
-    <option value="pisces">
-     Pisces
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option value="aries">
+   Aries
+  </option>
+  <option value="taurus">
+   Taurus
+  </option>
+  <option value="gemini">
+   Gemini
+  </option>
+  <option value="cancer">
+   Cancer
+  </option>
+  <option value="leo">
+   Leo
+  </option>
+  <option value="virgo">
+   Virgo
+  </option>
+  <option value="libra">
+   Libra
+  </option>
+  <option value="scorpio">
+   Scorpio
+  </option>
+  <option value="sagittarius">
+   Sagittarius
+  </option>
+  <option value="capricorn">
+   Capricorn
+  </option>
+  <option value="aquarius">
+   Aquarius
+  </option>
+  <option value="pisces">
+   Pisces
+  </option>
+ </select>
 </div>
 
+```
 h3:
   - Minimum search Length
 
 p:
   - Set"minSearchLength":2to define the minimum number of characters required before initiating a search.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden overflow" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden overflow" data-select='{
       "hasSearch": true,
       "minSearchLength": 2,
       "placeholder": "Select your sign",
-      "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+      "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
       "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
       "dropdownClasses": "advance-select-menu max-h-52 pt-0 overflow-y-auto",
       "optionClasses": "advance-select-option selected:select-active",
-      "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-      "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+      "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+      "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }'>
-    <option value="">
-     Choose
-    </option>
-    <option value="AF">
-     Afghanistan
-    </option>
-    <option value="AX">
-     Aland Islands
-    </option>
-    <option value="AL">
-     Albania
-    </option>
-    <option value="DZ">
-     Algeria
-    </option>
-    <option value="AS">
-     American Samoa
-    </option>
-    <option value="AD">
-     Andorra
-    </option>
-    <option value="AO">
-     Angola
-    </option>
-    <option value="AI">
-     Anguilla
-    </option>
-    <option value="AG">
-     Antigua and Barbuda
-    </option>
-    <option value="AR">
-     Argentina
-    </option>
-    <option value="AM">
-     Armenia
-    </option>
-    <option value="AW">
-     Aruba
-    </option>
-    <option value="AU">
-     Australia
-    </option>
-    <option value="AT">
-     Austria
-    </option>
-    <option value="AZ">
-     Azerbaijan
-    </option>
-    <option value="BS">
-     Bahamas
-    </option>
-    <option value="BH">
-     Bahrain
-    </option>
-    <option value="BD">
-     Bangladesh
-    </option>
-    <option value="BB">
-     Barbados
-    </option>
-    <option value="BY">
-     Belarus
-    </option>
-    <option value="BE">
-     Belgium
-    </option>
-    <option value="BZ">
-     Belize
-    </option>
-    <option value="BJ">
-     Benin
-    </option>
-    <option value="BM">
-     Bermuda
-    </option>
-    <option value="BT">
-     Bhutan
-    </option>
-    <option value="BO">
-     Bolivia (Plurinational State of)
-    </option>
-    <option value="BQ">
-     Bonaire, Sint Eustatius and Saba
-    </option>
-    <option value="BA">
-     Bosnia and Herzegovina
-    </option>
-    <option value="BW">
-     Botswana
-    </option>
-    <option value="BR">
-     Brazil
-    </option>
-    <option value="IO">
-     British Indian Ocean Territory
-    </option>
-    <option value="BN">
-     Brunei Darussalam
-    </option>
-    <option value="BG">
-     Bulgaria
-    </option>
-    <option value="BF">
-     Burkina Faso
-    </option>
-    <option value="BI">
-     Burundi
-    </option>
-    <option value="CV">
-     Cabo Verde
-    </option>
-    <option value="KH">
-     Cambodia
-    </option>
-    <option value="CM">
-     Cameroon
-    </option>
-    <option value="CA">
-     Canada
-    </option>
-    <option value="KY">
-     Cayman Islands
-    </option>
-    <option value="CF">
-     Central African Republic
-    </option>
-    <option value="TD">
-     Chad
-    </option>
-    <option value="CL">
-     Chile
-    </option>
-    <option value="CN">
-     China
-    </option>
-    <option value="CX">
-     Christmas Island
-    </option>
-    <option value="CC">
-     Cocos (Keeling) Islands
-    </option>
-    <option value="CO">
-     Colombia
-    </option>
-    <option value="KM">
-     Comoros
-    </option>
-    <option value="CK">
-     Cook Islands
-    </option>
-    <option value="CR">
-     Costa Rica
-    </option>
-    <option value="HR">
-     Croatia
-    </option>
-    <option value="CU">
-     Cuba
-    </option>
-    <option value="CW">
-     CuraÃ§ao
-    </option>
-    <option value="CY">
-     Cyprus
-    </option>
-    <option value="CZ">
-     Czech Republic
-    </option>
-    <option value="CI">
-     CÃ´te Ivoire
-    </option>
-    <option value="CD">
-     Democratic Republic of the Congo
-    </option>
-    <option value="DK">
-     Denmark
-    </option>
-    <option value="DJ">
-     Djibouti
-    </option>
-    <option value="DM">
-     Dominica
-    </option>
-    <option value="DO">
-     Dominican Republic
-    </option>
-    <option value="EC">
-     Ecuador
-    </option>
-    <option value="EG">
-     Egypt
-    </option>
-    <option value="SV">
-     El Salvador
-    </option>
-    <option value="GB-ENG">
-     England
-    </option>
-    <option value="GQ">
-     Equatorial Guinea
-    </option>
-    <option value="ER">
-     Eritrea
-    </option>
-    <option value="EE">
-     Estonia
-    </option>
-    <option value="ET">
-     Ethiopia
-    </option>
-    <option value="FK">
-     Falkland Islands
-    </option>
-    <option value="FO">
-     Faroe Islands
-    </option>
-    <option value="FM">
-     Federated States of Micronesia
-    </option>
-    <option value="FJ">
-     Fiji
-    </option>
-    <option value="FI">
-     Finland
-    </option>
-    <option value="FR">
-     France
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option value="AF">
+   Afghanistan
+  </option>
+  <option value="AX">
+   Aland Islands
+  </option>
+  <option value="AL">
+   Albania
+  </option>
+  <option value="DZ">
+   Algeria
+  </option>
+  <option value="AS">
+   American Samoa
+  </option>
+  <option value="AD">
+   Andorra
+  </option>
+  <option value="AO">
+   Angola
+  </option>
+  <option value="AI">
+   Anguilla
+  </option>
+  <option value="AG">
+   Antigua and Barbuda
+  </option>
+  <option value="AR">
+   Argentina
+  </option>
+  <option value="AM">
+   Armenia
+  </option>
+  <option value="AW">
+   Aruba
+  </option>
+  <option value="AU">
+   Australia
+  </option>
+  <option value="AT">
+   Austria
+  </option>
+  <option value="AZ">
+   Azerbaijan
+  </option>
+  <option value="BS">
+   Bahamas
+  </option>
+  <option value="BH">
+   Bahrain
+  </option>
+  <option value="BD">
+   Bangladesh
+  </option>
+  <option value="BB">
+   Barbados
+  </option>
+  <option value="BY">
+   Belarus
+  </option>
+  <option value="BE">
+   Belgium
+  </option>
+  <option value="BZ">
+   Belize
+  </option>
+  <option value="BJ">
+   Benin
+  </option>
+  <option value="BM">
+   Bermuda
+  </option>
+  <option value="BT">
+   Bhutan
+  </option>
+  <option value="BO">
+   Bolivia (Plurinational State of)
+  </option>
+  <option value="BQ">
+   Bonaire, Sint Eustatius and Saba
+  </option>
+  <option value="BA">
+   Bosnia and Herzegovina
+  </option>
+  <option value="BW">
+   Botswana
+  </option>
+  <option value="BR">
+   Brazil
+  </option>
+  <option value="IO">
+   British Indian Ocean Territory
+  </option>
+  <option value="BN">
+   Brunei Darussalam
+  </option>
+  <option value="BG">
+   Bulgaria
+  </option>
+  <option value="BF">
+   Burkina Faso
+  </option>
+  <option value="BI">
+   Burundi
+  </option>
+  <option value="CV">
+   Cabo Verde
+  </option>
+  <option value="KH">
+   Cambodia
+  </option>
+  <option value="CM">
+   Cameroon
+  </option>
+  <option value="CA">
+   Canada
+  </option>
+  <option value="KY">
+   Cayman Islands
+  </option>
+  <option value="CF">
+   Central African Republic
+  </option>
+  <option value="TD">
+   Chad
+  </option>
+  <option value="CL">
+   Chile
+  </option>
+  <option value="CN">
+   China
+  </option>
+  <option value="CX">
+   Christmas Island
+  </option>
+  <option value="CC">
+   Cocos (Keeling) Islands
+  </option>
+  <option value="CO">
+   Colombia
+  </option>
+  <option value="KM">
+   Comoros
+  </option>
+  <option value="CK">
+   Cook Islands
+  </option>
+  <option value="CR">
+   Costa Rica
+  </option>
+  <option value="HR">
+   Croatia
+  </option>
+  <option value="CU">
+   Cuba
+  </option>
+  <option value="CW">
+   CuraÃ§ao
+  </option>
+  <option value="CY">
+   Cyprus
+  </option>
+  <option value="CZ">
+   Czech Republic
+  </option>
+  <option value="CI">
+   CÃ´te Ivoire
+  </option>
+  <option value="CD">
+   Democratic Republic of the Congo
+  </option>
+  <option value="DK">
+   Denmark
+  </option>
+  <option value="DJ">
+   Djibouti
+  </option>
+  <option value="DM">
+   Dominica
+  </option>
+  <option value="DO">
+   Dominican Republic
+  </option>
+  <option value="EC">
+   Ecuador
+  </option>
+  <option value="EG">
+   Egypt
+  </option>
+  <option value="SV">
+   El Salvador
+  </option>
+  <option value="GB-ENG">
+   England
+  </option>
+  <option value="GQ">
+   Equatorial Guinea
+  </option>
+  <option value="ER">
+   Eritrea
+  </option>
+  <option value="EE">
+   Estonia
+  </option>
+  <option value="ET">
+   Ethiopia
+  </option>
+  <option value="FK">
+   Falkland Islands
+  </option>
+  <option value="FO">
+   Faroe Islands
+  </option>
+  <option value="FM">
+   Federated States of Micronesia
+  </option>
+  <option value="FJ">
+   Fiji
+  </option>
+  <option value="FI">
+   Finland
+  </option>
+  <option value="FR">
+   France
+  </option>
+ </select>
 </div>
 
+```
 h3:
   - Direct match searching Off
 
 p:
   - SetisSearchDirectMatch: falseto turn off direct match searching, allowing for broader search results without exact term matching.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select aria-label="Advance select" class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select aria-label="Advance select" class="hidden" data-select='{
       "hasSearch": true,
       "isSearchDirectMatch": false,
       "searchPlaceholder": "Search options...",
       "placeholder": "Select options...",
-      "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+      "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
       "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
       "dropdownClasses": "advance-select-menu max-h-48 -ms-1 overflow-y-auto pt-0",
       "optionClasses": "advance-select-option selected:select-active",
-      "optionTemplate": "&lt;div class=\"flex items-center\"&gt; &lt;div class=\"size-8 me-2\" data-icon&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=\"text-sm font-semibold text-base-content\" data-title&gt;&lt;/div&gt; &lt;div class=\"text-xs text-base-content/80\" data-description&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\"flex justify-between items-center flex-1\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt; &lt;/div&gt;",
-      "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+      "optionTemplate": "<div class=\"flex items-center\"> <div class=\"size-8 me-2\" data-icon></div><div><div class=\"text-sm font-semibold text-base-content\" data-title></div> <div class=\"text-xs text-base-content/80\" data-description></div></div><div class=\"flex justify-between items-center flex-1\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div> </div>",
+      "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }' multiple="">
-    <option value="">
-     Choose
-    </option>
-    <option data-select-option='{
-        "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png\" alt=\"Mark Gilbert\" /&gt;"}' selected="" value="1">
-     Mark Gilbert
-    </option>
-    <option data-select-option='{
-        "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png\" alt=\"Eugenia Parsons\" /&gt;"}' value="2">
-     Eugenia Parsons
-    </option>
-    <option data-select-option='{
-        "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Francis Byrd\" /&gt;"}' value="3">
-     Francis Byrd
-    </option>
-    <option data-select-option='{
-        "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png\" alt=\"Jayden Rogers\" /&gt;"}' value="4">
-     Mark@Gilbert
-    </option>
-    <option data-select-option='{
-        "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png\" alt=\"Eugenia Parsons\" /&gt;"}' value="5">
-     Eugenia#Parsons
-    </option>
-    <option data-select-option='{
-        "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Francis Byrd\" /&gt;"}' value="6">
-     Francis-Byrd
-    </option>
-    <option data-select-option='{
-        "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png\" alt=\"Jayden Rogers\" /&gt;"}' value="7">
-     Mark.Gilbert
-    </option>
-    <option data-select-option='{
-        "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png\" alt=\"Eugenia Parsons\" /&gt;"}' value="8">
-     Eugenia_Parsons
-    </option>
-    <option data-select-option='{
-        "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Francis Byrd\" /&gt;"}' value="9">
-     Francis%Byrd
-    </option>
-    <option data-select-option='{
-        "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png\" alt=\"Jayden Rogers\" /&gt;"}' value="7">
-     Ma@rk Gilbert
-    </option>
-    <option data-select-option='{
-        "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png\" alt=\"Eugenia Parsons\" /&gt;"}' value="8">
-     Eugenia Par-sons
-    </option>
-    <option data-select-option='{
-        "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Francis Byrd\" /&gt;"}' value="9">
-     Francis B#yrd
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option data-select-option='{
+        "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png\" alt=\"Mark Gilbert\" />"}' selected="" value="1">
+   Mark Gilbert
+  </option>
+  <option data-select-option='{
+        "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png\" alt=\"Eugenia Parsons\" />"}' value="2">
+   Eugenia Parsons
+  </option>
+  <option data-select-option='{
+        "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Francis Byrd\" />"}' value="3">
+   Francis Byrd
+  </option>
+  <option data-select-option='{
+        "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png\" alt=\"Jayden Rogers\" />"}' value="4">
+   Mark@Gilbert
+  </option>
+  <option data-select-option='{
+        "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png\" alt=\"Eugenia Parsons\" />"}' value="5">
+   Eugenia#Parsons
+  </option>
+  <option data-select-option='{
+        "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Francis Byrd\" />"}' value="6">
+   Francis-Byrd
+  </option>
+  <option data-select-option='{
+        "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png\" alt=\"Jayden Rogers\" />"}' value="7">
+   Mark.Gilbert
+  </option>
+  <option data-select-option='{
+        "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png\" alt=\"Eugenia Parsons\" />"}' value="8">
+   Eugenia_Parsons
+  </option>
+  <option data-select-option='{
+        "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Francis Byrd\" />"}' value="9">
+   Francis%Byrd
+  </option>
+  <option data-select-option='{
+        "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png\" alt=\"Jayden Rogers\" />"}' value="7">
+   Ma@rk Gilbert
+  </option>
+  <option data-select-option='{
+        "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png\" alt=\"Eugenia Parsons\" />"}' value="8">
+   Eugenia Par-sons
+  </option>
+  <option data-select-option='{
+        "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Francis Byrd\" />"}' value="9">
+   Francis B#yrd
+  </option>
+ </select>
 </div>
 
+```
 h3:
   - Tags
 
@@ -1088,51 +1043,48 @@ p:
 p:
   - Sizingadvance-select-*doesn’t work for tags options
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-[450px] sm:h-80 overflow-y-auto flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select aria-label="Advance select" class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select aria-label="Advance select" class="hidden" data-select='{
     "placeholder": "Select option...",
-    "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
     "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
     "dropdownClasses": "advance-select-menu max-h-48 -ms-1 overflow-y-auto",
     "optionClasses": "advance-select-option selected:select-active",
     "mode": "tags",
     "wrapperClasses": "advance-select-tag flex-wrap",
-    "tagsItemTemplate": " &lt;div class=\"flex flex-nowrap items-center relative z-10 bg-base-100 border border-base-content/25 rounded-full p-1 m-1\"&gt; &lt;div class=\"size-6 me-1\" data-icon&gt;&lt;/div&gt; &lt;div class=\"whitespace-nowrap text-base-content\" data-title&gt;&lt;/div&gt; &lt;div class=\"btn btn-sm min-h-0 size-5 btn-circle btn-soft btn-secondary ms-2 \" data-remove&gt;&lt;span class=\"icon-[tabler--x] shrink-0 size-3.5\"&gt;&lt;/span&gt;&lt;/div&gt; &lt;/div&gt;",
+    "tagsItemTemplate": " <div class=\"flex flex-nowrap items-center relative z-10 bg-base-100 border border-base-content/25 rounded-full p-1 m-1\"> <div class=\"size-6 me-1\" data-icon></div> <div class=\"whitespace-nowrap text-base-content\" data-title></div> <div class=\"btn btn-sm min-h-0 size-5 btn-circle btn-soft btn-secondary ms-2 \" data-remove><span class=\"icon-[tabler--x] shrink-0 size-3.5\"></span></div> </div>",
     "tagsInputClasses": "py-2.5 px-2 rounded-lg order-1 text-sm outline-none",
-    "optionTemplate": "&lt;div class=\"flex items-center\"&gt; &lt;div class=\"size-8 me-2\" data-icon&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=\"text-sm font-semibold text-base-content\" data-title&gt;&lt;/div&gt; &lt;div class=\"text-xs text-base-content/80\" data-description&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\"flex justify-between items-center flex-1\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt; &lt;/div&gt;",
-    "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+    "optionTemplate": "<div class=\"flex items-center\"> <div class=\"size-8 me-2\" data-icon></div><div><div class=\"text-sm font-semibold text-base-content\" data-title></div> <div class=\"text-xs text-base-content/80\" data-description></div></div><div class=\"flex justify-between items-center flex-1\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div> </div>",
+    "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }' multiple="">
-    <option value="">
-     Choose
-    </option>
-    <option data-select-option='{
+  <option value="">
+   Choose
+  </option>
+  <option data-select-option='{
         "description": "mark",
-        "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png\" alt=\"Mark Gilbert\" /&gt;"}' selected="" value="1">
-     Mark Gilbert
-    </option>
-    <option data-select-option='{
+        "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png\" alt=\"Mark Gilbert\" />"}' selected="" value="1">
+   Mark Gilbert
+  </option>
+  <option data-select-option='{
         "description": "eug",
-        "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png\" alt=\"Eugenia Parsons\" /&gt;"}' value="2">
-     Eugenia Parsons
-    </option>
-    <option data-select-option='{
+        "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png\" alt=\"Eugenia Parsons\" />"}' value="2">
+   Eugenia Parsons
+  </option>
+  <option data-select-option='{
         "description": "francis",
-        "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Francis Byrd\" /&gt;"}' value="3">
-     Francis Byrd
-    </option>
-    <option data-select-option='{
+        "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Francis Byrd\" />"}' value="3">
+   Francis Byrd
+  </option>
+  <option data-select-option='{
         "description": "rogers",
-        "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-3.png\" alt=\"Jayden Rogers\" /&gt;"}' value="4">
-     Jayden Rogers
-    </option>
-   </select>
-  </div>
- </div>
+        "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-3.png\" alt=\"Jayden Rogers\" />"}' value="4">
+   Jayden Rogers
+  </option>
+ </select>
 </div>
 
+```
 h3:
   - Custom option
 
@@ -1142,341 +1094,318 @@ p:
 p:
   - Basic example of options with icon.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
     "placeholder": "Select option...",
-    "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;span class=\"me-2 flex\" data-icon&gt;&lt;/span&gt;&lt;span class=\"text-base-content\" data-title&gt;&lt;/span&gt;&lt;/button&gt;",
+    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"><span class=\"me-2 flex\" data-icon></span><span class=\"text-base-content\" data-title></span></button>",
     "toggleClasses": "advance-select-toggle items-center",
     "dropdownClasses": "advance-select-menu max-h-44",
     "optionClasses": "advance-select-option selected:select-active",
-    "optionTemplate": "&lt;div&gt;&lt;div class=\"flex items-center\"&gt; &lt;div class=\"me-2 flex\" data-icon&gt;&lt;/div&gt; &lt;div class=\"font-semibold text-base-content\" data-title&gt;&lt;/div&gt; &lt;/div&gt; &lt;div class=\"mt-1.5 text-sm text-base-content/80\" data-description&gt;&lt;/div&gt; &lt;/div&gt;",
-    "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+    "optionTemplate": "<div><div class=\"flex items-center\"> <div class=\"me-2 flex\" data-icon></div> <div class=\"font-semibold text-base-content\" data-title></div> </div> <div class=\"mt-1.5 text-sm text-base-content/80\" data-description></div> </div>",
+    "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }'>
-    <option value="">
-     Choose
-    </option>
-    <option data-select-option='{
+  <option value="">
+   Choose
+  </option>
+  <option data-select-option='{
         "description": "Recommended for beginners.",
-        "icon": "&lt;span class=\"icon-[tabler--circle-check] shrink-0 size-4 text-base-content\"&gt;&lt;/span&gt;"}' selected="" value="5">
-     Beginner-friendly
-    </option>
-    <option data-select-option='{
+        "icon": "<span class=\"icon-[tabler--circle-check] shrink-0 size-4 text-base-content\"></span>"}' selected="" value="5">
+   Beginner-friendly
+  </option>
+  <option data-select-option='{
         "description": "Suitable for advanced users.",
-        "icon": "&lt;span class=\"icon-[tabler--target] shrink-0 size-4 text-base-content\"&gt;&lt;/span&gt;"}' value="6">
-     Advanced users
-    </option>
-   </select>
-  </div>
- </div>
+        "icon": "<span class=\"icon-[tabler--target] shrink-0 size-4 text-base-content\"></span>"}' value="6">
+   Advanced users
+  </option>
+ </select>
 </div>
 
+```
 p:
   - Basic example of options with avatar.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
     "placeholder": "Select option...",
-    "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;span class=\"size-6 me-2\" data-icon&gt;&lt;/span&gt;&lt;span class=\"text-base-content\" data-title&gt;&lt;/span&gt;&lt;/button&gt;",
+    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"><span class=\"size-6 me-2\" data-icon></span><span class=\"text-base-content\" data-title></span></button>",
     "toggleClasses": "advance-select-toggle items-center",
     "dropdownClasses": "advance-select-menu max-h-44 overflow-y-auto",
     "optionClasses": "advance-select-option selected:select-active",
-    "optionTemplate": "&lt;div class=\"flex items-start\"&gt; &lt;div class=\"size-6 me-2\" data-icon&gt;&lt;/div&gt; &lt;div&gt; &lt;div class=\"text-base-content\" data-title&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;",
-    "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+    "optionTemplate": "<div class=\"flex items-start\"> <div class=\"size-6 me-2\" data-icon></div> <div> <div class=\"text-base-content\" data-title></div><div></div>",
+    "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }'>
-    <option value="">
-     Choose
-    </option>
-    <option data-select-option='{ "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png\" alt=\"Mark Gilbert\" /&gt;"}' selected="" value="1">
-     Mark Gilbert
-    </option>
-    <option data-select-option='{ "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png\" alt=\"Eugenia Parsons\" /&gt;"}' value="2">
-     Eugenia Parsons
-    </option>
-    <option data-select-option='{ "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Francis Byrd\" /&gt;"}' value="3">
-     Francis Byrd
-    </option>
-    <option data-select-option='{ "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-3.png\" alt=\"Jayden Rogers\" /&gt;"}' value="4">
-     Jayden Rogers
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option data-select-option='{ "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png\" alt=\"Mark Gilbert\" />"}' selected="" value="1">
+   Mark Gilbert
+  </option>
+  <option data-select-option='{ "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png\" alt=\"Eugenia Parsons\" />"}' value="2">
+   Eugenia Parsons
+  </option>
+  <option data-select-option='{ "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Francis Byrd\" />"}' value="3">
+   Francis Byrd
+  </option>
+  <option data-select-option='{ "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-3.png\" alt=\"Jayden Rogers\" />"}' value="4">
+   Jayden Rogers
+  </option>
+ </select>
 </div>
 
+```
 h3:
   - Modal example
 
 p:
   - Basic usage in modal window.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <button aria-controls="select-modal" aria-expanded="false" aria-haspopup="dialog" class="btn btn-primary" data-overlay="#select-modal" type="button">
-   Open modal
-  </button>
-  <div class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 hidden" id="select-modal" role="dialog" tabindex="-1">
-   <div class="modal-dialog overlay-open:opacity-100 overlay-open:duration-300">
-    <div class="modal-content">
-     <div class="modal-header">
-      <h3 class="modal-title">
-       Dialog Title
-      </h3>
-      <button aria-label="Close" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" data-overlay="#select-modal" type="button">
-       <span class="icon-[tabler--x] size-4">
-       </span>
-      </button>
-     </div>
-     <div class="modal-body h-72">
-      <select class="hidden" data-select='{
+```html
+<button aria-controls="select-modal" aria-expanded="false" aria-haspopup="dialog" class="btn btn-primary" data-overlay="#select-modal" type="button">
+ Open modal
+</button>
+<div class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 hidden" id="select-modal" role="dialog" tabindex="-1">
+ <div class="modal-dialog overlay-open:opacity-100 overlay-open:duration-300">
+  <div class="modal-content">
+   <div class="modal-header">
+    <h3 class="modal-title">
+     Dialog Title
+    </h3>
+    <button aria-label="Close" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" data-overlay="#select-modal" type="button">
+     <span class="icon-[tabler--x] size-4">
+     </span>
+    </button>
+   </div>
+   <div class="modal-body h-72">
+    <select class="hidden" data-select='{
           "placeholder": "Select option...",
-          "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+          "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
           "toggleClasses": "advance-select-toggle mt-0.5",
           "dropdownClasses": "advance-select-menu shadow-none border border-base-content/25",
           "optionClasses": "advance-select-option selected:select-active",
-          "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-          "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+          "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+          "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
           }'>
-       <option value="">
-        Choose
-       </option>
-       <option value="name">
-        Full Name
-       </option>
-       <option value="email">
-        Email Address
-       </option>
-       <option value="description">
-        Project Description
-       </option>
-       <option value="user_id">
-        User Identification Number
-       </option>
-      </select>
-     </div>
-     <div class="modal-footer">
-      <button class="btn btn-soft btn-secondary" data-overlay="#select-modal" type="button">
-       Close
-      </button>
-      <button class="btn btn-primary" type="button">
-       Save changes
-      </button>
-     </div>
-    </div>
+     <option value="">
+      Choose
+     </option>
+     <option value="name">
+      Full Name
+     </option>
+     <option value="email">
+      Email Address
+     </option>
+     <option value="description">
+      Project Description
+     </option>
+     <option value="user_id">
+      User Identification Number
+     </option>
+    </select>
+   </div>
+   <div class="modal-footer">
+    <button class="btn btn-soft btn-secondary" data-overlay="#select-modal" type="button">
+     Close
+    </button>
+    <button class="btn btn-primary" type="button">
+     Save changes
+    </button>
    </div>
   </div>
  </div>
 </div>
 
+```
 h3:
   - Add/Remove option
 
 p:
   - Utilize theaddOptionandremoveOptionmethods toaddorremoveoptions, respectively.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-80 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="mb-4 flex gap-3">
-   <button class="btn btn-primary" id="add-option">
-    Add
-   </button>
-   <button class="btn btn-primary" id="remove-option">
-    Remove
-   </button>
-  </div>
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="mb-4 flex gap-3">
+ <button class="btn btn-primary" id="add-option">
+  Add
+ </button>
+ <button class="btn btn-primary" id="remove-option">
+  Remove
+ </button>
+</div>
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
     "placeholder": "Select option...",
-    "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
     "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
     "dropdownClasses": "advance-select-menu max-h-48 overflow-y-auto",
     "optionClasses": "advance-select-option selected:select-active",
-    "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-    "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+    "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+    "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }' id="add-remove-select">
-    <option value="">
-     Choose
-    </option>
-    <option value="name">
-     Full Name
-    </option>
-    <option value="email">
-     Email Address
-    </option>
-    <option value="description">
-     Project Description
-    </option>
-    <option value="user_id">
-     User Identification Number
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option value="name">
+   Full Name
+  </option>
+  <option value="email">
+   Email Address
+  </option>
+  <option value="description">
+   Project Description
+  </option>
+  <option value="user_id">
+   User Identification Number
+  </option>
+ </select>
 </div>
 
+```
 h3:
   - Destroy/Reinitialize
 
 p:
   - Thedestroymethodis provided to facilitate the destruction of a select element.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
     "placeholder": "Select option...",
-    "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
     "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
     "dropdownClasses": "advance-select-menu",
     "optionClasses": "advance-select-option selected:select-active",
-    "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-    "extraMarkup": "&lt;span id=\"select-icon\" class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+    "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+    "extraMarkup": "<span id=\"select-icon\" class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }' id="destroy-select">
-    <option value="">
-     Choose
-    </option>
-    <option value="name">
-     Full Name
-    </option>
-    <option value="email">
-     Email Address
-    </option>
-    <option value="description">
-     Project Description
-    </option>
-    <option value="user_id">
-     User Identification Number
-    </option>
-   </select>
-  </div>
-  <div class="mt-4 flex gap-3">
-   <button class="btn btn-primary" id="destroy-btn">
-    Destroy
-   </button>
-   <button class="btn btn-primary" disabled="" id="reinit-btn">
-    Reinitialize
-   </button>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option value="name">
+   Full Name
+  </option>
+  <option value="email">
+   Email Address
+  </option>
+  <option value="description">
+   Project Description
+  </option>
+  <option value="user_id">
+   User Identification Number
+  </option>
+ </select>
+</div>
+<div class="mt-4 flex gap-3">
+ <button class="btn btn-primary" id="destroy-btn">
+  Destroy
+ </button>
+ <button class="btn btn-primary" disabled="" id="reinit-btn">
+  Reinitialize
+ </button>
 </div>
 
+```
 h3:
   - Set a single value with a setter.
 
 p:
   - ProvidessetValuemethodthat helps to set a value programmatically.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
     "placeholder": "Select with button",
-    "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;span class=\"size-6 me-2\" data-icon&gt;&lt;/span&gt;&lt;span class=\"text-base-content\" data-title&gt;&lt;/span&gt;&lt;/button&gt;",
+    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"><span class=\"size-6 me-2\" data-icon></span><span class=\"text-base-content\" data-title></span></button>",
     "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
     "dropdownClasses": "advance-select-menu",
     "optionClasses": "advance-select-option selected:select-active",
-    "optionTemplate": "&lt;div class=\"flex items-start\"&gt; &lt;div class=\"size-6 me-2\" data-icon&gt;&lt;/div&gt; &lt;div&gt; &lt;div class=\"text-base-content\" data-title&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;",
-    "extraMarkup": "&lt;span id=\"select-icon\" class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+    "optionTemplate": "<div class=\"flex items-start\"> <div class=\"size-6 me-2\" data-icon></div> <div> <div class=\"text-base-content\" data-title></div><div></div>",
+    "extraMarkup": "<span id=\"select-icon\" class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
   }' id="single-setter">
-    <option value="">
-     Choose
-    </option>
-    <option data-select-option='{ "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-5.png\" alt=\"Ethan Caldwell\" /&gt;"}' selected="" value="1">
-     Ethan Caldwell
-    </option>
-    <option data-select-option='{ "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png\" alt=\"Isabella Martinez\" /&gt;"}' value="2">
-     Isabella Martinez
-    </option>
-    <option data-select-option='{ "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Ava Thompson\" /&gt;"}' value="3">
-     Ava Thompson
-    </option>
-   </select>
-  </div>
-  <div class="mt-4 flex flex-wrap gap-2">
-   <button class="btn btn-sm btn-primary" id="set-to-2" type="button">
-    Set value to "Isabella Martinez"
-   </button>
-   <button class="btn btn-sm btn-primary" id="set-to-3" type="button">
-    Set value to "Ava Thompson"
-   </button>
-  </div>
-  <div class="mt-3 flex flex-wrap gap-2">
-   <button class="btn btn-sm btn-soft btn-secondary" id="reset-single-value" type="button">
-    Reset value
-   </button>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option data-select-option='{ "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-5.png\" alt=\"Ethan Caldwell\" />"}' selected="" value="1">
+   Ethan Caldwell
+  </option>
+  <option data-select-option='{ "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png\" alt=\"Isabella Martinez\" />"}' value="2">
+   Isabella Martinez
+  </option>
+  <option data-select-option='{ "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Ava Thompson\" />"}' value="3">
+   Ava Thompson
+  </option>
+ </select>
+</div>
+<div class="mt-4 flex flex-wrap gap-2">
+ <button class="btn btn-sm btn-primary" id="set-to-2" type="button">
+  Set value to "Isabella Martinez"
+ </button>
+ <button class="btn btn-sm btn-primary" id="set-to-3" type="button">
+  Set value to "Ava Thompson"
+ </button>
+</div>
+<div class="mt-3 flex flex-wrap gap-2">
+ <button class="btn btn-sm btn-soft btn-secondary" id="reset-single-value" type="button">
+  Reset value
+ </button>
 </div>
 
+```
 h3:
   - Set a multiple value with a setter.
 
 p:
   - ProvidessetValuemethodthat helps to set a value programmatically.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
       "placeholder": "Select multiple option with button",
-      "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+      "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
       "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
       "dropdownClasses": "advance-select-menu",
       "optionClasses": "advance-select-option selected:select-active",
-      "optionTemplate": "&lt;div class=\"flex items-start\"&gt; &lt;div class=\"size-6 me-2\" data-icon&gt;&lt;/div&gt; &lt;div&gt; &lt;div class=\"text-base-content\" data-title&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;",
-      "extraMarkup": "&lt;span id=\"select-icon\" class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+      "optionTemplate": "<div class=\"flex items-start\"> <div class=\"size-6 me-2\" data-icon></div> <div> <div class=\"text-base-content\" data-title></div><div></div>",
+      "extraMarkup": "<span id=\"select-icon\" class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }' id="multiple-setter" multiple="">
-    <option value="">
-     Choose
-    </option>
-    <option data-select-option='{ "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-5.png\" alt=\"Ethan Caldwell\" /&gt;"}' value="1">
-     Ethan Caldwell
-    </option>
-    <option data-select-option='{ "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png\" alt=\"Isabella Martinez\" /&gt;"}' value="2">
-     Isabella Martinez
-    </option>
-    <option data-select-option='{ "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Ava Thompson\" /&gt;"}' value="3">
-     Ava Thompson
-    </option>
-   </select>
-  </div>
-  <div class="mt-4 flex flex-wrap gap-2">
-   <button class="btn btn-sm btn-primary" id="set-to-1-and-2" type="button">
-    Set value to "Isabella Martinez" and ""
-   </button>
-   <button class="btn btn-sm btn-primary" id="set-to-2-and-3" type="button">
-    Set value to "Ava Thompson" and ""
-   </button>
-  </div>
-  <div class="mt-3 flex flex-wrap gap-2">
-   <button class="btn btn-sm btn-soft btn-secondary" id="reset-multiple-value" type="button">
-    Reset value
-   </button>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option data-select-option='{ "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-5.png\" alt=\"Ethan Caldwell\" />"}' value="1">
+   Ethan Caldwell
+  </option>
+  <option data-select-option='{ "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png\" alt=\"Isabella Martinez\" />"}' value="2">
+   Isabella Martinez
+  </option>
+  <option data-select-option='{ "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Ava Thompson\" />"}' value="3">
+   Ava Thompson
+  </option>
+ </select>
+</div>
+<div class="mt-4 flex flex-wrap gap-2">
+ <button class="btn btn-sm btn-primary" id="set-to-1-and-2" type="button">
+  Set value to "Isabella Martinez" and ""
+ </button>
+ <button class="btn btn-sm btn-primary" id="set-to-2-and-3" type="button">
+  Set value to "Ava Thompson" and ""
+ </button>
+</div>
+<div class="mt-3 flex flex-wrap gap-2">
+ <button class="btn btn-sm btn-soft btn-secondary" id="reset-multiple-value" type="button">
+  Reset value
+ </button>
 </div>
 
+```
 h3:
   - Remote data selection
 
 p:
   - SetapiUrl: "https://some-path.com/api"to configure selection based on remote data, allowing data to be fetched dynamically from the specified API endpoint.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
       "apiUrl": "https://fakestoreapi.com/products",
       "apiQuery": "limit=10",
       "apiFieldsMap": {
@@ -1486,36 +1415,33 @@ Code:
         "icon": "image",
         "description": "description"
       },
-      "apiIconTag": "&lt;img /&gt;",
+      "apiIconTag": "<img />",
       "hasSearch": true,
       "searchPlaceholder": "Search...",
       "placeholder": "Select product...",
-      "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+      "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
       "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
       "dropdownClasses": "advance-select-menu max-h-48 pt-0 overflow-y-auto",
       "optionClasses": "advance-select-option selected:select-active",
-      "optionTemplate": "&lt;div class=\"flex items-center gap-2\"&gt;&lt;div class=\"size-8 overflow-hidden flex-none rounded-full\" data-icon&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=\"text-sm font-semibold\" data-title&gt;&lt;/div&gt;&lt;div class=\"text-xs \" data-description&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-      "extraMarkup": "&lt;span id=\"select-icon\" class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+      "optionTemplate": "<div class=\"flex items-center gap-2\"><div class=\"size-8 overflow-hidden flex-none rounded-full\" data-icon></div><div><div class=\"text-sm font-semibold\" data-title></div><div class=\"text-xs \" data-description></div></div><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+      "extraMarkup": "<span id=\"select-icon\" class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }'>
-    <option value="">
-     Choose
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+ </select>
 </div>
 
+```
 h3:
   - Remote data selection (multiple options)
 
 p:
   - Allow multiple options to be selected by settingapiUrl: "https://some-path.com/api", enabling dynamic selection from remote data provided by the specified API endpoint.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
       "apiUrl": "https://fakestoreapi.com/products",
       "apiQuery": "limit=10",
       "apiFieldsMap": {
@@ -1525,34 +1451,31 @@ Code:
         "icon": "image",
         "description": "description"
       },
-      "apiIconTag": "&lt;img /&gt;",
+      "apiIconTag": "<img />",
       "placeholder": "Select product...",
-      "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+      "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
       "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
       "dropdownClasses": "advance-select-menu max-h-48 pt-0 overflow-y-auto",
       "optionClasses": "advance-select-option selected:select-active",
-      "optionTemplate": "&lt;div class=\"flex items-center gap-2\"&gt;&lt;div class=\"size-8 overflow-hidden flex-none rounded-full\" data-icon&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=\"text-sm font-semibold\" data-title&gt;&lt;/div&gt;&lt;div class=\"text-xs \" data-description&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-      "extraMarkup": "&lt;span id=\"select-icon\" class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+      "optionTemplate": "<div class=\"flex items-center gap-2\"><div class=\"size-8 overflow-hidden flex-none rounded-full\" data-icon></div><div><div class=\"text-sm font-semibold\" data-title></div><div class=\"text-xs \" data-description></div></div><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+      "extraMarkup": "<span id=\"select-icon\" class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }' multiple="">
-    <option value="">
-     Choose
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+ </select>
 </div>
 
+```
 h3:
   - Remote data selection with removable tags
 
 p:
   - Enable selection with removable tags usingapiUrl: "https://some-path.com/api", allowing choices to be dynamically loaded from remote data and displayed as tags.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
       "apiUrl": "https://fakestoreapi.com/products",
       "apiQuery": "limit=10",
       "apiFieldsMap": {
@@ -1562,120 +1485,111 @@ Code:
         "icon": "image",
         "description": "description"
       },
-      "apiIconTag": "&lt;img /&gt;",
+      "apiIconTag": "<img />",
       "placeholder": "Select product...",
-      "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+      "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
       "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
       "mode": "tags",
       "wrapperClasses": "advance-select-tag text-wrap flex-wrap",
-      "tagsItemTemplate": " &lt;div class=\"flex flex-nowrap items-center relative z-10 bg-base-100 border border-base-content/25 rounded-full p-1 m-1\"&gt; &lt;div class=\"size-6 overflow-hidden flex-none rounded-full me-1\" data-icon&gt;&lt;/div&gt; &lt;div class=\"truncate whitespace-break-spaces text-base-content\" data-title&gt;&lt;/div&gt; &lt;div class=\"btn btn-sm min-h-0 size-5 btn-circle btn-soft btn-secondary ms-2 \" data-remove&gt;&lt;span class=\"icon-[tabler--x] shrink-0 size-3.5\"&gt;&lt;/span&gt;&lt;/div&gt; &lt;/div&gt;",
+      "tagsItemTemplate": " <div class=\"flex flex-nowrap items-center relative z-10 bg-base-100 border border-base-content/25 rounded-full p-1 m-1\"> <div class=\"size-6 overflow-hidden flex-none rounded-full me-1\" data-icon></div> <div class=\"truncate whitespace-break-spaces text-base-content\" data-title></div> <div class=\"btn btn-sm min-h-0 size-5 btn-circle btn-soft btn-secondary ms-2 \" data-remove><span class=\"icon-[tabler--x] shrink-0 size-3.5\"></span></div> </div>",
       "tagsInputClasses": "py-2.5 px-2 rounded-lg order-1 text-sm outline-none",
       "dropdownClasses": "advance-select-menu max-h-48 pt-0 overflow-y-auto",
       "optionClasses": "advance-select-option selected:select-active",
-      "optionTemplate": "&lt;div class=\"flex items-center gap-2\"&gt;&lt;div class=\"size-8 overflow-hidden flex-none rounded-full\" data-icon&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=\"text-sm font-semibold\" data-title&gt;&lt;/div&gt;&lt;div class=\"text-xs \" data-description&gt;&lt;/div&gt;&lt;/div&gt; &lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-      "extraMarkup": "&lt;span id=\"select-icon\" class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+      "optionTemplate": "<div class=\"flex items-center gap-2\"><div class=\"size-8 overflow-hidden flex-none rounded-full\" data-icon></div><div><div class=\"text-sm font-semibold\" data-title></div><div class=\"text-xs \" data-description></div></div> <span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+      "extraMarkup": "<span id=\"select-icon\" class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }' multiple="">
-    <option value="">
-     Choose
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+ </select>
 </div>
 
+```
 h3:
   - Multiple selection with option template (remote data)
 
 p:
   - Enable multiple option selection with a custom template by settingapiUrl: "https://some-path.com/api". This allows selections to be dynamically built from remote data with a specified option format.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
       "apiUrl": "https://fakestoreapi.com/products",
       "apiQuery": "limit=10",
       "apiFieldsMap": {
         "id": "id",
         "title": "title"
       },
-      "apiIconTag": "&lt;img /&gt;",
+      "apiIconTag": "<img />",
       "placeholder": "Select product...",
-      "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+      "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
       "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
       "toggleCountText": "selected",
       "toggleCountTextMinItems": 2,
       "dropdownClasses": "advance-select-menu max-h-48 pt-0 overflow-y-auto",
       "optionClasses": "advance-select-option selected:select-active",
-      "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-      "extraMarkup": "&lt;span id=\"select-icon\" class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+      "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+      "extraMarkup": "<span id=\"select-icon\" class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }' multiple="">
-    <option value="">
-     Choose
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+ </select>
 </div>
 
+```
 h3:
   - Multiple with conditional counter (remote data)
 
 p:
   - Usemultipletag to enable counter option that counts the number of selected options. UseapiUrl: "https://some-path.com/api"to enable build select according to the remote data.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
       "apiUrl": "https://fakestoreapi.com/products",
       "apiQuery": "limit=10",
       "apiFieldsMap": {
         "id": "id",
         "title": "title"
       },
-      "apiIconTag": "&lt;img /&gt;",
+      "apiIconTag": "<img />",
       "searchPlaceholder": "Search...",
       "placeholder": "Select product...",
-      "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+      "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
       "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
       "toggleSeparators": {
-        "betweenItemsAndCounter": "&amp;"
+        "betweenItemsAndCounter": "&"
       },
       "toggleCountText": "selected",
       "toggleCountTextMinItems": 2,
       "toggleCountTextMode": "nItemsAndCount",
       "dropdownClasses": "advance-select-menu max-h-48 pt-0 overflow-y-auto",
       "optionClasses": "advance-select-option selected:select-active",
-      "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-      "extraMarkup": "&lt;span id=\"select-icon\" class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+      "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+      "extraMarkup": "<span id=\"select-icon\" class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }' id="remote-multi-cond-count" multiple="">
-    <option value="">
-     Choose
-    </option>
-   </select>
-  </div>
-  <div class="mt-4 flex flex-wrap gap-2">
-   <button class="btn btn-outline btn-primary btn-sm" id="remote-clear-btn" type="button">
-    Clear
-   </button>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+ </select>
+</div>
+<div class="mt-4 flex flex-wrap gap-2">
+ <button class="btn btn-outline btn-primary btn-sm" id="remote-clear-btn" type="button">
+  Clear
+ </button>
 </div>
 
+```
 h3:
   - Custom template with avatars (remote data)
 
 p:
   - Create a custom selection design featuring avatars by settingapiUrl: "https://some-path.com/api". This enables options to be dynamically loaded from remote data and displayed with personalized avatar styling..
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
       "apiUrl": "https://fakestoreapi.com/products",
       "apiQuery": "limit=10",
       "apiFieldsMap": {
@@ -1684,23 +1598,22 @@ Code:
         "title": "title",
         "icon": "image"
       },
-      "apiIconTag": "&lt;img /&gt;",
+      "apiIconTag": "<img />",
       "placeholder": "Select product...",
-      "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+      "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
       "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
       "dropdownClasses": "advance-select-menu max-h-48 pt-0 overflow-y-auto",
       "optionClasses": "advance-select-option selected:select-active",
-      "optionTemplate": "&lt;div class=\"flex items-center gap-2\"&gt;&lt;div class=\"size-8 overflow-hidden flex-none rounded-full\" data-icon&gt;&lt;/div&gt;&lt;div class=\"text-sm font-semibold\" data-title&gt;&lt;/div&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-      "extraMarkup": "&lt;span id=\"select-icon\" class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+      "optionTemplate": "<div class=\"flex items-center gap-2\"><div class=\"size-8 overflow-hidden flex-none rounded-full\" data-icon></div><div class=\"text-sm font-semibold\" data-title></div><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+      "extraMarkup": "<span id=\"select-icon\" class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }'>
-    <option value="">
-     Choose
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+ </select>
 </div>
 
+```
 h3:
   - Modal example with overflow:hidden
 
@@ -1710,133 +1623,130 @@ p:
 p:
   - WhendropdownScopeis set towindow, thedropdownClassesincludew-full(required to updateupdateDropdownWidth()) andz-80(necessary to ensure the dropdown displays above the backdrop).
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <button aria-controls="overflow-animation-modal" aria-expanded="false" aria-haspopup="dialog" class="btn btn-primary" data-overlay="#overflow-animation-modal" type="button">
-   Open modal
-  </button>
-  <div aria-labelledby="overflow-animation-modal-label" class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 hidden" id="overflow-animation-modal" role="dialog" tabindex="-1">
-   <div class="overlay-animation-target modal-dialog overlay-open:opacity-100 overlay-open:duration-300">
-    <div class="modal-content">
-     <div class="modal-header">
-      <h3 class="modal-title">
-       Dialog Title
-      </h3>
-      <button aria-label="Close" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" data-overlay="#overflow-animation-modal" type="button">
-       <span class="icon-[tabler--x] size-4">
-       </span>
-      </button>
-     </div>
-     <div class="space-y-3 overflow-y-auto p-4">
-      <select class="hidden" data-select='{
+```html
+<button aria-controls="overflow-animation-modal" aria-expanded="false" aria-haspopup="dialog" class="btn btn-primary" data-overlay="#overflow-animation-modal" type="button">
+ Open modal
+</button>
+<div aria-labelledby="overflow-animation-modal-label" class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 hidden" id="overflow-animation-modal" role="dialog" tabindex="-1">
+ <div class="overlay-animation-target modal-dialog overlay-open:opacity-100 overlay-open:duration-300">
+  <div class="modal-content">
+   <div class="modal-header">
+    <h3 class="modal-title">
+     Dialog Title
+    </h3>
+    <button aria-label="Close" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" data-overlay="#overflow-animation-modal" type="button">
+     <span class="icon-[tabler--x] size-4">
+     </span>
+    </button>
+   </div>
+   <div class="space-y-3 overflow-y-auto p-4">
+    <select class="hidden" data-select='{
             "placeholder": "Select option...",
-            "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+            "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
             "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
             "dropdownClasses": "advance-select-menu z-80 w-full",
             "dropdownScope": "window",
             "optionClasses": "advance-select-option selected:select-active",
-            "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-            "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+            "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+            "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
             }'>
-       <option value="">
-        Choose
-       </option>
-       <option value="name">
-        Full Name
-       </option>
-       <option value="email">
-        Email Address
-       </option>
-       <option value="description">
-        Project Description
-       </option>
-       <option value="user_id">
-        User Identification Number
-       </option>
-      </select>
-      <select class="hidden" data-select='{
+     <option value="">
+      Choose
+     </option>
+     <option value="name">
+      Full Name
+     </option>
+     <option value="email">
+      Email Address
+     </option>
+     <option value="description">
+      Project Description
+     </option>
+     <option value="user_id">
+      User Identification Number
+     </option>
+    </select>
+    <select class="hidden" data-select='{
             "placeholder": "Select multiple options...",
-            "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+            "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
             "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
             "dropdownClasses": "advance-select-menu z-80 w-full",
             "dropdownScope": "window",
             "optionClasses": "advance-select-option selected:select-active",
-            "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-            "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+            "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+            "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
             }' multiple="">
-       <option value="">
-        Choose
-       </option>
-       <option value="name">
-        Full Name
-       </option>
-       <option value="email">
-        Email Address
-       </option>
-       <option value="description">
-        Project Description
-       </option>
-       <option value="user_id">
-        User Identification Number
-       </option>
-      </select>
-      <label class="hidden" for="tags-modal">
-       Tags modal label
-      </label>
-      <select aria-label="Advance select" class="hidden" data-select='{
+     <option value="">
+      Choose
+     </option>
+     <option value="name">
+      Full Name
+     </option>
+     <option value="email">
+      Email Address
+     </option>
+     <option value="description">
+      Project Description
+     </option>
+     <option value="user_id">
+      User Identification Number
+     </option>
+    </select>
+    <label class="hidden" for="tags-modal">
+     Tags modal label
+    </label>
+    <select aria-label="Advance select" class="hidden" data-select='{
             "placeholder": "Select option...",
-            "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+            "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
             "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
             "dropdownClasses": "advance-select-menu w-full z-80 max-h-48 -ms-1 overflow-y-auto",
             "optionClasses": "advance-select-option selected:select-active",
             "mode": "tags",
             "dropdownScope": "window",
             "wrapperClasses": "advance-select-tag flex-wrap",
-            "tagsItemTemplate": " &lt;div class=\"flex flex-nowrap items-center relative z-10 bg-base-100 border border-base-content/25 rounded-full p-1 m-1\"&gt; &lt;div class=\"size-6 me-1\" data-icon&gt;&lt;/div&gt; &lt;div class=\"whitespace-nowrap text-base-content\" data-title&gt;&lt;/div&gt; &lt;div class=\"btn btn-sm min-h-0 size-5 btn-circle btn-soft btn-secondary ms-2 \" data-remove&gt;&lt;span class=\"icon-[tabler--x] shrink-0 size-3.5\"&gt;&lt;/span&gt;&lt;/div&gt; &lt;/div&gt;",
+            "tagsItemTemplate": " <div class=\"flex flex-nowrap items-center relative z-10 bg-base-100 border border-base-content/25 rounded-full p-1 m-1\"> <div class=\"size-6 me-1\" data-icon></div> <div class=\"whitespace-nowrap text-base-content\" data-title></div> <div class=\"btn btn-sm min-h-0 size-5 btn-circle btn-soft btn-secondary ms-2 \" data-remove><span class=\"icon-[tabler--x] shrink-0 size-3.5\"></span></div> </div>",
             "tagsInputClasses": "py-2.5 px-2 rounded-lg order-1 text-sm outline-none",
-            "optionTemplate": "&lt;div class=\"flex items-center\"&gt; &lt;div class=\"size-8 me-2\" data-icon&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=\"text-sm font-semibold text-base-content\" data-title&gt;&lt;/div&gt; &lt;div class=\"text-xs text-base-content/80\" data-description&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\"flex justify-between items-center flex-1\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt; &lt;/div&gt;",
-            "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+            "optionTemplate": "<div class=\"flex items-center\"> <div class=\"size-8 me-2\" data-icon></div><div><div class=\"text-sm font-semibold text-base-content\" data-title></div> <div class=\"text-xs text-base-content/80\" data-description></div></div><div class=\"flex justify-between items-center flex-1\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div> </div>",
+            "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
             }' id="tags-modal" multiple="">
-       <option value="">
-        Choose
-       </option>
-       <option data-select-option='{
+     <option value="">
+      Choose
+     </option>
+     <option data-select-option='{
               "description": "mark",
-              "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png\" alt=\"Mark Gilbert\" /&gt;"}' selected="" value="1">
-        Mark Gilbert
-       </option>
-       <option data-select-option='{
+              "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png\" alt=\"Mark Gilbert\" />"}' selected="" value="1">
+      Mark Gilbert
+     </option>
+     <option data-select-option='{
               "description": "eug",
-              "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png\" alt=\"Eugenia Parsons\" /&gt;"}' value="2">
-        Eugenia Parsons
-       </option>
-       <option data-select-option='{
+              "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png\" alt=\"Eugenia Parsons\" />"}' value="2">
+      Eugenia Parsons
+     </option>
+     <option data-select-option='{
               "description": "francis",
-              "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Francis Byrd\" /&gt;"}' value="3">
-        Francis Byrd
-       </option>
-       <option data-select-option='{
+              "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png\" alt=\"Francis Byrd\" />"}' value="3">
+      Francis Byrd
+     </option>
+     <option data-select-option='{
               "description": "rogers",
-              "icon": "&lt;img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-3.png\" alt=\"Jayden Rogers\" /&gt;"}' value="4">
-        Jayden Rogers
-       </option>
-      </select>
-     </div>
-     <div class="modal-footer">
-      <button class="btn btn-soft btn-secondary" data-overlay="#overflow-animation-modal" type="button">
-       Close
-      </button>
-      <button class="btn btn-primary" type="button">
-       Save changes
-      </button>
-     </div>
-    </div>
+              "icon": "<img class=\"rounded-full\" src=\"https://cdn.flyonui.com/fy-assets/avatar/avatar-3.png\" alt=\"Jayden Rogers\" />"}' value="4">
+      Jayden Rogers
+     </option>
+    </select>
+   </div>
+   <div class="modal-footer">
+    <button class="btn btn-soft btn-secondary" data-overlay="#overflow-animation-modal" type="button">
+     Close
+    </button>
+    <button class="btn btn-primary" type="button">
+     Save changes
+    </button>
    </div>
   </div>
  </div>
 </div>
 
+```
 h2:
   - JavaScript behavior
 
@@ -1930,42 +1840,39 @@ table:
 p:
   - Below is a demonstration of how to use the methods. Assign an ID to thedata-selectelement. To test other methods, copy the following code into your console and click the button.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-80 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <button class="btn btn-primary mb-4" id="open-btn">
-   Open
-  </button>
-  <div class="max-w-sm">
-   <select class="--prevent-on-load-init hidden" data-select='{
+```html
+<button class="btn btn-primary mb-4" id="open-btn">
+ Open
+</button>
+<div class="max-w-sm">
+ <select class="--prevent-on-load-init hidden" data-select='{
     "placeholder": "Select option...",
-    "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
     "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
     "dropdownClasses": "advance-select-menu max-h-44 overflow-y-auto",
     "optionClasses": "advance-select-option selected:select-active",
-    "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-    "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+    "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+    "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }' id="method-select">
-    <option value="">
-     Choose
-    </option>
-    <option value="name">
-     Full Name
-    </option>
-    <option value="email">
-     Email Address
-    </option>
-    <option value="description">
-     Project Description
-    </option>
-    <option value="user_id">
-     User Identification Number
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option value="name">
+   Full Name
+  </option>
+  <option value="email">
+   Email Address
+  </option>
+  <option value="description">
+   Project Description
+  </option>
+  <option value="user_id">
+   User Identification Number
+  </option>
+ </select>
 </div>
 
+```
 p:
   - Open item (public method).
 
@@ -2001,39 +1908,36 @@ table:
 p:
   - Display a console log message when an option is selected.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <select class="hidden" data-select='{
+```html
+<div class="max-w-sm">
+ <select class="hidden" data-select='{
     "placeholder": "Select option...",
-    "toggleTag": "&lt;button type=\"button\" aria-expanded=\"false\"&gt;&lt;/button&gt;",
+    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
     "toggleClasses": "advance-select-toggle select-disabled:pointer-events-none select-disabled:opacity-40",
     "dropdownClasses": "advance-select-menu",
     "optionClasses": "advance-select-option selected:select-active",
-    "optionTemplate": "&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;span data-title&gt;&lt;/span&gt;&lt;span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"&gt;&lt;/span&gt;&lt;/div&gt;",
-    "extraMarkup": "&lt;span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"&gt;&lt;/span&gt;"
+    "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"icon-[tabler--check] shrink-0 size-4 text-primary hidden selected:block \"></span></div>",
+    "extraMarkup": "<span class=\"icon-[tabler--caret-up-down] shrink-0 size-4 text-base-content absolute top-1/2 end-3 -translate-y-1/2 \"></span>"
     }' id="event-select">
-    <option value="">
-     Choose
-    </option>
-    <option value="name">
-     Full Name
-    </option>
-    <option value="email">
-     Email Address
-    </option>
-    <option value="description">
-     Project Description
-    </option>
-    <option value="user_id">
-     User Identification Number
-    </option>
-   </select>
-  </div>
- </div>
+  <option value="">
+   Choose
+  </option>
+  <option value="name">
+   Full Name
+  </option>
+  <option value="email">
+   Email Address
+  </option>
+  <option value="description">
+   Project Description
+  </option>
+  <option value="user_id">
+   User Identification Number
+  </option>
+ </select>
 </div>
 
+```
 p:
   - When select changes event example.
 

@@ -35,13 +35,10 @@ h3:
 p:
   - Basic inputrangeexample.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input aria-label="range" class="range" type="range"/>
- </div>
-</div>
+```html
+<input aria-label="range" class="range" type="range"/>
 
+```
 h2:
   - Size
 
@@ -51,17 +48,14 @@ h3:
 p:
   - The Range inputs are stacked in three sizes:extra smallxs, smallsm, default, and largelg.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input aria-label="range" class="range range-xs" type="range"/>
-  <input aria-label="range" class="range range-sm" type="range"/>
-  <input aria-label="range" class="range" type="range"/>
-  <input aria-label="range" class="range range-lg" type="range"/>
-  <input aria-label="range" class="range range-xl" type="range"/>
- </div>
-</div>
+```html
+<input aria-label="range" class="range range-xs" type="range"/>
+<input aria-label="range" class="range range-sm" type="range"/>
+<input aria-label="range" class="range" type="range"/>
+<input aria-label="range" class="range range-lg" type="range"/>
+<input aria-label="range" class="range range-xl" type="range"/>
 
+```
 h2:
   - Color
 
@@ -71,32 +65,26 @@ h3:
 p:
   - The standard format for range is accompanied by the component classrangeand modifier classrange-{semantic-color}.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input aria-label="range" class="range" type="range"/>
-  <input aria-label="primary range" class="range range-primary" type="range"/>
-  <input aria-label="secondary range" class="range range-secondary" type="range"/>
-  <input aria-label="info range" class="range range-info" type="range"/>
-  <input aria-label="success range" class="range range-success" type="range"/>
-  <input aria-label="warning range" class="range range-warning" type="range"/>
-  <input aria-label="error range" class="range range-error" type="range"/>
- </div>
-</div>
+```html
+<input aria-label="range" class="range" type="range"/>
+<input aria-label="primary range" class="range range-primary" type="range"/>
+<input aria-label="secondary range" class="range range-secondary" type="range"/>
+<input aria-label="info range" class="range range-info" type="range"/>
+<input aria-label="success range" class="range range-success" type="range"/>
+<input aria-label="warning range" class="range range-warning" type="range"/>
+<input aria-label="error range" class="range range-error" type="range"/>
 
+```
 h3:
   - Custom color
 
 p:
   - Utilize[--range-color:]to incorporate your custom color.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input aria-label="custom range" class="range [--range-color:teal]" type="range"/>
- </div>
-</div>
+```html
+<input aria-label="custom range" class="range [--range-color:teal]" type="range"/>
 
+```
 h2:
   - Illustrations
 
@@ -106,56 +94,47 @@ h3:
 p:
   - Apply thedisabledboolean attribute to a range input to disable pointer events and prevent focusing.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input aria-label="disabled range" class="range" disabled="" type="range"/>
- </div>
-</div>
+```html
+<input aria-label="disabled range" class="range" disabled="" type="range"/>
 
+```
 h3:
   - Min and max
 
 p:
   - Range inputs inherently have default values forminandmax- 0 and 100, respectively. You can customize these values using theminandmaxattributes.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input aria-label="range" class="range" max="100" min="0" type="range" value="40"/>
- </div>
-</div>
+```html
+<input aria-label="range" class="range" max="100" min="0" type="range" value="40"/>
 
+```
 h3:
   - Steps
 
 p:
   - Thestepattribute specifies the interval between legal numbers in an<input>element.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input aria-label="range" class="range" max="100" min="0" step="25" type="range" value="25"/>
-  <div class="w-full flex justify-between text-xs px-2">
-   <span>
-    |
-   </span>
-   <span>
-    |
-   </span>
-   <span>
-    |
-   </span>
-   <span>
-    |
-   </span>
-   <span>
-    |
-   </span>
-  </div>
- </div>
+```html
+<input aria-label="range" class="range" max="100" min="0" step="25" type="range" value="25"/>
+<div class="w-full flex justify-between text-xs px-2">
+ <span>
+  |
+ </span>
+ <span>
+  |
+ </span>
+ <span>
+  |
+ </span>
+ <span>
+  |
+ </span>
+ <span>
+  |
+ </span>
 </div>
 
+```
 h2:
   - Range
 

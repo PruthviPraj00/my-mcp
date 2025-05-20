@@ -24,42 +24,33 @@ h3:
 p:
   - Apply theskeletoncomponent class to any markup to showcase it’s structure.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="skeleton h-32 w-32">
-  </div>
- </div>
+```html
+<div class="skeleton h-32 w-32">
 </div>
 
+```
 h3:
   - Animated skeleton
 
 p:
   - Apply theskeleton-animatedmodifier class to any markup to showcase it’s structure with loading animation.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="skeleton skeleton-animated h-32 w-32">
-  </div>
- </div>
+```html
+<div class="skeleton skeleton-animated h-32 w-32">
 </div>
 
+```
 h3:
   - Active skeleton
 
 p:
   - Add theanimate-pulseanimation class to any markup to display its structure with an active animation. For additional options, refer to the TailwindCSSanimationdocumentation.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="skeleton h-32 w-32 animate-pulse">
-  </div>
- </div>
+```html
+<div class="skeleton h-32 w-32 animate-pulse">
 </div>
 
+```
 h2:
   - Illustrations
 
@@ -69,48 +60,42 @@ h3:
 p:
   - Utilize the provided example to present a skeleton featuring a circular shape and content.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex w-52 flex-col gap-4">
-   <div class="flex items-center gap-4">
-    <div class="skeleton h-16 w-16 shrink-0 rounded-full">
-    </div>
-    <div class="flex flex-col gap-4">
-     <div class="skeleton h-4 w-20">
-     </div>
-     <div class="skeleton h-4 w-28">
-     </div>
-    </div>
+```html
+<div class="flex w-52 flex-col gap-4">
+ <div class="flex items-center gap-4">
+  <div class="skeleton h-16 w-16 shrink-0 rounded-full">
+  </div>
+  <div class="flex flex-col gap-4">
+   <div class="skeleton h-4 w-20">
    </div>
-   <div class="skeleton h-32 w-full">
+   <div class="skeleton h-4 w-28">
    </div>
   </div>
  </div>
+ <div class="skeleton h-32 w-full">
+ </div>
 </div>
 
+```
 h3:
   - Rectangle with content
 
 p:
   - Utilize the provided example to present a skeleton featuring a Rectangular shape and content with loading animation.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex w-52 flex-col gap-4">
-   <div class="skeleton skeleton-animated h-32 w-full">
-   </div>
-   <div class="skeleton skeleton-animated h-4 w-28">
-   </div>
-   <div class="skeleton skeleton-animated h-4 w-full">
-   </div>
-   <div class="skeleton skeleton-animated h-4 w-full">
-   </div>
-  </div>
+```html
+<div class="flex w-52 flex-col gap-4">
+ <div class="skeleton skeleton-animated h-32 w-full">
+ </div>
+ <div class="skeleton skeleton-animated h-4 w-28">
+ </div>
+ <div class="skeleton skeleton-animated h-4 w-full">
+ </div>
+ <div class="skeleton skeleton-animated h-4 w-full">
  </div>
 </div>
 
+```
 h2:
   - Skeleton
 

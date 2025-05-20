@@ -56,67 +56,61 @@ h3:
 p:
   - The following example demonstrates the usage of a default full calendar, initialized with the JavaScript code provided below.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card flex not-prose p-4 w-full">
-   <div class="w-full" id="calendar">
-   </div>
-  </div>
+```html
+<div class="card flex not-prose p-4 w-full">
+ <div class="w-full" id="calendar">
  </div>
 </div>
 
+```
 h3:
   - Custom example
 
 p:
   - The following example demonstrates the usage of a custom functional full calendar with event modal, initialized with the JavaScript code provided below.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card flex not-prose p-4 w-full">
-   <div id="calendar-custom">
+```html
+<div class="card flex not-prose p-4 w-full">
+ <div id="calendar-custom">
+ </div>
+</div>
+<button aria-controls="calendar-event-modal" aria-expanded="false" aria-haspopup="dialog" class="btn hidden" data-overlay="#calendar-event-modal" id="modalTrigger" type="button">
+</button>
+<div class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 hidden" id="calendar-event-modal" role="dialog" tabindex="-1">
+ <div class="modal-dialog overlay-open:opacity-100 overlay-open:duration-300">
+  <div class="modal-content">
+   <div class="modal-header">
+    <h3 class="modal-title" id="modalTitle">
+     Event
+    </h3>
+    <button aria-label="Close" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" data-overlay="#calendar-event-modal" type="button">
+     <span class="icon-[tabler--x] size-4">
+     </span>
+    </button>
    </div>
-  </div>
-  <button aria-controls="calendar-event-modal" aria-expanded="false" aria-haspopup="dialog" class="btn hidden" data-overlay="#calendar-event-modal" id="modalTrigger" type="button">
-  </button>
-  <div class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 hidden" id="calendar-event-modal" role="dialog" tabindex="-1">
-   <div class="modal-dialog overlay-open:opacity-100 overlay-open:duration-300">
-    <div class="modal-content">
-     <div class="modal-header">
-      <h3 class="modal-title" id="modalTitle">
-       Event
-      </h3>
-      <button aria-label="Close" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" data-overlay="#calendar-event-modal" type="button">
-       <span class="icon-[tabler--x] size-4">
-       </span>
-      </button>
+   <form id="eventForm">
+    <div class="modal-body pt-0">
+     <div class="mb-4">
+      <label class="label-text" for="eventTitle">
+       Add event title below
+      </label>
+      <input class="input" id="eventTitle" placeholder="Event title" required="" type="text"/>
      </div>
-     <form id="eventForm">
-      <div class="modal-body pt-0">
-       <div class="mb-4">
-        <label class="label-text" for="eventTitle">
-         Add event title below
-        </label>
-        <input class="input" id="eventTitle" placeholder="Event title" required="" type="text"/>
-       </div>
-      </div>
-      <div class="modal-footer">
-       <button class="btn btn-soft btn-secondary" data-overlay="#calendar-event-modal" type="button">
-        Close
-       </button>
-       <button class="btn btn-primary" type="submit">
-        Save changes
-       </button>
-      </div>
-     </form>
     </div>
-   </div>
+    <div class="modal-footer">
+     <button class="btn btn-soft btn-secondary" data-overlay="#calendar-event-modal" type="button">
+      Close
+     </button>
+     <button class="btn btn-primary" type="submit">
+      Save changes
+     </button>
+    </div>
+   </form>
   </div>
  </div>
 </div>
 
+```
 h2:
   - Full Calendar
 

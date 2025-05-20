@@ -25,38 +25,35 @@ h3:
 p:
   - Use the component classfooterfor footer component.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="w-full">
-   <footer class="footer items-center px-6 py-4">
-    <aside class="grid-flow-col items-center">
-     <p>
-      ©2024
-      <a class="link link-hover font-medium" href="#">
-       FlyonUI
-      </a>
-     </p>
-    </aside>
-    <nav class="text-base-content grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-     <a class="link link-hover" href="#">
-      License
-     </a>
-     <a class="link link-hover" href="#">
-      Help
-     </a>
-     <a class="link link-hover" href="#">
-      Contact
-     </a>
-     <a class="link link-hover" href="#">
-      Policy
-     </a>
-    </nav>
-   </footer>
-  </div>
- </div>
+```html
+<div class="w-full">
+ <footer class="footer items-center px-6 py-4">
+  <aside class="grid-flow-col items-center">
+   <p>
+    ©2024
+    <a class="link link-hover font-medium" href="#">
+     FlyonUI
+    </a>
+   </p>
+  </aside>
+  <nav class="text-base-content grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+   <a class="link link-hover" href="#">
+    License
+   </a>
+   <a class="link link-hover" href="#">
+    Help
+   </a>
+   <a class="link link-hover" href="#">
+    Contact
+   </a>
+   <a class="link link-hover" href="#">
+    Policy
+   </a>
+  </nav>
+ </footer>
 </div>
 
+```
 h2:
   - Position
 
@@ -66,108 +63,102 @@ h3:
 p:
   - Use the component classfooterfor footer component. Below given example displays static footer with links.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="w-full">
-   <div class="flex w-full flex-col gap-4">
-    <div class="mb-4 flex items-center gap-4">
-     <div class="skeleton h-16 w-16 shrink-0 rounded-full">
-     </div>
-     <div class="flex flex-col gap-4">
-      <div class="skeleton h-4 w-52">
-      </div>
-      <div class="skeleton h-4 w-52">
-      </div>
-     </div>
+```html
+<div class="w-full">
+ <div class="flex w-full flex-col gap-4">
+  <div class="mb-4 flex items-center gap-4">
+   <div class="skeleton h-16 w-16 shrink-0 rounded-full">
+   </div>
+   <div class="flex flex-col gap-4">
+    <div class="skeleton h-4 w-52">
     </div>
-    <div class="skeleton mb-4 h-32 w-full">
+    <div class="skeleton h-4 w-52">
     </div>
    </div>
-   <footer class="footer bg-base-200/60 items-center rounded-t-box px-6 py-4 shadow-base-300/20 shadow-sm">
-    <aside class="grid-flow-col items-center">
-     <p>
-      ©2024
-      <a class="link link-hover font-medium" href="#">
-       FlyonUI
-      </a>
-     </p>
-    </aside>
-    <nav class="text-base-content grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-     <a class="link link-hover" href="#">
-      License
-     </a>
-     <a class="link link-hover" href="#">
-      Help
-     </a>
-     <a class="link link-hover" href="#">
-      Contact
-     </a>
-     <a class="link link-hover" href="#">
-      Policy
-     </a>
-    </nav>
-   </footer>
+  </div>
+  <div class="skeleton mb-4 h-32 w-full">
   </div>
  </div>
+ <footer class="footer bg-base-200/60 items-center rounded-t-box px-6 py-4 shadow-base-300/20 shadow-sm">
+  <aside class="grid-flow-col items-center">
+   <p>
+    ©2024
+    <a class="link link-hover font-medium" href="#">
+     FlyonUI
+    </a>
+   </p>
+  </aside>
+  <nav class="text-base-content grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+   <a class="link link-hover" href="#">
+    License
+   </a>
+   <a class="link link-hover" href="#">
+    Help
+   </a>
+   <a class="link link-hover" href="#">
+    Contact
+   </a>
+   <a class="link link-hover" href="#">
+    Policy
+   </a>
+  </nav>
+ </footer>
 </div>
 
+```
 h3:
   - Sticky footer
 
 p:
   - Please refer to the following example for a sticky footer that remains visible even when scrolling.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="relative h-60 w-full">
-   <div class="overflow-y-auto relative h-full w-full overflow-y-scroll pe-2">
-    <div class="flex w-full flex-col gap-4">
-     <div class="mb-4 flex items-center gap-4">
-      <div class="skeleton h-16 w-16 rounded-full">
-      </div>
-      <div class="flex flex-col gap-4">
-       <div class="skeleton h-4 w-52">
-       </div>
-       <div class="skeleton h-4 w-52">
-       </div>
-      </div>
+```html
+<div class="relative h-60 w-full">
+ <div class="overflow-y-auto relative h-full w-full overflow-y-scroll pe-2">
+  <div class="flex w-full flex-col gap-4">
+   <div class="mb-4 flex items-center gap-4">
+    <div class="skeleton h-16 w-16 rounded-full">
+    </div>
+    <div class="flex flex-col gap-4">
+     <div class="skeleton h-4 w-52">
      </div>
-     <div class="skeleton mb-4 h-16 w-full">
-     </div>
-     <div class="skeleton mb-4 h-32 w-full">
+     <div class="skeleton h-4 w-52">
      </div>
     </div>
-    <footer class="footer bg-base-200 absolute -bottom-px sticky start-0 w-full px-6 py-4">
-     <aside class="grid-flow-col items-center">
-      <p>
-       ©2024
-       <a class="link link-hover font-medium" href="#">
-        FlyonUI
-       </a>
-      </p>
-     </aside>
-     <nav class="text-base-content grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-      <a class="link link-hover" href="#">
-       License
-      </a>
-      <a class="link link-hover" href="#">
-       Help
-      </a>
-      <a class="link link-hover" href="#">
-       Contact
-      </a>
-      <a class="link link-hover" href="#">
-       Policy
-      </a>
-     </nav>
-    </footer>
+   </div>
+   <div class="skeleton mb-4 h-16 w-full">
+   </div>
+   <div class="skeleton mb-4 h-32 w-full">
    </div>
   </div>
+  <footer class="footer bg-base-200 absolute -bottom-px sticky start-0 w-full px-6 py-4">
+   <aside class="grid-flow-col items-center">
+    <p>
+     ©2024
+     <a class="link link-hover font-medium" href="#">
+      FlyonUI
+     </a>
+    </p>
+   </aside>
+   <nav class="text-base-content grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+    <a class="link link-hover" href="#">
+     License
+    </a>
+    <a class="link link-hover" href="#">
+     Help
+    </a>
+    <a class="link link-hover" href="#">
+     Contact
+    </a>
+    <a class="link link-hover" href="#">
+     Policy
+    </a>
+   </nav>
+  </footer>
  </div>
 </div>
 
+```
 h2:
   - Illustrations
 
@@ -177,407 +168,495 @@ h3:
 p:
   - Please refer to the following example for a footer with logo section. Use component classfooter-titlefor footer column headings.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <footer class="footer bg-base-200/60 p-10">
-   <aside class="gap-6">
-    <div class="flex items-center gap-2 text-xl font-bold text-base-content">
-     <svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-      <path clip-rule="evenodd" d="M17.6745 16.9224 12.6233 10.378C12.2167 9.85117 11.4185 9.8611 11.0251 10.3979L6.45728 16.631C6.26893 16.888 5.96935 17.0398 5.65069 17.0398H3.79114C2.9635 17.0398 2.49412 16.0919 2.99583 15.4336L11.0224 4.90319C11.4206 4.38084 12.2056 4.37762 12.608 4.89668L20.9829 15.6987C21.4923 16.3558 21.024 17.3114 20.1926 17.3114H18.4661C18.1562 17.3114 17.8638 17.1677 17.6745 16.9224zm-5.0879-1.33 2.309 2.7669C15.439 19.0105 14.976 20 14.1278 20H9.74075C8.9164 20 8.4461 19.0586 8.94116 18.3994l2.07804-2.7669C11.4065 15.1169 12.1734 15.0972 12.5866 15.5924z" fill="var(--color-primary)" fill-rule="evenodd">
-      </path>
-     </svg>
-     <span>
-      FlyonUI
-     </span>
-    </div>
-    <p class="text-base-content text-sm">
-     Most developer friendly &amp; highly
-     <br/>
-     customisable Tailwind UI Kit.
-    </p>
-   </aside>
-   <nav class="text-base-content">
-    <h6 class="footer-title">
-     Services
-    </h6>
-    <a class="link link-hover" href="#">
-     Branding
-    </a>
-    <a class="link link-hover" href="#">
-     Design
-    </a>
-    <a class="link link-hover" href="#">
-     Marketing
-    </a>
-    <a class="link link-hover" href="#">
-     Advertisement
-    </a>
-   </nav>
-   <nav class="text-base-content">
-    <h6 class="footer-title">
-     Company
-    </h6>
-    <a class="link link-hover" href="#">
-     About us
-    </a>
-    <a class="link link-hover" href="#">
-     Contact
-    </a>
-    <a class="link link-hover" href="#">
-     Jobs
-    </a>
-    <a class="link link-hover" href="#">
-     Press kit
-    </a>
-   </nav>
-   <nav class="text-base-content">
-    <h6 class="footer-title">
-     Legal
-    </h6>
-    <a class="link link-hover" href="#">
-     Terms of use
-    </a>
-    <a class="link link-hover" href="#">
-     Privacy policy
-    </a>
-    <a class="link link-hover" href="#">
-     Cookie policy
-    </a>
-   </nav>
-  </footer>
- </div>
-</div>
+```html
+<footer class="footer bg-base-200/60 p-10">
+ <aside class="gap-6">
+  <div class="flex items-center gap-2 text-xl font-bold text-base-content">
+   <svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path clip-rule="evenodd" d="M17.6745 16.9224 12.6233 10.378C12.2167 9.85117 11.4185 9.8611 11.0251 10.3979L6.45728 16.631C6.26893 16.888 5.96935 17.0398 5.65069 17.0398H3.79114C2.9635 17.0398 2.49412 16.0919 2.99583 15.4336L11.0224 4.90319C11.4206 4.38084 12.2056 4.37762 12.608 4.89668L20.9829 15.6987C21.4923 16.3558 21.024 17.3114 20.1926 17.3114H18.4661C18.1562 17.3114 17.8638 17.1677 17.6745 16.9224zm-5.0879-1.33 2.309 2.7669C15.439 19.0105 14.976 20 14.1278 20H9.74075C8.9164 20 8.4461 19.0586 8.94116 18.3994l2.07804-2.7669C11.4065 15.1169 12.1734 15.0972 12.5866 15.5924z" fill="var(--color-primary)" fill-rule="evenodd">
+    </path>
+   </svg>
+   <span>
+    FlyonUI
+   </span>
+  </div>
+  <p class="text-base-content text-sm">
+   Most developer friendly & highly
+   <br/>
+   customisable Tailwind UI Kit.
+  </p>
+ </aside>
+ <nav class="text-base-content">
+  <h6 class="footer-title">
+   Services
+  </h6>
+  <a class="link link-hover" href="#">
+   Branding
+  </a>
+  <a class="link link-hover" href="#">
+   Design
+  </a>
+  <a class="link link-hover" href="#">
+   Marketing
+  </a>
+  <a class="link link-hover" href="#">
+   Advertisement
+  </a>
+ </nav>
+ <nav class="text-base-content">
+  <h6 class="footer-title">
+   Company
+  </h6>
+  <a class="link link-hover" href="#">
+   About us
+  </a>
+  <a class="link link-hover" href="#">
+   Contact
+  </a>
+  <a class="link link-hover" href="#">
+   Jobs
+  </a>
+  <a class="link link-hover" href="#">
+   Press kit
+  </a>
+ </nav>
+ <nav class="text-base-content">
+  <h6 class="footer-title">
+   Legal
+  </h6>
+  <a class="link link-hover" href="#">
+   Terms of use
+  </a>
+  <a class="link link-hover" href="#">
+   Privacy policy
+  </a>
+  <a class="link link-hover" href="#">
+   Cookie policy
+  </a>
+ </nav>
+</footer>
 
+```
 h3:
   - With form
 
 p:
   - Please refer to the following example for a footer with form.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <footer class="footer bg-base-200/60 p-10">
-   <form class="gap-6">
-    <div class="flex items-center gap-2 text-xl font-bold text-base-content">
-     <svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-      <path clip-rule="evenodd" d="M17.6745 16.9224 12.6233 10.378C12.2167 9.85117 11.4185 9.8611 11.0251 10.3979L6.45728 16.631C6.26893 16.888 5.96935 17.0398 5.65069 17.0398H3.79114C2.9635 17.0398 2.49412 16.0919 2.99583 15.4336L11.0224 4.90319C11.4206 4.38084 12.2056 4.37762 12.608 4.89668L20.9829 15.6987C21.4923 16.3558 21.024 17.3114 20.1926 17.3114H18.4661C18.1562 17.3114 17.8638 17.1677 17.6745 16.9224zm-5.0879-1.33 2.309 2.7669C15.439 19.0105 14.976 20 14.1278 20H9.74075C8.9164 20 8.4461 19.0586 8.94116 18.3994l2.07804-2.7669C11.4065 15.1169 12.1734 15.0972 12.5866 15.5924z" fill="var(--color-primary)" fill-rule="evenodd">
-      </path>
-     </svg>
-     <span>
-      FlyonUI
-     </span>
-    </div>
-    <p class="text-base-content text-sm">
-     Most developer friendly &amp; highly
-     <br/>
-     customisable Tailwind UI Kit.
-    </p>
-    <fieldset>
-     <label class="label-text" for="subscribeLetter">
-      Subscribe to newsletter
-     </label>
-     <div class="flex w-full flex-wrap gap-1 sm:flex-nowrap">
-      <input class="input input-sm" id="subscribeLetter" placeholder="johndoe@gmail.com"/>
-      <button class="btn btn-sm btn-primary" type="submit">
-       Subscribe
-      </button>
-     </div>
-    </fieldset>
-   </form>
-   <nav class="text-base-content">
-    <h6 class="footer-title">
-     Services
-    </h6>
-    <a class="link link-hover" href="#">
-     Branding
-    </a>
-    <span>
-     <a class="link link-hover" href="#">
-      Design
-     </a>
-     <span class="badge badge-sm badge-primary ms-2">
-      New
-     </span>
-    </span>
-    <a class="link link-hover" href="#">
-     Marketing
-    </a>
-    <a class="link link-hover" href="#">
-     Advertisement
-    </a>
-   </nav>
-   <nav class="text-base-content">
-    <h6 class="footer-title">
-     Company
-    </h6>
-    <a class="link link-hover" href="#">
-     About us
-    </a>
-    <a class="link link-hover" href="#">
-     Contact
-    </a>
-    <a class="link link-hover" href="#">
-     Jobs
-    </a>
-    <a class="link link-hover" href="#">
-     Press kit
-    </a>
-   </nav>
-   <nav class="text-base-content">
-    <h6 class="footer-title">
-     Legal
-    </h6>
-    <a class="link link-hover" href="#">
-     Terms of use
-    </a>
-    <a class="link link-hover" href="#">
-     Privacy policy
-    </a>
-    <a class="link link-hover" href="#">
-     Cookie policy
-    </a>
-   </nav>
-  </footer>
- </div>
-</div>
+```html
+<footer class="footer bg-base-200/60 p-10">
+ <form class="gap-6">
+  <div class="flex items-center gap-2 text-xl font-bold text-base-content">
+   <svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path clip-rule="evenodd" d="M17.6745 16.9224 12.6233 10.378C12.2167 9.85117 11.4185 9.8611 11.0251 10.3979L6.45728 16.631C6.26893 16.888 5.96935 17.0398 5.65069 17.0398H3.79114C2.9635 17.0398 2.49412 16.0919 2.99583 15.4336L11.0224 4.90319C11.4206 4.38084 12.2056 4.37762 12.608 4.89668L20.9829 15.6987C21.4923 16.3558 21.024 17.3114 20.1926 17.3114H18.4661C18.1562 17.3114 17.8638 17.1677 17.6745 16.9224zm-5.0879-1.33 2.309 2.7669C15.439 19.0105 14.976 20 14.1278 20H9.74075C8.9164 20 8.4461 19.0586 8.94116 18.3994l2.07804-2.7669C11.4065 15.1169 12.1734 15.0972 12.5866 15.5924z" fill="var(--color-primary)" fill-rule="evenodd">
+    </path>
+   </svg>
+   <span>
+    FlyonUI
+   </span>
+  </div>
+  <p class="text-base-content text-sm">
+   Most developer friendly & highly
+   <br/>
+   customisable Tailwind UI Kit.
+  </p>
+  <fieldset>
+   <label class="label-text" for="subscribeLetter">
+    Subscribe to newsletter
+   </label>
+   <div class="flex w-full flex-wrap gap-1 sm:flex-nowrap">
+    <input class="input input-sm" id="subscribeLetter" placeholder="johndoe@gmail.com"/>
+    <button class="btn btn-sm btn-primary" type="submit">
+     Subscribe
+    </button>
+   </div>
+  </fieldset>
+ </form>
+ <nav class="text-base-content">
+  <h6 class="footer-title">
+   Services
+  </h6>
+  <a class="link link-hover" href="#">
+   Branding
+  </a>
+  <span>
+   <a class="link link-hover" href="#">
+    Design
+   </a>
+   <span class="badge badge-sm badge-primary ms-2">
+    New
+   </span>
+  </span>
+  <a class="link link-hover" href="#">
+   Marketing
+  </a>
+  <a class="link link-hover" href="#">
+   Advertisement
+  </a>
+ </nav>
+ <nav class="text-base-content">
+  <h6 class="footer-title">
+   Company
+  </h6>
+  <a class="link link-hover" href="#">
+   About us
+  </a>
+  <a class="link link-hover" href="#">
+   Contact
+  </a>
+  <a class="link link-hover" href="#">
+   Jobs
+  </a>
+  <a class="link link-hover" href="#">
+   Press kit
+  </a>
+ </nav>
+ <nav class="text-base-content">
+  <h6 class="footer-title">
+   Legal
+  </h6>
+  <a class="link link-hover" href="#">
+   Terms of use
+  </a>
+  <a class="link link-hover" href="#">
+   Privacy policy
+  </a>
+  <a class="link link-hover" href="#">
+   Cookie policy
+  </a>
+ </nav>
+</footer>
 
+```
 h3:
   - With Logo & Social Links
 
 p:
   - Please refer to the following example for a footer with logo & social links.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <footer class="footer bg-base-200/60 px-6 py-4">
-   <div class="flex w-full flex-wrap items-center justify-between">
-    <div class="flex items-center gap-2 text-xl font-bold text-base-content">
-     <svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-      <path clip-rule="evenodd" d="M17.6745 16.9224 12.6233 10.378C12.2167 9.85117 11.4185 9.8611 11.0251 10.3979L6.45728 16.631C6.26893 16.888 5.96935 17.0398 5.65069 17.0398H3.79114C2.9635 17.0398 2.49412 16.0919 2.99583 15.4336L11.0224 4.90319C11.4206 4.38084 12.2056 4.37762 12.608 4.89668L20.9829 15.6987C21.4923 16.3558 21.024 17.3114 20.1926 17.3114H18.4661C18.1562 17.3114 17.8638 17.1677 17.6745 16.9224zm-5.0879-1.33 2.309 2.7669C15.439 19.0105 14.976 20 14.1278 20H9.74075C8.9164 20 8.4461 19.0586 8.94116 18.3994l2.07804-2.7669C11.4065 15.1169 12.1734 15.0972 12.5866 15.5924z" fill="var(--color-primary)" fill-rule="evenodd">
-      </path>
-     </svg>
-     <span>
-      FlyonUI
-     </span>
-    </div>
-    <aside class="grid-flow-col items-center">
-     <p>
-      ©2024
-      <a class="link link-hover font-medium" href="#">
-       FlyonUI
-      </a>
-     </p>
-    </aside>
-    <div class="flex h-5 gap-4">
-     <a aria-label="Github Link" class="link" href="#">
-      <span class="icon-[tabler--brand-github] size-5">
-      </span>
-     </a>
-     <a aria-label="Facebook Link" class="link" href="#">
-      <span class="icon-[tabler--brand-facebook] size-5">
-      </span>
-     </a>
-     <a aria-label="X Link" class="link" href="#">
-      <span class="icon-[tabler--brand-x] size-5">
-      </span>
-     </a>
-     <a aria-label="Google Link" class="link" href="#">
-      <span class="icon-[tabler--brand-google] size-5">
-      </span>
-     </a>
-    </div>
-   </div>
-  </footer>
+```html
+<footer class="footer bg-base-200/60 px-6 py-4">
+ <div class="flex w-full flex-wrap items-center justify-between">
+  <div class="flex items-center gap-2 text-xl font-bold text-base-content">
+   <svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path clip-rule="evenodd" d="M17.6745 16.9224 12.6233 10.378C12.2167 9.85117 11.4185 9.8611 11.0251 10.3979L6.45728 16.631C6.26893 16.888 5.96935 17.0398 5.65069 17.0398H3.79114C2.9635 17.0398 2.49412 16.0919 2.99583 15.4336L11.0224 4.90319C11.4206 4.38084 12.2056 4.37762 12.608 4.89668L20.9829 15.6987C21.4923 16.3558 21.024 17.3114 20.1926 17.3114H18.4661C18.1562 17.3114 17.8638 17.1677 17.6745 16.9224zm-5.0879-1.33 2.309 2.7669C15.439 19.0105 14.976 20 14.1278 20H9.74075C8.9164 20 8.4461 19.0586 8.94116 18.3994l2.07804-2.7669C11.4065 15.1169 12.1734 15.0972 12.5866 15.5924z" fill="var(--color-primary)" fill-rule="evenodd">
+    </path>
+   </svg>
+   <span>
+    FlyonUI
+   </span>
+  </div>
+  <aside class="grid-flow-col items-center">
+   <p>
+    ©2024
+    <a class="link link-hover font-medium" href="#">
+     FlyonUI
+    </a>
+   </p>
+  </aside>
+  <div class="flex h-5 gap-4">
+   <a aria-label="Github Link" class="link" href="#">
+    <span class="icon-[tabler--brand-github] size-5">
+    </span>
+   </a>
+   <a aria-label="Facebook Link" class="link" href="#">
+    <span class="icon-[tabler--brand-facebook] size-5">
+    </span>
+   </a>
+   <a aria-label="X Link" class="link" href="#">
+    <span class="icon-[tabler--brand-x] size-5">
+    </span>
+   </a>
+   <a aria-label="Google Link" class="link" href="#">
+    <span class="icon-[tabler--brand-google] size-5">
+    </span>
+   </a>
+  </div>
  </div>
-</div>
+</footer>
 
+```
 h3:
   - With copyright text
 
 p:
   - Please refer to the following example for a footer with copyright text.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <footer class="footer footer-center bg-base-200/60 px-6 py-4">
-   <aside>
-    <p>
-     Copyright Â© 2024 - All right reserved.
-    </p>
-   </aside>
-  </footer>
- </div>
-</div>
+```html
+<footer class="footer footer-center bg-base-200/60 px-6 py-4">
+ <aside>
+  <p>
+   Copyright Â© 2024 - All right reserved.
+  </p>
+ </aside>
+</footer>
 
+```
 h3:
   - With copyright text & social links
 
 p:
   - Please refer to the following example for a footer with copyright text & social links.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <footer class="footer bg-base-200/60 px-6 py-4">
-   <div class="flex w-full items-center justify-between">
-    <aside class="grid-flow-col items-center">
-     <p>
-      ©2024
-      <a class="link link-hover font-medium" href="#">
-       FlyonUI
-      </a>
-     </p>
-    </aside>
-    <div class="flex gap-4 h-5">
-     <a aria-label="Github Link" class="link" href="#">
-      <span class="icon-[tabler--brand-github] size-5">
-      </span>
-     </a>
-     <a aria-label="Facebook Link" class="link" href="#">
-      <span class="icon-[tabler--brand-facebook] size-5">
-      </span>
-     </a>
-     <a aria-label="X Link" class="link" href="#">
-      <span class="icon-[tabler--brand-x] size-5">
-      </span>
-     </a>
-     <a aria-label="Google Link" class="link" href="#">
-      <span class="icon-[tabler--brand-google] size-5">
-      </span>
-     </a>
-    </div>
-   </div>
-  </footer>
+```html
+<footer class="footer bg-base-200/60 px-6 py-4">
+ <div class="flex w-full items-center justify-between">
+  <aside class="grid-flow-col items-center">
+   <p>
+    ©2024
+    <a class="link link-hover font-medium" href="#">
+     FlyonUI
+    </a>
+   </p>
+  </aside>
+  <div class="flex gap-4 h-5">
+   <a aria-label="Github Link" class="link" href="#">
+    <span class="icon-[tabler--brand-github] size-5">
+    </span>
+   </a>
+   <a aria-label="Facebook Link" class="link" href="#">
+    <span class="icon-[tabler--brand-facebook] size-5">
+    </span>
+   </a>
+   <a aria-label="X Link" class="link" href="#">
+    <span class="icon-[tabler--brand-x] size-5">
+    </span>
+   </a>
+   <a aria-label="Google Link" class="link" href="#">
+    <span class="icon-[tabler--brand-google] size-5">
+    </span>
+   </a>
+  </div>
  </div>
-</div>
+</footer>
 
+```
 h3:
   - With two rows
 
 p:
   - Please refer to the following example for a footer with two rows.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <footer class="footer bg-base-200/60 grid-rows-2 p-10 text-base-content">
-   <nav>
-    <h6 class="footer-title">
-     Services
-    </h6>
-    <a class="link link-hover" href="#">
-     Branding
-    </a>
-    <a class="link link-hover" href="#">
-     Design
-    </a>
-    <a class="link link-hover" href="#">
-     Marketing
-    </a>
-    <a class="link link-hover" href="#">
-     Advertisement
-    </a>
-   </nav>
-   <nav>
-    <h6 class="footer-title">
-     Company
-    </h6>
-    <a class="link link-hover" href="#">
-     About us
-    </a>
-    <a class="link link-hover" href="#">
-     Contact
-    </a>
-    <a class="link link-hover" href="#">
-     Jobs
-    </a>
-    <a class="link link-hover" href="#">
-     Press kit
-    </a>
-   </nav>
-   <nav>
-    <h6 class="footer-title">
-     Legal
-    </h6>
-    <a class="link link-hover" href="#">
-     Terms of use
-    </a>
-    <a class="link link-hover" href="#">
-     Privacy policy
-    </a>
-    <a class="link link-hover" href="#">
-     Cookie policy
-    </a>
-   </nav>
-   <nav>
-    <h6 class="footer-title">
-     Social
-    </h6>
-    <a class="link link-hover" href="#">
-     Twitter
-    </a>
-    <a class="link link-hover" href="#">
-     Instagram
-    </a>
-    <a class="link link-hover" href="#">
-     Facebook
-    </a>
-    <a class="link link-hover" href="#">
-     Github
-    </a>
-   </nav>
-   <nav>
-    <h6 class="footer-title">
-     Explore
-    </h6>
-    <a class="link link-hover" href="#">
-     Features
-    </a>
-    <a class="link link-hover" href="#">
-     Enterprise
-    </a>
-    <a class="link link-hover" href="#">
-     Security
-    </a>
-    <a class="link link-hover" href="#">
-     Pricing
-    </a>
-   </nav>
-   <nav>
-    <h6 class="footer-title">
-     Apps
-    </h6>
-    <a class="link link-hover" href="#">
-     Mac
-    </a>
-    <a class="link link-hover" href="#">
-     Windows
-    </a>
-    <a class="link link-hover" href="#">
-     iPhone
-    </a>
-    <a class="link link-hover" href="#">
-     Android
-    </a>
-   </nav>
-  </footer>
- </div>
-</div>
+```html
+<footer class="footer bg-base-200/60 grid-rows-2 p-10 text-base-content">
+ <nav>
+  <h6 class="footer-title">
+   Services
+  </h6>
+  <a class="link link-hover" href="#">
+   Branding
+  </a>
+  <a class="link link-hover" href="#">
+   Design
+  </a>
+  <a class="link link-hover" href="#">
+   Marketing
+  </a>
+  <a class="link link-hover" href="#">
+   Advertisement
+  </a>
+ </nav>
+ <nav>
+  <h6 class="footer-title">
+   Company
+  </h6>
+  <a class="link link-hover" href="#">
+   About us
+  </a>
+  <a class="link link-hover" href="#">
+   Contact
+  </a>
+  <a class="link link-hover" href="#">
+   Jobs
+  </a>
+  <a class="link link-hover" href="#">
+   Press kit
+  </a>
+ </nav>
+ <nav>
+  <h6 class="footer-title">
+   Legal
+  </h6>
+  <a class="link link-hover" href="#">
+   Terms of use
+  </a>
+  <a class="link link-hover" href="#">
+   Privacy policy
+  </a>
+  <a class="link link-hover" href="#">
+   Cookie policy
+  </a>
+ </nav>
+ <nav>
+  <h6 class="footer-title">
+   Social
+  </h6>
+  <a class="link link-hover" href="#">
+   Twitter
+  </a>
+  <a class="link link-hover" href="#">
+   Instagram
+  </a>
+  <a class="link link-hover" href="#">
+   Facebook
+  </a>
+  <a class="link link-hover" href="#">
+   Github
+  </a>
+ </nav>
+ <nav>
+  <h6 class="footer-title">
+   Explore
+  </h6>
+  <a class="link link-hover" href="#">
+   Features
+  </a>
+  <a class="link link-hover" href="#">
+   Enterprise
+  </a>
+  <a class="link link-hover" href="#">
+   Security
+  </a>
+  <a class="link link-hover" href="#">
+   Pricing
+  </a>
+ </nav>
+ <nav>
+  <h6 class="footer-title">
+   Apps
+  </h6>
+  <a class="link link-hover" href="#">
+   Mac
+  </a>
+  <a class="link link-hover" href="#">
+   Windows
+  </a>
+  <a class="link link-hover" href="#">
+   iPhone
+  </a>
+  <a class="link link-hover" href="#">
+   Android
+  </a>
+ </nav>
+</footer>
 
+```
 h3:
   - Centered footer with logo & social icons
 
 p:
   - Please refer to the example below for a centered footer with a logo and social icons. Utilize the modifier classfooter-centerto align the footer content in the center.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <footer class="footer bg-base-200/60 flex flex-col items-center gap-4 p-6">
+```html
+<footer class="footer bg-base-200/60 flex flex-col items-center gap-4 p-6">
+ <div class="flex items-center gap-2 text-xl font-bold text-base-content">
+  <svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+   <path clip-rule="evenodd" d="M17.6745 16.9224 12.6233 10.378C12.2167 9.85117 11.4185 9.8611 11.0251 10.3979L6.45728 16.631C6.26893 16.888 5.96935 17.0398 5.65069 17.0398H3.79114C2.9635 17.0398 2.49412 16.0919 2.99583 15.4336L11.0224 4.90319C11.4206 4.38084 12.2056 4.37762 12.608 4.89668L20.9829 15.6987C21.4923 16.3558 21.024 17.3114 20.1926 17.3114H18.4661C18.1562 17.3114 17.8638 17.1677 17.6745 16.9224zm-5.0879-1.33 2.309 2.7669C15.439 19.0105 14.976 20 14.1278 20H9.74075C8.9164 20 8.4461 19.0586 8.94116 18.3994l2.07804-2.7669C11.4065 15.1169 12.1734 15.0972 12.5866 15.5924z" fill="var(--color-primary)" fill-rule="evenodd">
+   </path>
+  </svg>
+  <span>
+   FlyonUI
+  </span>
+ </div>
+ <aside>
+  <p>
+   Â©2024
+   <span class="font-medium">
+    FlyonUI
+   </span>
+  </p>
+ </aside>
+ <nav class="grid-flow-col gap-4">
+  <a class="link link-hover text-base-content" href="#">
+   License
+  </a>
+  <a class="link link-hover text-base-content" href="#">
+   Help
+  </a>
+  <a class="link link-hover text-base-content" href="#">
+   Contact
+  </a>
+  <a class="link link-hover text-base-content" href="#">
+   Policy
+  </a>
+ </nav>
+ <div class="flex h-5 gap-4">
+  <a aria-label="Github Link" class="link text-base-content" href="#">
+   <span class="icon-[tabler--brand-github-filled] size-5">
+   </span>
+  </a>
+  <a aria-label="Facebook Link" class="link text-base-content" href="#">
+   <span class="icon-[tabler--brand-facebook-filled] size-5">
+   </span>
+  </a>
+  <a aria-label="X Link" class="link text-base-content" href="#">
+   <span class="icon-[tabler--brand-x-filled] size-5">
+   </span>
+  </a>
+  <a aria-label="Google Link" class="link text-base-content" href="#">
+   <span class="icon-[tabler--brand-google-filled] size-5">
+   </span>
+  </a>
+ </div>
+</footer>
+
+```
+h3:
+  - Centered footer with social icons
+
+p:
+  - Please refer to the example below for a centered footer with social icons.
+
+```html
+<footer class="footer footer-center bg-base-200/60 rounded-sm p-6">
+ <nav class="grid grid-flow-col gap-4 text-base-content">
+  <a class="link link-hover" href="#">
+   About
+  </a>
+  <a class="link link-hover" href="#">
+   Contact
+  </a>
+  <a class="link link-hover" href="#">
+   Jobs
+  </a>
+  <a class="link link-hover" href="#">
+   Policy
+  </a>
+ </nav>
+ <nav>
+  <div class="flex gap-4">
+   <a aria-label="Facebook Link" class="link link-animated" href="#">
+    <span class="icon-[tabler--brand-facebook] size-6">
+    </span>
+   </a>
+   <a aria-label="X Link" class="link link-animated" href="#">
+    <span class="icon-[tabler--brand-x] size-6">
+    </span>
+   </a>
+   <a aria-label="Linkedin Link" class="link link-animated" href="#">
+    <span class="icon-[tabler--brand-linkedin] size-6">
+    </span>
+   </a>
+  </div>
+ </nav>
+ <aside>
+  <p>
+   Copyright Â© 2024 - All right reserved by FlyonUI
+  </p>
+ </aside>
+</footer>
+
+```
+h3:
+  - Dual footer (with partition)
+
+p:
+  - Please refer to the example below for a footer dual footer with partition.
+
+```html
+<div class="w-full">
+ <footer class="footer bg-base-200/60 p-10">
+  <form class="gap-6">
    <div class="flex items-center gap-2 text-xl font-bold text-base-content">
     <svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
      <path clip-rule="evenodd" d="M17.6745 16.9224 12.6233 10.378C12.2167 9.85117 11.4185 9.8611 11.0251 10.3979L6.45728 16.631C6.26893 16.888 5.96935 17.0398 5.65069 17.0398H3.79114C2.9635 17.0398 2.49412 16.0919 2.99583 15.4336L11.0224 4.90319C11.4206 4.38084 12.2056 4.37762 12.608 4.89668L20.9829 15.6987C21.4923 16.3558 21.024 17.3114 20.1926 17.3114H18.4661C18.1562 17.3114 17.8638 17.1677 17.6745 16.9224zm-5.0879-1.33 2.309 2.7669C15.439 19.0105 14.976 20 14.1278 20H9.74075C8.9164 20 8.4461 19.0586 8.94116 18.3994l2.07804-2.7669C11.4065 15.1169 12.1734 15.0972 12.5866 15.5924z" fill="var(--color-primary)" fill-rule="evenodd">
@@ -587,292 +666,174 @@ Code:
      FlyonUI
     </span>
    </div>
-   <aside>
+   <p class="text-base-content text-sm">
+    Most developer friendly & highly
+    <br/>
+    customisable Tailwind UI Kit.
+   </p>
+   <fieldset>
+    <label class="label-text" for="subscribeNewsletter">
+     Subscribe to newsletter
+    </label>
+    <div class="flex flex-wrap sm:flex-nowrap w-full gap-1">
+     <input class="input input-sm" id="subscribeNewsletter" placeholder="johndoe@gmail.com"/>
+     <button class="btn btn-sm btn-primary">
+      Subscribe
+     </button>
+    </div>
+   </fieldset>
+  </form>
+  <nav class="text-base-content">
+   <h6 class="footer-title">
+    Services
+   </h6>
+   <a class="link link-hover" href="#">
+    Branding
+   </a>
+   <span>
+    <a class="link link-hover" href="#">
+     Design
+    </a>
+    <span class="badge ms-2 badge-sm badge-primary">
+     New
+    </span>
+   </span>
+   <a class="link link-hover" href="#">
+    Marketing
+   </a>
+   <a class="link link-hover" href="#">
+    Advertisement
+   </a>
+  </nav>
+  <nav class="text-base-content">
+   <h6 class="footer-title">
+    Company
+   </h6>
+   <a class="link link-hover" href="#">
+    About us
+   </a>
+   <a class="link link-hover" href="#">
+    Contact
+   </a>
+   <a class="link link-hover" href="#">
+    Jobs
+   </a>
+   <a class="link link-hover" href="#">
+    Press kit
+   </a>
+  </nav>
+  <nav class="text-base-content">
+   <h6 class="footer-title">
+    Legal
+   </h6>
+   <a class="link link-hover" href="#">
+    Terms of use
+   </a>
+   <a class="link link-hover" href="#">
+    Privacy policy
+   </a>
+   <a class="link link-hover" href="#">
+    Cookie policy
+   </a>
+  </nav>
+ </footer>
+ <footer class="footer bg-base-200/60 border-base-content/25 border-t px-6 py-4">
+  <div class="flex w-full items-center justify-between">
+   <aside class="grid-flow-col items-center">
     <p>
-     Â©2024
-     <span class="font-medium">
+     ©2024
+     <a class="link link-hover font-medium" href="#">
       FlyonUI
-     </span>
+     </a>
     </p>
    </aside>
-   <nav class="grid-flow-col gap-4">
-    <a class="link link-hover text-base-content" href="#">
-     License
-    </a>
-    <a class="link link-hover text-base-content" href="#">
-     Help
-    </a>
-    <a class="link link-hover text-base-content" href="#">
-     Contact
-    </a>
-    <a class="link link-hover text-base-content" href="#">
-     Policy
-    </a>
-   </nav>
    <div class="flex h-5 gap-4">
-    <a aria-label="Github Link" class="link text-base-content" href="#">
-     <span class="icon-[tabler--brand-github-filled] size-5">
+    <a aria-label="Github Link" class="link" href="#">
+     <span class="icon-[tabler--brand-github] size-5">
      </span>
     </a>
-    <a aria-label="Facebook Link" class="link text-base-content" href="#">
-     <span class="icon-[tabler--brand-facebook-filled] size-5">
+    <a aria-label="Facebook Link" class="link" href="#">
+     <span class="icon-[tabler--brand-facebook] size-5">
      </span>
     </a>
-    <a aria-label="X Link" class="link text-base-content" href="#">
-     <span class="icon-[tabler--brand-x-filled] size-5">
+    <a aria-label="X Link" class="link" href="#">
+     <span class="icon-[tabler--brand-x] size-5">
      </span>
     </a>
-    <a aria-label="Google Link" class="link text-base-content" href="#">
-     <span class="icon-[tabler--brand-google-filled] size-5">
+    <a aria-label="Google Link" class="link" href="#">
+     <span class="icon-[tabler--brand-google] size-5">
      </span>
     </a>
    </div>
-  </footer>
- </div>
-</div>
-
-h3:
-  - Centered footer with social icons
-
-p:
-  - Please refer to the example below for a centered footer with social icons.
-
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <footer class="footer footer-center bg-base-200/60 rounded-sm p-6">
-   <nav class="grid grid-flow-col gap-4 text-base-content">
-    <a class="link link-hover" href="#">
-     About
-    </a>
-    <a class="link link-hover" href="#">
-     Contact
-    </a>
-    <a class="link link-hover" href="#">
-     Jobs
-    </a>
-    <a class="link link-hover" href="#">
-     Policy
-    </a>
-   </nav>
-   <nav>
-    <div class="flex gap-4">
-     <a aria-label="Facebook Link" class="link link-animated" href="#">
-      <span class="icon-[tabler--brand-facebook] size-6">
-      </span>
-     </a>
-     <a aria-label="X Link" class="link link-animated" href="#">
-      <span class="icon-[tabler--brand-x] size-6">
-      </span>
-     </a>
-     <a aria-label="Linkedin Link" class="link link-animated" href="#">
-      <span class="icon-[tabler--brand-linkedin] size-6">
-      </span>
-     </a>
-    </div>
-   </nav>
-   <aside>
-    <p>
-     Copyright Â© 2024 - All right reserved by FlyonUI
-    </p>
-   </aside>
-  </footer>
- </div>
-</div>
-
-h3:
-  - Dual footer (with partition)
-
-p:
-  - Please refer to the example below for a footer dual footer with partition.
-
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="w-full">
-   <footer class="footer bg-base-200/60 p-10">
-    <form class="gap-6">
-     <div class="flex items-center gap-2 text-xl font-bold text-base-content">
-      <svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-       <path clip-rule="evenodd" d="M17.6745 16.9224 12.6233 10.378C12.2167 9.85117 11.4185 9.8611 11.0251 10.3979L6.45728 16.631C6.26893 16.888 5.96935 17.0398 5.65069 17.0398H3.79114C2.9635 17.0398 2.49412 16.0919 2.99583 15.4336L11.0224 4.90319C11.4206 4.38084 12.2056 4.37762 12.608 4.89668L20.9829 15.6987C21.4923 16.3558 21.024 17.3114 20.1926 17.3114H18.4661C18.1562 17.3114 17.8638 17.1677 17.6745 16.9224zm-5.0879-1.33 2.309 2.7669C15.439 19.0105 14.976 20 14.1278 20H9.74075C8.9164 20 8.4461 19.0586 8.94116 18.3994l2.07804-2.7669C11.4065 15.1169 12.1734 15.0972 12.5866 15.5924z" fill="var(--color-primary)" fill-rule="evenodd">
-       </path>
-      </svg>
-      <span>
-       FlyonUI
-      </span>
-     </div>
-     <p class="text-base-content text-sm">
-      Most developer friendly &amp; highly
-      <br/>
-      customisable Tailwind UI Kit.
-     </p>
-     <fieldset>
-      <label class="label-text" for="subscribeNewsletter">
-       Subscribe to newsletter
-      </label>
-      <div class="flex flex-wrap sm:flex-nowrap w-full gap-1">
-       <input class="input input-sm" id="subscribeNewsletter" placeholder="johndoe@gmail.com"/>
-       <button class="btn btn-sm btn-primary">
-        Subscribe
-       </button>
-      </div>
-     </fieldset>
-    </form>
-    <nav class="text-base-content">
-     <h6 class="footer-title">
-      Services
-     </h6>
-     <a class="link link-hover" href="#">
-      Branding
-     </a>
-     <span>
-      <a class="link link-hover" href="#">
-       Design
-      </a>
-      <span class="badge ms-2 badge-sm badge-primary">
-       New
-      </span>
-     </span>
-     <a class="link link-hover" href="#">
-      Marketing
-     </a>
-     <a class="link link-hover" href="#">
-      Advertisement
-     </a>
-    </nav>
-    <nav class="text-base-content">
-     <h6 class="footer-title">
-      Company
-     </h6>
-     <a class="link link-hover" href="#">
-      About us
-     </a>
-     <a class="link link-hover" href="#">
-      Contact
-     </a>
-     <a class="link link-hover" href="#">
-      Jobs
-     </a>
-     <a class="link link-hover" href="#">
-      Press kit
-     </a>
-    </nav>
-    <nav class="text-base-content">
-     <h6 class="footer-title">
-      Legal
-     </h6>
-     <a class="link link-hover" href="#">
-      Terms of use
-     </a>
-     <a class="link link-hover" href="#">
-      Privacy policy
-     </a>
-     <a class="link link-hover" href="#">
-      Cookie policy
-     </a>
-    </nav>
-   </footer>
-   <footer class="footer bg-base-200/60 border-base-content/25 border-t px-6 py-4">
-    <div class="flex w-full items-center justify-between">
-     <aside class="grid-flow-col items-center">
-      <p>
-       ©2024
-       <a class="link link-hover font-medium" href="#">
-        FlyonUI
-       </a>
-      </p>
-     </aside>
-     <div class="flex h-5 gap-4">
-      <a aria-label="Github Link" class="link" href="#">
-       <span class="icon-[tabler--brand-github] size-5">
-       </span>
-      </a>
-      <a aria-label="Facebook Link" class="link" href="#">
-       <span class="icon-[tabler--brand-facebook] size-5">
-       </span>
-      </a>
-      <a aria-label="X Link" class="link" href="#">
-       <span class="icon-[tabler--brand-x] size-5">
-       </span>
-      </a>
-      <a aria-label="Google Link" class="link" href="#">
-       <span class="icon-[tabler--brand-google] size-5">
-       </span>
-      </a>
-     </div>
-    </div>
-   </footer>
   </div>
- </div>
+ </footer>
 </div>
 
+```
 h3:
   - With dropdown
 
 p:
   - Please refer to the example below for a footer with dropdown.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <footer class="footer grid-flow-col bg-base-200/60 items-center p-4">
-   <aside class="grid-flow-col items-center">
-    <a class="link link-hover font-medium" href="#">
-     FlyonUI ©
-    </a>
-   </aside>
-   <nav class="grid-flow-col gap-4 place-items-center place-self-center justify-self-end">
-    <div>
-     <div class="dropdown relative inline-flex">
-      <button aria-expanded="false" aria-haspopup="menu" aria-label="Dropdown" class="dropdown-toggle btn btn-secondary btn-outline btn-sm" id="dropdown-dividers" type="button">
-       Currency
-       <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4">
-       </span>
-      </button>
-      <ul aria-labelledby="dropdown-dividers" aria-orientation="vertical" class="dropdown-menu dropdown-open:opacity-100 hidden min-w-20" role="menu">
-       <li>
-        <a class="dropdown-item" href="#">
-         $ USD
-        </a>
-       </li>
-       <li>
-        <a class="dropdown-item" href="#">
-         € Euro
-        </a>
-       </li>
-       <li>
-        <a class="dropdown-item" href="#">
-         Â£ Pound
-        </a>
-       </li>
-       <li>
-        <a class="dropdown-item" href="#">
-         â¹ Rupee
-        </a>
-       </li>
-       <li>
-        <hr class="border-base-content/25 -mx-2 my-3"/>
-       </li>
-       <li>
-        <a class="dropdown-item" href="#">
-         â¿ Bitcoin
-        </a>
-       </li>
-      </ul>
-     </div>
-    </div>
-    <a class="btn btn-outline btn-error btn-sm max-sm:btn-square" href="#">
-     <span class="max-sm:hidden">
-      Logout
+```html
+<footer class="footer grid-flow-col bg-base-200/60 items-center p-4">
+ <aside class="grid-flow-col items-center">
+  <a class="link link-hover font-medium" href="#">
+   FlyonUI ©
+  </a>
+ </aside>
+ <nav class="grid-flow-col gap-4 place-items-center place-self-center justify-self-end">
+  <div>
+   <div class="dropdown relative inline-flex">
+    <button aria-expanded="false" aria-haspopup="menu" aria-label="Dropdown" class="dropdown-toggle btn btn-secondary btn-outline btn-sm" id="dropdown-dividers" type="button">
+     Currency
+     <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4">
      </span>
-     <span class="icon-[tabler--logout]">
-     </span>
-    </a>
-   </nav>
-  </footer>
- </div>
-</div>
+    </button>
+    <ul aria-labelledby="dropdown-dividers" aria-orientation="vertical" class="dropdown-menu dropdown-open:opacity-100 hidden min-w-20" role="menu">
+     <li>
+      <a class="dropdown-item" href="#">
+       $ USD
+      </a>
+     </li>
+     <li>
+      <a class="dropdown-item" href="#">
+       € Euro
+      </a>
+     </li>
+     <li>
+      <a class="dropdown-item" href="#">
+       Â£ Pound
+      </a>
+     </li>
+     <li>
+      <a class="dropdown-item" href="#">
+       â¹ Rupee
+      </a>
+     </li>
+     <li>
+      <hr class="border-base-content/25 -mx-2 my-3"/>
+     </li>
+     <li>
+      <a class="dropdown-item" href="#">
+       â¿ Bitcoin
+      </a>
+     </li>
+    </ul>
+   </div>
+  </div>
+  <a class="btn btn-outline btn-error btn-sm max-sm:btn-square" href="#">
+   <span class="max-sm:hidden">
+    Logout
+   </span>
+   <span class="icon-[tabler--logout]">
+   </span>
+  </a>
+ </nav>
+</footer>
 
+```
 h2:
   - Footer
 

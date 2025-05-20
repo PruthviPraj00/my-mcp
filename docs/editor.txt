@@ -45,14 +45,11 @@ p:
 p:
   - For images, we use the Simple Image plugin, which allows you to drag and drop images or paste the image URL directly, but no UI option will be visible in the toolbar.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="bg-base-100 shadow-base-300/20 rounded-box w-full p-4 shadow-sm" id="basic">
-  </div>
- </div>
+```html
+<div class="bg-base-100 shadow-base-300/20 rounded-box w-full p-4 shadow-sm" id="basic">
 </div>
 
+```
 p:
   - This block displays the data in JSON format.
 
@@ -62,34 +59,31 @@ h3:
 p:
   - Example showcasing a text editor in a modal.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <button aria-controls="text-editor-modal" aria-expanded="false" aria-haspopup="dialog" class="btn btn-primary" data-overlay="#text-editor-modal" type="button">
-   Daily tasks
-  </button>
-  <div class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 hidden" id="text-editor-modal" role="dialog" tabindex="-1">
-   <div class="modal-dialog overlay-open:opacity-100 overlay-open:duration-300 modal-dialog-lg">
-    <div class="modal-content">
-     <div class="modal-header">
-      <h3 class="modal-title">
-       Daily tasks
-      </h3>
-      <button aria-label="Close" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" data-overlay="#text-editor-modal" type="button">
-       <span class="icon-[tabler--x] size-4">
-       </span>
-      </button>
-     </div>
-     <div class="modal-body">
-      <div class="border border-base-content/25 rounded-box p-4" id="modal-editor">
-      </div>
-     </div>
+```html
+<button aria-controls="text-editor-modal" aria-expanded="false" aria-haspopup="dialog" class="btn btn-primary" data-overlay="#text-editor-modal" type="button">
+ Daily tasks
+</button>
+<div class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 hidden" id="text-editor-modal" role="dialog" tabindex="-1">
+ <div class="modal-dialog overlay-open:opacity-100 overlay-open:duration-300 modal-dialog-lg">
+  <div class="modal-content">
+   <div class="modal-header">
+    <h3 class="modal-title">
+     Daily tasks
+    </h3>
+    <button aria-label="Close" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" data-overlay="#text-editor-modal" type="button">
+     <span class="icon-[tabler--x] size-4">
+     </span>
+    </button>
+   </div>
+   <div class="modal-body">
+    <div class="border border-base-content/25 rounded-box p-4" id="modal-editor">
     </div>
    </div>
   </div>
  </div>
 </div>
 
+```
 h2:
   - WYSIWYG Editor
 

@@ -33,75 +33,72 @@ p:
 p:
   - Below example shows basic use of combo-box.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-64 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="relative max-w-sm" data-combo-box="">
-   <div class="relative">
-    <input aria-expanded="false" aria-label="Default combobox" class="input" data-combo-box-input="" role="combobox" type="text" value="India"/>
-    <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
+```html
+<div class="relative max-w-sm" data-combo-box="">
+ <div class="relative">
+  <input aria-expanded="false" aria-label="Default combobox" class="input" data-combo-box-input="" role="combobox" type="text" value="India"/>
+  <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
+  </span>
+ </div>
+ <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="0">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="Venezuela" data-combo-box-value="">
+     Venezuela
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
     </span>
    </div>
-   <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="0">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="Venezuela" data-combo-box-value="">
-       Venezuela
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="1">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="Papua New Guinea" data-combo-box-value="">
-       Papua New Guinea
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="2">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="South Africa " data-combo-box-value="">
-       South Africa
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="3">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="Honduras" data-combo-box-value="">
-       Honduras
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="4">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="India" data-combo-box-value="">
-       India
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="5">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="El Salvador" data-combo-box-value="">
-       El Salvador
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="1">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="Papua New Guinea" data-combo-box-value="">
+     Papua New Guinea
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="2">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="South Africa " data-combo-box-value="">
+     South Africa
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="3">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="Honduras" data-combo-box-value="">
+     Honduras
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="4">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="India" data-combo-box-value="">
+     India
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="5">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="El Salvador" data-combo-box-value="">
+     El Salvador
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
    </div>
   </div>
  </div>
 </div>
 
+```
 h3:
   - JSON example
 
@@ -117,50 +114,44 @@ p:
 p:
   - Another attribute,outputItemTemplate, defines the layout for each item within the dropdown menu. It comprises HTML structure incorporatingdata-combo-box-output-itemto represent individual dropdown items. Each item includes a section for the name (utilizingdata-combo-box-output-item-field="name") and a span for a checkmark icon, visible upon item selection.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-64 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="relative max-w-sm" data-combo-box='{
+```html
+<div class="relative max-w-sm" data-combo-box='{
     "apiUrl": "https://www.freetestapi.com/api/v1/countries",
-    "outputItemTemplate": "&lt;div class=\"dropdown-item combo-box-selected:dropdown-active\" data-combo-box-output-item&gt;&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;div data-combo-box-output-item-field=\"name\" data-combo-box-search-text data-combo-box-value&gt;&lt;/div&gt;&lt;span class=\"icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0\"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;"
+    "outputItemTemplate": "<div class=\"dropdown-item combo-box-selected:dropdown-active\" data-combo-box-output-item><div class=\"flex justify-between items-center w-full\"><div data-combo-box-output-item-field=\"name\" data-combo-box-search-text data-combo-box-value></div><span class=\"icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0\"></span></div></div>"
   }'>
-   <div class="relative">
-    <input aria-expanded="false" aria-label="Json-based combobox" class="input" data-combo-box-input="" role="combobox" type="text" value="India"/>
-    <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
-    </span>
-   </div>
-   <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
-   </div>
-  </div>
+ <div class="relative">
+  <input aria-expanded="false" aria-label="Json-based combobox" class="input" data-combo-box-input="" role="combobox" type="text" value="India"/>
+  <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
+  </span>
+ </div>
+ <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
  </div>
 </div>
 
+```
 h3:
   - JSON Example (based on API pathes)
 
 p:
   - A JSON-configured ComboBox that retrieves options from an API.apiSearchPathspecifies the API endpoint for searching items.apiSearchDefaultPathsets the default API endpoint to load all items initially.PreviewHTMLCopy<divclass="relative max-w-sm"data-combo-box='{"apiUrl": "https://restcountries.com/v3.1","apiSearchPath": "name","apiSearchDefaultPath": "all","outputItemTemplate": "<div class=\"dropdown-item combo-box-selected:dropdown-active\" data-combo-box-output-item><div class=\"flex justify-between items-center w-full\"><div><div class=\"hidden\" data-combo-box-output-item-field=\"ccn3\"></div><div data-combo-box-output-item-field=\"name.common\" data-combo-box-search-text data-combo-box-value></div></div><span class=\"icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0\"></span></div></div>"}'><divclass="relative"><inputclass="input"type="text"value="India"role="combobox"aria-expanded="false"data-combo-box-input=""aria-label="based on API pathes combobox"/><spanclass="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2"data-combo-box-toggle=""></span></div><divclass="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg"style="display: none"data-combo-box-output=""></div></div>
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-64 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="relative max-w-sm" data-combo-box='{
+```html
+<div class="relative max-w-sm" data-combo-box='{
     "apiUrl": "https://restcountries.com/v3.1",
     "apiSearchPath": "name",
     "apiSearchDefaultPath": "all",
-    "outputItemTemplate": "&lt;div class=\"dropdown-item combo-box-selected:dropdown-active\" data-combo-box-output-item&gt;&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;div&gt;&lt;div class=\"hidden\" data-combo-box-output-item-field=\"ccn3\"&gt;&lt;/div&gt;&lt;div data-combo-box-output-item-field=\"name.common\" data-combo-box-search-text data-combo-box-value&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class=\"icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0\"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;"
+    "outputItemTemplate": "<div class=\"dropdown-item combo-box-selected:dropdown-active\" data-combo-box-output-item><div class=\"flex justify-between items-center w-full\"><div><div class=\"hidden\" data-combo-box-output-item-field=\"ccn3\"></div><div data-combo-box-output-item-field=\"name.common\" data-combo-box-search-text data-combo-box-value></div></div><span class=\"icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0\"></span></div></div>"
   }'>
-   <div class="relative">
-    <input aria-expanded="false" aria-label="based on API pathes combobox" class="input" data-combo-box-input="" role="combobox" type="text" value="India"/>
-    <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
-    </span>
-   </div>
-   <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
-   </div>
-  </div>
+ <div class="relative">
+  <input aria-expanded="false" aria-label="based on API pathes combobox" class="input" data-combo-box-input="" role="combobox" type="text" value="India"/>
+  <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
+  </span>
+ </div>
+ <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
  </div>
 </div>
 
+```
 h2:
   - Option usage
 
@@ -176,55 +167,49 @@ p:
 p:
   - The following example demonstrates the usage of search and limit parameters in a combo box.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-64 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="relative max-w-sm" data-combo-box='{
+```html
+<div class="relative max-w-sm" data-combo-box='{
   "apiUrl": "https://www.freetestapi.com/api/v1/countries",
   "apiQuery": "limit=7",
   "apiSearchQuery": "search",
-  "outputEmptyTemplate": "&lt;div class=\"dropdown-item\"&gt;No countries found...&lt;/div&gt;",
-  "outputItemTemplate": "&lt;div class=\"dropdown-item combo-box-selected:dropdown-active\" data-combo-box-output-item&gt;&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;div data-combo-box-output-item-field=\"name\" data-combo-box-search-text data-combo-box-value&gt;&lt;/div&gt;&lt;span class=\"icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0\"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;"
+  "outputEmptyTemplate": "<div class=\"dropdown-item\">No countries found...</div>",
+  "outputItemTemplate": "<div class=\"dropdown-item combo-box-selected:dropdown-active\" data-combo-box-output-item><div class=\"flex justify-between items-center w-full\"><div data-combo-box-output-item-field=\"name\" data-combo-box-search-text data-combo-box-value></div><span class=\"icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0\"></span></div></div>"
 }'>
-   <div class="relative">
-    <input aria-expanded="false" aria-label="Parameters in combobox" class="input" data-combo-box-input="" role="combobox" type="text" value="India"/>
-    <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
-    </span>
-   </div>
-   <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
-   </div>
-  </div>
+ <div class="relative">
+  <input aria-expanded="false" aria-label="Parameters in combobox" class="input" data-combo-box-input="" role="combobox" type="text" value="India"/>
+  <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
+  </span>
+ </div>
+ <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
  </div>
 </div>
 
+```
 h3:
   - Minimum search Length
 
 p:
   - Set"minSearchLength": 2to define the minimum number of characters required before initiating a search.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-64 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="relative max-w-sm" data-combo-box='{
+```html
+<div class="relative max-w-sm" data-combo-box='{
   "apiUrl": "https://www.freetestapi.com/api/v1/countries",
   "apiQuery": "limit=15",
   "minSearchLength": 2,
   "apiSearchQuery": "search",
-  "outputEmptyTemplate": "&lt;div class=\"dropdown-item\"&gt;No countries found...&lt;/div&gt;",
-  "outputItemTemplate": "&lt;div class=\"dropdown-item combo-box-selected:dropdown-active\" data-combo-box-output-item&gt;&lt;div class=\"flex justify-between items-center w-full\"&gt;&lt;div data-combo-box-output-item-field=\"name\" data-combo-box-search-text data-combo-box-value&gt;&lt;/div&gt;&lt;span class=\"icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0\"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;"
+  "outputEmptyTemplate": "<div class=\"dropdown-item\">No countries found...</div>",
+  "outputItemTemplate": "<div class=\"dropdown-item combo-box-selected:dropdown-active\" data-combo-box-output-item><div class=\"flex justify-between items-center w-full\"><div data-combo-box-output-item-field=\"name\" data-combo-box-search-text data-combo-box-value></div><span class=\"icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0\"></span></div></div>"
 }'>
-   <div class="relative">
-    <input aria-expanded="false" aria-label="Parameters in combobox" class="input" data-combo-box-input="" role="combobox" type="text" value="India"/>
-    <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
-    </span>
-   </div>
-   <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
-   </div>
-  </div>
+ <div class="relative">
+  <input aria-expanded="false" aria-label="Parameters in combobox" class="input" data-combo-box-input="" role="combobox" type="text" value="India"/>
+  <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
+  </span>
+ </div>
+ <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
  </div>
 </div>
 
+```
 h3:
   - Open on focus
 
@@ -234,110 +219,104 @@ p:
 p:
   - Alternatively, users have the option to utilize thedata-combo-box-toggleattribute, designating an element within the ComboBox responsible for toggling the visibility of the dropdown list.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-64 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="relative max-w-sm" data-combo-box='{
+```html
+<div class="relative max-w-sm" data-combo-box='{
   "apiUrl": "https://www.freetestapi.com/api/v1/countries",
   "isOpenOnFocus": true,
-  "outputEmptyTemplate": "&lt;div class=\"dropdown-item\"&gt;No countries found...&lt;/div&gt;",
-  "outputItemTemplate": "&lt;div class=\"dropdown-item combo-box-selected:dropdown-active\" data-combo-box-output-item&gt; &lt;div class=\"flex justify-between items-center w-full\"&gt; &lt;div data-combo-box-output-item-field=\"name\" data-combo-box-search-text data-combo-box-value&gt;&lt;/div&gt;&lt;span class=\"icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0\"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" 
+  "outputEmptyTemplate": "<div class=\"dropdown-item\">No countries found...</div>",
+  "outputItemTemplate": "<div class=\"dropdown-item combo-box-selected:dropdown-active\" data-combo-box-output-item> <div class=\"flex justify-between items-center w-full\"> <div data-combo-box-output-item-field=\"name\" data-combo-box-search-text data-combo-box-value></div><span class=\"icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0\"></span></div></div>" 
   }'>
-   <div class="relative">
-    <input aria-expanded="false" aria-label="open on focus combobox" class="input" data-combo-box-input="" role="combobox" type="text" value="India"/>
-    <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
-    </span>
-   </div>
-   <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
-   </div>
-  </div>
+ <div class="relative">
+  <input aria-expanded="false" aria-label="open on focus combobox" class="input" data-combo-box-input="" role="combobox" type="text" value="India"/>
+  <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
+  </span>
+ </div>
+ <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
  </div>
 </div>
 
+```
 h3:
   - Close Button
 
 p:
   - A basic usage of ComboBox with close button.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-64 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="relative max-w-sm" data-combo-box="">
-   <div class="relative">
-    <input aria-expanded="false" aria-label="Combobox with close button" class="input" data-combo-box-input="" role="combobox" type="text"/>
-    <div class="combo-box-active:flex absolute inset-y-0 end-8 hidden items-center">
-     <button aria-label="Close" class="btn btn-sm btn-circle btn-text btn-primary" data-combo-box-close="" type="button">
-      <span class="sr-only">
-       Close
-      </span>
-      <span class="icon-[tabler--xbox-x] size-4 shrink-0">
-      </span>
-     </button>
-    </div>
-    <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
+```html
+<div class="relative max-w-sm" data-combo-box="">
+ <div class="relative">
+  <input aria-expanded="false" aria-label="Combobox with close button" class="input" data-combo-box-input="" role="combobox" type="text"/>
+  <div class="combo-box-active:flex absolute inset-y-0 end-8 hidden items-center">
+   <button aria-label="Close" class="btn btn-sm btn-circle btn-text btn-primary" data-combo-box-close="" type="button">
+    <span class="sr-only">
+     Close
+    </span>
+    <span class="icon-[tabler--xbox-x] size-4 shrink-0">
+    </span>
+   </button>
+  </div>
+  <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
+  </span>
+ </div>
+ <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="0">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="Venezuela" data-combo-box-value="">
+     Venezuela
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
     </span>
    </div>
-   <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="0">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="Venezuela" data-combo-box-value="">
-       Venezuela
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="1">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="Papua New Guinea" data-combo-box-value="">
-       Papua New Guinea
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="2">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="South Africa " data-combo-box-value="">
-       South Africa
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="3">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="Honduras" data-combo-box-value="">
-       Honduras
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="4">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="India" data-combo-box-value="">
-       India
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="5">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="El Salvador" data-combo-box-value="">
-       El Salvador
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="1">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="Papua New Guinea" data-combo-box-value="">
+     Papua New Guinea
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="2">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="South Africa " data-combo-box-value="">
+     South Africa
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="3">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="Honduras" data-combo-box-value="">
+     Honduras
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="4">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="India" data-combo-box-value="">
+     India
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="5">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="El Salvador" data-combo-box-value="">
+     El Salvador
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
    </div>
   </div>
  </div>
 </div>
 
+```
 h2:
   - SearchBox
 
@@ -350,28 +329,137 @@ p:
 p:
   - Below is an example showcasing the utilization of the SearchBox within a dropdown, employing data attributes in HTML. Furthermore, the example illustrates how to create groups.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <div class="relative" data-combo-box='{
+```html
+<div class="max-w-sm">
+ <div class="relative" data-combo-box='{
       "groupingType": "default",
       "preventSelection": true,
       "isOpenOnFocus": true,
-      "groupingTitleTemplate": "&lt;div class=\"block text-xs text-base-content/50 m-3 mb-1\"&gt;&lt;/div&gt;"
+      "groupingTitleTemplate": "<div class=\"block text-xs text-base-content/50 m-3 mb-1\"></div>"
     }'>
-    <div class="relative">
-     <input aria-expanded="false" class="input ps-8" data-combo-box-input="" placeholder="Search for an action" role="combobox" type="text"/>
-     <span class="icon-[tabler--search] text-base-content absolute start-3 top-1/2 size-4 shrink-0 -translate-y-1/2">
-     </span>
+  <div class="relative">
+   <input aria-expanded="false" class="input ps-8" data-combo-box-input="" placeholder="Search for an action" role="combobox" type="text"/>
+   <span class="icon-[tabler--search] text-base-content absolute start-3 top-1/2 size-4 shrink-0 -translate-y-1/2">
+   </span>
+  </div>
+  <div class="bg-base-100 rounded-box p-2 shadow-base-300/20 shadow-lg" data-combo-box-output="" style="display:none">
+   <div class="space-y-0.5" data-combo-box-output-items-wrapper="">
+    <div data-combo-box-output-item='{"group": {"name": "recent", "title": "Recent Actions"}}' tabindex="0">
+     <a class="dropdown-item combo-box-selected:dropdown-active" href="#">
+      <span class="icon-[tabler--writing] text-base-content/80 size-5 shrink-0">
+      </span>
+      <span class="text-base-content" data-combo-box-search-text="Write a document" data-combo-box-value="">
+       Write a document
+      </span>
+      <span class="text-base-content/50 ms-auto hidden text-xs sm:inline" data-combo-box-search-text="Google Docs" data-combo-box-value="">
+       Google Docs
+      </span>
+     </a>
     </div>
-    <div class="bg-base-100 rounded-box p-2 shadow-base-300/20 shadow-lg" data-combo-box-output="" style="display:none">
-     <div class="space-y-0.5" data-combo-box-output-items-wrapper="">
+    <div data-combo-box-output-item='{"group": {"name": "recent", "title": "Recent Actions"}}' tabindex="1">
+     <a class="dropdown-item combo-box-selected:dropdown-active" href="#">
+      <span class="icon-[tabler--calendar] text-base-content/80 size-5 shrink-0">
+      </span>
+      <span class="text-base-content" data-combo-box-search-text="Schedule a meeting" data-combo-box-value="">
+       Schedule a meeting
+      </span>
+      <span class="text-base-content/50 ms-auto hidden text-xs sm:inline" data-combo-box-search-text="Google Calendar" data-combo-box-value="">
+       Google Calendar
+      </span>
+     </a>
+    </div>
+    <div data-combo-box-output-item='{"group": {"name": "recent", "title": "Recent Actions"}}' tabindex="2">
+     <a class="dropdown-item combo-box-selected:dropdown-active" href="#">
+      <span class="icon-[tabler--presentation] text-base-content/80 size-5 shrink-0">
+      </span>
+      <span class="text-base-content" data-combo-box-search-text="Create a presentation" data-combo-box-value="">
+       Create a presentation
+      </span>
+      <span class="text-base-content/50 ms-auto hidden text-xs sm:inline" data-combo-box-search-text="Microsoft PowerPoint" data-combo-box-value="">
+       PowerPoint
+      </span>
+     </a>
+    </div>
+    <div data-combo-box-output-item='{"group": {"name": "people", "title": "People"}}' tabindex="4">
+     <a class="dropdown-item combo-box-selected:dropdown-active" href="#">
+      <img alt="Image Description" class="size-6 shrink-0 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png"/>
+      <span class="text-base-content" data-combo-box-search-text="Alice Johnson" data-combo-box-value="">
+       Alice Johnson
+      </span>
+      <span class="ms-auto text-xs text-teal-600" data-combo-box-search-text="Online" data-combo-box-value="">
+       Online
+      </span>
+     </a>
+    </div>
+    <div data-combo-box-output-item='{"group": {"name": "people", "title": "People"}}' tabindex="5">
+     <a class="dropdown-item combo-box-selected:dropdown-active" href="#">
+      <img alt="Image Description" class="size-6 shrink-0 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-11.png"/>
+      <span class="text-base-content" data-combo-box-search-text="David Kim" data-combo-box-value="">
+       David Kim
+      </span>
+      <span class="text-base-content/50 ms-auto text-xs" data-combo-box-search-text="Offline" data-combo-box-value="">
+       Offline
+      </span>
+     </a>
+    </div>
+    <div data-combo-box-output-item='{"group": {"name": "people", "title": "People"}}' tabindex="6">
+     <a class="dropdown-item combo-box-selected:dropdown-active" href="#">
+      <img alt="Image Description" class="size-6 shrink-0 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-12.png"/>
+      <span class="text-base-content" data-combo-box-search-text="Rosa Martinez" data-combo-box-value="">
+       Rosa Martinez
+      </span>
+      <span class="text-base-content/50 ms-auto text-xs" data-combo-box-search-text="Offline" data-combo-box-value="">
+       Offline
+      </span>
+     </a>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+```
+p:
+  - A combo box displaying HTML content within a modal.
+
+```html
+<h5 class="text-base-content text-base">
+ Press
+ <kbd class="kbd kbd-sm">
+  Shift
+ </kbd>
+ +
+ <kbd class="kbd kbd-sm">
+  :
+ </kbd>
+ for SearchBox.
+</h5>
+<button aria-controls="html-modal-combo-box" aria-expanded="false" aria-haspopup="dialog" class="hidden" data-overlay="#html-modal-combo-box" type="button">
+</button>
+<div class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 hidden" id="html-modal-combo-box" role="dialog" tabindex="-1">
+ <div class="modal-dialog overlay-open:opacity-100 overlay-open:duration-300">
+  <div class="modal-content">
+   <div class="relative" data-combo-box='{
+          "preventVisibility": true,
+          "groupingType": "default",
+          "preventSelection": true,
+          "isOpenOnFocus": true,
+          "groupingTitleTemplate": "<div class=\"block text-xs text-base-content/50 m-3 mb-1\"></div>"
+        }'>
+    <div class="modal-header block">
+     <div class="relative">
+      <input aria-expanded="false" autofocus="" class="input ps-8" data-combo-box-input="" placeholder="Search or type a command" role="combobox" type="text"/>
+      <span class="icon-[tabler--search] text-base-content absolute start-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
+      </span>
+     </div>
+    </div>
+    <div class="modal-body overflow-y-auto mt-0 max-h-72 p-1.5" data-combo-box-output="">
+     <div class="space-y-0.5 p-0.5" data-combo-box-output-items-wrapper="">
       <div data-combo-box-output-item='{"group": {"name": "recent", "title": "Recent Actions"}}' tabindex="0">
        <a class="dropdown-item combo-box-selected:dropdown-active" href="#">
-        <span class="icon-[tabler--writing] text-base-content/80 size-5 shrink-0">
+        <span class="icon-[tabler--writing] text-base-content/80 size-4 shrink-0">
         </span>
-        <span class="text-base-content" data-combo-box-search-text="Write a document" data-combo-box-value="">
+        <span class="text-base-content text-sm" data-combo-box-search-text="Write a document" data-combo-box-value="">
          Write a document
         </span>
         <span class="text-base-content/50 ms-auto hidden text-xs sm:inline" data-combo-box-search-text="Google Docs" data-combo-box-value="">
@@ -381,9 +469,9 @@ Code:
       </div>
       <div data-combo-box-output-item='{"group": {"name": "recent", "title": "Recent Actions"}}' tabindex="1">
        <a class="dropdown-item combo-box-selected:dropdown-active" href="#">
-        <span class="icon-[tabler--calendar] text-base-content/80 size-5 shrink-0">
+        <span class="icon-[tabler--calendar] text-base-content/80 size-4 shrink-0">
         </span>
-        <span class="text-base-content" data-combo-box-search-text="Schedule a meeting" data-combo-box-value="">
+        <span class="text-base-content text-sm" data-combo-box-search-text="Schedule a meeting" data-combo-box-value="">
          Schedule a meeting
         </span>
         <span class="text-base-content/50 ms-auto hidden text-xs sm:inline" data-combo-box-search-text="Google Calendar" data-combo-box-value="">
@@ -393,9 +481,9 @@ Code:
       </div>
       <div data-combo-box-output-item='{"group": {"name": "recent", "title": "Recent Actions"}}' tabindex="2">
        <a class="dropdown-item combo-box-selected:dropdown-active" href="#">
-        <span class="icon-[tabler--presentation] text-base-content/80 size-5 shrink-0">
+        <span class="icon-[tabler--presentation] text-base-content/80 size-4 shrink-0">
         </span>
-        <span class="text-base-content" data-combo-box-search-text="Create a presentation" data-combo-box-value="">
+        <span class="text-base-content text-sm" data-combo-box-search-text="Create a presentation" data-combo-box-value="">
          Create a presentation
         </span>
         <span class="text-base-content/50 ms-auto hidden text-xs sm:inline" data-combo-box-search-text="Microsoft PowerPoint" data-combo-box-value="">
@@ -405,8 +493,8 @@ Code:
       </div>
       <div data-combo-box-output-item='{"group": {"name": "people", "title": "People"}}' tabindex="4">
        <a class="dropdown-item combo-box-selected:dropdown-active" href="#">
-        <img alt="Image Description" class="size-6 shrink-0 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png"/>
-        <span class="text-base-content" data-combo-box-search-text="Alice Johnson" data-combo-box-value="">
+        <img alt="Image Description" class="size-5 shrink-0 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png"/>
+        <span class="text-base-content text-sm" data-combo-box-search-text="Alice Johnson" data-combo-box-value="">
          Alice Johnson
         </span>
         <span class="ms-auto text-xs text-teal-600" data-combo-box-search-text="Online" data-combo-box-value="">
@@ -416,8 +504,8 @@ Code:
       </div>
       <div data-combo-box-output-item='{"group": {"name": "people", "title": "People"}}' tabindex="5">
        <a class="dropdown-item combo-box-selected:dropdown-active" href="#">
-        <img alt="Image Description" class="size-6 shrink-0 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-11.png"/>
-        <span class="text-base-content" data-combo-box-search-text="David Kim" data-combo-box-value="">
+        <img alt="Image Description" class="size-5 shrink-0 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-11.png"/>
+        <span class="text-base-content text-sm" data-combo-box-search-text="David Kim" data-combo-box-value="">
          David Kim
         </span>
         <span class="text-base-content/50 ms-auto text-xs" data-combo-box-search-text="Offline" data-combo-box-value="">
@@ -427,8 +515,8 @@ Code:
       </div>
       <div data-combo-box-output-item='{"group": {"name": "people", "title": "People"}}' tabindex="6">
        <a class="dropdown-item combo-box-selected:dropdown-active" href="#">
-        <img alt="Image Description" class="size-6 shrink-0 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-12.png"/>
-        <span class="text-base-content" data-combo-box-search-text="Rosa Martinez" data-combo-box-value="">
+        <img alt="Image Description" class="size-5 shrink-0 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-12.png"/>
+        <span class="text-base-content text-sm" data-combo-box-search-text="Rosa Martinez" data-combo-box-value="">
          Rosa Martinez
         </span>
         <span class="text-base-content/50 ms-auto text-xs" data-combo-box-search-text="Offline" data-combo-box-value="">
@@ -443,122 +531,7 @@ Code:
  </div>
 </div>
 
-p:
-  - A combo box displaying HTML content within a modal.
-
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <h5 class="text-base-content text-base">
-   Press
-   <kbd class="kbd kbd-sm">
-    Shift
-   </kbd>
-   +
-   <kbd class="kbd kbd-sm">
-    :
-   </kbd>
-   for SearchBox.
-  </h5>
-  <button aria-controls="html-modal-combo-box" aria-expanded="false" aria-haspopup="dialog" class="hidden" data-overlay="#html-modal-combo-box" type="button">
-  </button>
-  <div class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 hidden" id="html-modal-combo-box" role="dialog" tabindex="-1">
-   <div class="modal-dialog overlay-open:opacity-100 overlay-open:duration-300">
-    <div class="modal-content">
-     <div class="relative" data-combo-box='{
-          "preventVisibility": true,
-          "groupingType": "default",
-          "preventSelection": true,
-          "isOpenOnFocus": true,
-          "groupingTitleTemplate": "&lt;div class=\"block text-xs text-base-content/50 m-3 mb-1\"&gt;&lt;/div&gt;"
-        }'>
-      <div class="modal-header block">
-       <div class="relative">
-        <input aria-expanded="false" autofocus="" class="input ps-8" data-combo-box-input="" placeholder="Search or type a command" role="combobox" type="text"/>
-        <span class="icon-[tabler--search] text-base-content absolute start-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
-        </span>
-       </div>
-      </div>
-      <div class="modal-body overflow-y-auto mt-0 max-h-72 p-1.5" data-combo-box-output="">
-       <div class="space-y-0.5 p-0.5" data-combo-box-output-items-wrapper="">
-        <div data-combo-box-output-item='{"group": {"name": "recent", "title": "Recent Actions"}}' tabindex="0">
-         <a class="dropdown-item combo-box-selected:dropdown-active" href="#">
-          <span class="icon-[tabler--writing] text-base-content/80 size-4 shrink-0">
-          </span>
-          <span class="text-base-content text-sm" data-combo-box-search-text="Write a document" data-combo-box-value="">
-           Write a document
-          </span>
-          <span class="text-base-content/50 ms-auto hidden text-xs sm:inline" data-combo-box-search-text="Google Docs" data-combo-box-value="">
-           Google Docs
-          </span>
-         </a>
-        </div>
-        <div data-combo-box-output-item='{"group": {"name": "recent", "title": "Recent Actions"}}' tabindex="1">
-         <a class="dropdown-item combo-box-selected:dropdown-active" href="#">
-          <span class="icon-[tabler--calendar] text-base-content/80 size-4 shrink-0">
-          </span>
-          <span class="text-base-content text-sm" data-combo-box-search-text="Schedule a meeting" data-combo-box-value="">
-           Schedule a meeting
-          </span>
-          <span class="text-base-content/50 ms-auto hidden text-xs sm:inline" data-combo-box-search-text="Google Calendar" data-combo-box-value="">
-           Google Calendar
-          </span>
-         </a>
-        </div>
-        <div data-combo-box-output-item='{"group": {"name": "recent", "title": "Recent Actions"}}' tabindex="2">
-         <a class="dropdown-item combo-box-selected:dropdown-active" href="#">
-          <span class="icon-[tabler--presentation] text-base-content/80 size-4 shrink-0">
-          </span>
-          <span class="text-base-content text-sm" data-combo-box-search-text="Create a presentation" data-combo-box-value="">
-           Create a presentation
-          </span>
-          <span class="text-base-content/50 ms-auto hidden text-xs sm:inline" data-combo-box-search-text="Microsoft PowerPoint" data-combo-box-value="">
-           PowerPoint
-          </span>
-         </a>
-        </div>
-        <div data-combo-box-output-item='{"group": {"name": "people", "title": "People"}}' tabindex="4">
-         <a class="dropdown-item combo-box-selected:dropdown-active" href="#">
-          <img alt="Image Description" class="size-5 shrink-0 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png"/>
-          <span class="text-base-content text-sm" data-combo-box-search-text="Alice Johnson" data-combo-box-value="">
-           Alice Johnson
-          </span>
-          <span class="ms-auto text-xs text-teal-600" data-combo-box-search-text="Online" data-combo-box-value="">
-           Online
-          </span>
-         </a>
-        </div>
-        <div data-combo-box-output-item='{"group": {"name": "people", "title": "People"}}' tabindex="5">
-         <a class="dropdown-item combo-box-selected:dropdown-active" href="#">
-          <img alt="Image Description" class="size-5 shrink-0 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-11.png"/>
-          <span class="text-base-content text-sm" data-combo-box-search-text="David Kim" data-combo-box-value="">
-           David Kim
-          </span>
-          <span class="text-base-content/50 ms-auto text-xs" data-combo-box-search-text="Offline" data-combo-box-value="">
-           Offline
-          </span>
-         </a>
-        </div>
-        <div data-combo-box-output-item='{"group": {"name": "people", "title": "People"}}' tabindex="6">
-         <a class="dropdown-item combo-box-selected:dropdown-active" href="#">
-          <img alt="Image Description" class="size-5 shrink-0 rounded-full" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-12.png"/>
-          <span class="text-base-content text-sm" data-combo-box-search-text="Rosa Martinez" data-combo-box-value="">
-           Rosa Martinez
-          </span>
-          <span class="text-base-content/50 ms-auto text-xs" data-combo-box-search-text="Offline" data-combo-box-value="">
-           Offline
-          </span>
-         </a>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </div>
- </div>
-</div>
-
+```
 h3:
   - Json example
 
@@ -568,70 +541,63 @@ p:
 p:
   - Utilizing a JSON example in a dropdown, use option:apiGroupFieldto select a heading. Positions are categorized as headings in this scenario.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-80 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <div class="relative" data-combo-box="{
-    &quot;groupingType&quot;: &quot;default&quot;,
-    &quot;isOpenOnFocus&quot;: true,
-    &quot;apiUrl&quot;: &quot;/json/searchbox.json&quot;,
-    &quot;apiGroupField&quot;: &quot;position&quot;,
-    &quot;outputItemTemplate&quot;: &quot;&lt;div class=\&quot;dropdown-item combo-box-selected:dropdown-active\&quot; data-combo-box-output-item&gt; &lt;div class=\&quot;flex items-center justify-between\&quot;&gt; &lt;div class=\&quot;flex items-center w-full\&quot;&gt; &lt;div class=\&quot;flex items-center justify-center rounded-full bg-base-200 size-6 overflow-hidden me-2.5\&quot;&gt; &lt;img class=\&quot;shrink-0\&quot; data-combo-box-output-item-attr='[{\&quot;valueFrom\&quot;: \&quot;image\&quot;, \&quot;attr\&quot;: \&quot;src\&quot;}, {\&quot;valueFrom\&quot;: \&quot;name\&quot;, \&quot;attr\&quot;: \&quot;alt\&quot;}]' /&gt; &lt;/div&gt; &lt;div data-combo-box-output-item-field=\&quot;name\&quot; data-combo-box-search-text data-combo-box-value&gt;&lt;/div&gt; &lt;/div&gt; &lt;span class=\&quot;icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0\&quot;&gt; &lt;/span&gt; &lt;/div&gt; &lt;/div&gt;&quot;,&quot;groupingTitleTemplate&quot;: &quot;&lt;div class=\&quot;block text-xs text-base-content/50 m-3 mb-1\&quot;&gt;&lt;/div&gt;&quot;
+```html
+<div class="max-w-sm">
+ <div class="relative" data-combo-box="{
+    "groupingType": "default",
+    "isOpenOnFocus": true,
+    "apiUrl": "/json/searchbox.json",
+    "apiGroupField": "position",
+    "outputItemTemplate": "<div class=\"dropdown-item combo-box-selected:dropdown-active\" data-combo-box-output-item> <div class=\"flex items-center justify-between\"> <div class=\"flex items-center w-full\"> <div class=\"flex items-center justify-center rounded-full bg-base-200 size-6 overflow-hidden me-2.5\"> <img class=\"shrink-0\" data-combo-box-output-item-attr='[{\"valueFrom\": \"image\", \"attr\": \"src\"}, {\"valueFrom\": \"name\", \"attr\": \"alt\"}]' /> </div> <div data-combo-box-output-item-field=\"name\" data-combo-box-search-text data-combo-box-value></div> </div> <span class=\"icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0\"> </span> </div> </div>","groupingTitleTemplate": "<div class=\"block text-xs text-base-content/50 m-3 mb-1\"></div>"
   }">
-    <div class="relative">
-     <input aria-expanded="false" autofocus="" class="input ps-8" data-combo-box-input="" placeholder="Search or type a command" role="combobox" type="text"/>
-     <span class="icon-[tabler--search] text-base-content absolute start-3 top-1/2 size-4 shrink-0 -translate-y-1/2">
-     </span>
-    </div>
-    <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-56 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
-    </div>
-   </div>
+  <div class="relative">
+   <input aria-expanded="false" autofocus="" class="input ps-8" data-combo-box-input="" placeholder="Search or type a command" role="combobox" type="text"/>
+   <span class="icon-[tabler--search] text-base-content absolute start-3 top-1/2 size-4 shrink-0 -translate-y-1/2">
+   </span>
+  </div>
+  <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-56 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
   </div>
  </div>
 </div>
 
+```
 p:
   - Combo box with json data show in modal.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <h5 class="text-base-content text-base">
-   Press
-   <kbd class="kbd kbd-sm">
-    Shift
-   </kbd>
-   +
-   <kbd class="kbd kbd-sm">
-    t
-   </kbd>
-   for SearchBox.
-  </h5>
-  <button aria-controls="json-modal-combo-box" aria-expanded="false" aria-haspopup="dialog" class="hidden" data-overlay="#json-modal-combo-box" type="button">
-  </button>
-  <div class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 hidden" id="json-modal-combo-box" role="dialog" tabindex="-1">
-   <div class="modal-dialog overlay-open:opacity-100 overlay-open:duration-300">
-    <div class="modal-content">
-     <div class="relative" data-combo-box="{
-        &quot;preventVisibility&quot;: true,
-        &quot;groupingType&quot;: &quot;default&quot;,
-        &quot;apiUrl&quot;: &quot;/json/searchbox.json&quot;,
-        &quot;apiGroupField&quot;: &quot;position&quot;,
-        &quot;outputItemTemplate&quot;: &quot;&lt;div class=\&quot;dropdown-item combo-box-selected:dropdown-active\&quot; data-combo-box-output-item&gt; &lt;div class=\&quot;flex items-center justify-between\&quot;&gt; &lt;div class=\&quot;flex items-center w-full\&quot;&gt; &lt;div class=\&quot;flex items-center justify-center rounded-full bg-base-200 size-6 overflow-hidden me-2.5\&quot;&gt; &lt;img class=\&quot;shrink-0\&quot; data-combo-box-output-item-attr='[{\&quot;valueFrom\&quot;: \&quot;image\&quot;, \&quot;attr\&quot;: \&quot;src\&quot;}, {\&quot;valueFrom\&quot;: \&quot;name\&quot;, \&quot;attr\&quot;: \&quot;alt\&quot;}]' /&gt; &lt;/div&gt; &lt;div data-combo-box-output-item-field=\&quot;name\&quot; data-combo-box-search-text data-combo-box-value&gt;&lt;/div&gt; &lt;/div&gt; &lt;span class=\&quot;icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0\&quot;&gt; &lt;/span&gt; &lt;/div&gt; &lt;/div&gt;&quot;,
-        &quot;groupingTitleTemplate&quot;: &quot;&lt;div class=\&quot;block text-xs text-base-content/50 m-3 mb-1\&quot;&gt;&lt;/div&gt;&quot;
+```html
+<h5 class="text-base-content text-base">
+ Press
+ <kbd class="kbd kbd-sm">
+  Shift
+ </kbd>
+ +
+ <kbd class="kbd kbd-sm">
+  t
+ </kbd>
+ for SearchBox.
+</h5>
+<button aria-controls="json-modal-combo-box" aria-expanded="false" aria-haspopup="dialog" class="hidden" data-overlay="#json-modal-combo-box" type="button">
+</button>
+<div class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 hidden" id="json-modal-combo-box" role="dialog" tabindex="-1">
+ <div class="modal-dialog overlay-open:opacity-100 overlay-open:duration-300">
+  <div class="modal-content">
+   <div class="relative" data-combo-box="{
+        "preventVisibility": true,
+        "groupingType": "default",
+        "apiUrl": "/json/searchbox.json",
+        "apiGroupField": "position",
+        "outputItemTemplate": "<div class=\"dropdown-item combo-box-selected:dropdown-active\" data-combo-box-output-item> <div class=\"flex items-center justify-between\"> <div class=\"flex items-center w-full\"> <div class=\"flex items-center justify-center rounded-full bg-base-200 size-6 overflow-hidden me-2.5\"> <img class=\"shrink-0\" data-combo-box-output-item-attr='[{\"valueFrom\": \"image\", \"attr\": \"src\"}, {\"valueFrom\": \"name\", \"attr\": \"alt\"}]' /> </div> <div data-combo-box-output-item-field=\"name\" data-combo-box-search-text data-combo-box-value></div> </div> <span class=\"icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0\"> </span> </div> </div>",
+        "groupingTitleTemplate": "<div class=\"block text-xs text-base-content/50 m-3 mb-1\"></div>"
       }">
-      <div class="modal-header block">
-       <div class="relative">
-        <input aria-expanded="false" autofocus="" class="input ps-8" data-combo-box-input="" placeholder="Search or type a command" role="combobox" type="text"/>
-        <span class="icon-[tabler--search] text-base-content absolute start-3 top-1/2 size-4 shrink-0 -translate-y-1/2">
-        </span>
-       </div>
-      </div>
-      <div class="modal-body" data-combo-box-output="">
-       <div class="overflow-y-auto max-h-72 space-y-0.5" data-combo-box-output-items-wrapper="">
-       </div>
-      </div>
+    <div class="modal-header block">
+     <div class="relative">
+      <input aria-expanded="false" autofocus="" class="input ps-8" data-combo-box-input="" placeholder="Search or type a command" role="combobox" type="text"/>
+      <span class="icon-[tabler--search] text-base-content absolute start-3 top-1/2 size-4 shrink-0 -translate-y-1/2">
+      </span>
+     </div>
+    </div>
+    <div class="modal-body" data-combo-box-output="">
+     <div class="overflow-y-auto max-h-72 space-y-0.5" data-combo-box-output-items-wrapper="">
      </div>
     </div>
    </div>
@@ -639,6 +605,7 @@ Code:
  </div>
 </div>
 
+```
 h3:
   - Json with tab filter
 
@@ -648,72 +615,65 @@ p:
 p:
   - Experience tab filtering within a dropdown. Set:groupingTypetotabs, utilize:groupingTitleTemplateto style the filtering tabs, and:tabsWrapperTemplateto style the tab wrapper.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-80 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <div class="relative" data-combo-box='{
+```html
+<div class="max-w-sm">
+ <div class="relative" data-combo-box='{
       "groupingType": "tabs",
       "isOpenOnFocus": true,
       "apiUrl": "https://fakestoreapi.com/products",
       "apiGroupField": "category",
-      "outputItemTemplate": "&lt;div class=\"dropdown-item combo-box-selected:dropdown-active\" data-combo-box-output-item&gt; &lt;div class=\"flex justify-between items-center w-full\"&gt; &lt;div class=\"truncate\" data-combo-box-output-item-field=\"title\" data-combo-box-search-text data-combo-box-value&gt;&lt;/div&gt; &lt;span class=\"icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0\"&gt; &lt;/span&gt; &lt;/div&gt; &lt;/div&gt;",
-      "groupingTitleTemplate": "&lt;button type=\"button\" class=\"btn btn-sm btn-text capitalize combo-box-tab-active:btn-active\"&gt;&lt;/button&gt;",
-      "tabsWrapperTemplate": "&lt;div class=\"overflow-x-auto mb-1 pb-2\"&gt;&lt;/div&gt;"
+      "outputItemTemplate": "<div class=\"dropdown-item combo-box-selected:dropdown-active\" data-combo-box-output-item> <div class=\"flex justify-between items-center w-full\"> <div class=\"truncate\" data-combo-box-output-item-field=\"title\" data-combo-box-search-text data-combo-box-value></div> <span class=\"icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0\"> </span> </div> </div>",
+      "groupingTitleTemplate": "<button type=\"button\" class=\"btn btn-sm btn-text capitalize combo-box-tab-active:btn-active\"></button>",
+      "tabsWrapperTemplate": "<div class=\"overflow-x-auto mb-1 pb-2\"></div>"
     }'>
-    <div class="relative">
-     <input aria-expanded="false" autofocus="" class="input ps-8" data-combo-box-input="" placeholder="Search or type a command" role="combobox" type="text"/>
-     <span class="icon-[tabler--search] text-base-content absolute start-3 top-1/2 size-4 shrink-0 -translate-y-1/2">
-     </span>
-    </div>
-    <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-56 w-full overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
-     <div class="space-y-0.5" data-combo-box-output-items-wrapper="">
-     </div>
-    </div>
+  <div class="relative">
+   <input aria-expanded="false" autofocus="" class="input ps-8" data-combo-box-input="" placeholder="Search or type a command" role="combobox" type="text"/>
+   <span class="icon-[tabler--search] text-base-content absolute start-3 top-1/2 size-4 shrink-0 -translate-y-1/2">
+   </span>
+  </div>
+  <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-56 w-full overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
+   <div class="space-y-0.5" data-combo-box-output-items-wrapper="">
    </div>
   </div>
  </div>
 </div>
 
+```
 p:
   - In this example, a modal popup is employed to provide a user-friendly tab filtering experience.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <h5 class="text-base-content text-base">
-   Press
-   <kbd class="kbd kbd-sm">
-    \
-   </kbd>
-   for SearchBox.
-  </h5>
-  <button aria-controls="tab-modal-combo-box" aria-expanded="false" aria-haspopup="dialog" class="hidden" data-overlay="#tab-modal-combo-box" type="button">
-  </button>
-  <div class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 hidden" id="tab-modal-combo-box" role="dialog" tabindex="-1">
-   <div class="modal-dialog overlay-open:opacity-100 overlay-open:duration-300 overflow-x-hidden">
-    <div class="modal-content max-h-full">
-     <div class="relative" data-combo-box='{
+```html
+<h5 class="text-base-content text-base">
+ Press
+ <kbd class="kbd kbd-sm">
+  \
+ </kbd>
+ for SearchBox.
+</h5>
+<button aria-controls="tab-modal-combo-box" aria-expanded="false" aria-haspopup="dialog" class="hidden" data-overlay="#tab-modal-combo-box" type="button">
+</button>
+<div class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 hidden" id="tab-modal-combo-box" role="dialog" tabindex="-1">
+ <div class="modal-dialog overlay-open:opacity-100 overlay-open:duration-300 overflow-x-hidden">
+  <div class="modal-content max-h-full">
+   <div class="relative" data-combo-box='{
             "preventVisibility": true,
             "groupingType": "tabs",
             "isOpenOnFocus": true,
             "apiUrl": "https://fakestoreapi.com/products",
             "apiGroupField": "category",
-            "outputItemTemplate": "&lt;div class=\"dropdown-item combo-box-selected:dropdown-active\" data-combo-box-output-item&gt; &lt;div  class=\"flex justify-between items-center w-full\"&gt; &lt;div class=\"truncate\" data-combo-box-output-item-field=\"title\" data-combo-box-search-text data-combo-box-value&gt;&lt;/div&gt; &lt;span class=\"icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0\"&gt; &lt;/span&gt; &lt;/div&gt; &lt;/div&gt;",
-            "groupingTitleTemplate": "&lt;button type=\"button\" class=\"btn btn-sm btn-text capitalize combo-box-tab-active:btn-active\"&gt;&lt;/button&gt;",
-            "tabsWrapperTemplate": "&lt;div class=\"overflow-x-auto mb-1 pb-2\"&gt;&lt;/div&gt;"
+            "outputItemTemplate": "<div class=\"dropdown-item combo-box-selected:dropdown-active\" data-combo-box-output-item> <div  class=\"flex justify-between items-center w-full\"> <div class=\"truncate\" data-combo-box-output-item-field=\"title\" data-combo-box-search-text data-combo-box-value></div> <span class=\"icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0\"> </span> </div> </div>",
+            "groupingTitleTemplate": "<button type=\"button\" class=\"btn btn-sm btn-text capitalize combo-box-tab-active:btn-active\"></button>",
+            "tabsWrapperTemplate": "<div class=\"overflow-x-auto mb-1 pb-2\"></div>"
             }'>
-      <div class="modal-header block">
-       <div class="relative">
-        <input aria-expanded="false" autofocus="" class="input ps-8" data-combo-box-input="" placeholder="Search or type a command" role="combobox" type="text"/>
-        <span class="icon-[tabler--search] text-base-content absolute start-3 top-1/2 size-4 shrink-0 -translate-y-1/2">
-        </span>
-       </div>
-      </div>
-      <div class="modal-body" data-combo-box-output="">
-       <div class="overflow-y-auto max-h-72 space-y-0.5" data-combo-box-output-items-wrapper="">
-       </div>
-      </div>
+    <div class="modal-header block">
+     <div class="relative">
+      <input aria-expanded="false" autofocus="" class="input ps-8" data-combo-box-input="" placeholder="Search or type a command" role="combobox" type="text"/>
+      <span class="icon-[tabler--search] text-base-content absolute start-3 top-1/2 size-4 shrink-0 -translate-y-1/2">
+      </span>
+     </div>
+    </div>
+    <div class="modal-body" data-combo-box-output="">
+     <div class="overflow-y-auto max-h-72 space-y-0.5" data-combo-box-output-items-wrapper="">
      </div>
     </div>
    </div>
@@ -721,6 +681,7 @@ Code:
  </div>
 </div>
 
+```
 h2:
   - Illustrations
 
@@ -730,83 +691,80 @@ p:
 h3:
   - Destroy/Reinitialize
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-64 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="relative max-w-sm" data-combo-box="" id="combo-box-to-destroy">
-   <div class="relative">
-    <input aria-expanded="false" aria-label="Combobox Destroy" class="input" data-combo-box-input="" role="combobox" type="text" value="India"/>
-    <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
+```html
+<div class="relative max-w-sm" data-combo-box="" id="combo-box-to-destroy">
+ <div class="relative">
+  <input aria-expanded="false" aria-label="Combobox Destroy" class="input" data-combo-box-input="" role="combobox" type="text" value="India"/>
+  <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
+  </span>
+ </div>
+ <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="0">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="Venezuela" data-combo-box-value="">
+     Venezuela
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
     </span>
    </div>
-   <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="0">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="Venezuela" data-combo-box-value="">
-       Venezuela
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="1">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="Papua New Guinea" data-combo-box-value="">
-       Papua New Guinea
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="2">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="South Africa " data-combo-box-value="">
-       South Africa
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="3">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="Honduras" data-combo-box-value="">
-       Honduras
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="4">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="India" data-combo-box-value="">
-       India
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="5">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="El Salvador" data-combo-box-value="">
-       El Salvador
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="1">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="Papua New Guinea" data-combo-box-value="">
+     Papua New Guinea
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
    </div>
   </div>
-  <div class="mt-4 flex gap-3">
-   <button class="btn btn-primary" id="destroy-btn">
-    Destroy
-   </button>
-   <button class="btn btn-primary" disabled="" id="reinit-btn">
-    Reinitialize
-   </button>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="2">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="South Africa " data-combo-box-value="">
+     South Africa
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="3">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="Honduras" data-combo-box-value="">
+     Honduras
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="4">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="India" data-combo-box-value="">
+     India
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="5">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="El Salvador" data-combo-box-value="">
+     El Salvador
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
   </div>
  </div>
 </div>
+<div class="mt-4 flex gap-3">
+ <button class="btn btn-primary" id="destroy-btn">
+  Destroy
+ </button>
+ <button class="btn btn-primary" disabled="" id="reinit-btn">
+  Reinitialize
+ </button>
+</div>
 
+```
 h2:
   - Accessibility notes
 
@@ -895,78 +853,75 @@ table:
 p:
   - Below, is the demonstration on how to use the methods. To test other methods, copy the following methods into your console and click the button.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-64 relative flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="relative max-w-sm" data-combo-box="" id="combo-box-method">
-   <div class="relative">
-    <input aria-expanded="false" aria-label="Default combobox" class="input" data-combo-box-input="" role="combobox" type="text" value="India"/>
-    <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
+```html
+<div class="relative max-w-sm" data-combo-box="" id="combo-box-method">
+ <div class="relative">
+  <input aria-expanded="false" aria-label="Default combobox" class="input" data-combo-box-input="" role="combobox" type="text" value="India"/>
+  <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
+  </span>
+ </div>
+ <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="0">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="Venezuela" data-combo-box-value="">
+     Venezuela
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
     </span>
    </div>
-   <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="0">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="Venezuela" data-combo-box-value="">
-       Venezuela
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="1">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="Papua New Guinea" data-combo-box-value="">
-       Papua New Guinea
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="2">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="South Africa " data-combo-box-value="">
-       South Africa
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="3">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="Honduras" data-combo-box-value="">
-       Honduras
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="4">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="India" data-combo-box-value="">
-       India
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="5">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="El Salvador" data-combo-box-value="">
-       El Salvador
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="1">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="Papua New Guinea" data-combo-box-value="">
+     Papua New Guinea
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
    </div>
   </div>
-  <button class="btn btn-primary mt-4 absolute top-28 sm:top-2 sm:end-6" id="open-btn">
-   Open ComboBox
-  </button>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="2">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="South Africa " data-combo-box-value="">
+     South Africa
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="3">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="Honduras" data-combo-box-value="">
+     Honduras
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="4">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="India" data-combo-box-value="">
+     India
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="5">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="El Salvador" data-combo-box-value="">
+     El Salvador
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
+  </div>
  </div>
 </div>
+<button class="btn btn-primary mt-4 absolute top-28 sm:top-2 sm:end-6" id="open-btn">
+ Open ComboBox
+</button>
 
+```
 p:
   - Open item (public method).
 
@@ -987,75 +942,72 @@ table:
 p:
   - Display a console log message when an option is selected.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block h-72 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="relative max-w-sm" data-combo-box="" id="combo-box-event">
-   <div class="relative">
-    <input aria-expanded="false" aria-label="Default combobox" class="input" data-combo-box-input="" role="combobox" type="text" value="India"/>
-    <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
+```html
+<div class="relative max-w-sm" data-combo-box="" id="combo-box-event">
+ <div class="relative">
+  <input aria-expanded="false" aria-label="Default combobox" class="input" data-combo-box-input="" role="combobox" type="text" value="India"/>
+  <span class="icon-[tabler--caret-up-down] text-base-content absolute end-3 top-1/2 size-4 shrink-0 -translate-y-1/2" data-combo-box-toggle="">
+  </span>
+ </div>
+ <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="0">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="Venezuela" data-combo-box-value="">
+     Venezuela
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
     </span>
    </div>
-   <div class="bg-base-100 rounded-box shadow-base-300/20 absolute z-50 max-h-44 w-full space-y-0.5 overflow-y-auto p-2 shadow-lg" data-combo-box-output="" style="display:none">
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="0">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="Venezuela" data-combo-box-value="">
-       Venezuela
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="1">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="Papua New Guinea" data-combo-box-value="">
-       Papua New Guinea
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="2">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="South Africa " data-combo-box-value="">
-       South Africa
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="3">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="Honduras" data-combo-box-value="">
-       Honduras
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="4">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="India" data-combo-box-value="">
-       India
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
-    <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="5">
-     <div class="flex items-center justify-between">
-      <span data-combo-box-search-text="El Salvador" data-combo-box-value="">
-       El Salvador
-      </span>
-      <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
-      </span>
-     </div>
-    </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="1">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="Papua New Guinea" data-combo-box-value="">
+     Papua New Guinea
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="2">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="South Africa " data-combo-box-value="">
+     South Africa
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="3">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="Honduras" data-combo-box-value="">
+     Honduras
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="4">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="India" data-combo-box-value="">
+     India
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
+   </div>
+  </div>
+  <div class="dropdown-item combo-box-selected:dropdown-active" data-combo-box-output-item="" tabindex="5">
+   <div class="flex items-center justify-between">
+    <span data-combo-box-search-text="El Salvador" data-combo-box-value="">
+     El Salvador
+    </span>
+    <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 shrink-0">
+    </span>
    </div>
   </div>
  </div>
 </div>
 
+```
 p:
   - When select changes event example.
 

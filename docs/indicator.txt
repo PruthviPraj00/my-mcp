@@ -30,82 +30,70 @@ h3:
 p:
   - Theindicatorcomponent acts as a container for indicators, with theindicator-itemclass offering default positioning. Tailwind utility classes enable control over size, background color, and roundness of the indicators.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="indicator">
-   <span class="indicator-item bg-primary size-3 rounded-full">
-   </span>
-   <div class="bg-primary/10 border-primary grid place-items-center rounded-md border p-3">
-    <span class="icon-[tabler--bell] text-primary size-5">
-    </span>
-   </div>
-  </div>
+```html
+<div class="indicator">
+ <span class="indicator-item bg-primary size-3 rounded-full">
+ </span>
+ <div class="bg-primary/10 border-primary grid place-items-center rounded-md border p-3">
+  <span class="icon-[tabler--bell] text-primary size-5">
+  </span>
  </div>
 </div>
 
+```
 h3:
   - Status as indicator
 
 p:
   - Usestatusfor status style indicator.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="indicator">
-   <span class="indicator-item status status-primary status-lg">
-   </span>
-   <div class="bg-primary/10 border-primary grid place-items-center rounded-md border p-3">
-    <span class="icon-[tabler--bell] text-primary size-5">
-    </span>
-   </div>
-  </div>
+```html
+<div class="indicator">
+ <span class="indicator-item status status-primary status-lg">
+ </span>
+ <div class="bg-primary/10 border-primary grid place-items-center rounded-md border p-3">
+  <span class="icon-[tabler--bell] text-primary size-5">
+  </span>
  </div>
 </div>
 
+```
 h3:
   - Badge as indicator
 
 p:
   - Usebadgefor badge style indicator.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="indicator">
-   <span class="indicator-item badge badge-primary">
-    +999
-   </span>
-   <div class="bg-primary/10 border-primary grid place-items-center rounded-md border p-3">
-    <span class="icon-[tabler--bell] text-primary size-5">
-    </span>
-   </div>
-  </div>
+```html
+<div class="indicator">
+ <span class="indicator-item badge badge-primary">
+  +999
+ </span>
+ <div class="bg-primary/10 border-primary grid place-items-center rounded-md border p-3">
+  <span class="icon-[tabler--bell] text-primary size-5">
+  </span>
  </div>
 </div>
 
+```
 h3:
   - Pill badge as indicator
 
 p:
   - Using therounded-fullclass withbadgecreates a pill-shaped badge as an indicator.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="indicator">
-   <span class="indicator-item badge badge-primary rounded-full">
-    +999
-   </span>
-   <div class="bg-primary/10 border-primary grid place-items-center rounded-md border p-3">
-    <span class="icon-[tabler--bell] text-primary size-5">
-    </span>
-   </div>
-  </div>
+```html
+<div class="indicator">
+ <span class="indicator-item badge badge-primary rounded-full">
+  +999
+ </span>
+ <div class="bg-primary/10 border-primary grid place-items-center rounded-md border p-3">
+  <span class="icon-[tabler--bell] text-primary size-5">
+  </span>
  </div>
 </div>
 
+```
 h2:
   - Illustrations
 
@@ -115,82 +103,73 @@ h3:
 p:
   - Avatar with an indicator badge denoting the user’s status.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="avatar indicator me-8">
-   <span class="indicator-item badge badge-primary">
-    typingâ¦
-   </span>
-   <div class="size-16 rounded-md">
-    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png"/>
-   </div>
-  </div>
-  <div class="avatar indicator">
-   <span class="indicator-item bg-primary size-3 rounded-full">
-   </span>
-   <div class="size-16 rounded-md">
-    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png"/>
-   </div>
-  </div>
-  <div class="avatar indicator">
-   <span class="indicator-item status status-primary status-lg">
-   </span>
-   <div class="size-16 rounded-md">
-    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png"/>
-   </div>
-  </div>
+```html
+<div class="avatar indicator me-8">
+ <span class="indicator-item badge badge-primary">
+  typingâ¦
+ </span>
+ <div class="size-16 rounded-md">
+  <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png"/>
+ </div>
+</div>
+<div class="avatar indicator">
+ <span class="indicator-item bg-primary size-3 rounded-full">
+ </span>
+ <div class="size-16 rounded-md">
+  <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png"/>
+ </div>
+</div>
+<div class="avatar indicator">
+ <span class="indicator-item status status-primary status-lg">
+ </span>
+ <div class="size-16 rounded-md">
+  <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png"/>
  </div>
 </div>
 
+```
 h3:
   - Indicator on input
 
 p:
   - Input field with a prominent indicator badge denoting a required entry.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="indicator">
-   <span class="indicator-item badge badge-primary">
-    Required
-   </span>
-   <input class="input" placeholder="Your email address" type="text"/>
-  </div>
- </div>
+```html
+<div class="indicator">
+ <span class="indicator-item badge badge-primary">
+  Required
+ </span>
+ <input class="input" placeholder="Your email address" type="text"/>
 </div>
 
+```
 h3:
   - Button indicator
 
 p:
   - Button indicator provides a visual cue for interacting with content or actions within a container.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="indicator mt-4">
-   <div class="indicator-item indicator-top">
-    <button aria-label="Close Button Indicator" class="btn btn-error btn-circle btn-sm">
-     <span class="icon-[tabler--x] size-5">
-     </span>
-    </button>
-   </div>
-   <div class="card">
-    <div class="card-body">
-     <h2 class="card-title">
-      Card Title
-     </h2>
-     <p>
-      Rerum reiciendis beatae tenetur excepturi
-     </p>
-    </div>
-   </div>
+```html
+<div class="indicator mt-4">
+ <div class="indicator-item indicator-top">
+  <button aria-label="Close Button Indicator" class="btn btn-error btn-circle btn-sm">
+   <span class="icon-[tabler--x] size-5">
+   </span>
+  </button>
+ </div>
+ <div class="card">
+  <div class="card-body">
+   <h2 class="card-title">
+    Card Title
+   </h2>
+   <p>
+    Rerum reiciendis beatae tenetur excepturi
+   </p>
   </div>
  </div>
 </div>
 
+```
 h2:
   - Animation
 
@@ -200,53 +179,47 @@ h3:
 p:
   - Include theanimate-pingutility to enable an element to scale and fade, resembling a radar ping or water ripple effect, which is beneficial for features like notification badges.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="indicator">
-   <div class="indicator-item inline-grid *:[grid-area:1/1]">
-    <div class="status status-error animate-ping">
-    </div>
-    <div class="status status-error">
-    </div>
-   </div>
-   <button aria-label="Button Indicator" class="btn btn-secondary btn-outline btn-square">
-    <span class="icon-[tabler--shopping-bag] size-5">
-    </span>
-   </button>
+```html
+<div class="indicator">
+ <div class="indicator-item inline-grid *:[grid-area:1/1]">
+  <div class="status status-error animate-ping">
   </div>
-  <div class="indicator">
-   <span class="indicator-item badge badge-error rounded-full">
-    +99
-    <span class="bg-error absolute size-full animate-ping rounded-full opacity-75">
-    </span>
-   </span>
-   <button class="btn btn-secondary btn-outline">
-    Notifications
-   </button>
+  <div class="status status-error">
   </div>
  </div>
+ <button aria-label="Button Indicator" class="btn btn-secondary btn-outline btn-square">
+  <span class="icon-[tabler--shopping-bag] size-5">
+  </span>
+ </button>
+</div>
+<div class="indicator">
+ <span class="indicator-item badge badge-error rounded-full">
+  +99
+  <span class="bg-error absolute size-full animate-ping rounded-full opacity-75">
+  </span>
+ </span>
+ <button class="btn btn-secondary btn-outline">
+  Notifications
+ </button>
 </div>
 
+```
 h3:
   - Pulse animation
 
 p:
   - Apply the classanimation-pulseto integrate this animated loading indicator for situations where content within a card is loading.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose relative flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="bg-primary/10 flex size-32 items-center justify-center rounded-md border border-base-content/20">
-   <div class="indicator">
-    <span class="badge badge-primary animate-pulse rounded-full">
-     loading...
-    </span>
-   </div>
-  </div>
+```html
+<div class="bg-primary/10 flex size-32 items-center justify-center rounded-md border border-base-content/20">
+ <div class="indicator">
+  <span class="badge badge-primary animate-pulse rounded-full">
+   loading...
+  </span>
  </div>
 </div>
 
+```
 h2:
   - Positions
 
@@ -256,123 +229,117 @@ h3:
 p:
   - The Indicators can be positioned at.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="indicator">
-   <span class="indicator-item indicator-top indicator-start bg-primary size-3 rounded-full">
-   </span>
-   <span class="indicator-item indicator-top indicator-center bg-primary size-3 rounded-full">
-   </span>
-   <span class="indicator-item indicator-top indicator-end bg-primary size-3 rounded-full">
-   </span>
-   <span class="indicator-item indicator-middle indicator-start bg-primary size-3 rounded-full">
-   </span>
-   <span class="indicator-item indicator-middle indicator-center bg-primary size-3 rounded-full">
-   </span>
-   <span class="indicator-item indicator-middle indicator-end bg-primary size-3 rounded-full">
-   </span>
-   <span class="indicator-item indicator-bottom indicator-start bg-primary size-3 rounded-full">
-   </span>
-   <span class="indicator-item indicator-bottom indicator-center bg-primary size-3 rounded-full">
-   </span>
-   <span class="indicator-item indicator-bottom indicator-end bg-primary size-3 rounded-full">
-   </span>
-   <div class="bg-primary/10 border border-primary grid h-32 w-60 place-items-center rounded-md">
-   </div>
-  </div>
+```html
+<div class="indicator">
+ <span class="indicator-item indicator-top indicator-start bg-primary size-3 rounded-full">
+ </span>
+ <span class="indicator-item indicator-top indicator-center bg-primary size-3 rounded-full">
+ </span>
+ <span class="indicator-item indicator-top indicator-end bg-primary size-3 rounded-full">
+ </span>
+ <span class="indicator-item indicator-middle indicator-start bg-primary size-3 rounded-full">
+ </span>
+ <span class="indicator-item indicator-middle indicator-center bg-primary size-3 rounded-full">
+ </span>
+ <span class="indicator-item indicator-middle indicator-end bg-primary size-3 rounded-full">
+ </span>
+ <span class="indicator-item indicator-bottom indicator-start bg-primary size-3 rounded-full">
+ </span>
+ <span class="indicator-item indicator-bottom indicator-center bg-primary size-3 rounded-full">
+ </span>
+ <span class="indicator-item indicator-bottom indicator-end bg-primary size-3 rounded-full">
+ </span>
+ <div class="bg-primary/10 border border-primary grid h-32 w-60 place-items-center rounded-md">
  </div>
 </div>
 
+```
 h3:
   - Badge indicator
 
 p:
   - The badge display can be positioned at.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="indicator my-3 ms-14">
-   <span class="indicator-item indicator-top indicator-start badge badge-primary max-sm:px-1">
-    <span class="max-sm:hidden">
-     top+start
-    </span>
-    <span class="sm:hidden">
-     T-Start
-    </span>
-   </span>
-   <span class="indicator-item indicator-top indicator-center badge badge-primary max-sm:px-1">
-    <span class="max-sm:hidden">
-     top+center
-    </span>
-    <span class="sm:hidden">
-     T-center
-    </span>
-   </span>
-   <span class="indicator-item indicator-top indicator-end badge badge-primary max-sm:px-1">
-    <span class="max-sm:hidden">
-     top+end
-    </span>
-    <span class="sm:hidden">
-     T-end
-    </span>
-   </span>
-   <span class="indicator-item indicator-middle indicator-start badge badge-primary max-sm:px-1">
-    <span class="max-sm:hidden">
-     middle+start
-    </span>
-    <span class="sm:hidden">
-     M-start
-    </span>
-   </span>
-   <span class="indicator-item indicator-middle indicator-center badge badge-primary max-sm:px-1">
-    <span class="max-sm:hidden">
-     middle+center
-    </span>
-    <span class="sm:hidden">
-     M-center
-    </span>
-   </span>
-   <span class="indicator-item indicator-middle indicator-end badge badge-primary max-sm:px-1">
-    <span class="max-sm:hidden">
-     middle+end
-    </span>
-    <span class="sm:hidden">
-     M-end
-    </span>
-   </span>
-   <span class="indicator-item indicator-bottom indicator-start badge badge-primary max-sm:px-1">
-    <span class="max-sm:hidden">
-     bottom+start
-    </span>
-    <span class="sm:hidden">
-     B-Start
-    </span>
-   </span>
-   <span class="indicator-item indicator-bottom indicator-center badge badge-primary max-sm:px-1">
-    <span class="max-sm:hidden">
-     bottom+center
-    </span>
-    <span class="sm:hidden">
-     B-center
-    </span>
-   </span>
-   <span class="indicator-item indicator-bottom indicator-end badge badge-primary max-sm:px-1">
-    <span class="max-sm:hidden">
-     bottom+end
-    </span>
-    <span class="sm:hidden">
-     B-end
-    </span>
-   </span>
-   <div class="bg-primary/10 border-primary grid h-32 w-60 place-items-center rounded-md border max-sm:w-40">
-    content
-   </div>
-  </div>
+```html
+<div class="indicator my-3 ms-14">
+ <span class="indicator-item indicator-top indicator-start badge badge-primary max-sm:px-1">
+  <span class="max-sm:hidden">
+   top+start
+  </span>
+  <span class="sm:hidden">
+   T-Start
+  </span>
+ </span>
+ <span class="indicator-item indicator-top indicator-center badge badge-primary max-sm:px-1">
+  <span class="max-sm:hidden">
+   top+center
+  </span>
+  <span class="sm:hidden">
+   T-center
+  </span>
+ </span>
+ <span class="indicator-item indicator-top indicator-end badge badge-primary max-sm:px-1">
+  <span class="max-sm:hidden">
+   top+end
+  </span>
+  <span class="sm:hidden">
+   T-end
+  </span>
+ </span>
+ <span class="indicator-item indicator-middle indicator-start badge badge-primary max-sm:px-1">
+  <span class="max-sm:hidden">
+   middle+start
+  </span>
+  <span class="sm:hidden">
+   M-start
+  </span>
+ </span>
+ <span class="indicator-item indicator-middle indicator-center badge badge-primary max-sm:px-1">
+  <span class="max-sm:hidden">
+   middle+center
+  </span>
+  <span class="sm:hidden">
+   M-center
+  </span>
+ </span>
+ <span class="indicator-item indicator-middle indicator-end badge badge-primary max-sm:px-1">
+  <span class="max-sm:hidden">
+   middle+end
+  </span>
+  <span class="sm:hidden">
+   M-end
+  </span>
+ </span>
+ <span class="indicator-item indicator-bottom indicator-start badge badge-primary max-sm:px-1">
+  <span class="max-sm:hidden">
+   bottom+start
+  </span>
+  <span class="sm:hidden">
+   B-Start
+  </span>
+ </span>
+ <span class="indicator-item indicator-bottom indicator-center badge badge-primary max-sm:px-1">
+  <span class="max-sm:hidden">
+   bottom+center
+  </span>
+  <span class="sm:hidden">
+   B-center
+  </span>
+ </span>
+ <span class="indicator-item indicator-bottom indicator-end badge badge-primary max-sm:px-1">
+  <span class="max-sm:hidden">
+   bottom+end
+  </span>
+  <span class="sm:hidden">
+   B-end
+  </span>
+ </span>
+ <div class="bg-primary/10 border-primary grid h-32 w-60 place-items-center rounded-md border max-sm:w-40">
+  content
  </div>
 </div>
 
+```
 h2:
   - Responsive
 
@@ -382,20 +349,17 @@ h3:
 p:
   - Utilize responsive modifiers likesm,md,lgto adjust the indicator’s position based on screen size.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="indicator">
-   <span class="indicator-item indicator-start sm:indicator-middle md:indicator-bottom lg:indicator-center xl:indicator-end status status-primary">
-   </span>
-   <div class="bg-primary/10 border-primary grid place-items-center rounded-md border p-3">
-    <span class="icon-[tabler--bell] text-primary size-5">
-    </span>
-   </div>
-  </div>
+```html
+<div class="indicator">
+ <span class="indicator-item indicator-start sm:indicator-middle md:indicator-bottom lg:indicator-center xl:indicator-end status status-primary">
+ </span>
+ <div class="bg-primary/10 border-primary grid place-items-center rounded-md border p-3">
+  <span class="icon-[tabler--bell] text-primary size-5">
+  </span>
  </div>
 </div>
 
+```
 h2:
   - Indicator
 

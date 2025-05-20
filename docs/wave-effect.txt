@@ -58,15 +58,12 @@ h3:
 p:
   - Use thewavesclass to implement the default ripple effect.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <button class="btn btn-outline waves">
-   Default
-  </button>
- </div>
-</div>
+```html
+<button class="btn btn-outline waves">
+ Default
+</button>
 
+```
 h2:
   - Color
 
@@ -76,67 +73,61 @@ h3:
 p:
   - Combine thewavesclass withwaves-{semantic color}to implement colored wave effects.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <button class="btn btn-soft waves">
-   Default
-  </button>
-  <button class="btn btn-soft btn-primary waves waves-primary">
-   <span class="waves-ripple">
-   </span>
-   Primary
-  </button>
-  <button class="btn btn-soft btn-secondary waves waves-secondary">
-   Secondary
-  </button>
-  <button class="btn btn-soft btn-accent waves waves-accent">
-   Accent
-  </button>
-  <button class="btn btn-soft btn-info waves waves-info">
-   Info
-  </button>
-  <button class="btn btn-soft btn-success waves waves-success">
-   Success
-  </button>
-  <button class="btn btn-soft btn-warning waves waves-warning">
-   Warning
-  </button>
-  <button class="btn btn-soft btn-error waves waves-error">
-   Error
-  </button>
- </div>
-</div>
+```html
+<button class="btn btn-soft waves">
+ Default
+</button>
+<button class="btn btn-soft btn-primary waves waves-primary">
+ <span class="waves-ripple">
+ </span>
+ Primary
+</button>
+<button class="btn btn-soft btn-secondary waves waves-secondary">
+ Secondary
+</button>
+<button class="btn btn-soft btn-accent waves waves-accent">
+ Accent
+</button>
+<button class="btn btn-soft btn-info waves waves-info">
+ Info
+</button>
+<button class="btn btn-soft btn-success waves waves-success">
+ Success
+</button>
+<button class="btn btn-soft btn-warning waves waves-warning">
+ Warning
+</button>
+<button class="btn btn-soft btn-error waves waves-error">
+ Error
+</button>
 
+```
 h3:
   - Custom colors
 
 p:
   - To customize the ripple color, apply thewavesclass alongside the--wave-colorCSS variable.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <button class="btn waves [--btn-color:#1877F2] text-white [--wave-color:#ffffff5e]">
-   <span class="icon-[tabler--brand-facebook] size-4.5 shrink-0">
-   </span>
-   Facebook
-   <span class="waves-ripple">
-   </span>
-  </button>
-  <button class="btn waves btn-soft [--btn-color:#1da1f2] [--btn-fg:#1da1f2] [--wave-color:#4a87d766]">
-   <span class="icon-[tabler--brand-x] size-4.5 shrink-0">
-   </span>
-   Twitter
-  </button>
-  <button class="btn waves btn-outline [--btn-color:#0a66c2] [--btn-fg:#0a66c2] [--wave-color:#0a66c250]">
-   <span class="icon-[tabler--brand-linkedin] size-4.5 shrink-0">
-   </span>
-   LinkedIn
-  </button>
- </div>
-</div>
+```html
+<button class="btn waves [--btn-color:#1877F2] text-white [--wave-color:#ffffff5e]">
+ <span class="icon-[tabler--brand-facebook] size-4.5 shrink-0">
+ </span>
+ Facebook
+ <span class="waves-ripple">
+ </span>
+</button>
+<button class="btn waves btn-soft [--btn-color:#1da1f2] [--btn-fg:#1da1f2] [--wave-color:#4a87d766]">
+ <span class="icon-[tabler--brand-x] size-4.5 shrink-0">
+ </span>
+ Twitter
+</button>
+<button class="btn waves btn-outline [--btn-color:#0a66c2] [--btn-fg:#0a66c2] [--wave-color:#0a66c250]">
+ <span class="icon-[tabler--brand-linkedin] size-4.5 shrink-0">
+ </span>
+ LinkedIn
+</button>
 
+```
 h2:
   - Illustration
 
@@ -146,97 +137,85 @@ h3:
 p:
   - Example of wave effect applied to buttons.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <button class="btn btn-primary waves waves-light">
-   Default
-  </button>
-  <button class="btn btn-primary btn-soft waves waves-primary">
-   Default
-  </button>
-  <button class="btn btn-primary btn-outline waves waves-primary">
-   Default
-  </button>
-  <button class="btn btn-primary btn-text waves waves-primary">
-   Default
-  </button>
-  <button class="btn btn-primary btn-gradient waves waves-light">
-   Default
-  </button>
- </div>
-</div>
+```html
+<button class="btn btn-primary waves waves-light">
+ Default
+</button>
+<button class="btn btn-primary btn-soft waves waves-primary">
+ Default
+</button>
+<button class="btn btn-primary btn-outline waves waves-primary">
+ Default
+</button>
+<button class="btn btn-primary btn-text waves waves-primary">
+ Default
+</button>
+<button class="btn btn-primary btn-gradient waves waves-light">
+ Default
+</button>
 
+```
 h3:
   - Icons
 
 p:
   - Example of wave effect applied to icon buttons.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <button aria-label="Icon Button" class="btn btn-square waves waves-light btn-primary">
-   <span class="icon-[tabler--star] size-4.5">
-   </span>
-  </button>
-  <button aria-label="Soft Icon Button" class="btn btn-square waves waves-primary btn-soft btn-primary">
-   <span class="icon-[tabler--star] size-4.5">
-   </span>
-  </button>
-  <button aria-label="Outline Icon Button" class="btn btn-square waves waves-primary btn-outline btn-primary">
-   <span class="icon-[tabler--star] size-4.5">
-   </span>
-  </button>
-  <button aria-label="Outline Icon Button" class="btn btn-square waves waves-primary btn-text btn-primary">
-   <span class="icon-[tabler--star] size-4.5">
-   </span>
-  </button>
-  <button aria-label="Gradient Icon Button" class="btn btn-square waves waves-light btn-gradient btn-primary">
-   <span class="icon-[tabler--star] size-4.5">
-   </span>
-  </button>
- </div>
-</div>
+```html
+<button aria-label="Icon Button" class="btn btn-square waves waves-light btn-primary">
+ <span class="icon-[tabler--star] size-4.5">
+ </span>
+</button>
+<button aria-label="Soft Icon Button" class="btn btn-square waves waves-primary btn-soft btn-primary">
+ <span class="icon-[tabler--star] size-4.5">
+ </span>
+</button>
+<button aria-label="Outline Icon Button" class="btn btn-square waves waves-primary btn-outline btn-primary">
+ <span class="icon-[tabler--star] size-4.5">
+ </span>
+</button>
+<button aria-label="Outline Icon Button" class="btn btn-square waves waves-primary btn-text btn-primary">
+ <span class="icon-[tabler--star] size-4.5">
+ </span>
+</button>
+<button aria-label="Gradient Icon Button" class="btn btn-square waves waves-light btn-gradient btn-primary">
+ <span class="icon-[tabler--star] size-4.5">
+ </span>
+</button>
 
+```
 h3:
   - Card
 
 p:
   - Example of wave effect applied to card.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card waves waves-primary sm:max-w-sm">
-   <div class="card-body">
-    <h5 class="card-title mb-2.5">
-     Welcome to Our Service
-    </h5>
-    <p>
-     Discover the features and benefits that our service offers. Enhance your experience with our user-friendly
+```html
+<div class="card waves waves-primary sm:max-w-sm">
+ <div class="card-body">
+  <h5 class="card-title mb-2.5">
+   Welcome to Our Service
+  </h5>
+  <p>
+   Discover the features and benefits that our service offers. Enhance your experience with our user-friendly
 platform designed to meet all your needs.
-    </p>
-   </div>
-  </div>
+  </p>
  </div>
 </div>
 
+```
 h3:
   - Image
 
 p:
   - Example of wave effect applied to images.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="waves waves-info">
-   <img alt="flower image" src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png"/>
-  </div>
- </div>
+```html
+<div class="waves waves-info">
+ <img alt="flower image" src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png"/>
 </div>
 
+```
 h2:
   - Wave Effect
 

@@ -35,14 +35,11 @@ h3:
 p:
   - Basic example ofstatuscomponent.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <span class="status">
-  </span>
- </div>
-</div>
+```html
+<span class="status">
+</span>
 
+```
 h2:
   - Size
 
@@ -52,22 +49,19 @@ h3:
 p:
   - Status sizes withstatus-{xs|sm|md|lg|xl}utility classes.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex items-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div aria-label="status" class="status status-xs">
-  </div>
-  <div aria-label="status" class="status status-sm">
-  </div>
-  <div aria-label="status" class="status status-md">
-  </div>
-  <div aria-label="status" class="status status-lg">
-  </div>
-  <div aria-label="status" class="status status-xl">
-  </div>
- </div>
+```html
+<div aria-label="status" class="status status-xs">
+</div>
+<div aria-label="status" class="status status-sm">
+</div>
+<div aria-label="status" class="status status-md">
+</div>
+<div aria-label="status" class="status status-lg">
+</div>
+<div aria-label="status" class="status status-xl">
 </div>
 
+```
 h2:
   - Color
 
@@ -77,26 +71,23 @@ h3:
 p:
   - Pre-configured color status designs.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div aria-label="status" class="status status-primary">
-  </div>
-  <div aria-label="status" class="status status-secondary">
-  </div>
-  <div aria-label="status" class="status status-accent">
-  </div>
-  <div aria-label="info" class="status status-info">
-  </div>
-  <div aria-label="success" class="status status-success">
-  </div>
-  <div aria-label="warning" class="status status-warning">
-  </div>
-  <div aria-label="error" class="status status-error">
-  </div>
- </div>
+```html
+<div aria-label="status" class="status status-primary">
+</div>
+<div aria-label="status" class="status status-secondary">
+</div>
+<div aria-label="status" class="status status-accent">
+</div>
+<div aria-label="info" class="status status-info">
+</div>
+<div aria-label="success" class="status status-success">
+</div>
+<div aria-label="warning" class="status status-warning">
+</div>
+<div aria-label="error" class="status status-error">
 </div>
 
+```
 h2:
   - Animation
 
@@ -106,61 +97,52 @@ h3:
 p:
   - Use theanimate-bounceutility to apply a bouncing animation to an element, creating a dynamic up-and-down motion. This effect is useful for drawing attention to interactive elements like buttons, notifications, or alerts.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex items-center gap-2">
-   <div class="status status-info animate-bounce">
-   </div>
-   <span>
-    Unread messages
-   </span>
-  </div>
+```html
+<div class="flex items-center gap-2">
+ <div class="status status-info animate-bounce">
  </div>
+ <span>
+  Unread messages
+ </span>
 </div>
 
+```
 h3:
   - Ping Animation
 
 p:
   - Include theanimate-pingutility to enable an element to scale and fade, resembling a radar ping or water ripple effect, which is beneficial for features like attention to the alert.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex items-center gap-2">
-   <div class="inline-grid *:[grid-area:1/1]">
-    <div class="status status-error animate-ping">
-    </div>
-    <div class="status status-error">
-    </div>
-   </div>
-   <span>
-    Server is down
-   </span>
+```html
+<div class="flex items-center gap-2">
+ <div class="inline-grid *:[grid-area:1/1]">
+  <div class="status status-error animate-ping">
+  </div>
+  <div class="status status-error">
   </div>
  </div>
+ <span>
+  Server is down
+ </span>
 </div>
 
+```
 h3:
   - Pulse Animation
 
 p:
   - Use theanimate-pulseutility to make an element pulse, drawing attention to important statuses like alerts or maintenance.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex items-center gap-2">
-   <div class="status status-warning animate-pulse">
-   </div>
-   <span>
-    Under Maintenance
-   </span>
-  </div>
+```html
+<div class="flex items-center gap-2">
+ <div class="status status-warning animate-pulse">
  </div>
+ <span>
+  Under Maintenance
+ </span>
 </div>
 
+```
 h2:
   - Illustrations
 
@@ -170,43 +152,40 @@ h3:
 p:
   - This example demonstrates how to integratestatuswithprogressfor better task visualization.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="progress mb-4 h-3">
-   <div class="progress-bar progress-primary w-1/4 rounded-e-none">
-   </div>
-   <div class="progress-bar progress-success w-1/4 rounded-none">
-   </div>
-   <div class="progress-bar progress-error w-2/4 rounded-s-none">
-   </div>
+```html
+<div class="progress mb-4 h-3">
+ <div class="progress-bar progress-primary w-1/4 rounded-e-none">
+ </div>
+ <div class="progress-bar progress-success w-1/4 rounded-none">
+ </div>
+ <div class="progress-bar progress-error w-2/4 rounded-s-none">
+ </div>
+</div>
+<div class="flex items-center gap-4 *:flex *:items-center *:gap-2">
+ <div>
+  <div aria-label="status" class="status status-primary">
   </div>
-  <div class="flex items-center gap-4 *:flex *:items-center *:gap-2">
-   <div>
-    <div aria-label="status" class="status status-primary">
-    </div>
-    <span class="text-primary">
-     Initiated
-    </span>
-   </div>
-   <div>
-    <div aria-label="status" class="status status-success">
-    </div>
-    <span class="text-success">
-     In Progress
-    </span>
-   </div>
-   <div>
-    <div aria-label="status" class="status status-error">
-    </div>
-    <span class="text-error">
-     Completed
-    </span>
-   </div>
+  <span class="text-primary">
+   Initiated
+  </span>
+ </div>
+ <div>
+  <div aria-label="status" class="status status-success">
   </div>
+  <span class="text-success">
+   In Progress
+  </span>
+ </div>
+ <div>
+  <div aria-label="status" class="status status-error">
+  </div>
+  <span class="text-error">
+   Completed
+  </span>
  </div>
 </div>
 
+```
 h2:
   - Status
 

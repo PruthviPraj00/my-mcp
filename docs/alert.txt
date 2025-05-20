@@ -31,90 +31,81 @@ h3:
 p:
   - The standard format of solid-colored avatars, accompanied by the component classalertand modifier classalert-{semantic-color}.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="alert" role="alert">
-   A quick alert conveying key information or prompting action within a system.
-  </div>
-  <div class="alert alert-primary" role="alert">
-   Welcome to our platform! Explore our latest features and updates.
-  </div>
-  <div class="alert alert-info" role="alert">
-   Stay tuned for our upcoming events and announcements.
-  </div>
-  <div class="alert alert-success" role="alert">
-   Your transaction was successful. Thank you for choosing our service!
-  </div>
-  <div class="alert alert-warning" role="alert">
-   Attention! Your account security may be at risk. Enable two-factor authentication now.
-  </div>
-  <div class="alert alert-error" role="alert">
-   Oops! It seems there was an unexpected error. Please try again later.
-  </div>
- </div>
+```html
+<div class="alert" role="alert">
+ A quick alert conveying key information or prompting action within a system.
+</div>
+<div class="alert alert-primary" role="alert">
+ Welcome to our platform! Explore our latest features and updates.
+</div>
+<div class="alert alert-info" role="alert">
+ Stay tuned for our upcoming events and announcements.
+</div>
+<div class="alert alert-success" role="alert">
+ Your transaction was successful. Thank you for choosing our service!
+</div>
+<div class="alert alert-warning" role="alert">
+ Attention! Your account security may be at risk. Enable two-factor authentication now.
+</div>
+<div class="alert alert-error" role="alert">
+ Oops! It seems there was an unexpected error. Please try again later.
 </div>
 
+```
 h3:
   - Soft alerts
 
 p:
   - The standard format of soft-colored avatars, accompanied by the component classalert,alert-softand modifier classalert-{semantic-color}.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="alert alert-soft" role="alert">
-   A quick alert conveying key information or prompting action within a system.
-  </div>
-  <div class="alert alert-soft alert-primary" role="alert">
-   Welcome to our platform! Explore our latest features and updates.
-  </div>
-  <div class="alert alert-soft alert-info" role="alert">
-   Stay tuned for our upcoming events and announcements.
-  </div>
-  <div class="alert alert-soft alert-success" role="alert">
-   Your transaction was successful. Thank you for choosing our service!
-  </div>
-  <div class="alert alert-soft alert-warning" role="alert">
-   Attention! Your account security may be at risk. Enable two-factor authentication now.
-  </div>
-  <div class="alert alert-soft alert-error" role="alert">
-   Oops! It seems there was an unexpected error. Please try again later.
-  </div>
- </div>
+```html
+<div class="alert alert-soft" role="alert">
+ A quick alert conveying key information or prompting action within a system.
+</div>
+<div class="alert alert-soft alert-primary" role="alert">
+ Welcome to our platform! Explore our latest features and updates.
+</div>
+<div class="alert alert-soft alert-info" role="alert">
+ Stay tuned for our upcoming events and announcements.
+</div>
+<div class="alert alert-soft alert-success" role="alert">
+ Your transaction was successful. Thank you for choosing our service!
+</div>
+<div class="alert alert-soft alert-warning" role="alert">
+ Attention! Your account security may be at risk. Enable two-factor authentication now.
+</div>
+<div class="alert alert-soft alert-error" role="alert">
+ Oops! It seems there was an unexpected error. Please try again later.
 </div>
 
+```
 h3:
   - Outline alerts
 
 p:
   - The standard format of outline-colored avatars, accompanied by the component classalert,alert-outlineand modifier classalert-{semantic-color}.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="alert alert-outline" role="alert">
-   A quick alert conveying key information or prompting action within a system.
-  </div>
-  <div class="alert alert-outline alert-primary" role="alert">
-   Welcome to our platform! Explore our latest features and updates.
-  </div>
-  <div class="alert alert-outline alert-info" role="alert">
-   Stay tuned for our upcoming events and announcements.
-  </div>
-  <div class="alert alert-outline alert-success" role="alert">
-   Your transaction was successful. Thank you for choosing our service!
-  </div>
-  <div class="alert alert-outline alert-warning" role="alert">
-   Attention! Your account security may be at risk. Enable two-factor authentication now.
-  </div>
-  <div class="alert alert-outline alert-error" role="alert">
-   Oops! It seems there was an unexpected error. Please try again later.
-  </div>
- </div>
+```html
+<div class="alert alert-outline" role="alert">
+ A quick alert conveying key information or prompting action within a system.
+</div>
+<div class="alert alert-outline alert-primary" role="alert">
+ Welcome to our platform! Explore our latest features and updates.
+</div>
+<div class="alert alert-outline alert-info" role="alert">
+ Stay tuned for our upcoming events and announcements.
+</div>
+<div class="alert alert-outline alert-success" role="alert">
+ Your transaction was successful. Thank you for choosing our service!
+</div>
+<div class="alert alert-outline alert-warning" role="alert">
+ Attention! Your account security may be at risk. Enable two-factor authentication now.
+</div>
+<div class="alert alert-outline alert-error" role="alert">
+ Oops! It seems there was an unexpected error. Please try again later.
 </div>
 
+```
 h2:
   - Illustrations
 
@@ -124,236 +115,215 @@ h3:
 p:
   - You can achieve this style by combining theborder-dashedutility class with thealert-outlinemodifier class.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="alert alert-outline border-dashed" role="alert">
-   A quick alert conveying key information or prompting action within a system.
-  </div>
-  <div class="alert alert-outline border-dashed alert-primary" role="alert">
-   Welcome to our platform! Explore our latest features and updates.
-  </div>
-  <div class="alert alert-outline border-dashed alert-info" role="alert">
-   Stay tuned for our upcoming events and announcements.
-  </div>
-  <div class="alert alert-outline border-dashed alert-success" role="alert">
-   Your transaction was successful. Thank you for choosing our service!
-  </div>
-  <div class="alert alert-outline border-dashed alert-warning" role="alert">
-   Attention! Your account security may be at risk. Enable two-factor authentication now.
-  </div>
-  <div class="alert alert-outline border-dashed alert-error" role="alert">
-   Oops! It seems there was an unexpected error. Please try again later.
-  </div>
- </div>
+```html
+<div class="alert alert-outline border-dashed" role="alert">
+ A quick alert conveying key information or prompting action within a system.
+</div>
+<div class="alert alert-outline border-dashed alert-primary" role="alert">
+ Welcome to our platform! Explore our latest features and updates.
+</div>
+<div class="alert alert-outline border-dashed alert-info" role="alert">
+ Stay tuned for our upcoming events and announcements.
+</div>
+<div class="alert alert-outline border-dashed alert-success" role="alert">
+ Your transaction was successful. Thank you for choosing our service!
+</div>
+<div class="alert alert-outline border-dashed alert-warning" role="alert">
+ Attention! Your account security may be at risk. Enable two-factor authentication now.
+</div>
+<div class="alert alert-outline border-dashed alert-error" role="alert">
+ Oops! It seems there was an unexpected error. Please try again later.
 </div>
 
+```
 h3:
   - Alerts with icon
 
 p:
   - Add a descriptive icon to complement the message within the alert component, as illustrated in the example below.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="alert alert-warning flex items-center gap-4" role="alert">
-   <span class="icon-[tabler--alert-triangle] shrink-0 size-6">
-   </span>
-   <p>
-    <span class="text-lg font-semibold">
-     Warning alert:
-    </span>
-    Stay informed about the latest updates and upcoming events.
-   </p>
-  </div>
-  <div class="alert alert-success flex items-center gap-4" role="alert">
-   <span class="icon-[tabler--circle-check] shrink-0 size-6">
-   </span>
-   <p>
-    <span class="text-lg font-semibold">
-     Success alert:
-    </span>
-    Explore our recent achievements and upcoming events.
-   </p>
-  </div>
-  <div class="alert alert-soft alert-warning flex items-center gap-4" role="alert">
-   <span class="icon-[tabler--alert-triangle] shrink-0 size-6">
-   </span>
-   <p>
-    <span class="text-lg font-semibold">
-     Warning alert:
-    </span>
-    Take note of important updates and upcoming events.
-   </p>
-  </div>
-  <div class="alert alert-soft alert-success flex items-center gap-4" role="alert">
-   <span class="icon-[tabler--circle-check] shrink-0 size-6">
-   </span>
-   <p>
-    <span class="text-lg font-semibold">
-     Success alert:
-    </span>
-    Celebrate our successes and stay informed about upcoming events.
-   </p>
-  </div>
-  <div class="alert alert-outline alert-warning flex items-center gap-4" role="alert">
-   <span class="icon-[tabler--alert-triangle] shrink-0 size-6">
-   </span>
-   <p>
-    <span class="text-lg font-semibold">
-     Warning alert:
-    </span>
-    Pay attention to warnings and stay updated about upcoming events.
-   </p>
-  </div>
-  <div class="alert alert-outline alert-success flex items-center gap-4" role="alert">
-   <span class="icon-[tabler--circle-check] shrink-0 size-6">
-   </span>
-   <p>
-    <span class="text-lg font-semibold">
-     Success alert:
-    </span>
-    Be aware of important notices and upcoming events.
-   </p>
-  </div>
- </div>
+```html
+<div class="alert alert-warning flex items-center gap-4" role="alert">
+ <span class="icon-[tabler--alert-triangle] shrink-0 size-6">
+ </span>
+ <p>
+  <span class="text-lg font-semibold">
+   Warning alert:
+  </span>
+  Stay informed about the latest updates and upcoming events.
+ </p>
+</div>
+<div class="alert alert-success flex items-center gap-4" role="alert">
+ <span class="icon-[tabler--circle-check] shrink-0 size-6">
+ </span>
+ <p>
+  <span class="text-lg font-semibold">
+   Success alert:
+  </span>
+  Explore our recent achievements and upcoming events.
+ </p>
+</div>
+<div class="alert alert-soft alert-warning flex items-center gap-4" role="alert">
+ <span class="icon-[tabler--alert-triangle] shrink-0 size-6">
+ </span>
+ <p>
+  <span class="text-lg font-semibold">
+   Warning alert:
+  </span>
+  Take note of important updates and upcoming events.
+ </p>
+</div>
+<div class="alert alert-soft alert-success flex items-center gap-4" role="alert">
+ <span class="icon-[tabler--circle-check] shrink-0 size-6">
+ </span>
+ <p>
+  <span class="text-lg font-semibold">
+   Success alert:
+  </span>
+  Celebrate our successes and stay informed about upcoming events.
+ </p>
+</div>
+<div class="alert alert-outline alert-warning flex items-center gap-4" role="alert">
+ <span class="icon-[tabler--alert-triangle] shrink-0 size-6">
+ </span>
+ <p>
+  <span class="text-lg font-semibold">
+   Warning alert:
+  </span>
+  Pay attention to warnings and stay updated about upcoming events.
+ </p>
+</div>
+<div class="alert alert-outline alert-success flex items-center gap-4" role="alert">
+ <span class="icon-[tabler--circle-check] shrink-0 size-6">
+ </span>
+ <p>
+  <span class="text-lg font-semibold">
+   Success alert:
+  </span>
+  Be aware of important notices and upcoming events.
+ </p>
 </div>
 
+```
 h3:
   - Descriptive alert
 
 p:
   - Alerts may include supplementary HTML elements such as headers, paragraphs, and icons.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="alert alert-soft alert-primary flex items-start gap-4">
-   <span class="icon-[tabler--check] shrink-0 size-6">
-   </span>
-   <div class="flex flex-col gap-1">
-    <h5 class="text-lg font-semibold">
-     Server maintenance in progress
-    </h5>
-    <p>
-     Our servers are currently undergoing maintenance. We apologize for any inconvenience caused and appreciate your patience.
-    </p>
-   </div>
-  </div>
+```html
+<div class="alert alert-soft alert-primary flex items-start gap-4">
+ <span class="icon-[tabler--check] shrink-0 size-6">
+ </span>
+ <div class="flex flex-col gap-1">
+  <h5 class="text-lg font-semibold">
+   Server maintenance in progress
+  </h5>
+  <p>
+   Our servers are currently undergoing maintenance. We apologize for any inconvenience caused and appreciate your patience.
+  </p>
  </div>
 </div>
 
+```
 h3:
   - Alert with list
 
 p:
   - Similarly you can use lists.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="alert alert-soft alert-primary flex items-start gap-4">
-   <span class="icon-[tabler--info-circle] shrink-0 size-6">
-   </span>
-   <div class="flex flex-col gap-1">
-    <h5 class="text-lg font-semibold">
-     Please ensure that your password meets the following requirements:
-    </h5>
-    <ul class="mt-1.5 list-inside list-disc">
-     <li>
-      Contains a minimum of 10 characters and a maximum of 100 characters.
-     </li>
-     <li>
-      Includes at least one lowercase character.
-     </li>
-     <li>
-      Incorporates at least one special character such as !, @, #, or ?.
-     </li>
-    </ul>
-   </div>
-  </div>
+```html
+<div class="alert alert-soft alert-primary flex items-start gap-4">
+ <span class="icon-[tabler--info-circle] shrink-0 size-6">
+ </span>
+ <div class="flex flex-col gap-1">
+  <h5 class="text-lg font-semibold">
+   Please ensure that your password meets the following requirements:
+  </h5>
+  <ul class="mt-1.5 list-inside list-disc">
+   <li>
+    Contains a minimum of 10 characters and a maximum of 100 characters.
+   </li>
+   <li>
+    Includes at least one lowercase character.
+   </li>
+   <li>
+    Incorporates at least one special character such as !, @, #, or ?.
+   </li>
+  </ul>
  </div>
 </div>
 
+```
 h3:
   - Alert with action
 
 p:
   - The action alert delivers vital information to users and encourages them to take defined actions. It commonly comprises a message, a link for additional details, and interactive buttons for user engagement.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="alert alert-soft alert-primary" role="alert">
-   Please read the
-   <a class="link link-primary font-semibold" href="#">
-    policy
-   </a>
-   . These can be configured in Settings.
-   <div class="mt-4 flex gap-2">
-    <button class="btn btn-primary btn-sm" type="button">
-     Ok
-    </button>
-    <button class="btn btn-outline btn-secondary btn-sm" type="button">
-     Cancel
-    </button>
-   </div>
-  </div>
+```html
+<div class="alert alert-soft alert-primary" role="alert">
+ Please read the
+ <a class="link link-primary font-semibold" href="#">
+  policy
+ </a>
+ . These can be configured in Settings.
+ <div class="mt-4 flex gap-2">
+  <button class="btn btn-primary btn-sm" type="button">
+   Ok
+  </button>
+  <button class="btn btn-outline btn-secondary btn-sm" type="button">
+   Cancel
+  </button>
  </div>
 </div>
 
+```
 h3:
   - Responsive alert
 
 p:
   - This alert example maintains a horizontal layout on larger screens while adapting to a vertical layout on mobile devices.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="alert alert-soft alert-primary flex items-start max-sm:flex-col max-sm:items-center gap-4">
-   <span class="icon-[tabler--check] size-6 shrink-0">
-   </span>
-   <div class="flex flex-col grow gap-1 max-sm:items-center">
-    <h5 class="text-lg font-semibold">
-     Server maintenance in progress
-    </h5>
-    <p>
-     Our servers are currently undergoing maintenance. We apologize for any inconvenience caused and appreciate your patience.
-    </p>
-   </div>
-   <div class="flex gap-2">
-    <button class="btn btn-primary btn-sm" type="button">
-     Agree
-    </button>
-    <button class="btn btn-outline btn-secondary btn-sm" type="button">
-     Cancel
-    </button>
-   </div>
-  </div>
+```html
+<div class="alert alert-soft alert-primary flex items-start max-sm:flex-col max-sm:items-center gap-4">
+ <span class="icon-[tabler--check] size-6 shrink-0">
+ </span>
+ <div class="flex flex-col grow gap-1 max-sm:items-center">
+  <h5 class="text-lg font-semibold">
+   Server maintenance in progress
+  </h5>
+  <p>
+   Our servers are currently undergoing maintenance. We apologize for any inconvenience caused and appreciate your patience.
+  </p>
+ </div>
+ <div class="flex gap-2">
+  <button class="btn btn-primary btn-sm" type="button">
+   Agree
+  </button>
+  <button class="btn btn-outline btn-secondary btn-sm" type="button">
+   Cancel
+  </button>
  </div>
 </div>
 
+```
 h3:
   - Dismissible alert
 
 p:
   - Utilize thedata-remove-elementattribute to specify the connected ID for alert removal. Customize the removal animation by incorporating theremoving:modifier, as illustrated below.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="alert alert-soft alert-primary removing:translate-x-5 removing:opacity-0 flex items-center gap-4 transition duration-300 ease-in-out" id="dismiss-alert1" role="alert">
-   Dive into our platform to discover exciting new features and updates.
-   <button aria-label="Close Button" class="ms-auto cursor-pointer leading-none" data-remove-element="#dismiss-alert1">
-    <span class="icon-[tabler--x] size-5">
-    </span>
-   </button>
-  </div>
- </div>
+```html
+<div class="alert alert-soft alert-primary removing:translate-x-5 removing:opacity-0 flex items-center gap-4 transition duration-300 ease-in-out" id="dismiss-alert1" role="alert">
+ Dive into our platform to discover exciting new features and updates.
+ <button aria-label="Close Button" class="ms-auto cursor-pointer leading-none" data-remove-element="#dismiss-alert1">
+  <span class="icon-[tabler--x] size-5">
+  </span>
+ </button>
 </div>
 
+```
 h2:
   - Alert
 

@@ -21,36 +21,30 @@ h3:
 p:
   - A HTML form for filtering with radio buttons and a reset option.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose justify-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <form class="filter">
-   <input class="btn btn-square" type="reset" value="Ã"/>
-   <input aria-label="Tea" class="btn" name="drink" type="radio"/>
-   <input aria-label="Coffee" class="btn" name="drink" type="radio"/>
-   <input aria-label="Smoothie" class="btn" name="drink" type="radio"/>
-  </form>
- </div>
-</div>
+```html
+<form class="filter">
+ <input class="btn btn-square" type="reset" value="Ã"/>
+ <input aria-label="Tea" class="btn" name="drink" type="radio"/>
+ <input aria-label="Coffee" class="btn" name="drink" type="radio"/>
+ <input aria-label="Smoothie" class="btn" name="drink" type="radio"/>
+</form>
 
+```
 h3:
   - Implementing filter without HTML forms
 
 p:
   - Use this method when HTML forms are not an option.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose justify-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="filter">
-   <input aria-label="All" class="btn filter-reset" name="destination" type="radio"/>
-   <input aria-label="Jungle" class="btn" name="destination" type="radio"/>
-   <input aria-label="Beach" class="btn" name="destination" type="radio"/>
-   <input aria-label="Mountain" class="btn" name="destination" type="radio"/>
-  </div>
- </div>
+```html
+<div class="filter">
+ <input aria-label="All" class="btn filter-reset" name="destination" type="radio"/>
+ <input aria-label="Jungle" class="btn" name="destination" type="radio"/>
+ <input aria-label="Beach" class="btn" name="destination" type="radio"/>
+ <input aria-label="Mountain" class="btn" name="destination" type="radio"/>
 </div>
 
+```
 h2:
   - Filter
 

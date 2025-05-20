@@ -28,42 +28,36 @@ p:
 p:
   - Use themockup-phonecomponent class to contain the phone mockup. Themockup-phone-cameraclass introduces dynamic island UI elements. Meanwhile, themockup-phone-displayclass serves as a container for displaying items.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="mockup-phone">
-   <div class="mockup-phone-camera">
-   </div>
-   <div class="mockup-phone-display bg-base-200">
-    <div class="h-142 w-80 grid place-content-center">
-     Hi.
-    </div>
-   </div>
+```html
+<div class="mockup-phone">
+ <div class="mockup-phone-camera">
+ </div>
+ <div class="mockup-phone-display bg-base-200">
+  <div class="h-142 w-80 grid place-content-center">
+   Hi.
   </div>
  </div>
 </div>
 
+```
 h3:
   - Image
 
 p:
   - This demonstrates how we use images as display.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="mockup-phone">
-   <div class="mockup-phone-camera">
-   </div>
-   <div class="mockup-phone-display flex justify-center">
-    <div class="h-142 w-80">
-     <img alt="phone background" class="size-full object-cover" src="https://cdn.flyonui.com/fy-assets/components/iphone/image.png"/>
-    </div>
-   </div>
+```html
+<div class="mockup-phone">
+ <div class="mockup-phone-camera">
+ </div>
+ <div class="mockup-phone-display flex justify-center">
+  <div class="h-142 w-80">
+   <img alt="phone background" class="size-full object-cover" src="https://cdn.flyonui.com/fy-assets/components/iphone/image.png"/>
   </div>
  </div>
 </div>
 
+```
 h2:
   - Phone
 

@@ -50,28 +50,22 @@ h3:
 p:
   - The following example demonstrates the usage of a star-based rating system with the raty-js library using images, initialized with the below provided JavaScript code. Set thepathto the location where the images are stored in your project, or to the node modules if they are stored there.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex" id="raty-with-image">
-  </div>
- </div>
+```html
+<div class="flex" id="raty-with-image">
 </div>
 
+```
 h3:
   - With fonts
 
 p:
   - The following example demonstrates the usage of a star-based rating system with the raty-js library using fonts, initialized with the below provided JavaScript code. Set thepathto the location where the fonts are stored in your project, or to the node modules if they are stored there.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex" id="raty-with-font">
-  </div>
- </div>
+```html
+<div class="flex" id="raty-with-font">
 </div>
 
+```
 h2:
   - Illustrations
 
@@ -81,156 +75,126 @@ h3:
 p:
   - The following example demonstrates the usage of a star-based read only (static) rating system, initialized with the below provided JavaScript code.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex" id="raty-read-only">
-  </div>
- </div>
+```html
+<div class="flex" id="raty-read-only">
 </div>
 
+```
 h3:
   - Custom icons
 
 p:
   - The following example demonstrates the usage of a rating with the custom heart icons, initialized with the below provided JavaScript code.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex" id="raty-custom-icons">
-  </div>
- </div>
+```html
+<div class="flex" id="raty-custom-icons">
 </div>
 
+```
 h3:
   - With half stars
 
 p:
   - The following example demonstrates the usage of a rating with half stars, initialized with the below provided JavaScript code.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex" id="raty-with-half-stars">
-  </div>
- </div>
+```html
+<div class="flex" id="raty-with-half-stars">
 </div>
 
+```
 h3:
   - Custom sizes
 
 p:
   - Utilizesize-{number}withstarOff&starOnoptions for rating with custom sizes.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex" id="raty-xs">
-  </div>
-  <div class="flex" id="raty-sm">
-  </div>
-  <div class="flex" id="raty-default">
-  </div>
-  <div class="flex" id="raty-lg">
-  </div>
- </div>
+```html
+<div class="flex" id="raty-xs">
+</div>
+<div class="flex" id="raty-sm">
+</div>
+<div class="flex" id="raty-default">
+</div>
+<div class="flex" id="raty-lg">
 </div>
 
+```
 h3:
   - Custom colors
 
 p:
   - Utilizetext-{color}withstarOff&starOnoptions for rating with custom colors.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex" id="raty-primary">
-  </div>
-  <div class="flex" id="raty-warning">
-  </div>
-  <div class="flex" id="raty-error">
-  </div>
- </div>
+```html
+<div class="flex" id="raty-primary">
+</div>
+<div class="flex" id="raty-warning">
+</div>
+<div class="flex" id="raty-error">
 </div>
 
+```
 h3:
   - With hints
 
 p:
   - The following example demonstrates the usage of a rating with hints, initialized with the below provided JavaScript code.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex" id="raty-with-hints">
-  </div>
-  <div class="h-6" data-hint="">
-  </div>
- </div>
+```html
+<div class="flex" id="raty-with-hints">
+</div>
+<div class="h-6" data-hint="">
 </div>
 
+```
 h3:
   - Custom number of stars
 
 p:
   - The following example demonstrates the usage of a rating with custom number of stars , initialized with the below provided JavaScript code.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex" id="raty-with-custom-number-of-stars">
-  </div>
- </div>
+```html
+<div class="flex" id="raty-with-custom-number-of-stars">
 </div>
 
+```
 h3:
   - With score
 
 p:
   - The following example demonstrates the usage of a rating with score(value) , initialized with the below provided JavaScript code.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex items-center justify-between gap-4">
-   <div class="flex" id="raty-with-score">
-   </div>
-   <div class="border-base-content/25 rounded-field text-base-content flex size-8 items-center justify-center border border-2 font-semibold" id="raty-score">
-   </div>
-  </div>
+```html
+<div class="flex items-center justify-between gap-4">
+ <div class="flex" id="raty-with-score">
+ </div>
+ <div class="border-base-content/25 rounded-field text-base-content flex size-8 items-center justify-center border border-2 font-semibold" id="raty-score">
  </div>
 </div>
 
+```
 h3:
   - With reset option
 
 p:
   - The following example demonstrates the usage of a rating with reset option, initialized with the below provided JavaScript code.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex" id="raty-with-reset">
-  </div>
- </div>
+```html
+<div class="flex" id="raty-with-reset">
 </div>
 
+```
 h3:
   - With animation
 
 p:
   - The following example demonstrates the usage of a rating with animation, initialized with the below provided JavaScript code.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex" id="raty-with-animation">
-  </div>
- </div>
+```html
+<div class="flex" id="raty-with-animation">
 </div>
 
+```
 h2:
   - Rating
 

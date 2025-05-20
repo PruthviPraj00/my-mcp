@@ -37,106 +37,94 @@ h3:
 p:
   - Utilize the component classdividerto create vertical content divisions. Apply the modifier classdivider-{semantic-color}to specify different colors for the dividers.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-8 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="divider">
-  </div>
-  <div class="divider divider-neutral">
-  </div>
-  <div class="divider divider-primary">
-  </div>
-  <div class="divider divider-secondary">
-  </div>
-  <div class="divider divider-accent">
-  </div>
-  <div class="divider divider-info">
-  </div>
-  <div class="divider divider-success">
-  </div>
-  <div class="divider divider-warning">
-  </div>
-  <div class="divider divider-error">
-  </div>
- </div>
+```html
+<div class="divider">
+</div>
+<div class="divider divider-neutral">
+</div>
+<div class="divider divider-primary">
+</div>
+<div class="divider divider-secondary">
+</div>
+<div class="divider divider-accent">
+</div>
+<div class="divider divider-info">
+</div>
+<div class="divider divider-success">
+</div>
+<div class="divider divider-warning">
+</div>
+<div class="divider divider-error">
 </div>
 
+```
 h3:
   - Horizontal divider
 
 p:
   - Use the responsive classdivider-horizontalwith the component classdividerto create horizontal content divisions.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex h-60 flex-wrap gap-8">
-   <div class="divider divider-horizontal">
-   </div>
-   <div class="divider divider-horizontal divider-neutral">
-   </div>
-   <div class="divider divider-horizontal divider-primary">
-   </div>
-   <div class="divider divider-horizontal divider-secondary">
-   </div>
-   <div class="divider divider-horizontal divider-accent">
-   </div>
-   <div class="divider divider-horizontal divider-info">
-   </div>
-   <div class="divider divider-horizontal divider-success">
-   </div>
-   <div class="divider divider-horizontal divider-warning">
-   </div>
-   <div class="divider divider-horizontal divider-error">
-   </div>
-  </div>
+```html
+<div class="flex h-60 flex-wrap gap-8">
+ <div class="divider divider-horizontal">
+ </div>
+ <div class="divider divider-horizontal divider-neutral">
+ </div>
+ <div class="divider divider-horizontal divider-primary">
+ </div>
+ <div class="divider divider-horizontal divider-secondary">
+ </div>
+ <div class="divider divider-horizontal divider-accent">
+ </div>
+ <div class="divider divider-horizontal divider-info">
+ </div>
+ <div class="divider divider-horizontal divider-success">
+ </div>
+ <div class="divider divider-horizontal divider-warning">
+ </div>
+ <div class="divider divider-horizontal divider-error">
  </div>
 </div>
 
+```
 h3:
   - With content (horizontal)
 
 p:
   - Add text or icon within the divider markup to show it within the horizontal divider line.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex h-60 flex-wrap gap-5">
-   <div class="divider divider-horizontal">
-    Text
-   </div>
-   <div class="divider divider-horizontal">
-    <span class="flex items-center justify-center">
-     <span class="icon-[tabler--sun] size-5">
-     </span>
-    </span>
-   </div>
-  </div>
+```html
+<div class="flex h-60 flex-wrap gap-5">
+ <div class="divider divider-horizontal">
+  Text
+ </div>
+ <div class="divider divider-horizontal">
+  <span class="flex items-center justify-center">
+   <span class="icon-[tabler--sun] size-5">
+   </span>
+  </span>
  </div>
 </div>
 
+```
 h3:
   - With content (vertical)
 
 p:
   - Insert icons or text into the divider markup following the examples below to display them within the divider line.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-5 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="divider">
-   Text
-  </div>
-  <div class="divider">
-   <span class="flex items-center justify-center">
-    <span class="icon-[tabler--crown] size-5">
-    </span>
-   </span>
-  </div>
- </div>
+```html
+<div class="divider">
+ Text
+</div>
+<div class="divider">
+ <span class="flex items-center justify-center">
+  <span class="icon-[tabler--crown] size-5">
+  </span>
+ </span>
 </div>
 
+```
 h2:
   - Styles
 
@@ -146,66 +134,54 @@ h3:
 p:
   - The following example represents the default style for the divider line.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-0 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="divider">
-   Default
-  </div>
- </div>
+```html
+<div class="divider">
+ Default
 </div>
 
+```
 h3:
   - Dotted
 
 p:
   - Apply the modifier classdivider-dottedto display the divider line in a dotted pattern.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-0 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="divider divider-dotted">
-   Dotted
-  </div>
- </div>
+```html
+<div class="divider divider-dotted">
+ Dotted
 </div>
 
+```
 h3:
   - Dashed
 
 p:
   - Apply the modifier classdivider-dashedto display the divider line in a dashed pattern.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-0 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="divider divider-dashed">
-   Dashed
-  </div>
- </div>
+```html
+<div class="divider divider-dashed">
+ Dashed
 </div>
 
+```
 h3:
   - Custom thickness
 
 p:
   - Utilize the TailwindCSSstateclassesafter:andbefore:along with the border classesborder-e-*for vertical dividers andborder-t-*for horizontal dividers to customize their thickness.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-5 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="divider after:border-t-2 before:border-t-2">
-   Default
-  </div>
-  <div class="divider divider-dotted after:border-t-4 before:border-t-4">
-   Dotted
-  </div>
-  <div class="divider divider-dashed after:border-t-8 before:border-t-8">
-   Dashed
-  </div>
- </div>
+```html
+<div class="divider after:border-t-2 before:border-t-2">
+ Default
+</div>
+<div class="divider divider-dotted after:border-t-4 before:border-t-4">
+ Dotted
+</div>
+<div class="divider divider-dashed after:border-t-8 before:border-t-8">
+ Dashed
 </div>
 
+```
 h2:
   - Content positions
 
@@ -215,44 +191,38 @@ h3:
 p:
   - Use the responsive classesdivider-startanddivider-endto position content at the start and end positions, respectively. By default, the content is centered.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-5 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="divider divider-start">
-   Start
-  </div>
-  <div class="divider">
-   Center
-  </div>
-  <div class="divider divider-end">
-   End
-  </div>
- </div>
+```html
+<div class="divider divider-start">
+ Start
+</div>
+<div class="divider">
+ Center
+</div>
+<div class="divider divider-end">
+ End
 </div>
 
+```
 h3:
   - Horizontal divider content
 
 p:
   - Use the responsive classesdivider-startanddivider-endto position content at the start and end positions in horizontal divider, respectively. By default, the content is centered.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex h-60 gap-5">
-   <div class="divider divider-start divider-horizontal">
-    Start
-   </div>
-   <div class="divider divider-horizontal">
-    Center
-   </div>
-   <div class="divider divider-end divider-horizontal">
-    End
-   </div>
-  </div>
+```html
+<div class="flex h-60 gap-5">
+ <div class="divider divider-start divider-horizontal">
+  Start
+ </div>
+ <div class="divider divider-horizontal">
+  Center
+ </div>
+ <div class="divider divider-end divider-horizontal">
+  End
  </div>
 </div>
 
+```
 h2:
   - Illustrations
 
@@ -265,99 +235,87 @@ p:
 p:
   - Use TailwindCSS classes forresponsive design, such assm:,md:,lg:,xl:, and2xl:, along with the responsive classdivider-horizontal, to switch the divider alignment to horizontal at specific breakpoints.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex w-full flex-col gap-5 lg:flex-row">
-   <div class="shadow-base-300/20 bg-base-200 grid h-32 grow place-items-center shadow-sm">
-   </div>
-   <div class="divider lg:divider-horizontal">
-    OR
-   </div>
-   <div class="shadow-base-300/20 bg-base-200 grid h-32 grow place-items-center shadow-sm">
-   </div>
-  </div>
+```html
+<div class="flex w-full flex-col gap-5 lg:flex-row">
+ <div class="shadow-base-300/20 bg-base-200 grid h-32 grow place-items-center shadow-sm">
+ </div>
+ <div class="divider lg:divider-horizontal">
+  OR
+ </div>
+ <div class="shadow-base-300/20 bg-base-200 grid h-32 grow place-items-center shadow-sm">
  </div>
 </div>
 
+```
 p:
   - Utilize responsive breakpoint classes alongside the responsive classdivider-verticalto adjust the divider alignment to vertical at specific breakpoints.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex w-full gap-5 lg:flex-col">
-   <div class="shadow-base-300/20 bg-base-200 grid h-32 grow place-items-center shadow-sm">
-   </div>
-   <div class="divider divider-horizontal lg:divider-vertical">
-    OR
-   </div>
-   <div class="shadow-base-300/20 bg-base-200 grid h-32 grow place-items-center shadow-sm">
-   </div>
-  </div>
+```html
+<div class="flex w-full gap-5 lg:flex-col">
+ <div class="shadow-base-300/20 bg-base-200 grid h-32 grow place-items-center shadow-sm">
+ </div>
+ <div class="divider divider-horizontal lg:divider-vertical">
+  OR
+ </div>
+ <div class="shadow-base-300/20 bg-base-200 grid h-32 grow place-items-center shadow-sm">
  </div>
 </div>
 
+```
 h3:
   - Buttons with divider
 
 p:
   - Use the example below to implement buttons with a responsive horizontal divider.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex w-fit flex-col gap-5 lg:flex-row">
-   <div class="grid grow place-items-center">
-    <button class="btn btn-soft [--btn-color:#1877F2] [--btn-fg:#1877F2]">
-     <span class="icon-[tabler--brand-facebook]">
-     </span>
-     Sign in with Facebook
-    </button>
-   </div>
-   <div class="divider lg:divider-horizontal">
-   </div>
-   <div class="grid grow place-items-center">
-    <button class="btn btn-soft [--btn-color:#1da1f2] [--btn-fg:#1da1f2]">
-     <span class="icon-[tabler--brand-x]">
-     </span>
-     Sign in with Twitter
-    </button>
-   </div>
-  </div>
+```html
+<div class="flex w-fit flex-col gap-5 lg:flex-row">
+ <div class="grid grow place-items-center">
+  <button class="btn btn-soft [--btn-color:#1877F2] [--btn-fg:#1877F2]">
+   <span class="icon-[tabler--brand-facebook]">
+   </span>
+   Sign in with Facebook
+  </button>
+ </div>
+ <div class="divider lg:divider-horizontal">
+ </div>
+ <div class="grid grow place-items-center">
+  <button class="btn btn-soft [--btn-color:#1da1f2] [--btn-fg:#1da1f2]">
+   <span class="icon-[tabler--brand-x]">
+   </span>
+   Sign in with Twitter
+  </button>
  </div>
 </div>
 
+```
 h3:
   - Buttons with vertical divider
 
 p:
   - Use the example below to implement buttons with a vertical divider.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex w-fit flex-col gap-5">
-   <div class="grid grow place-items-center">
-    <button class="btn btn-soft [--btn-color:#1877F2] [--btn-fg:#1877F2]">
-     <span class="icon-[tabler--brand-facebook]">
-     </span>
-     Sign in with Facebook
-    </button>
-   </div>
-   <div class="divider divider-vertical">
-   </div>
-   <div class="grid grow place-items-center">
-    <button class="btn btn-soft w-full [--btn-color:#1da1f2] [--btn-fg:#1da1f2]">
-     <span class="icon-[tabler--brand-x]">
-     </span>
-     Sign in with Twitter
-    </button>
-   </div>
-  </div>
+```html
+<div class="flex w-fit flex-col gap-5">
+ <div class="grid grow place-items-center">
+  <button class="btn btn-soft [--btn-color:#1877F2] [--btn-fg:#1877F2]">
+   <span class="icon-[tabler--brand-facebook]">
+   </span>
+   Sign in with Facebook
+  </button>
+ </div>
+ <div class="divider divider-vertical">
+ </div>
+ <div class="grid grow place-items-center">
+  <button class="btn btn-soft w-full [--btn-color:#1da1f2] [--btn-fg:#1da1f2]">
+   <span class="icon-[tabler--brand-x]">
+   </span>
+   Sign in with Twitter
+  </button>
  </div>
 </div>
 
+```
 h2:
   - Divider
 

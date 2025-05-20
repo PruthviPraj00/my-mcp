@@ -40,30 +40,27 @@ p:
 p:
   - The example below demonstrates a default popover triggered upon a click event.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose p-10 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="tooltip [--trigger:click]">
-   <div class="tooltip-toggle">
-    <button aria-label="Popover Button" class="btn btn-square">
-     <span class="icon-[tabler--chevron-up]">
-     </span>
-    </button>
-    <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
-     <div class="tooltip-body bg-base-100 max-w-xs rounded-lg p-4 text-start">
-      <span class="text-base-content text-lg font-medium">
-       Popover title
-      </span>
-      <p class="text-base-content/80 text-base pt-4">
-       This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
-      </p>
-     </div>
-    </div>
+```html
+<div class="tooltip [--trigger:click]">
+ <div class="tooltip-toggle">
+  <button aria-label="Popover Button" class="btn btn-square">
+   <span class="icon-[tabler--chevron-up]">
+   </span>
+  </button>
+  <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
+   <div class="tooltip-body bg-base-100 max-w-xs rounded-lg p-4 text-start">
+    <span class="text-base-content text-lg font-medium">
+     Popover title
+    </span>
+    <p class="text-base-content/80 text-base pt-4">
+     This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
+    </p>
    </div>
   </div>
  </div>
 </div>
 
+```
 h2:
   - Colors
 
@@ -73,138 +70,135 @@ h3:
 p:
   - Use modifier classtooltip-{semantic-color}with component classtooltip-bodyfor colored popover.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose gap-5 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="tooltip [--trigger:click]">
-   <div class="tooltip-toggle">
-    <button aria-label="Primary Popover Button" class="btn btn-square btn-primary">
-     <span class="icon-[tabler--chevron-up]">
-     </span>
-    </button>
-    <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
-     <div class="tooltip-body tooltip-primary max-w-xs rounded-lg p-4 text-start">
-      <span class="text-lg font-medium">
-       Popover title
-      </span>
-      <p class="text-base pt-4">
-       This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
-      </p>
-     </div>
-    </div>
+```html
+<div class="tooltip [--trigger:click]">
+ <div class="tooltip-toggle">
+  <button aria-label="Primary Popover Button" class="btn btn-square btn-primary">
+   <span class="icon-[tabler--chevron-up]">
+   </span>
+  </button>
+  <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
+   <div class="tooltip-body tooltip-primary max-w-xs rounded-lg p-4 text-start">
+    <span class="text-lg font-medium">
+     Popover title
+    </span>
+    <p class="text-base pt-4">
+     This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
+    </p>
    </div>
   </div>
-  <div class="tooltip [--trigger:click]">
-   <div class="tooltip-toggle">
-    <button aria-label="Secondary Popover Button" class="btn btn-square btn-secondary">
-     <span class="icon-[tabler--chevron-up]">
-     </span>
-    </button>
-    <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
-     <div class="tooltip-body tooltip-secondary max-w-xs rounded-lg p-4 text-start">
-      <span class="text-lg font-medium">
-       Popover title
-      </span>
-      <p class="text-base pt-4">
-       This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
-      </p>
-     </div>
-    </div>
+ </div>
+</div>
+<div class="tooltip [--trigger:click]">
+ <div class="tooltip-toggle">
+  <button aria-label="Secondary Popover Button" class="btn btn-square btn-secondary">
+   <span class="icon-[tabler--chevron-up]">
+   </span>
+  </button>
+  <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
+   <div class="tooltip-body tooltip-secondary max-w-xs rounded-lg p-4 text-start">
+    <span class="text-lg font-medium">
+     Popover title
+    </span>
+    <p class="text-base pt-4">
+     This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
+    </p>
    </div>
   </div>
-  <div class="tooltip [--trigger:click]">
-   <div class="tooltip-toggle">
-    <button aria-label="Accent Popover Button" class="btn btn-square btn-accent">
-     <span class="icon-[tabler--chevron-up]">
-     </span>
-    </button>
-    <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
-     <div class="tooltip-body tooltip-accent max-w-xs rounded-lg p-4 text-start">
-      <span class="text-lg font-medium">
-       Popover title
-      </span>
-      <p class="text-base pt-4">
-       This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
-      </p>
-     </div>
-    </div>
+ </div>
+</div>
+<div class="tooltip [--trigger:click]">
+ <div class="tooltip-toggle">
+  <button aria-label="Accent Popover Button" class="btn btn-square btn-accent">
+   <span class="icon-[tabler--chevron-up]">
+   </span>
+  </button>
+  <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
+   <div class="tooltip-body tooltip-accent max-w-xs rounded-lg p-4 text-start">
+    <span class="text-lg font-medium">
+     Popover title
+    </span>
+    <p class="text-base pt-4">
+     This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
+    </p>
    </div>
   </div>
-  <div class="tooltip [--trigger:click]">
-   <div class="tooltip-toggle">
-    <button aria-label="Info Popover Button" class="btn btn-square btn-info">
-     <span class="icon-[tabler--chevron-up]">
-     </span>
-    </button>
-    <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
-     <div class="tooltip-body tooltip-info max-w-xs rounded-lg p-4 text-start">
-      <span class="text-lg font-medium">
-       Popover title
-      </span>
-      <p class="text-base pt-4">
-       This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
-      </p>
-     </div>
-    </div>
+ </div>
+</div>
+<div class="tooltip [--trigger:click]">
+ <div class="tooltip-toggle">
+  <button aria-label="Info Popover Button" class="btn btn-square btn-info">
+   <span class="icon-[tabler--chevron-up]">
+   </span>
+  </button>
+  <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
+   <div class="tooltip-body tooltip-info max-w-xs rounded-lg p-4 text-start">
+    <span class="text-lg font-medium">
+     Popover title
+    </span>
+    <p class="text-base pt-4">
+     This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
+    </p>
    </div>
   </div>
-  <div class="tooltip [--trigger:click]">
-   <div class="tooltip-toggle">
-    <button aria-label="Success Popover Button" class="btn btn-square btn-success">
-     <span class="icon-[tabler--chevron-up]">
-     </span>
-    </button>
-    <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
-     <div class="tooltip-body tooltip-success max-w-xs rounded-lg p-4 text-start">
-      <span class="text-lg font-medium">
-       Popover title
-      </span>
-      <p class="text-base pt-4">
-       This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
-      </p>
-     </div>
-    </div>
+ </div>
+</div>
+<div class="tooltip [--trigger:click]">
+ <div class="tooltip-toggle">
+  <button aria-label="Success Popover Button" class="btn btn-square btn-success">
+   <span class="icon-[tabler--chevron-up]">
+   </span>
+  </button>
+  <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
+   <div class="tooltip-body tooltip-success max-w-xs rounded-lg p-4 text-start">
+    <span class="text-lg font-medium">
+     Popover title
+    </span>
+    <p class="text-base pt-4">
+     This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
+    </p>
    </div>
   </div>
-  <div class="tooltip [--trigger:click]">
-   <div class="tooltip-toggle">
-    <button aria-label="Warning Popover Button" class="btn btn-square btn-warning">
-     <span class="icon-[tabler--chevron-up]">
-     </span>
-    </button>
-    <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
-     <div class="tooltip-body tooltip-warning max-w-xs rounded-lg p-4 text-start">
-      <span class="text-lg font-medium">
-       Popover title
-      </span>
-      <p class="text-base pt-4">
-       This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
-      </p>
-     </div>
-    </div>
+ </div>
+</div>
+<div class="tooltip [--trigger:click]">
+ <div class="tooltip-toggle">
+  <button aria-label="Warning Popover Button" class="btn btn-square btn-warning">
+   <span class="icon-[tabler--chevron-up]">
+   </span>
+  </button>
+  <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
+   <div class="tooltip-body tooltip-warning max-w-xs rounded-lg p-4 text-start">
+    <span class="text-lg font-medium">
+     Popover title
+    </span>
+    <p class="text-base pt-4">
+     This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
+    </p>
    </div>
   </div>
-  <div class="tooltip [--trigger:click]">
-   <div class="tooltip-toggle">
-    <button aria-label="Error Popover Button" class="btn btn-square btn-error">
-     <span class="icon-[tabler--chevron-up]">
-     </span>
-    </button>
-    <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
-     <div class="tooltip-body tooltip-error max-w-xs rounded-lg p-4 text-start">
-      <span class="text-lg font-medium">
-       Popover title
-      </span>
-      <p class="text-base pt-4">
-       This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
-      </p>
-     </div>
-    </div>
+ </div>
+</div>
+<div class="tooltip [--trigger:click]">
+ <div class="tooltip-toggle">
+  <button aria-label="Error Popover Button" class="btn btn-square btn-error">
+   <span class="icon-[tabler--chevron-up]">
+   </span>
+  </button>
+  <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
+   <div class="tooltip-body tooltip-error max-w-xs rounded-lg p-4 text-start">
+    <span class="text-lg font-medium">
+     Popover title
+    </span>
+    <p class="text-base pt-4">
+     This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
+    </p>
    </div>
   </div>
  </div>
 </div>
 
+```
 h2:
   - Directions
 
@@ -214,84 +208,81 @@ h3:
 p:
   - Utilize the JavaScript option class[--placement:{direction}]to specify the popover placement in various directions. Here,directioncan betop,bottom,left, orright. By default, the popover is positioned at thetop.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="tooltip [--trigger:click] [--placement:left]">
-   <div class="tooltip-toggle">
-    <button aria-label="Popover Button" class="btn btn-square">
-     <span class="icon-[tabler--chevron-left]">
-     </span>
-    </button>
-    <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
-     <div class="tooltip-body bg-base-100 max-w-xs rounded-lg p-4 text-start">
-      <span class="text-base-content text-lg font-medium">
-       Popover title
-      </span>
-      <p class="text-base-content/80 text-base pt-4">
-       This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
-      </p>
-     </div>
-    </div>
+```html
+<div class="tooltip [--trigger:click] [--placement:left]">
+ <div class="tooltip-toggle">
+  <button aria-label="Popover Button" class="btn btn-square">
+   <span class="icon-[tabler--chevron-left]">
+   </span>
+  </button>
+  <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
+   <div class="tooltip-body bg-base-100 max-w-xs rounded-lg p-4 text-start">
+    <span class="text-base-content text-lg font-medium">
+     Popover title
+    </span>
+    <p class="text-base-content/80 text-base pt-4">
+     This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
+    </p>
    </div>
   </div>
-  <div class="tooltip [--trigger:click]">
-   <div class="tooltip-toggle">
-    <button aria-label="Popover Button" class="btn btn-square">
-     <span class="icon-[tabler--chevron-up]">
-     </span>
-    </button>
-    <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
-     <div class="tooltip-body bg-base-100 max-w-xs rounded-lg p-4 text-start">
-      <span class="text-base-content text-lg font-medium">
-       Popover title
-      </span>
-      <p class="text-base-content/80 text-base pt-4">
-       This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
-      </p>
-     </div>
-    </div>
+ </div>
+</div>
+<div class="tooltip [--trigger:click]">
+ <div class="tooltip-toggle">
+  <button aria-label="Popover Button" class="btn btn-square">
+   <span class="icon-[tabler--chevron-up]">
+   </span>
+  </button>
+  <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
+   <div class="tooltip-body bg-base-100 max-w-xs rounded-lg p-4 text-start">
+    <span class="text-base-content text-lg font-medium">
+     Popover title
+    </span>
+    <p class="text-base-content/80 text-base pt-4">
+     This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
+    </p>
    </div>
   </div>
-  <div class="tooltip [--placement:bottom] [--trigger:click]">
-   <div class="tooltip-toggle">
-    <button aria-label="Popover Button" class="btn btn-square">
-     <span class="icon-[tabler--chevron-down]">
-     </span>
-    </button>
-    <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
-     <div class="tooltip-body bg-base-100 max-w-xs rounded-lg p-4 text-start">
-      <span class="text-base-content text-lg font-medium">
-       Popover title
-      </span>
-      <p class="text-base-content/80 text-base pt-4">
-       This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
-      </p>
-     </div>
-    </div>
+ </div>
+</div>
+<div class="tooltip [--placement:bottom] [--trigger:click]">
+ <div class="tooltip-toggle">
+  <button aria-label="Popover Button" class="btn btn-square">
+   <span class="icon-[tabler--chevron-down]">
+   </span>
+  </button>
+  <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
+   <div class="tooltip-body bg-base-100 max-w-xs rounded-lg p-4 text-start">
+    <span class="text-base-content text-lg font-medium">
+     Popover title
+    </span>
+    <p class="text-base-content/80 text-base pt-4">
+     This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
+    </p>
    </div>
   </div>
-  <div class="tooltip [--placement:right] [--trigger:click]">
-   <div class="tooltip-toggle">
-    <button aria-label="Popover Button" class="btn btn-square">
-     <span class="icon-[tabler--chevron-right]">
-     </span>
-    </button>
-    <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
-     <div class="tooltip-body bg-base-100 max-w-xs rounded-lg p-4 text-start">
-      <span class="text-base-content text-lg font-medium">
-       Popover title
-      </span>
-      <p class="text-base-content/80 text-base pt-4">
-       This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
-      </p>
-     </div>
-    </div>
+ </div>
+</div>
+<div class="tooltip [--placement:right] [--trigger:click]">
+ <div class="tooltip-toggle">
+  <button aria-label="Popover Button" class="btn btn-square">
+   <span class="icon-[tabler--chevron-right]">
+   </span>
+  </button>
+  <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
+   <div class="tooltip-body bg-base-100 max-w-xs rounded-lg p-4 text-start">
+    <span class="text-base-content text-lg font-medium">
+     Popover title
+    </span>
+    <p class="text-base-content/80 text-base pt-4">
+     This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
+    </p>
    </div>
   </div>
  </div>
 </div>
 
+```
 h2:
   - Illustrations
 
@@ -301,103 +292,99 @@ h3:
 p:
   - Below given example shows rating & reviews popover on click.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="tooltip [--trigger:click]">
-   <div class="tooltip-toggle">
-    <p class="text-primary cursor-pointer select-none flex items-center gap-1">
-     Ratings &amp; reviews
-     <span class="icon-[tabler--eye-closed] tooltip-shown:hidden">
+```html
+<div class="tooltip [--trigger:click]">
+ <div class="tooltip-toggle">
+  <p class="text-primary cursor-pointer select-none flex items-center gap-1">
+   Ratings & reviews
+   <span class="icon-[tabler--eye-closed] tooltip-shown:hidden">
+   </span>
+   <span class="icon-[tabler--eye] hidden tooltip-shown:inline-block">
+   </span>
+  </p>
+  <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible p-4" role="popover">
+   <div class="tooltip-body bg-base-100 text-base-content/80 flex max-w-xs flex-col gap-1 rounded-lg p-4 text-start">
+    <div class="text-primary text-xl flex items-center gap-1 font-medium">
+     4.35
+     <span class="icon-[tabler--star-filled] size-5">
      </span>
-     <span class="icon-[tabler--eye] hidden tooltip-shown:inline-block">
-     </span>
+    </div>
+    <div class="text-base-content font-medium">
+     Total 300 reviews
+    </div>
+    <p>
+     All reviews are from genuine customers.
     </p>
-    <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible p-4" role="popover">
-     <div class="tooltip-body bg-base-100 text-base-content/80 flex max-w-xs flex-col gap-1 rounded-lg p-4 text-start">
-      <div class="text-primary text-xl flex items-center gap-1 font-medium">
-       4.35
-       <span class="icon-[tabler--star-filled] size-5">
-       </span>
-      </div>
-      <div class="text-base-content font-medium">
-       Total 300 reviews
-      </div>
-      <p>
-       All reviews are from genuine customers.
-      </p>
-      <div class="mt-4 flex items-center justify-between">
-       <span class="badge badge-soft badge-primary rounded-full">
-        +6 this week
-       </span>
-       <a class="link link-primary link-hover text-sm" href="#">
-        See all
-       </a>
-      </div>
-      <div class="divider my-2">
-      </div>
-      <div class="space-y-2">
-       <div class="flex w-full items-center gap-2">
-        <span class="text-sm text-nowrap font-medium leading-5">
-         5 Star
-        </span>
-        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress" role="progressbar">
-         <div class="progress-bar progress-primary w-3/4">
-         </div>
-        </div>
-        <span class="text-sm font-medium leading-5">
-         225
-        </span>
-       </div>
-       <div class="flex w-full items-center gap-2">
-        <span class="text-sm text-nowrap font-medium leading-5">
-         4 Star
-        </span>
-        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress" role="progressbar">
-         <div class="progress-bar progress-primary w-[10%]">
-         </div>
-        </div>
-        <span class="text-sm font-medium leading-5">
-         30
-        </span>
-       </div>
-       <div class="flex w-full items-center gap-2">
-        <span class="text-sm text-nowrap font-medium leading-5">
-         3 Star
-        </span>
-        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress" role="progressbar">
-         <div class="progress-bar progress-primary w-[10%]">
-         </div>
-        </div>
-        <span class="text-sm font-medium leading-5">
-         30
-        </span>
-       </div>
-       <div class="flex w-full items-center gap-2">
-        <span class="text-sm text-nowrap font-medium leading-5">
-         2 Star
-        </span>
-        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="5" class="progress" role="progressbar">
-         <div class="progress-bar progress-primary w-[5%]">
-         </div>
-        </div>
-        <span class="text-sm font-medium leading-5">
-         15
-        </span>
-       </div>
-       <div class="flex w-full items-center gap-2">
-        <span class="text-sm text-nowrap font-medium leading-5">
-         1 Star
-        </span>
-        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress" role="progressbar">
-         <div class="progress-bar progress-primary w-0">
-         </div>
-        </div>
-        <span class="text-sm font-medium leading-5">
-         00
-        </span>
+    <div class="mt-4 flex items-center justify-between">
+     <span class="badge badge-soft badge-primary rounded-full">
+      +6 this week
+     </span>
+     <a class="link link-primary link-hover text-sm" href="#">
+      See all
+     </a>
+    </div>
+    <div class="divider my-2">
+    </div>
+    <div class="space-y-2">
+     <div class="flex w-full items-center gap-2">
+      <span class="text-sm text-nowrap font-medium leading-5">
+       5 Star
+      </span>
+      <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress" role="progressbar">
+       <div class="progress-bar progress-primary w-3/4">
        </div>
       </div>
+      <span class="text-sm font-medium leading-5">
+       225
+      </span>
+     </div>
+     <div class="flex w-full items-center gap-2">
+      <span class="text-sm text-nowrap font-medium leading-5">
+       4 Star
+      </span>
+      <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress" role="progressbar">
+       <div class="progress-bar progress-primary w-[10%]">
+       </div>
+      </div>
+      <span class="text-sm font-medium leading-5">
+       30
+      </span>
+     </div>
+     <div class="flex w-full items-center gap-2">
+      <span class="text-sm text-nowrap font-medium leading-5">
+       3 Star
+      </span>
+      <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" class="progress" role="progressbar">
+       <div class="progress-bar progress-primary w-[10%]">
+       </div>
+      </div>
+      <span class="text-sm font-medium leading-5">
+       30
+      </span>
+     </div>
+     <div class="flex w-full items-center gap-2">
+      <span class="text-sm text-nowrap font-medium leading-5">
+       2 Star
+      </span>
+      <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="5" class="progress" role="progressbar">
+       <div class="progress-bar progress-primary w-[5%]">
+       </div>
+      </div>
+      <span class="text-sm font-medium leading-5">
+       15
+      </span>
+     </div>
+     <div class="flex w-full items-center gap-2">
+      <span class="text-sm text-nowrap font-medium leading-5">
+       1 Star
+      </span>
+      <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress" role="progressbar">
+       <div class="progress-bar progress-primary w-0">
+       </div>
+      </div>
+      <span class="text-sm font-medium leading-5">
+       00
+      </span>
      </div>
     </div>
    </div>
@@ -405,6 +392,7 @@ Code:
  </div>
 </div>
 
+```
 h2:
   - Options usage
 
@@ -417,63 +405,57 @@ p:
 p:
   - Utilize the provided example to trigger the tooltip/popover on thefocusevent.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="tooltip [--trigger:focus]">
-   <div class="tooltip-toggle">
-    <button aria-label="Popover Button" class="btn btn-square">
-     <span class="icon-[tabler--chevron-up]">
-     </span>
-    </button>
-    <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
-     <div class="tooltip-body bg-base-100 max-w-xs rounded-lg p-4 text-start">
-      <span class="text-base-content text-lg font-medium">
-       Popover title
-      </span>
-      <p class="text-base-content/80 text-base py-4">
-       This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
-      </p>
-      <a class="link link-primary" href="/docs/overlays/tooltip/">
-       Click me
-      </a>
-     </div>
-    </div>
+```html
+<div class="tooltip [--trigger:focus]">
+ <div class="tooltip-toggle">
+  <button aria-label="Popover Button" class="btn btn-square">
+   <span class="icon-[tabler--chevron-up]">
+   </span>
+  </button>
+  <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
+   <div class="tooltip-body bg-base-100 max-w-xs rounded-lg p-4 text-start">
+    <span class="text-base-content text-lg font-medium">
+     Popover title
+    </span>
+    <p class="text-base-content/80 text-base py-4">
+     This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
+    </p>
+    <a class="link link-primary" href="/docs/overlays/tooltip/">
+     Click me
+    </a>
    </div>
   </div>
  </div>
 </div>
 
+```
 p:
   - Utilize the provided example to trigger the tooltip/popover on theHoverevent.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="tooltip">
-   <div class="tooltip-toggle">
-    <button aria-label="Popover Button" class="btn btn-square">
-     <span class="icon-[tabler--chevron-up]">
-     </span>
-    </button>
-    <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
-     <div class="tooltip-body bg-base-100 max-w-xs rounded-lg p-4 text-start">
-      <span class="text-base-content text-lg font-medium">
-       Popover title
-      </span>
-      <p class="text-base-content/80 text-base py-4">
-       This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
-      </p>
-      <a class="link link-primary" href="/docs/overlays/tooltip/">
-       Click me
-      </a>
-     </div>
-    </div>
+```html
+<div class="tooltip">
+ <div class="tooltip-toggle">
+  <button aria-label="Popover Button" class="btn btn-square">
+   <span class="icon-[tabler--chevron-up]">
+   </span>
+  </button>
+  <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
+   <div class="tooltip-body bg-base-100 max-w-xs rounded-lg p-4 text-start">
+    <span class="text-base-content text-lg font-medium">
+     Popover title
+    </span>
+    <p class="text-base-content/80 text-base py-4">
+     This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
+    </p>
+    <a class="link link-primary" href="/docs/overlays/tooltip/">
+     Click me
+    </a>
    </div>
   </div>
  </div>
 </div>
 
+```
 h3:
   - Interaction
 
@@ -483,33 +465,30 @@ p:
 p:
   - The provided example disables interaction with the popover content.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="tooltip [--trigger:focus] [--interaction:false]">
-   <div class="tooltip-toggle">
-    <button aria-label="Popover Button" class="btn btn-square">
-     <span class="icon-[tabler--chevron-up]">
-     </span>
-    </button>
-    <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
-     <div class="tooltip-body bg-base-100 max-w-xs rounded-lg p-4 text-start">
-      <span class="text-base-content text-lg font-medium">
-       Popover title
-      </span>
-      <p class="text-base-content/80 text-base py-4">
-       This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
-      </p>
-      <a class="link link-primary" href="#">
-       Click me
-      </a>
-     </div>
-    </div>
+```html
+<div class="tooltip [--trigger:focus] [--interaction:false]">
+ <div class="tooltip-toggle">
+  <button aria-label="Popover Button" class="btn btn-square">
+   <span class="icon-[tabler--chevron-up]">
+   </span>
+  </button>
+  <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
+   <div class="tooltip-body bg-base-100 max-w-xs rounded-lg p-4 text-start">
+    <span class="text-base-content text-lg font-medium">
+     Popover title
+    </span>
+    <p class="text-base-content/80 text-base py-4">
+     This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
+    </p>
+    <a class="link link-primary" href="#">
+     Click me
+    </a>
    </div>
   </div>
  </div>
 </div>
 
+```
 h3:
   - Tooltip strategy
 
@@ -522,30 +501,27 @@ p:
 p:
   - The provided example showcases the behavior of tooltips/popovers when utilizing the absolute positioning strategy.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose relative h-70 justify-center flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="tooltip show [--trigger:click] [--strategy:absolute] [--placement:bottom]">
-   <div class="tooltip-toggle">
-    <button aria-label="Popover Button" class="btn btn-square">
-     <span class="icon-[tabler--chevron-down]">
-     </span>
-    </button>
-    <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
-     <div class="tooltip-body bg-base-100 w-64 sm:max-w-xs rounded-lg p-4 text-start">
-      <span class="text-base-content text-lg font-medium">
-       Popover title
-      </span>
-      <p class="text-base-content/80 text-base pt-4">
-       This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
-      </p>
-     </div>
-    </div>
+```html
+<div class="tooltip show [--trigger:click] [--strategy:absolute] [--placement:bottom]">
+ <div class="tooltip-toggle">
+  <button aria-label="Popover Button" class="btn btn-square">
+   <span class="icon-[tabler--chevron-down]">
+   </span>
+  </button>
+  <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
+   <div class="tooltip-body bg-base-100 w-64 sm:max-w-xs rounded-lg p-4 text-start">
+    <span class="text-base-content text-lg font-medium">
+     Popover title
+    </span>
+    <p class="text-base-content/80 text-base pt-4">
+     This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
+    </p>
    </div>
   </div>
  </div>
 </div>
 
+```
 h3:
   - Prevent popper
 
@@ -558,30 +534,27 @@ p:
 p:
   - The provided example showcases the behavior of tooltips/popovers when prevent-popper is set totrue.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose h-64 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="tooltip show [--trigger:click] [--placement:right-start] [--prevent-popper:true]">
-   <div class="tooltip-toggle">
-    <button aria-label="Popover Button" class="btn btn-square">
-     <span class="icon-[tabler--chevron-down]">
-     </span>
-    </button>
-    <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
-     <div class="tooltip-body bg-base-100 w-64 sm:max-w-xs rounded-lg p-4 text-start">
-      <span class="text-base-content text-lg font-medium">
-       Popover title
-      </span>
-      <p class="text-base-content/80 text-base pt-4">
-       This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
-      </p>
-     </div>
-    </div>
+```html
+<div class="tooltip show [--trigger:click] [--placement:right-start] [--prevent-popper:true]">
+ <div class="tooltip-toggle">
+  <button aria-label="Popover Button" class="btn btn-square">
+   <span class="icon-[tabler--chevron-down]">
+   </span>
+  </button>
+  <div class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="popover">
+   <div class="tooltip-body bg-base-100 w-64 sm:max-w-xs rounded-lg p-4 text-start">
+    <span class="text-base-content text-lg font-medium">
+     Popover title
+    </span>
+    <p class="text-base-content/80 text-base pt-4">
+     This text serves as placeholder content for the popover, showcasing its overall look in the user interface.
+    </p>
    </div>
   </div>
  </div>
 </div>
 
+```
 h2:
   - JavaScript behavior
 

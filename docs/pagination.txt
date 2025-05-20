@@ -26,31 +26,28 @@ h3:
 p:
   - Basic pagination with the default style has been implemented. To denote the active state, we utilizedaria-[current='page']:{tw-utility-class}for styling.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <nav class="flex items-center gap-x-1">
-   <button class="btn btn-text" type="button">
-    Previous
-   </button>
-   <div class="flex items-center gap-x-1">
-    <button class="btn btn-text btn-square aria-[current='page']:text-bg-primary" type="button">
-     1
-    </button>
-    <button aria-current="page" class="btn btn-text btn-square aria-[current='page']:text-bg-primary" type="button">
-     2
-    </button>
-    <button class="btn btn-text btn-square aria-[current='page']:text-bg-primary" type="button">
-     3
-    </button>
-   </div>
-   <button class="btn btn-text" type="button">
-    Next
-   </button>
-  </nav>
+```html
+<nav class="flex items-center gap-x-1">
+ <button class="btn btn-text" type="button">
+  Previous
+ </button>
+ <div class="flex items-center gap-x-1">
+  <button class="btn btn-text btn-square aria-[current='page']:text-bg-primary" type="button">
+   1
+  </button>
+  <button aria-current="page" class="btn btn-text btn-square aria-[current='page']:text-bg-primary" type="button">
+   2
+  </button>
+  <button class="btn btn-text btn-square aria-[current='page']:text-bg-primary" type="button">
+   3
+  </button>
  </div>
-</div>
+ <button class="btn btn-text" type="button">
+  Next
+ </button>
+</nav>
 
+```
 h2:
   - Variants
 
@@ -60,62 +57,56 @@ h3:
 p:
   - By applying thebtn-softmodifier class, it will transform into a soft pagination type.PreviewHTMLCopyPrevious123Next<navclass="flex items-center gap-x-1"><buttontype="button"class="btn btn-soft">Previous</button><divclass="flex items-center gap-x-1"><buttontype="button"class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary">1</button><buttontype="button"class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary"aria-current="page">2</button><buttontype="button"class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary">3</button></div><buttontype="button"class="btn btn-soft">Next</button></nav>
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <nav class="flex items-center gap-x-1">
-   <button class="btn btn-soft" type="button">
-    Previous
-   </button>
-   <div class="flex items-center gap-x-1">
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     1
-    </button>
-    <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     2
-    </button>
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     3
-    </button>
-   </div>
-   <button class="btn btn-soft" type="button">
-    Next
-   </button>
-  </nav>
+```html
+<nav class="flex items-center gap-x-1">
+ <button class="btn btn-soft" type="button">
+  Previous
+ </button>
+ <div class="flex items-center gap-x-1">
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   1
+  </button>
+  <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   2
+  </button>
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   3
+  </button>
  </div>
-</div>
+ <button class="btn btn-soft" type="button">
+  Next
+ </button>
+</nav>
 
+```
 h3:
   - Outline
 
 p:
   - By applying thebtn-outlinemodifier class, it will transform into a outline pagination type.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <nav class="flex items-center gap-x-1">
-   <button class="btn btn-outline" type="button">
-    Previous
-   </button>
-   <div class="flex items-center gap-x-1">
-    <button class="btn btn-outline btn-square aria-[current='page']:text-border-primary aria-[current='page']:bg-primary/10" type="button">
-     1
-    </button>
-    <button aria-current="page" class="btn btn-outline btn-square aria-[current='page']:text-border-primary aria-[current='page']:bg-primary/10" type="button">
-     2
-    </button>
-    <button class="btn btn-outline btn-square aria-[current='page']:text-border-primary aria-[current='page']:bg-primary/10" type="button">
-     3
-    </button>
-   </div>
-   <button class="btn btn-outline" type="button">
-    Next
-   </button>
-  </nav>
+```html
+<nav class="flex items-center gap-x-1">
+ <button class="btn btn-outline" type="button">
+  Previous
+ </button>
+ <div class="flex items-center gap-x-1">
+  <button class="btn btn-outline btn-square aria-[current='page']:text-border-primary aria-[current='page']:bg-primary/10" type="button">
+   1
+  </button>
+  <button aria-current="page" class="btn btn-outline btn-square aria-[current='page']:text-border-primary aria-[current='page']:bg-primary/10" type="button">
+   2
+  </button>
+  <button class="btn btn-outline btn-square aria-[current='page']:text-border-primary aria-[current='page']:bg-primary/10" type="button">
+   3
+  </button>
  </div>
-</div>
+ <button class="btn btn-outline" type="button">
+  Next
+ </button>
+</nav>
 
+```
 h2:
   - Shape
 
@@ -125,93 +116,84 @@ h3:
 p:
   - Default shape example.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <nav class="flex items-center gap-x-1">
-   <button class="btn btn-soft" type="button">
-    Previous
-   </button>
-   <div class="flex items-center gap-x-1">
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     1
-    </button>
-    <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     2
-    </button>
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     3
-    </button>
-   </div>
-   <button class="btn btn-soft" type="button">
-    Next
-   </button>
-  </nav>
+```html
+<nav class="flex items-center gap-x-1">
+ <button class="btn btn-soft" type="button">
+  Previous
+ </button>
+ <div class="flex items-center gap-x-1">
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   1
+  </button>
+  <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   2
+  </button>
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   3
+  </button>
  </div>
-</div>
+ <button class="btn btn-soft" type="button">
+  Next
+ </button>
+</nav>
 
+```
 h3:
   - Square
 
 p:
   - Thebtnclass inherently includes theroundedutility, so by applyingrounded-none, we can eliminate the rounded corners, creating square-shaped pagination.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <nav class="flex items-center gap-x-1">
-   <button class="btn btn-soft rounded-none" type="button">
-    Previous
-   </button>
-   <div class="flex items-center gap-x-1">
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary rounded-none" type="button">
-     1
-    </button>
-    <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary rounded-none" type="button">
-     2
-    </button>
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary rounded-none" type="button">
-     3
-    </button>
-   </div>
-   <button class="btn btn-soft rounded-none" type="button">
-    Next
-   </button>
-  </nav>
+```html
+<nav class="flex items-center gap-x-1">
+ <button class="btn btn-soft rounded-none" type="button">
+  Previous
+ </button>
+ <div class="flex items-center gap-x-1">
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary rounded-none" type="button">
+   1
+  </button>
+  <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary rounded-none" type="button">
+   2
+  </button>
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary rounded-none" type="button">
+   3
+  </button>
  </div>
-</div>
+ <button class="btn btn-soft rounded-none" type="button">
+  Next
+ </button>
+</nav>
 
+```
 h3:
   - Circle
 
 p:
   - Therounded-fullclass rounds the “Previous” and “Next” buttons, while thebtn-circleclass creates circular pagination buttons.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <nav class="flex items-center gap-x-1">
-   <button class="btn btn-soft rounded-full" type="button">
-    Previous
-   </button>
-   <div class="flex items-center gap-x-1">
-    <button class="btn btn-soft btn-circle aria-[current='page']:text-bg-soft-primary" type="button">
-     1
-    </button>
-    <button aria-current="page" class="btn btn-soft btn-circle aria-[current='page']:text-bg-soft-primary" type="button">
-     2
-    </button>
-    <button class="btn btn-soft btn-circle aria-[current='page']:text-bg-soft-primary" type="button">
-     3
-    </button>
-   </div>
-   <button class="btn btn-soft rounded-full" type="button">
-    Next
-   </button>
-  </nav>
+```html
+<nav class="flex items-center gap-x-1">
+ <button class="btn btn-soft rounded-full" type="button">
+  Previous
+ </button>
+ <div class="flex items-center gap-x-1">
+  <button class="btn btn-soft btn-circle aria-[current='page']:text-bg-soft-primary" type="button">
+   1
+  </button>
+  <button aria-current="page" class="btn btn-soft btn-circle aria-[current='page']:text-bg-soft-primary" type="button">
+   2
+  </button>
+  <button class="btn btn-soft btn-circle aria-[current='page']:text-bg-soft-primary" type="button">
+   3
+  </button>
  </div>
-</div>
+ <button class="btn btn-soft rounded-full" type="button">
+  Next
+ </button>
+</nav>
 
+```
 h2:
   - Sizes
 
@@ -221,107 +203,104 @@ h3:
 p:
   - To create smaller or larger buttons, use thebtn-xs,btn-smandbtn-lgresponsive classes.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col overflow-x-auto flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <nav class="flex items-center gap-x-1">
-   <button class="btn btn-soft btn-xs" type="button">
-    Previous
-   </button>
-   <div class="flex items-center gap-x-1">
-    <button class="btn btn-soft btn-xs btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     1
-    </button>
-    <button aria-current="page" class="btn btn-soft btn-xs btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     2
-    </button>
-    <button class="btn btn-soft btn-xs btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     3
-    </button>
-   </div>
-   <button class="btn btn-soft btn-xs" type="button">
-    Next
-   </button>
-  </nav>
-  <nav class="flex items-center gap-x-1">
-   <button class="btn btn-soft btn-sm" type="button">
-    Previous
-   </button>
-   <div class="flex items-center gap-x-1">
-    <button class="btn btn-soft btn-sm btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     1
-    </button>
-    <button aria-current="page" class="btn btn-soft btn-sm btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     2
-    </button>
-    <button class="btn btn-soft btn-sm btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     3
-    </button>
-   </div>
-   <button class="btn btn-soft btn-sm" type="button">
-    Next
-   </button>
-  </nav>
-  <nav class="flex items-center gap-x-1">
-   <button class="btn btn-soft" type="button">
-    Previous
-   </button>
-   <div class="flex items-center gap-x-1">
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     1
-    </button>
-    <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     2
-    </button>
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     3
-    </button>
-   </div>
-   <button class="btn btn-soft" type="button">
-    Next
-   </button>
-  </nav>
-  <nav class="flex items-center gap-x-1">
-   <button class="btn btn-soft btn-lg" type="button">
-    Previous
-   </button>
-   <div class="flex items-center gap-x-1">
-    <button class="btn btn-soft btn-lg btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     1
-    </button>
-    <button aria-current="page" class="btn btn-soft btn-lg btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     2
-    </button>
-    <button class="btn btn-soft btn-lg btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     3
-    </button>
-   </div>
-   <button class="btn btn-soft btn-lg" type="button">
-    Next
-   </button>
-  </nav>
-  <nav class="flex items-center gap-x-1">
-   <button class="btn btn-soft btn-xl" type="button">
-    Previous
-   </button>
-   <div class="flex items-center gap-x-1">
-    <button class="btn btn-soft btn-xl btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     1
-    </button>
-    <button aria-current="page" class="btn btn-soft btn-xl btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     2
-    </button>
-    <button class="btn btn-soft btn-xl btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     3
-    </button>
-   </div>
-   <button class="btn btn-soft btn-xl" type="button">
-    Next
-   </button>
-  </nav>
+```html
+<nav class="flex items-center gap-x-1">
+ <button class="btn btn-soft btn-xs" type="button">
+  Previous
+ </button>
+ <div class="flex items-center gap-x-1">
+  <button class="btn btn-soft btn-xs btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   1
+  </button>
+  <button aria-current="page" class="btn btn-soft btn-xs btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   2
+  </button>
+  <button class="btn btn-soft btn-xs btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   3
+  </button>
  </div>
-</div>
+ <button class="btn btn-soft btn-xs" type="button">
+  Next
+ </button>
+</nav>
+<nav class="flex items-center gap-x-1">
+ <button class="btn btn-soft btn-sm" type="button">
+  Previous
+ </button>
+ <div class="flex items-center gap-x-1">
+  <button class="btn btn-soft btn-sm btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   1
+  </button>
+  <button aria-current="page" class="btn btn-soft btn-sm btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   2
+  </button>
+  <button class="btn btn-soft btn-sm btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   3
+  </button>
+ </div>
+ <button class="btn btn-soft btn-sm" type="button">
+  Next
+ </button>
+</nav>
+<nav class="flex items-center gap-x-1">
+ <button class="btn btn-soft" type="button">
+  Previous
+ </button>
+ <div class="flex items-center gap-x-1">
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   1
+  </button>
+  <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   2
+  </button>
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   3
+  </button>
+ </div>
+ <button class="btn btn-soft" type="button">
+  Next
+ </button>
+</nav>
+<nav class="flex items-center gap-x-1">
+ <button class="btn btn-soft btn-lg" type="button">
+  Previous
+ </button>
+ <div class="flex items-center gap-x-1">
+  <button class="btn btn-soft btn-lg btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   1
+  </button>
+  <button aria-current="page" class="btn btn-soft btn-lg btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   2
+  </button>
+  <button class="btn btn-soft btn-lg btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   3
+  </button>
+ </div>
+ <button class="btn btn-soft btn-lg" type="button">
+  Next
+ </button>
+</nav>
+<nav class="flex items-center gap-x-1">
+ <button class="btn btn-soft btn-xl" type="button">
+  Previous
+ </button>
+ <div class="flex items-center gap-x-1">
+  <button class="btn btn-soft btn-xl btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   1
+  </button>
+  <button aria-current="page" class="btn btn-soft btn-xl btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   2
+  </button>
+  <button class="btn btn-soft btn-xl btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   3
+  </button>
+ </div>
+ <button class="btn btn-soft btn-xl" type="button">
+  Next
+ </button>
+</nav>
 
+```
 h2:
   - Alignment
 
@@ -331,69 +310,66 @@ h3:
 p:
   - To change the alignment of pagination components, use classes likejustify-centerto center them orjustify-endto align them to the right.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <nav class="flex items-center gap-x-1">
-   <button class="btn btn-soft" type="button">
-    Previous
-   </button>
-   <div class="flex items-center gap-x-1">
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     1
-    </button>
-    <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     2
-    </button>
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     3
-    </button>
-   </div>
-   <button class="btn btn-soft" type="button">
-    Next
-   </button>
-  </nav>
-  <nav class="flex items-center justify-center gap-x-1">
-   <button class="btn btn-soft" type="button">
-    Previous
-   </button>
-   <div class="flex items-center gap-x-1">
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     1
-    </button>
-    <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     2
-    </button>
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     3
-    </button>
-   </div>
-   <button class="btn btn-soft" type="button">
-    Next
-   </button>
-  </nav>
-  <nav class="flex items-center justify-end gap-x-1">
-   <button class="btn btn-soft" type="button">
-    Previous
-   </button>
-   <div class="flex items-center gap-x-1">
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     1
-    </button>
-    <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     2
-    </button>
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     3
-    </button>
-   </div>
-   <button class="btn btn-soft" type="button">
-    Next
-   </button>
-  </nav>
+```html
+<nav class="flex items-center gap-x-1">
+ <button class="btn btn-soft" type="button">
+  Previous
+ </button>
+ <div class="flex items-center gap-x-1">
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   1
+  </button>
+  <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   2
+  </button>
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   3
+  </button>
  </div>
-</div>
+ <button class="btn btn-soft" type="button">
+  Next
+ </button>
+</nav>
+<nav class="flex items-center justify-center gap-x-1">
+ <button class="btn btn-soft" type="button">
+  Previous
+ </button>
+ <div class="flex items-center gap-x-1">
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   1
+  </button>
+  <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   2
+  </button>
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   3
+  </button>
+ </div>
+ <button class="btn btn-soft" type="button">
+  Next
+ </button>
+</nav>
+<nav class="flex items-center justify-end gap-x-1">
+ <button class="btn btn-soft" type="button">
+  Previous
+ </button>
+ <div class="flex items-center gap-x-1">
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   1
+  </button>
+  <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   2
+  </button>
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   3
+  </button>
+ </div>
+ <button class="btn btn-soft" type="button">
+  Next
+ </button>
+</nav>
 
+```
 h2:
   - Responsive
 
@@ -403,39 +379,36 @@ h3:
 p:
   - On smaller screens, the text changes to an icon.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <nav class="flex items-center gap-x-1">
-   <button class="btn btn-soft max-sm:btn-square" type="button">
-    <span class="hidden sm:block">
-     Previous
-    </span>
-    <span class="icon-[tabler--chevron-left] rtl:rotate-180 block size-5 sm:hidden">
-    </span>
-   </button>
-   <div class="flex items-center gap-x-1">
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     1
-    </button>
-    <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     2
-    </button>
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     3
-    </button>
-   </div>
-   <button class="btn btn-soft max-sm:btn-square" type="button">
-    <span class="hidden sm:block">
-     Next
-    </span>
-    <span class="icon-[tabler--chevron-right] rtl:rotate-180 block size-5 sm:hidden">
-    </span>
-   </button>
-  </nav>
+```html
+<nav class="flex items-center gap-x-1">
+ <button class="btn btn-soft max-sm:btn-square" type="button">
+  <span class="hidden sm:block">
+   Previous
+  </span>
+  <span class="icon-[tabler--chevron-left] rtl:rotate-180 block size-5 sm:hidden">
+  </span>
+ </button>
+ <div class="flex items-center gap-x-1">
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   1
+  </button>
+  <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   2
+  </button>
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   3
+  </button>
  </div>
-</div>
+ <button class="btn btn-soft max-sm:btn-square" type="button">
+  <span class="hidden sm:block">
+   Next
+  </span>
+  <span class="icon-[tabler--chevron-right] rtl:rotate-180 block size-5 sm:hidden">
+  </span>
+ </button>
+</nav>
 
+```
 h2:
   - Illustrations
 
@@ -445,189 +418,174 @@ h3:
 p:
   - The previous button is disabled since it cannot go beyond page 1.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <nav class="flex items-center gap-x-1">
-   <button class="btn btn-soft btn-disabled" type="button">
-    Previous
-   </button>
-   <div class="flex items-center gap-x-1">
-    <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     1
-    </button>
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     2
-    </button>
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     3
-    </button>
-   </div>
-   <button class="btn btn-soft" type="button">
-    Next
-   </button>
-  </nav>
+```html
+<nav class="flex items-center gap-x-1">
+ <button class="btn btn-soft btn-disabled" type="button">
+  Previous
+ </button>
+ <div class="flex items-center gap-x-1">
+  <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   1
+  </button>
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   2
+  </button>
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   3
+  </button>
  </div>
-</div>
+ <button class="btn btn-soft" type="button">
+  Next
+ </button>
+</nav>
 
+```
 h3:
   - Mini
 
 p:
   - Mini size pagination.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <nav class="flex items-center gap-x-1">
-   <button aria-label="Previous Button" class="btn btn-text btn-square" type="button">
-    <span class="icon-[tabler--chevron-left] size-5 rtl:rotate-180">
-    </span>
-   </button>
-   <div class="flex items-center gap-x-1">
-    <button aria-current="page" class="btn btn-text btn-square pointer-events-none" type="button">
-     1
-    </button>
-    <span class="text-base-content/80 mx-3">
-     of
-    </span>
-    <button class="btn btn-text btn-square pointer-events-none" type="button">
-     3
-    </button>
-   </div>
-   <button aria-label="Next Button" class="btn btn-text btn-square" type="button">
-    <span class="icon-[tabler--chevron-right] size-5 rtl:rotate-180">
-    </span>
-   </button>
-  </nav>
+```html
+<nav class="flex items-center gap-x-1">
+ <button aria-label="Previous Button" class="btn btn-text btn-square" type="button">
+  <span class="icon-[tabler--chevron-left] size-5 rtl:rotate-180">
+  </span>
+ </button>
+ <div class="flex items-center gap-x-1">
+  <button aria-current="page" class="btn btn-text btn-square pointer-events-none" type="button">
+   1
+  </button>
+  <span class="text-base-content/80 mx-3">
+   of
+  </span>
+  <button class="btn btn-text btn-square pointer-events-none" type="button">
+   3
+  </button>
  </div>
-</div>
+ <button aria-label="Next Button" class="btn btn-text btn-square" type="button">
+  <span class="icon-[tabler--chevron-right] size-5 rtl:rotate-180">
+  </span>
+ </button>
+</nav>
 
+```
 h3:
   - Button group
 
 p:
   - Group pagination uses the Join component.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <nav class="join">
-   <button aria-label="Previous Button" class="btn btn-soft btn-square join-item" type="button">
-    <span class="icon-[tabler--chevron-left] size-5 rtl:rotate-180">
-    </span>
-   </button>
-   <button class="btn btn-soft join-item btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-    1
-   </button>
-   <button aria-current="page" class="btn btn-soft join-item btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-    2
-   </button>
-   <button class="btn btn-soft join-item btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-    3
-   </button>
-   <button aria-label="Next Button" class="btn btn-soft btn-square join-item" type="button">
-    <span class="icon-[tabler--chevron-right] size-5 rtl:rotate-180">
-    </span>
-   </button>
-  </nav>
- </div>
-</div>
+```html
+<nav class="join">
+ <button aria-label="Previous Button" class="btn btn-soft btn-square join-item" type="button">
+  <span class="icon-[tabler--chevron-left] size-5 rtl:rotate-180">
+  </span>
+ </button>
+ <button class="btn btn-soft join-item btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+  1
+ </button>
+ <button aria-current="page" class="btn btn-soft join-item btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+  2
+ </button>
+ <button class="btn btn-soft join-item btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+  3
+ </button>
+ <button aria-label="Next Button" class="btn btn-soft btn-square join-item" type="button">
+  <span class="icon-[tabler--chevron-right] size-5 rtl:rotate-180">
+  </span>
+ </button>
+</nav>
 
+```
 h3:
   - With icon
 
 p:
   - Utilize the provided code to display basic previous and next elements with icons.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <nav class="flex items-center gap-x-1">
-   <button class="btn btn-soft max-sm:btn-square" type="button">
-    <span class="icon-[tabler--chevron-left] size-5 rtl:rotate-180">
-    </span>
-    <span class="hidden sm:inline">
-     Previous
-    </span>
-   </button>
-   <div class="flex items-center gap-x-1">
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     1
-    </button>
-    <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     2
-    </button>
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     3
-    </button>
-   </div>
-   <button class="btn btn-soft max-sm:btn-square" type="button">
-    <span class="hidden sm:inline">
-     Next
-    </span>
-    <span class="icon-[tabler--chevron-right] size-5 rtl:rotate-180">
-    </span>
-   </button>
-  </nav>
+```html
+<nav class="flex items-center gap-x-1">
+ <button class="btn btn-soft max-sm:btn-square" type="button">
+  <span class="icon-[tabler--chevron-left] size-5 rtl:rotate-180">
+  </span>
+  <span class="hidden sm:inline">
+   Previous
+  </span>
+ </button>
+ <div class="flex items-center gap-x-1">
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   1
+  </button>
+  <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   2
+  </button>
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   3
+  </button>
  </div>
-</div>
+ <button class="btn btn-soft max-sm:btn-square" type="button">
+  <span class="hidden sm:inline">
+   Next
+  </span>
+  <span class="icon-[tabler--chevron-right] size-5 rtl:rotate-180">
+  </span>
+ </button>
+</nav>
 
+```
 h3:
   - Working with Tooltip
 
 p:
   - Pagination variant featuring tooltips.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <nav class="flex items-center gap-x-1">
-   <button class="btn btn-soft max-sm:btn-square" type="button">
-    <span class="icon-[tabler--chevron-left] size-5 rtl:rotate-180 sm:hidden">
+```html
+<nav class="flex items-center gap-x-1">
+ <button class="btn btn-soft max-sm:btn-square" type="button">
+  <span class="icon-[tabler--chevron-left] size-5 rtl:rotate-180 sm:hidden">
+  </span>
+  <span class="hidden sm:inline">
+   Previous
+  </span>
+ </button>
+ <div class="flex items-center gap-x-1">
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   1
+  </button>
+  <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   2
+  </button>
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   3
+  </button>
+  <div class="tooltip inline-block">
+   <button aria-label="More Pages" class="tooltip-toggle tooltip-toggle btn btn-soft btn-square group" type="button">
+    <span class="icon-[tabler--dots] size-5 group-hover:hidden">
     </span>
-    <span class="hidden sm:inline">
-     Previous
+    <span class="icon-[tabler--chevrons-right] rtl:rotate-180 hidden size-5 shrink-0 group-hover:block">
     </span>
-   </button>
-   <div class="flex items-center gap-x-1">
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     1
-    </button>
-    <button aria-current="page" class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     2
-    </button>
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     3
-    </button>
-    <div class="tooltip inline-block">
-     <button aria-label="More Pages" class="tooltip-toggle tooltip-toggle btn btn-soft btn-square group" type="button">
-      <span class="icon-[tabler--dots] size-5 group-hover:hidden">
-      </span>
-      <span class="icon-[tabler--chevrons-right] rtl:rotate-180 hidden size-5 shrink-0 group-hover:block">
-      </span>
-      <span class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="tooltip">
-       <span class="tooltip-body">
-        Next 7 pages
-       </span>
-      </span>
-     </button>
-    </div>
-    <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
-     10
-    </button>
-   </div>
-   <button class="btn btn-soft max-sm:btn-square" type="button">
-    <span class="hidden sm:inline">
-     Next
-    </span>
-    <span class="icon-[tabler--chevron-right] size-5 rtl:rotate-180 sm:hidden">
+    <span class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="tooltip">
+     <span class="tooltip-body">
+      Next 7 pages
+     </span>
     </span>
    </button>
-  </nav>
+  </div>
+  <button class="btn btn-soft btn-square aria-[current='page']:text-bg-soft-primary" type="button">
+   10
+  </button>
  </div>
-</div>
+ <button class="btn btn-soft max-sm:btn-square" type="button">
+  <span class="hidden sm:inline">
+   Next
+  </span>
+  <span class="icon-[tabler--chevron-right] size-5 rtl:rotate-180 sm:hidden">
+  </span>
+ </button>
+</nav>
 
+```
 h2:
   - Pagination
 

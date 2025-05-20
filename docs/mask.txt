@@ -44,234 +44,180 @@ h3:
 p:
   - By applying the classmaskalong withmask-{shape-name}to an element, you can utilize various shapes to clip your image.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-squircle size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-squircle size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h3:
   - Heart
 
 p:
   - Example of heart.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-heart size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-heart size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h3:
   - Hexagon
 
 p:
   - Example of hexagon.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-hexagon size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-hexagon size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h3:
   - Hexagon-2
 
 p:
   - Example of hexagon-2.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-hexagon-2 size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-hexagon-2 size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h3:
   - Decagon
 
 p:
   - Example of decagon.PreviewHTMLCopy<imgclass="mask mask-decagon size-25"src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"alt="mask image"/>
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-decagon size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-decagon size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h3:
   - Pentagon
 
 p:
   - Example of pentagon.PreviewHTMLCopy<imgclass="mask mask-pentagon size-25"src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"alt="mask image"/>
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-pentagon size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-pentagon size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h3:
   - Diamond
 
 p:
   - Example of diamond.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-diamond size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-diamond size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h3:
   - Circle
 
 p:
   - Example of circle.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-circle size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-circle size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h3:
   - Parallelogram
 
 p:
   - Example of parallelogram.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-parallelogram size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-parallelogram size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h3:
   - Parallelogram-2
 
 p:
   - Example of parallelogram-2.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-parallelogram-2 size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-parallelogram-2 size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h3:
   - Parallelogram-3
 
 p:
   - Example of parallelogram-3.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-parallelogram-3 size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-parallelogram-3 size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h3:
   - Parallelogram-4
 
 p:
   - Example of parallelogram-4.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-parallelogram-4 size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-parallelogram-4 size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h3:
   - Star
 
 p:
   - Example of star.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-star size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-star size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h3:
   - Star-2
 
 p:
   - Example of star-2.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-star-2 size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-star-2 size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h3:
   - Triangle
 
 p:
   - Example of triangle.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-triangle size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-triangle size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h3:
   - Triangle-2
 
 p:
   - Example of triangle-2.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-triangle-2 size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-triangle-2 size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h3:
   - Triangle-3
 
 p:
   - Example of triangle-3.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-triangle-3 size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-triangle-3 size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h3:
   - Triangle-4
 
 p:
   - Example of triangle-4.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-triangle-4 size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-triangle-4 size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h2:
   - Sides
 
@@ -281,26 +227,20 @@ h3:
 p:
   - Utilizing the classesmask-half-1andmask-half-2in conjunction withmask-shape_nameallows you to isolate specific sides of the shape.mask-half-1represents the left side, whilemask-half-2represents the right side. Incorporate these classes to enhance the style and appearance of your mask shapes.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-half-1 mask-diamond size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-half-1 mask-diamond size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h3:
   - mask-half-2
 
 p:
   - Example of mask-half-2.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <img alt="mask image" class="mask mask-half-2 mask-parallelogram size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
- </div>
-</div>
+```html
+<img alt="mask image" class="mask mask-half-2 mask-parallelogram size-25" src="https://cdn.flyonui.com/fy-assets/components/radio/image-1.png"/>
 
+```
 h2:
   - Mask
 

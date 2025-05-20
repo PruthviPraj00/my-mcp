@@ -41,13 +41,11 @@ h3:
 p:
   - Design a unique range slider.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Example
-  </label>
-  <div data-range-slider='{
+```html
+<label class="sr-only">
+ Example
+</label>
+<div data-range-slider='{
   "start": 50,
   "connect": "lower",
   "range": {
@@ -64,10 +62,9 @@ Code:
     "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
   }
 }'>
-  </div>
- </div>
 </div>
 
+```
 h2:
   - Color
 
@@ -77,14 +74,12 @@ h3:
 p:
   - An example showcasing the set of semantic colors.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !flex-col space-y-5 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div>
-   <label class="sr-only">
-    Example
-   </label>
-   <div data-range-slider='{
+```html
+<div>
+ <label class="sr-only">
+  Example
+ </label>
+ <div data-range-slider='{
     "start": 50,
     "connect": "lower",
     "range": {
@@ -101,13 +96,13 @@ Code:
       "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
     }
   }'>
-   </div>
-  </div>
-  <div>
-   <label class="sr-only">
-    Example
-   </label>
-   <div data-range-slider='{
+ </div>
+</div>
+<div>
+ <label class="sr-only">
+  Example
+ </label>
+ <div data-range-slider='{
     "start": 50,
     "connect": "lower",
     "range": {
@@ -124,13 +119,13 @@ Code:
       "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
     }
   }'>
-   </div>
-  </div>
-  <div>
-   <label class="sr-only">
-    Example
-   </label>
-   <div data-range-slider='{
+ </div>
+</div>
+<div>
+ <label class="sr-only">
+  Example
+ </label>
+ <div data-range-slider='{
     "start": 50,
     "connect": "lower",
     "range": {
@@ -147,13 +142,13 @@ Code:
       "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
     }
   }'>
-   </div>
-  </div>
-  <div>
-   <label class="sr-only">
-    Example
-   </label>
-   <div data-range-slider='{
+ </div>
+</div>
+<div>
+ <label class="sr-only">
+  Example
+ </label>
+ <div data-range-slider='{
     "start": 50,
     "connect": "lower",
     "range": {
@@ -170,13 +165,13 @@ Code:
       "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
     }
   }'>
-   </div>
-  </div>
-  <div>
-   <label class="sr-only">
-    Example
-   </label>
-   <div data-range-slider='{
+ </div>
+</div>
+<div>
+ <label class="sr-only">
+  Example
+ </label>
+ <div data-range-slider='{
     "start": 50,
     "connect": "lower",
     "range": {
@@ -193,13 +188,13 @@ Code:
       "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
     }
   }'>
-   </div>
-  </div>
-  <div>
-   <label class="sr-only">
-    Example
-   </label>
-   <div data-range-slider='{
+ </div>
+</div>
+<div>
+ <label class="sr-only">
+  Example
+ </label>
+ <div data-range-slider='{
     "start": 50,
     "connect": "lower",
     "range": {
@@ -216,11 +211,10 @@ Code:
       "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
     }
   }'>
-   </div>
-  </div>
  </div>
 </div>
 
+```
 h2:
   - Size
 
@@ -230,14 +224,12 @@ h3:
 p:
   - Sizing for advance range slider.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !flex-col space-y-5 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div>
-   <label class="sr-only">
-    Example
-   </label>
-   <div data-range-slider='{
+```html
+<div>
+ <label class="sr-only">
+  Example
+ </label>
+ <div data-range-slider='{
     "start": 50,
     "connect": "lower",
     "range": {
@@ -254,13 +246,13 @@ Code:
       "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
     }
   }'>
-   </div>
-  </div>
-  <div>
-   <label class="sr-only">
-    Example
-   </label>
-   <div data-range-slider='{
+ </div>
+</div>
+<div>
+ <label class="sr-only">
+  Example
+ </label>
+ <div data-range-slider='{
     "start": 50,
     "connect": "lower",
     "range": {
@@ -277,13 +269,13 @@ Code:
       "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
     }
   }'>
-   </div>
-  </div>
-  <div>
-   <label class="sr-only">
-    Example
-   </label>
-   <div data-range-slider='{
+ </div>
+</div>
+<div>
+ <label class="sr-only">
+  Example
+ </label>
+ <div data-range-slider='{
     "start": 50,
     "connect": "lower",
     "range": {
@@ -300,13 +292,13 @@ Code:
       "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
     }
   }'>
-   </div>
-  </div>
-  <div>
-   <label class="sr-only">
-    Example
-   </label>
-   <div data-range-slider='{
+ </div>
+</div>
+<div>
+ <label class="sr-only">
+  Example
+ </label>
+ <div data-range-slider='{
     "start": 50,
     "connect": "lower",
     "range": {
@@ -323,11 +315,10 @@ Code:
       "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
     }
   }'>
-   </div>
-  </div>
  </div>
 </div>
 
+```
 h2:
   - Orientation
 
@@ -337,13 +328,11 @@ h3:
 p:
   - The orientation setting allows you to configure the slider as either"vertical"or"horizontal", with"horizontal"as the default.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Example
-  </label>
-  <div data-range-slider='{
+```html
+<label class="sr-only">
+ Example
+</label>
+<div data-range-slider='{
   "start": [25, 75],
   "orientation": "vertical",
   "range": {
@@ -361,23 +350,20 @@ Code:
       "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
   }
 }'>
-  </div>
- </div>
 </div>
 
+```
 h3:
   - Vertical upper connect
 
 p:
   - Basic Vertical upper connect example.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Vertical Slider Example
-  </label>
-  <div data-range-slider='{
+```html
+<label class="sr-only">
+ Vertical Slider Example
+</label>
+<div data-range-slider='{
   "start": 50,
   "connect": "upper",
   "orientation": "vertical",
@@ -395,23 +381,20 @@ Code:
     "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
   }
 }'>
-  </div>
- </div>
 </div>
 
+```
 h3:
   - Vertical range with tooltip
 
 p:
   - Vertical range with tooltip example.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Vertical Slider Example
-  </label>
-  <div data-range-slider='{
+```html
+<label class="sr-only">
+ Vertical Slider Example
+</label>
+<div data-range-slider='{
   "start": 40,
   "connect": "lower",
   "orientation": "vertical",
@@ -433,10 +416,9 @@ Code:
     "tooltip": "bg-neutral text-sm text-neutral-content shadow-base-300/20 py-1 px-2 rounded-selector ms-3 start-3/4 -top-2.5 absolute shadow-md"
   }
 }'>
-  </div>
- </div>
 </div>
 
+```
 h2:
   - Illustrations
 
@@ -446,13 +428,11 @@ h3:
 p:
   - Set thedisabledattribute totrueon an element to give it a grayed-out appearance, disable pointer events, and prevent it from being focused. Userange-slider-disabled:{tw-utility-class}to apply styles to the disabled state.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Example
-  </label>
-  <div data-range-slider='{
+```html
+<label class="sr-only">
+ Example
+</label>
+<div data-range-slider='{
   "start": 50,
   "disabled": true,
   "connect": "lower",
@@ -470,23 +450,20 @@ Code:
     "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
   }
 }'>
-  </div>
- </div>
 </div>
 
+```
 h3:
   - RTL
 
 p:
   - RTL functionality works differently in noUiSlider; settingdir="rtl"to thehtmlelement wonât work. Instead, you need to setdirection: "rtl"as an option indata-range-slider.PreviewHTMLCopyExample<labelclass="sr-only">Example</label><divdata-range-slider='{"start": 50,"connect": "lower","range": {"min": 0,"max": 100},"direction": "rtl","cssClasses": {"target": "relative h-2 rounded-full bg-neutral/10","base": "size-full relative z-1","origin": "absolute top-0 end-0 rtl:start-0 size-full origin-[0_0] rounded-full","handle": "absolute top-1/2 end-0 rtl:start-0 size-4 bg-base-100 border-[3px] border-primary rounded-full translate-x-2/4 -translate-y-2/4 hover:cursor-grab active:cursor-grabbing hover:ring-2 ring-primary active:ring-[3px]","connects": "relative z-0 w-full h-2 rtl:rounded-s-full rtl:rounded-e-none rounded-e-full overflow-hidden","connect": "absolute top-0 end-0 rtl:start-0 z-1 size-full bg-primary origin-[0_0]","touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"}}'></div>
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Example
-  </label>
-  <div data-range-slider='{
+```html
+<label class="sr-only">
+ Example
+</label>
+<div data-range-slider='{
   "start": 50,
   "connect": "lower",
   "range": {
@@ -504,23 +481,20 @@ Code:
     "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
   }
 }'>
-  </div>
- </div>
 </div>
 
+```
 h3:
   - Steps
 
 p:
   - Range inputs, by default,âsnapâto integer values. To adjust this behavior, set thestepattribute to a specific integer value.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Example
-  </label>
-  <div data-range-slider='{
+```html
+<label class="sr-only">
+ Example
+</label>
+<div data-range-slider='{
   "start": 3,
   "connect": "lower",
   "range": {
@@ -538,23 +512,20 @@ Code:
     "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
   }
 }'>
-  </div>
- </div>
 </div>
 
+```
 h3:
   - Tooltip
 
 p:
   - Enable thetooltipsparameter by setting it totrueto display current values within the tooltip.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Example
-  </label>
-  <div class="sm:mt-7 mt-10" data-range-slider='{
+```html
+<label class="sr-only">
+ Example
+</label>
+<div class="sm:mt-7 mt-10" data-range-slider='{
   "start": 32,
   "connect": "lower",
   "range": {
@@ -574,23 +545,20 @@ Code:
     "tooltip": "bg-neutral text-sm text-neutral-content shadow-base-300/20 py-1 px-2 rounded-selector mb-3 absolute bottom-full start-2/4 -translate-x-2/4 rtl:translate-x-2/4 shadow-md"
   }
 }'>
-  </div>
- </div>
 </div>
 
+```
 h3:
   - Range
 
 p:
   - To enable range mode, set thestartparameter to an array containing two values.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Example
-  </label>
-  <div data-range-slider='{
+```html
+<label class="sr-only">
+ Example
+</label>
+<div data-range-slider='{
   "start": [35, 85],
   "range": {
     "min": 0,
@@ -607,23 +575,20 @@ Code:
     "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
   }
 }'>
-  </div>
- </div>
 </div>
 
+```
 h3:
   - Range with Tooltip
 
 p:
   - Demonstrating the combination of tooltips and range mode.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Example
-  </label>
-  <div class="sm:mt-7 mt-10" data-range-slider='{
+```html
+<label class="sr-only">
+ Example
+</label>
+<div class="sm:mt-7 mt-10" data-range-slider='{
   "start": [15, 65],
   "range": {
     "min": 0,
@@ -643,23 +608,20 @@ Code:
     "tooltip": "bg-neutral text-sm text-neutral-content shadow-base-300/20 py-1 px-2 rounded-selector mb-3 absolute bottom-full start-2/4 -translate-x-2/4 rtl:translate-x-2/4 shadow-md"
   }
 }'>
-  </div>
- </div>
 </div>
 
+```
 h3:
   - Pips
 
 p:
   - To enable the display of pips, set thepipsparameter to an object with specific configuration settings.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Example
-  </label>
-  <div class="sm:my-7 my-10" data-range-slider='{
+```html
+<label class="sr-only">
+ Example
+</label>
+<div class="sm:my-7 my-10" data-range-slider='{
   "start": [110, 430],
   "range": {
     "min": 0,
@@ -687,23 +649,20 @@ Code:
     "marker": "absolute h-4 border-s border-base-content/25"
   }
 }'>
-  </div>
- </div>
 </div>
 
+```
 h3:
   - Pips auto values
 
 p:
   - Drawing pips according to the number of steps.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Example
-  </label>
-  <div class="sm:my-7 my-10" data-range-slider='{
+```html
+<label class="sr-only">
+ Example
+</label>
+<div class="sm:my-7 my-10" data-range-slider='{
   "start": [70, 260],
   "range": {
     "min": 0,
@@ -735,23 +694,20 @@ Code:
     "markerLarge": "h-4"
   }
 }'>
-  </div>
- </div>
 </div>
 
+```
 h3:
   - Pass value to HTML element
 
 p:
   - Use theupdatemethod to set a value as the text content of an element.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Example
-  </label>
-  <div class="--prevent-on-load-init sm:mt-7 mt-10" data-range-slider='{
+```html
+<label class="sr-only">
+ Example
+</label>
+<div class="--prevent-on-load-init sm:mt-7 mt-10" data-range-slider='{
   "start": 302,
   "connect": "lower",
   "range": {
@@ -771,40 +727,37 @@ Code:
     "tooltip": "bg-neutral text-sm text-neutral-content shadow-base-300/20 py-1 px-2 rounded-selector mb-3 absolute bottom-full start-2/4 -translate-x-2/4 rtl:translate-x-2/4 shadow-md"
   }
 }' id="range-element">
-  </div>
-  <div class="mt-5 text-sm font-medium">
-   Value:
-   <span class="text-primary" id="range-element-target">
-    750
-   </span>
-  </div>
- </div>
+</div>
+<div class="mt-5 text-sm font-medium">
+ Value:
+ <span class="text-primary" id="range-element-target">
+  750
+ </span>
 </div>
 
+```
 h3:
   - Pass values to HTML elements (Range)
 
 p:
   - Using theupdatemethod to assign values as text to the min and max elements.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="mb-5 flex w-full justify-center">
-   <div class="flex items-center text-sm rtl:flex-row-reverse">
-    <div class="min-w-16 text-center" id="range-elements-min-target">
-     310
-    </div>
-    -
-    <div class="min-w-16 text-center" id="range-elements-max-target">
-     635
-    </div>
-   </div>
+```html
+<div class="mb-5 flex w-full justify-center">
+ <div class="flex items-center text-sm rtl:flex-row-reverse">
+  <div class="min-w-16 text-center" id="range-elements-min-target">
+   310
   </div>
-  <label class="sr-only">
-   Example range
-  </label>
-  <div class="--prevent-on-load-init" data-range-slider='{
+  -
+  <div class="min-w-16 text-center" id="range-elements-max-target">
+   635
+  </div>
+ </div>
+</div>
+<label class="sr-only">
+ Example range
+</label>
+<div class="--prevent-on-load-init" data-range-slider='{
   "start": [310, 635],
   "range": {
     "min": 0,
@@ -825,34 +778,31 @@ Code:
     "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
   }
 }' id="range-multi-elements">
-  </div>
- </div>
 </div>
 
+```
 h3:
   - Applying Thousand Separators and Decimal Formatting
 
 p:
   - Using theupdatemethod to assign values as text to the min and max elements.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="mb-5 flex w-full justify-center">
-   <div class="flex items-center text-sm rtl:flex-row-reverse">
-    <div class="min-w-36 text-center" id="thousands-separators-and-decimal-points-min-target">
-     130
-    </div>
-    -
-    <div class="min-w-36 text-center" id="thousands-separators-and-decimal-points-max-target">
-     610
-    </div>
-   </div>
+```html
+<div class="mb-5 flex w-full justify-center">
+ <div class="flex items-center text-sm rtl:flex-row-reverse">
+  <div class="min-w-36 text-center" id="thousands-separators-and-decimal-points-min-target">
+   130
   </div>
-  <label class="sr-only">
-   Example range
-  </label>
-  <div class="--prevent-on-load-init" data-range-slider='{
+  -
+  <div class="min-w-36 text-center" id="thousands-separators-and-decimal-points-max-target">
+   610
+  </div>
+ </div>
+</div>
+<label class="sr-only">
+ Example range
+</label>
+<div class="--prevent-on-load-init" data-range-slider='{
   "start": [1300000, 6100000],
   "range": {
     "min": 0,
@@ -873,23 +823,20 @@ Code:
     "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
   }
 }' id="thousands-separators-and-decimal-points">
-  </div>
- </div>
 </div>
 
+```
 h3:
   - Assign value to input
 
 p:
   - Using theupdatemethod to set values as input field values.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Example
-  </label>
-  <div class="--prevent-on-load-init sm:mt-7 mt-10" data-range-slider='{
+```html
+<label class="sr-only">
+ Example
+</label>
+<div class="--prevent-on-load-init sm:mt-7 mt-10" data-range-slider='{
   "start": 505,
   "connect": "lower",
   "range": {
@@ -909,26 +856,23 @@ Code:
     "tooltip": "bg-neutral text-sm text-neutral-content shadow-base-300/20 py-1 px-2 rounded-selector mb-3 absolute bottom-full start-2/4 -translate-x-2/4 rtl:translate-x-2/4 shadow-md"
   }
 }' id="range-input-element">
-  </div>
-  <div class="mt-5 max-w-xs">
-   <input class="input" id="range-input-target" type="text" value="505"/>
-  </div>
- </div>
+</div>
+<div class="mt-5 max-w-xs">
+ <input class="input" id="range-input-target" type="text" value="505"/>
 </div>
 
+```
 h3:
   - Assign values to multiple input fields
 
 p:
   - Using theupdatemethod to pass values as inputs value.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Example range
-  </label>
-  <div class="--prevent-on-load-init sm:mt-7 mt-10" data-range-slider='{
+```html
+<label class="sr-only">
+ Example range
+</label>
+<div class="--prevent-on-load-init sm:mt-7 mt-10" data-range-slider='{
   "start": [150, 650],
   "range": {
     "min": 0,
@@ -948,45 +892,42 @@ Code:
     "tooltip": "bg-neutral text-sm text-neutral-content shadow-base-300/20 py-1 px-2 rounded-selector mb-3 absolute bottom-full start-2/4 -translate-x-2/4 rtl:translate-x-2/4 shadow-md"
   }
 }' id="range-multi-inputs">
-  </div>
-  <div class="mt-5 flex flex-row space-x-4 rtl:flex-row-reverse">
-   <div class="basis-1/2">
-    <label class="mb-2 block text-sm font-medium" for="inputs-min-target">
-     Min price:
-    </label>
-    <input class="input" id="inputs-min-target" type="number" value="150"/>
-   </div>
-   <div class="basis-1/2">
-    <label class="mb-2 block text-sm font-medium" for="inputs-max-target">
-     Max price:
-    </label>
-    <input class="input" id="inputs-max-target" type="number" value="650"/>
-   </div>
-  </div>
+</div>
+<div class="mt-5 flex flex-row space-x-4 rtl:flex-row-reverse">
+ <div class="basis-1/2">
+  <label class="mb-2 block text-sm font-medium" for="inputs-min-target">
+   Min price:
+  </label>
+  <input class="input" id="inputs-min-target" type="number" value="150"/>
+ </div>
+ <div class="basis-1/2">
+  <label class="mb-2 block text-sm font-medium" for="inputs-max-target">
+   Max price:
+  </label>
+  <input class="input" id="inputs-max-target" type="number" value="650"/>
  </div>
 </div>
 
+```
 h3:
   - Range with Charts Example
 
 p:
   - Using theupdatemethod and its returned values to adjust the foreground chart width.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Example range
-  </label>
-  <div class="relative" dir="ltr">
-   <div id="range-chart-background">
-   </div>
-   <div class="absolute start-0 top-0 size-full overflow-hidden">
-    <div id="range-chart-foreground">
-    </div>
-   </div>
+```html
+<label class="sr-only">
+ Example range
+</label>
+<div class="relative" dir="ltr">
+ <div id="range-chart-background">
+ </div>
+ <div class="absolute start-0 top-0 size-full overflow-hidden">
+  <div id="range-chart-foreground">
   </div>
-  <div class="--prevent-on-load-init mt-4" data-range-slider='{
+ </div>
+</div>
+<div class="--prevent-on-load-init mt-4" data-range-slider='{
   "start": [130, 520],
   "range": {
     "min": 0,
@@ -1004,60 +945,57 @@ Code:
     "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
   }
 }' id="range-charts">
+</div>
+<div class="mt-5">
+ <div class="mb-2 text-sm font-medium">
+  Custom range:
+ </div>
+ <div class="flex flex-row gap-4">
+  <div class="basis-1/2">
+   <input class="input" id="range-charts-inputs-min-target" type="number" value="130"/>
   </div>
-  <div class="mt-5">
-   <div class="mb-2 text-sm font-medium">
-    Custom range:
-   </div>
-   <div class="flex flex-row gap-4">
-    <div class="basis-1/2">
-     <input class="input" id="range-charts-inputs-min-target" type="number" value="130"/>
-    </div>
-    <div class="basis-1/2">
-     <input class="input" id="range-charts-inputs-max-target" type="number" value="520"/>
-    </div>
-   </div>
+  <div class="basis-1/2">
+   <input class="input" id="range-charts-inputs-max-target" type="number" value="520"/>
   </div>
  </div>
 </div>
 
+```
 h3:
   - Range with Charts Example (Modal)
 
 p:
   - Adjust the chartâs foreground width inside amodalusing theupdatemethodâs return values.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <button aria-controls="range-with-chart-modal" aria-expanded="false" aria-haspopup="dialog" class="btn btn-primary" data-overlay="#range-with-chart-modal" type="button">
-   Open modal
-  </button>
-  <div class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 hidden" id="range-with-chart-modal" role="dialog" tabindex="-1">
-   <div class="modal-dialog overlay-open:opacity-100 overlay-open:duration-300 modal-dialog-xl">
-    <div class="modal-content">
-     <div class="modal-header">
-      <h3 class="modal-title">
-       Dialog Title
-      </h3>
-      <button aria-label="Close" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" data-overlay="#range-with-chart-modal" type="button">
-       <span class="icon-[tabler--x] size-4">
-       </span>
-      </button>
+```html
+<button aria-controls="range-with-chart-modal" aria-expanded="false" aria-haspopup="dialog" class="btn btn-primary" data-overlay="#range-with-chart-modal" type="button">
+ Open modal
+</button>
+<div class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 hidden" id="range-with-chart-modal" role="dialog" tabindex="-1">
+ <div class="modal-dialog overlay-open:opacity-100 overlay-open:duration-300 modal-dialog-xl">
+  <div class="modal-content">
+   <div class="modal-header">
+    <h3 class="modal-title">
+     Dialog Title
+    </h3>
+    <button aria-label="Close" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" data-overlay="#range-with-chart-modal" type="button">
+     <span class="icon-[tabler--x] size-4">
+     </span>
+    </button>
+   </div>
+   <div class="modal-body">
+    <label class="sr-only">
+     Example range
+    </label>
+    <div class="relative" dir="ltr">
+     <div id="range-chart-background-modal">
      </div>
-     <div class="modal-body">
-      <label class="sr-only">
-       Example range
-      </label>
-      <div class="relative" dir="ltr">
-       <div id="range-chart-background-modal">
-       </div>
-       <div class="absolute start-0 top-0 size-full overflow-hidden">
-        <div id="range-chart-foreground-modal">
-        </div>
-       </div>
+     <div class="absolute start-0 top-0 size-full overflow-hidden">
+      <div id="range-chart-foreground-modal">
       </div>
-      <div class="--prevent-on-load-init mt-4" data-range-slider='{
+     </div>
+    </div>
+    <div class="--prevent-on-load-init mt-4" data-range-slider='{
           "start": [290, 680],
           "range": {
             "min": 0,
@@ -1075,19 +1013,17 @@ Code:
             "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
           }
         }' id="range-charts-with-modal">
+    </div>
+    <div class="mt-5">
+     <div class="mb-2 text-sm font-medium">
+      Custom range:
+     </div>
+     <div class="flex flex-row gap-4">
+      <div class="basis-1/2">
+       <input class="input" id="range-charts-inputs-min-target-modal" type="number" value="290"/>
       </div>
-      <div class="mt-5">
-       <div class="mb-2 text-sm font-medium">
-        Custom range:
-       </div>
-       <div class="flex flex-row gap-4">
-        <div class="basis-1/2">
-         <input class="input" id="range-charts-inputs-min-target-modal" type="number" value="290"/>
-        </div>
-        <div class="basis-1/2">
-         <input class="input" id="range-charts-inputs-max-target-modal" type="number" value="680"/>
-        </div>
-       </div>
+      <div class="basis-1/2">
+       <input class="input" id="range-charts-inputs-max-target-modal" type="number" value="680"/>
       </div>
      </div>
     </div>
@@ -1096,19 +1032,18 @@ Code:
  </div>
 </div>
 
+```
 p:
   - Destroy/ReinitializeThedestroymethodis provided to facilitate the destruction of a advance range slider.
 
 h3:
   - Destroy/Reinitialize
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Example
-  </label>
-  <div data-range-slider='{
+```html
+<label class="sr-only">
+ Example
+</label>
+<div data-range-slider='{
   "start": [25, 75],
   "range": {
     "min": 0,
@@ -1125,18 +1060,17 @@ Code:
     "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
   }
 }' id="range-slider-to-destroy">
-  </div>
-  <div class="mt-4 flex gap-3">
-   <button class="btn btn-primary" id="destroy-btn">
-    Destroy
-   </button>
-   <button class="btn btn-primary" disabled="" id="reinit-btn">
-    Reinitialize
-   </button>
-  </div>
- </div>
+</div>
+<div class="mt-4 flex gap-3">
+ <button class="btn btn-primary" id="destroy-btn">
+  Destroy
+ </button>
+ <button class="btn btn-primary" disabled="" id="reinit-btn">
+  Reinitialize
+ </button>
 </div>
 
+```
 h2:
   - Slider behaviour
 
@@ -1146,13 +1080,11 @@ h3:
 p:
   - A handle snaps to a clicked location. A smooth transition is used. This option isdefault.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Example
-  </label>
-  <div data-range-slider='{
+```html
+<label class="sr-only">
+ Example
+</label>
+<div data-range-slider='{
   "start": 50,
   "connect": "lower",
   "behaviour": "tap",
@@ -1170,23 +1102,20 @@ Code:
     "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
   }
 }'>
-  </div>
- </div>
 </div>
 
+```
 h3:
   - Drag
 
 p:
   - Enables dragging of the range (the connecting bar between handles). This requires two handles, and theconnectoptionmustbe set totrue. When dragging the range, the slide event triggers for both handles.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Example
-  </label>
-  <div data-range-slider='{
+```html
+<label class="sr-only">
+ Example
+</label>
+<div data-range-slider='{
   "start": [25, 75],
   "behaviour": "drag",
   "range": {
@@ -1204,23 +1133,20 @@ Code:
     "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
   }
 }'>
-  </div>
- </div>
 </div>
 
+```
 h3:
   - Fixed dragging
 
 p:
   - Maintains a fixed distance between handles when thedrag-fixedflag is enabled.PreviewHTMLCopyExample<labelclass="sr-only">Example</label><divdata-range-slider='{"start": [30, 60],"behaviour": "drag-fixed","range": {"min": 0,"max": 100},"connect": true,"cssClasses": {"target": "relative h-2 rounded-full bg-neutral/10 range-slider-disabled:pointer-events-none range-slider-disabled:opacity-50","base": "size-full relative z-1","origin": "absolute top-0 end-0 rtl:start-0 size-full origin-[0_0] rounded-full","handle": "absolute top-1/2 end-0 rtl:start-0 size-4 bg-base-100 border-[3px] border-primary rounded-full translate-x-2/4 -translate-y-2/4 hover:cursor-grab active:cursor-grabbing hover:ring-2 ring-primary active:ring-[3px]","connects": "relative z-0 w-full h-2 overflow-hidden","connect": "absolute top-0 end-0 rtl:start-0 z-1 size-full bg-primary origin-[0_0]","touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"}}'></div>
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Example
-  </label>
-  <div data-range-slider='{
+```html
+<label class="sr-only">
+ Example
+</label>
+<div data-range-slider='{
   "start": [30, 60],
   "behaviour": "drag-fixed",
   "range": {
@@ -1238,23 +1164,20 @@ Code:
     "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
   }
 }'>
-  </div>
- </div>
 </div>
 
+```
 h3:
   - Hover
 
 p:
   - Enabling this option allows the slider to triggerhoverevents when a mouse or pen hovers over it, providing the slider value at the hovered position. The eventdoes nottrigger while the slider is being dragged with a mouse or pen, but itdoesactivate for touch interactions.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="sr-only">
-   Example
-  </label>
-  <div data-range-slider='{
+```html
+<label class="sr-only">
+ Example
+</label>
+<div data-range-slider='{
   "start": 500,
   "behaviour": "hover-snap",
   "connect": "lower",
@@ -1272,16 +1195,15 @@ Code:
     "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
   }
 }' id="range-hover-element">
-  </div>
-  <div class="mt-5 text-sm font-medium">
-   Value:
-   <span class="text-primary" id="range-hover-element-target">
-    500
-   </span>
-  </div>
- </div>
+</div>
+<div class="mt-5 text-sm font-medium">
+ Value:
+ <span class="text-primary" id="range-hover-element-target">
+  500
+ </span>
 </div>
 
+```
 h2:
   - JavaScript behavior
 

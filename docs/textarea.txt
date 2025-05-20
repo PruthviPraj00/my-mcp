@@ -34,62 +34,50 @@ h3:
 p:
   - Basic textarea example.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <textarea aria-label="Textarea" class="textarea max-w-sm"></textarea>
- </div>
-</div>
+```html
+<textarea aria-label="Textarea" class="textarea max-w-sm"></textarea>
 
+```
 h3:
   - Label and placeholder
 
 p:
   - Basic textarea with placeholder.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="sm:w-96">
-   <label class="label-text" for="textareaLabel">
-    Your bio
-   </label>
-   <textarea class="textarea" id="textareaLabel" placeholder="Hello!!!"></textarea>
-  </div>
- </div>
+```html
+<div class="sm:w-96">
+ <label class="label-text" for="textareaLabel">
+  Your bio
+ </label>
+ <textarea class="textarea" id="textareaLabel" placeholder="Hello!!!"></textarea>
 </div>
 
+```
 h2:
   - Types
 
 h3:
   - Default
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <textarea class="textarea max-w-sm" placeholder="Hello!!!"></textarea>
- </div>
-</div>
+```html
+<textarea class="textarea max-w-sm" placeholder="Hello!!!"></textarea>
 
+```
 h3:
   - Floating label
 
 p:
   - Thetextarea-floatingstyle is used to define the appearance of the textarea, while thetextarea-floating-labelis the container for the label text.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="textarea-floating sm:w-96">
-   <textarea class="textarea" id="textareaFloating" placeholder="Hello!!!"></textarea>
-   <label class="textarea-floating-label" for="textareaFloating">
-    Your bio
-   </label>
-  </div>
- </div>
+```html
+<div class="textarea-floating sm:w-96">
+ <textarea class="textarea" id="textareaFloating" placeholder="Hello!!!"></textarea>
+ <label class="textarea-floating-label" for="textareaFloating">
+  Your bio
+ </label>
 </div>
 
+```
 h2:
   - Size
 
@@ -99,59 +87,53 @@ h3:
 p:
   - Add responsive classtextarea-{size}where{size} = xs|sm|md|lg|xlfor textarea of different sizes.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <textarea class="textarea textarea-xs max-w-sm" placeholder="Hello!!!"></textarea>
-  <textarea class="textarea textarea-sm max-w-sm" placeholder="Hello!!!"></textarea>
-  <textarea class="textarea max-w-sm" placeholder="Hello!!!"></textarea>
-  <textarea class="textarea textarea-lg max-w-sm" placeholder="Hello!!!"></textarea>
-  <textarea class="textarea textarea-xl max-w-sm" placeholder="Hello!!!"></textarea>
- </div>
-</div>
+```html
+<textarea class="textarea textarea-xs max-w-sm" placeholder="Hello!!!"></textarea>
+<textarea class="textarea textarea-sm max-w-sm" placeholder="Hello!!!"></textarea>
+<textarea class="textarea max-w-sm" placeholder="Hello!!!"></textarea>
+<textarea class="textarea textarea-lg max-w-sm" placeholder="Hello!!!"></textarea>
+<textarea class="textarea textarea-xl max-w-sm" placeholder="Hello!!!"></textarea>
 
+```
 h3:
   - Floating label
 
 p:
   - Add responsive classselect-{size}where{size} = xs|sm|md|lg|xlfor select of different sizes.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="textarea-floating sm:w-96">
-   <textarea class="textarea textarea-xs" id="textareaFloatingExtraSmall" placeholder="Hello!!!"></textarea>
-   <label class="textarea-floating-label" for="textareaFloatingExtraSmall">
-    Your bio
-   </label>
-  </div>
-  <div class="textarea-floating sm:w-96">
-   <textarea class="textarea textarea-sm" id="textareaFloatingSmall" placeholder="Hello!!!"></textarea>
-   <label class="textarea-floating-label" for="textareaFloatingSmall">
-    Your bio
-   </label>
-  </div>
-  <div class="textarea-floating sm:w-96">
-   <textarea class="textarea" id="textareaFloatingMedium" placeholder="Hello!!!"></textarea>
-   <label class="textarea-floating-label" for="textareaFloatingMedium">
-    Your bio
-   </label>
-  </div>
-  <div class="textarea-floating sm:w-96">
-   <textarea class="textarea textarea-lg" id="textareaFloatingLarge" placeholder="Hello!!!"></textarea>
-   <label class="textarea-floating-label" for="textareaFloatingLarge">
-    Your bio
-   </label>
-  </div>
-  <div class="textarea-floating sm:w-96">
-   <textarea class="textarea textarea-xl" id="textareaFloatingExtraLarge" placeholder="Hello!!!"></textarea>
-   <label class="textarea-floating-label" for="textareaFloatingExtraLarge">
-    Your bio
-   </label>
-  </div>
- </div>
+```html
+<div class="textarea-floating sm:w-96">
+ <textarea class="textarea textarea-xs" id="textareaFloatingExtraSmall" placeholder="Hello!!!"></textarea>
+ <label class="textarea-floating-label" for="textareaFloatingExtraSmall">
+  Your bio
+ </label>
+</div>
+<div class="textarea-floating sm:w-96">
+ <textarea class="textarea textarea-sm" id="textareaFloatingSmall" placeholder="Hello!!!"></textarea>
+ <label class="textarea-floating-label" for="textareaFloatingSmall">
+  Your bio
+ </label>
+</div>
+<div class="textarea-floating sm:w-96">
+ <textarea class="textarea" id="textareaFloatingMedium" placeholder="Hello!!!"></textarea>
+ <label class="textarea-floating-label" for="textareaFloatingMedium">
+  Your bio
+ </label>
+</div>
+<div class="textarea-floating sm:w-96">
+ <textarea class="textarea textarea-lg" id="textareaFloatingLarge" placeholder="Hello!!!"></textarea>
+ <label class="textarea-floating-label" for="textareaFloatingLarge">
+  Your bio
+ </label>
+</div>
+<div class="textarea-floating sm:w-96">
+ <textarea class="textarea textarea-xl" id="textareaFloatingExtraLarge" placeholder="Hello!!!"></textarea>
+ <label class="textarea-floating-label" for="textareaFloatingExtraLarge">
+  Your bio
+ </label>
 </div>
 
+```
 h2:
   - Textarea group
 
@@ -161,54 +143,48 @@ h3:
 p:
   - Add a leading icon inside textarea.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !flex-col space-y-4 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="textarea max-w-sm">
-   <span class="icon-[tabler--message] text-base-content/80 mt-2 mx-4 size-5 shrink-0">
-   </span>
-   <textarea class="grow" placeholder="Hello!!!"></textarea>
-  </div>
-  <div class="textarea max-w-sm">
-   <span class="icon-[tabler--message] text-base-content/80 mt-2 mx-4 size-5 shrink-0">
-   </span>
-   <div class="textarea-floating grow">
-    <textarea id="textareaFloatingMedium" placeholder="Hello!!!"></textarea>
-    <label class="textarea-floating-label" for="textareaFloatingMedium">
-     Your bio
-    </label>
-   </div>
-  </div>
+```html
+<div class="textarea max-w-sm">
+ <span class="icon-[tabler--message] text-base-content/80 mt-2 mx-4 size-5 shrink-0">
+ </span>
+ <textarea class="grow" placeholder="Hello!!!"></textarea>
+</div>
+<div class="textarea max-w-sm">
+ <span class="icon-[tabler--message] text-base-content/80 mt-2 mx-4 size-5 shrink-0">
+ </span>
+ <div class="textarea-floating grow">
+  <textarea id="textareaFloatingMedium" placeholder="Hello!!!"></textarea>
+  <label class="textarea-floating-label" for="textareaFloatingMedium">
+   Your bio
+  </label>
  </div>
 </div>
 
+```
 h3:
   - Tailing icons
 
 p:
   - Add a tailing icon inside textarea.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !flex-col space-y-4 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="textarea max-w-sm">
-   <textarea class="grow resize-none" placeholder="Hello!!!"></textarea>
-   <span class="icon-[tabler--message] text-base-content/80 mt-2 mx-4 size-5 shrink-0">
-   </span>
-  </div>
-  <div class="textarea max-w-sm">
-   <div class="textarea-floating grow">
-    <textarea class="resize-none" id="textareaFloatingMedium" placeholder="Hello!!!"></textarea>
-    <label class="textarea-floating-label" for="textareaFloatingMedium">
-     Your bio
-    </label>
-   </div>
-   <span class="icon-[tabler--message] text-base-content/80 mt-2 mx-4 size-5 shrink-0">
-   </span>
-  </div>
+```html
+<div class="textarea max-w-sm">
+ <textarea class="grow resize-none" placeholder="Hello!!!"></textarea>
+ <span class="icon-[tabler--message] text-base-content/80 mt-2 mx-4 size-5 shrink-0">
+ </span>
+</div>
+<div class="textarea max-w-sm">
+ <div class="textarea-floating grow">
+  <textarea class="resize-none" id="textareaFloatingMedium" placeholder="Hello!!!"></textarea>
+  <label class="textarea-floating-label" for="textareaFloatingMedium">
+   Your bio
+  </label>
  </div>
+ <span class="icon-[tabler--message] text-base-content/80 mt-2 mx-4 size-5 shrink-0">
+ </span>
 </div>
 
+```
 h2:
   - Validation states
 
@@ -218,60 +194,54 @@ h3:
 p:
   - Success state can be show usingis-validclass.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block space-y-4 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="sm:w-96">
-   <label class="label-text" for="textareaStateSuccessDefault">
-    Full Name
-   </label>
-   <textarea class="textarea is-valid" id="textareaStateSuccessDefault" placeholder="Hello!!!"></textarea>
-   <span class="helper-text">
-    Helper text
-   </span>
-  </div>
-  <div class="textarea-floating sm:w-96">
-   <textarea class="textarea is-valid" id="textareaStateSuccessFloating" placeholder="Hello!!!"></textarea>
-   <label class="textarea-floating-label" for="textareaStateSuccessFloating">
-    Your bio
-   </label>
-   <span class="helper-text">
-    Helper text
-   </span>
-  </div>
- </div>
+```html
+<div class="sm:w-96">
+ <label class="label-text" for="textareaStateSuccessDefault">
+  Full Name
+ </label>
+ <textarea class="textarea is-valid" id="textareaStateSuccessDefault" placeholder="Hello!!!"></textarea>
+ <span class="helper-text">
+  Helper text
+ </span>
+</div>
+<div class="textarea-floating sm:w-96">
+ <textarea class="textarea is-valid" id="textareaStateSuccessFloating" placeholder="Hello!!!"></textarea>
+ <label class="textarea-floating-label" for="textareaStateSuccessFloating">
+  Your bio
+ </label>
+ <span class="helper-text">
+  Helper text
+ </span>
 </div>
 
+```
 h3:
   - Error state
 
 p:
   - Error state can be show usingis-invalidclass.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block space-y-4 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="sm:w-96">
-   <label class="label-text" for="textareaStateErrorDefault">
-    Full Name
-   </label>
-   <textarea class="textarea is-invalid" id="textareaStateErrorDefault" placeholder="Hello!!!"></textarea>
-   <span class="helper-text">
-    Helper text
-   </span>
-  </div>
-  <div class="textarea-floating sm:w-96">
-   <textarea class="textarea is-invalid" id="textareaStateErrorFloating" placeholder="Hello!!!"></textarea>
-   <label class="textarea-floating-label" for="textareaStateErrorFloating">
-    Your bio
-   </label>
-   <span class="helper-text">
-    Helper text
-   </span>
-  </div>
- </div>
+```html
+<div class="sm:w-96">
+ <label class="label-text" for="textareaStateErrorDefault">
+  Full Name
+ </label>
+ <textarea class="textarea is-invalid" id="textareaStateErrorDefault" placeholder="Hello!!!"></textarea>
+ <span class="helper-text">
+  Helper text
+ </span>
+</div>
+<div class="textarea-floating sm:w-96">
+ <textarea class="textarea is-invalid" id="textareaStateErrorFloating" placeholder="Hello!!!"></textarea>
+ <label class="textarea-floating-label" for="textareaStateErrorFloating">
+  Your bio
+ </label>
+ <span class="helper-text">
+  Helper text
+ </span>
 </div>
 
+```
 h2:
   - Illustrations
 
@@ -281,90 +251,78 @@ h3:
 p:
   - labelelements hidden using the .sr-only class.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="w-full sm:w-96">
-   <label class="label-text sr-only" for="textareaHiddenLabel">
-    Your bio
-   </label>
-   <textarea class="textarea" id="textareaHiddenLabel" placeholder="Hello!!!"></textarea>
-  </div>
- </div>
+```html
+<div class="w-full sm:w-96">
+ <label class="label-text sr-only" for="textareaHiddenLabel">
+  Your bio
+ </label>
+ <textarea class="textarea" id="textareaHiddenLabel" placeholder="Hello!!!"></textarea>
 </div>
 
+```
 h3:
   - Disable
 
 p:
   - Add thedisabledboolean attribute on an textarea to remove pointer events, and prevent focusing.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block space-y-4 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="w-full sm:w-96">
-   <label class="label-text sr-only" for="textareaDisabledefault">
-    Your bio
-   </label>
-   <textarea class="textarea" disabled="" id="textareaDisabledefault" placeholder="Hello!!!"></textarea>
-  </div>
-  <div class="textarea-floating sm:w-96">
-   <textarea class="textarea" disabled="" id="textareaDisabledoating" placeholder="Hello!!!"></textarea>
-   <label class="textarea-floating-label" for="textareaDisabledoating">
-    Your bio
-   </label>
-  </div>
- </div>
+```html
+<div class="w-full sm:w-96">
+ <label class="label-text sr-only" for="textareaDisabledefault">
+  Your bio
+ </label>
+ <textarea class="textarea" disabled="" id="textareaDisabledefault" placeholder="Hello!!!"></textarea>
+</div>
+<div class="textarea-floating sm:w-96">
+ <textarea class="textarea" disabled="" id="textareaDisabledoating" placeholder="Hello!!!"></textarea>
+ <label class="textarea-floating-label" for="textareaDisabledoating">
+  Your bio
+ </label>
 </div>
 
+```
 h3:
   - Readonly
 
 p:
   - Add thereadonlyboolean attribute on an textarea to prevent modification of the textarea value.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="w-full sm:w-96">
-   <label class="label-text sr-only" for="textareaReadonly">
-    Your bio
-   </label>
-   <textarea class="textarea" id="textareaReadonly" placeholder="Hello!!!" readonly=""></textarea>
-  </div>
- </div>
+```html
+<div class="w-full sm:w-96">
+ <label class="label-text sr-only" for="textareaReadonly">
+  Your bio
+ </label>
+ <textarea class="textarea" id="textareaReadonly" placeholder="Hello!!!" readonly=""></textarea>
 </div>
 
+```
 h3:
   - Helper text
 
 p:
   - Basic textarea example with helper text and hints.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block space-y-4 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="w-full sm:w-96">
-   <label class="label-text" for="textareaHelperTextDefault">
-    Full Name
-   </label>
-   <textarea class="textarea" id="textareaHelperTextDefault" placeholder="Hello!!!"></textarea>
-   <span class="helper-text">
-    Helper text
-   </span>
-  </div>
-  <div class="textarea-floating sm:w-96">
-   <textarea class="textarea" id="textareaHelperTextFloating" placeholder="Hello!!!"></textarea>
-   <label class="textarea-floating-label" for="textareaHelperTextFloating">
-    Your bio
-   </label>
-   <span class="helper-text">
-    Helper text
-   </span>
-  </div>
- </div>
+```html
+<div class="w-full sm:w-96">
+ <label class="label-text" for="textareaHelperTextDefault">
+  Full Name
+ </label>
+ <textarea class="textarea" id="textareaHelperTextDefault" placeholder="Hello!!!"></textarea>
+ <span class="helper-text">
+  Helper text
+ </span>
+</div>
+<div class="textarea-floating sm:w-96">
+ <textarea class="textarea" id="textareaHelperTextFloating" placeholder="Hello!!!"></textarea>
+ <label class="textarea-floating-label" for="textareaHelperTextFloating">
+  Your bio
+ </label>
+ <span class="helper-text">
+  Helper text
+ </span>
 </div>
 
+```
 h2:
   - Textarea
 

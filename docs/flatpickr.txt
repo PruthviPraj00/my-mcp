@@ -42,26 +42,20 @@ h3:
 p:
   - Basic date picker example.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input class="input max-w-sm" id="flatpickr-date" placeholder="YYYY-MM-DD" type="text"/>
- </div>
-</div>
+```html
+<input class="input max-w-sm" id="flatpickr-date" placeholder="YYYY-MM-DD" type="text"/>
 
+```
 h3:
   - Time picker
 
 p:
   - Basic time picker example.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input class="input max-w-sm" id="flatpickr-time" placeholder="HH:MM" type="text"/>
- </div>
-</div>
+```html
+<input class="input max-w-sm" id="flatpickr-time" placeholder="HH:MM" type="text"/>
 
+```
 h2:
   - Types
 
@@ -71,31 +65,25 @@ h3:
 p:
   - Default datepicker.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input class="input max-w-sm" id="flatpickr-default" placeholder="YYYY-MM-DD" type="text"/>
- </div>
-</div>
+```html
+<input class="input max-w-sm" id="flatpickr-default" placeholder="YYYY-MM-DD" type="text"/>
 
+```
 h3:
   - Floating
 
 p:
   - Floating label example.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="input-floating max-w-sm">
-   <input class="input" id="flatpickr-floating" placeholder="YYYY-MM-DD" type="text"/>
-   <label class="input-floating-label" for="flatpickr-floating">
-    Date
-   </label>
-  </div>
- </div>
+```html
+<div class="input-floating max-w-sm">
+ <input class="input" id="flatpickr-floating" placeholder="YYYY-MM-DD" type="text"/>
+ <label class="input-floating-label" for="flatpickr-floating">
+  Date
+ </label>
 </div>
 
+```
 h2:
   - Validation states
 
@@ -105,60 +93,54 @@ h3:
 p:
   - Success state can be show usingis-validclass.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <label class="label-text" for="flatpickrStateSuccess">
-    Date
-   </label>
-   <input class="input is-valid flatpickr-success" id="flatpickrStateSuccess" placeholder="YYYY-MM-DD" type="text"/>
-   <span class="helper-text">
-    Helper text
-   </span>
-  </div>
-  <div class="input-floating max-w-sm">
-   <input class="input is-valid flatpickr-success" id="flatpickrFloatingStateSuccess" placeholder="YYYY-MM-DD" type="text"/>
-   <label class="input-floating-label" for="flatpickrFloatingStateSuccess">
-    Date
-   </label>
-   <span class="helper-text ps-3">
-    Helper text
-   </span>
-  </div>
- </div>
+```html
+<div class="max-w-sm">
+ <label class="label-text" for="flatpickrStateSuccess">
+  Date
+ </label>
+ <input class="input is-valid flatpickr-success" id="flatpickrStateSuccess" placeholder="YYYY-MM-DD" type="text"/>
+ <span class="helper-text">
+  Helper text
+ </span>
+</div>
+<div class="input-floating max-w-sm">
+ <input class="input is-valid flatpickr-success" id="flatpickrFloatingStateSuccess" placeholder="YYYY-MM-DD" type="text"/>
+ <label class="input-floating-label" for="flatpickrFloatingStateSuccess">
+  Date
+ </label>
+ <span class="helper-text ps-3">
+  Helper text
+ </span>
 </div>
 
+```
 h3:
   - Error state
 
 p:
   - Error state can be show usingis-invalidclass.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col gap-6 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="max-w-sm">
-   <label class="label-text" for="flatpickrStateError">
-    Date
-   </label>
-   <input class="input is-invalid flatpickr-error" id="flatpickrStateError" placeholder="John Doe" type="text"/>
-   <span class="helper-text">
-    Helper text
-   </span>
-  </div>
-  <div class="input-floating max-w-sm">
-   <input class="input is-invalid flatpickr-error" id="flatpickrFloatingStateError" placeholder="John Doe" type="text"/>
-   <label class="input-floating-label" for="flatpickrFloatingStateError">
-    Date
-   </label>
-   <span class="helper-text ps-3">
-    Helper text
-   </span>
-  </div>
- </div>
+```html
+<div class="max-w-sm">
+ <label class="label-text" for="flatpickrStateError">
+  Date
+ </label>
+ <input class="input is-invalid flatpickr-error" id="flatpickrStateError" placeholder="John Doe" type="text"/>
+ <span class="helper-text">
+  Helper text
+ </span>
+</div>
+<div class="input-floating max-w-sm">
+ <input class="input is-invalid flatpickr-error" id="flatpickrFloatingStateError" placeholder="John Doe" type="text"/>
+ <label class="input-floating-label" for="flatpickrFloatingStateError">
+  Date
+ </label>
+ <span class="helper-text ps-3">
+  Helper text
+ </span>
 </div>
 
+```
 h2:
   - Illustrations
 
@@ -168,104 +150,80 @@ h3:
 p:
   - Example showcasing a picker with both date and time selection.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input class="input max-w-sm" id="flatpickr-date-time" placeholder="YYYY-MM-DD HH:MM" type="text"/>
- </div>
-</div>
+```html
+<input class="input max-w-sm" id="flatpickr-date-time" placeholder="YYYY-MM-DD HH:MM" type="text"/>
 
+```
 h3:
   - Multiple dates picker
 
 p:
   - Example demonstrating how to select multiple dates.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input class="input max-w-sm" id="flatpickr-multiple-date" placeholder="YYYY-MM-DD, YYYY-MM-DD" type="text"/>
- </div>
-</div>
+```html
+<input class="input max-w-sm" id="flatpickr-multiple-date" placeholder="YYYY-MM-DD, YYYY-MM-DD" type="text"/>
 
+```
 h3:
   - Range picker
 
 p:
   - Select range of date.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input class="input max-w-sm" id="flatpickr-range" placeholder="YYYY-MM-DD to YYYY-MM-DD" type="text"/>
- </div>
-</div>
+```html
+<input class="input max-w-sm" id="flatpickr-range" placeholder="YYYY-MM-DD to YYYY-MM-DD" type="text"/>
 
+```
 h3:
   - Human friendly
 
 p:
   - Human Friendly date picker example.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input class="input max-w-sm" id="flatpickr-human-friendly" placeholder="Month DD, YYYY" type="text"/>
- </div>
-</div>
+```html
+<input class="input max-w-sm" id="flatpickr-human-friendly" placeholder="Month DD, YYYY" type="text"/>
 
+```
 h3:
   - Inline picker
 
 p:
   - Basic inline picker example.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input class="input max-w-sm" id="flatpickr-inline" placeholder="YYYY-MM-DD" type="text"/>
- </div>
-</div>
+```html
+<input class="input max-w-sm" id="flatpickr-inline" placeholder="YYYY-MM-DD" type="text"/>
 
+```
 h3:
   - Disabled dates
 
 p:
   - The example below demonstrates how to disable a specific date range.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input class="input max-w-sm" id="flatpickr-disabled-range" placeholder="YYYY-MM-DD" type="text"/>
- </div>
-</div>
+```html
+<input class="input max-w-sm" id="flatpickr-disabled-range" placeholder="YYYY-MM-DD" type="text"/>
 
+```
 h3:
   - Localization
 
 p:
   - The date picker below has been localized to display months and days in Russian. For more information, please refer to the official documentation onlocalization.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input class="input max-w-sm" id="flatpickr-localization" placeholder="YYYY-MM-DD" type="text"/>
- </div>
-</div>
+```html
+<input class="input max-w-sm" id="flatpickr-localization" placeholder="YYYY-MM-DD" type="text"/>
 
+```
 p:
   - Display week numbersExample displaying week number.
 
 h3:
   - Display week numbers
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input class="input max-w-sm" id="flatpickr-week-number" placeholder="YYYY-MM-DD" type="text"/>
- </div>
-</div>
+```html
+<input class="input max-w-sm" id="flatpickr-week-number" placeholder="YYYY-MM-DD" type="text"/>
 
+```
 h2:
   - Flatpickr (Datepicker)
 

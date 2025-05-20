@@ -26,26 +26,20 @@ h3:
 p:
   - Use thetheme-controllercomponent class with a checkbox input to create a theme switcher that toggles between the default theme and the theme specified in the value.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input class="checkbox theme-controller" type="checkbox" value="dark"/>
- </div>
-</div>
+```html
+<input class="checkbox theme-controller" type="checkbox" value="dark"/>
 
+```
 h3:
   - Switch
 
 p:
   - Create a theme controller using a switch based on the example provided below.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input class="switch theme-controller" type="checkbox" value="dark"/>
- </div>
-</div>
+```html
+<input class="switch theme-controller" type="checkbox" value="dark"/>
 
+```
 h2:
   - Illustrations
 
@@ -55,157 +49,136 @@ h3:
 p:
   - The example below shows how to implement a theme controller using a switch component.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="swap swap-rotate">
-   <input class="theme-controller" type="checkbox" value="dark"/>
-   <span class="swap-off icon-[tabler--sun] size-7">
-   </span>
-   <span class="swap-on icon-[tabler--moon] size-7">
-   </span>
-  </label>
- </div>
-</div>
+```html
+<label class="swap swap-rotate">
+ <input class="theme-controller" type="checkbox" value="dark"/>
+ <span class="swap-off icon-[tabler--sun] size-7">
+ </span>
+ <span class="swap-on icon-[tabler--moon] size-7">
+ </span>
+</label>
 
+```
 h3:
   - Using switch with text
 
 p:
   - The example below illustrates how to create a theme controller using a switch combined with text.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="flex cursor-pointer gap-2">
-   <span class="label-text">
-    Light
-   </span>
-   <input class="switch theme-controller" type="checkbox" value="dark"/>
-   <span class="label-text">
-    Dark
-   </span>
-  </label>
- </div>
-</div>
+```html
+<label class="flex cursor-pointer gap-2">
+ <span class="label-text">
+  Light
+ </span>
+ <input class="switch theme-controller" type="checkbox" value="dark"/>
+ <span class="label-text">
+  Dark
+ </span>
+</label>
 
+```
 h3:
   - Using switch with icons inside
 
 p:
   - The example provided shows how to build a theme controller using a switch that features icons.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <label class="relative inline-block">
-   <input aria-label="default switch with icon" checked="" class="switch switch-primary theme-controller peer" type="checkbox"/>
-   <span class="icon-[tabler--sun] text-primary-content absolute start-1 top-1.5 hidden size-4 peer-checked:block">
-   </span>
-   <span class="icon-[tabler--moon] text-neutral-content absolute end-1 top-1.5 block size-4 peer-checked:hidden">
-   </span>
-  </label>
- </div>
-</div>
+```html
+<label class="relative inline-block">
+ <input aria-label="default switch with icon" checked="" class="switch switch-primary theme-controller peer" type="checkbox"/>
+ <span class="icon-[tabler--sun] text-primary-content absolute start-1 top-1.5 hidden size-4 peer-checked:block">
+ </span>
+ <span class="icon-[tabler--moon] text-neutral-content absolute end-1 top-1.5 block size-4 peer-checked:hidden">
+ </span>
+</label>
 
+```
 h3:
   - Using a switch with custom colors
 
 p:
   - The example below shows how to build a theme controller using a switch with personalized colors.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <input class="switch theme-controller checked:text-[#e4b0f8] checked:border-[#9b59b6] checked:bg-[#9b59b6]" type="checkbox" value="dark"/>
- </div>
-</div>
+```html
+<input class="switch theme-controller checked:text-[#e4b0f8] checked:border-[#9b59b6] checked:bg-[#9b59b6]" type="checkbox" value="dark"/>
 
+```
 h3:
   - Using a radio input
 
 p:
   - Create a theme controller using a radio input based on the example below.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="flex flex-col gap-1">
-   <div>
-    <div class="flex items-center justify-between gap-4">
-     <label class="label-text" for="defaultTheme">
-      Default
-     </label>
-     <input checked="" class="radio theme-controller" id="defaultTheme" name="theme-radios" type="radio" value="default"/>
-    </div>
-   </div>
-   <div>
-    <div class="flex items-center justify-between gap-4">
-     <label class="label-text" for="corporateTheme">
-      Corporate
-     </label>
-     <input class="radio theme-controller" id="corporateTheme" name="theme-radios" type="radio" value="corporate"/>
-    </div>
-   </div>
-   <div>
-    <div class="flex items-center justify-between gap-4">
-     <label class="label-text" for="gourmentTheme">
-      Gourmet
-     </label>
-     <input class="radio theme-controller" id="gourmentTheme" name="theme-radios" type="radio" value="gourmet"/>
-    </div>
-   </div>
+```html
+<div class="flex flex-col gap-1">
+ <div>
+  <div class="flex items-center justify-between gap-4">
+   <label class="label-text" for="defaultTheme">
+    Default
+   </label>
+   <input checked="" class="radio theme-controller" id="defaultTheme" name="theme-radios" type="radio" value="default"/>
+  </div>
+ </div>
+ <div>
+  <div class="flex items-center justify-between gap-4">
+   <label class="label-text" for="corporateTheme">
+    Corporate
+   </label>
+   <input class="radio theme-controller" id="corporateTheme" name="theme-radios" type="radio" value="corporate"/>
+  </div>
+ </div>
+ <div>
+  <div class="flex items-center justify-between gap-4">
+   <label class="label-text" for="gourmentTheme">
+    Gourmet
+   </label>
+   <input class="radio theme-controller" id="gourmentTheme" name="theme-radios" type="radio" value="gourmet"/>
   </div>
  </div>
 </div>
 
+```
 h3:
   - Using a radio button
 
 p:
   - The example below shows how to create a theme controller using a radio button.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="join drop-shadow join-vertical">
-   <input aria-label="Default" checked="" class="btn btn-secondary theme-controller join-item" name="theme-buttons" type="radio" value="default"/>
-   <input aria-label="Corporate" class="btn btn-secondary theme-controller join-item" name="theme-buttons" type="radio" value="corporate"/>
-   <input aria-label="Gourmet" class="btn btn-secondary theme-controller join-item" name="theme-buttons" type="radio" value="gourmet"/>
-  </div>
- </div>
+```html
+<div class="join drop-shadow join-vertical">
+ <input aria-label="Default" checked="" class="btn btn-secondary theme-controller join-item" name="theme-buttons" type="radio" value="default"/>
+ <input aria-label="Corporate" class="btn btn-secondary theme-controller join-item" name="theme-buttons" type="radio" value="corporate"/>
+ <input aria-label="Gourmet" class="btn btn-secondary theme-controller join-item" name="theme-buttons" type="radio" value="gourmet"/>
 </div>
 
+```
 h3:
   - Using a dropdown
 
 p:
   - Here’s a ready-to-use example of a theme controller utilizing a dropdown menu.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="dropdown relative inline-flex [--auto-close:inside]">
-   <button aria-expanded="false" aria-haspopup="menu" aria-label="Dropdown" class="dropdown-toggle btn btn-primary" id="dropdown-default" type="button">
-    Dropdown
-    <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4">
-    </span>
-   </button>
-   <ul aria-labelledby="dropdown-default" aria-orientation="vertical" class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60" role="menu">
-    <li>
-     <input aria-label="Default" checked="" class="theme-controller btn btn-text w-full justify-start" name="theme-dropdown" type="radio" value="default"/>
-    </li>
-    <li>
-     <input aria-label="Corporate" class="theme-controller btn btn-text w-full justify-start" name="theme-dropdown" type="radio" value="corporate"/>
-    </li>
-    <li>
-     <input aria-label="Gourmet" class="theme-controller btn btn-text w-full justify-start" name="theme-dropdown" type="radio" value="gourmet"/>
-    </li>
-   </ul>
-  </div>
- </div>
+```html
+<div class="dropdown relative inline-flex [--auto-close:inside]">
+ <button aria-expanded="false" aria-haspopup="menu" aria-label="Dropdown" class="dropdown-toggle btn btn-primary" id="dropdown-default" type="button">
+  Dropdown
+  <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4">
+  </span>
+ </button>
+ <ul aria-labelledby="dropdown-default" aria-orientation="vertical" class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60" role="menu">
+  <li>
+   <input aria-label="Default" checked="" class="theme-controller btn btn-text w-full justify-start" name="theme-dropdown" type="radio" value="default"/>
+  </li>
+  <li>
+   <input aria-label="Corporate" class="theme-controller btn btn-text w-full justify-start" name="theme-dropdown" type="radio" value="corporate"/>
+  </li>
+  <li>
+   <input aria-label="Gourmet" class="theme-controller btn btn-text w-full justify-start" name="theme-dropdown" type="radio" value="gourmet"/>
+  </li>
+ </ul>
 </div>
 
+```
 h2:
   - JavaScript Behavior
 

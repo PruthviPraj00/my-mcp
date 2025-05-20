@@ -18,24 +18,21 @@ h3:
 p:
   - Basic blockquote example.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <blockquote class="relative p-4">
-   <span class="icon-[tabler--quote] text-base-300/20 absolute -start-3 -top-3 size-16 rotate-180 rtl:rotate-0">
-   </span>
-   <div class="relative z-1">
-    <p class="text-base-content text-lg">
-     <em>
-      The blockquote element is ideal for showcasing well-known quotes within content. It's commonly used for
+```html
+<blockquote class="relative p-4">
+ <span class="icon-[tabler--quote] text-base-300/20 absolute -start-3 -top-3 size-16 rotate-180 rtl:rotate-0">
+ </span>
+ <div class="relative z-1">
+  <p class="text-base-content text-lg">
+   <em>
+    The blockquote element is ideal for showcasing well-known quotes within content. It's commonly used for
 testimonials, reviews, and notable quotes in articles.
-     </em>
-    </p>
-   </div>
-  </blockquote>
+   </em>
+  </p>
  </div>
-</div>
+</blockquote>
 
+```
 h2:
   - Alignment
 
@@ -45,48 +42,42 @@ h3:
 p:
   - An example of a centered blockquote.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <blockquote class="relative mx-auto p-4 text-center">
-   <span class="icon-[tabler--quote] text-base-300/20 absolute -top-3 start-2 size-16 rotate-180 rtl:rotate-0">
-   </span>
-   <div class="relative z-1">
-    <p class="text-base-content text-lg">
-     <em>
-      The blockquote element is ideal for showcasing well-known quotes within content. It's commonly used for
+```html
+<blockquote class="relative mx-auto p-4 text-center">
+ <span class="icon-[tabler--quote] text-base-300/20 absolute -top-3 start-2 size-16 rotate-180 rtl:rotate-0">
+ </span>
+ <div class="relative z-1">
+  <p class="text-base-content text-lg">
+   <em>
+    The blockquote element is ideal for showcasing well-known quotes within content. It's commonly used for
 testimonials, reviews, and notable quotes in articles.
-     </em>
-    </p>
-   </div>
-  </blockquote>
+   </em>
+  </p>
  </div>
-</div>
+</blockquote>
 
+```
 h3:
   - Right align
 
 p:
   - An example of a end blockquote.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <blockquote class="relative ms-auto p-4 text-end">
-   <span class="icon-[tabler--quote] text-base-300/20 absolute -top-3 start-6 size-16 rotate-180 rtl:rotate-0">
-   </span>
-   <div class="relative z-1">
-    <p class="text-base-content text-lg">
-     <em>
-      The blockquote element is ideal for showcasing well-known quotes within content. It's commonly used for
+```html
+<blockquote class="relative ms-auto p-4 text-end">
+ <span class="icon-[tabler--quote] text-base-300/20 absolute -top-3 start-6 size-16 rotate-180 rtl:rotate-0">
+ </span>
+ <div class="relative z-1">
+  <p class="text-base-content text-lg">
+   <em>
+    The blockquote element is ideal for showcasing well-known quotes within content. It's commonly used for
 testimonials, reviews, and notable quotes in articles.
-     </em>
-    </p>
-   </div>
-  </blockquote>
+   </em>
+  </p>
  </div>
-</div>
+</blockquote>
 
+```
 h2:
   - Illustrations
 
@@ -96,68 +87,62 @@ h3:
 p:
   - Labeling a source with a name.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <blockquote class="relative p-4">
-   <span class="icon-[tabler--quote] text-base-300/20 absolute -start-3 -top-3 size-16 rotate-180 rtl:rotate-0">
-   </span>
-   <div class="relative z-1">
-    <p class="text-base-content text-lg">
-     <em>
-      The blockquote element is ideal for showcasing well-known quotes within content. It's commonly used for
+```html
+<blockquote class="relative p-4">
+ <span class="icon-[tabler--quote] text-base-300/20 absolute -start-3 -top-3 size-16 rotate-180 rtl:rotate-0">
+ </span>
+ <div class="relative z-1">
+  <p class="text-base-content text-lg">
+   <em>
+    The blockquote element is ideal for showcasing well-known quotes within content. It's commonly used for
 testimonials, reviews, and notable quotes in articles.
-     </em>
-    </p>
-   </div>
-   <footer class="mt-4">
-    <div class="text-base-content/50 text-base font-semibold">
-     ~ Shamus Tuttle
-    </div>
-   </footer>
-  </blockquote>
+   </em>
+  </p>
  </div>
-</div>
+ <footer class="mt-4">
+  <div class="text-base-content/50 text-base font-semibold">
+   ~ Shamus Tuttle
+  </div>
+ </footer>
+</blockquote>
 
+```
 h3:
   - With avatar
 
 p:
   - Labeling a source with an avatar.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <blockquote class="relative p-4">
-   <span class="icon-[tabler--quote] text-base-300/20 absolute -start-3 -top-3 size-16 rotate-180 rtl:rotate-0">
-   </span>
-   <div class="relative z-1">
-    <p class="text-base-content text-lg">
-     <em>
-      The blockquote element is ideal for showcasing well-known quotes within content. It's commonly used for
+```html
+<blockquote class="relative p-4">
+ <span class="icon-[tabler--quote] text-base-300/20 absolute -start-3 -top-3 size-16 rotate-180 rtl:rotate-0">
+ </span>
+ <div class="relative z-1">
+  <p class="text-base-content text-lg">
+   <em>
+    The blockquote element is ideal for showcasing well-known quotes within content. It's commonly used for
 testimonials, reviews, and notable quotes in articles.
-     </em>
-    </p>
-   </div>
-   <footer class="mt-4 flex items-center">
-    <div class="avatar">
-     <div class="size-10 rounded-full">
-      <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
-     </div>
-    </div>
-    <div class="ms-4">
-     <div class="text-base-content text-base font-semibold">
-      Shamus Tuttle
-     </div>
-     <div class="text-base-content/50 text-xs">
-      Source title
-     </div>
-    </div>
-   </footer>
-  </blockquote>
+   </em>
+  </p>
  </div>
-</div>
+ <footer class="mt-4 flex items-center">
+  <div class="avatar">
+   <div class="size-10 rounded-full">
+    <img alt="avatar" src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"/>
+   </div>
+  </div>
+  <div class="ms-4">
+   <div class="text-base-content text-base font-semibold">
+    Shamus Tuttle
+   </div>
+   <div class="text-base-content/50 text-xs">
+    Source title
+   </div>
+  </div>
+ </footer>
+</blockquote>
 
+```
 h2:
   - Blockquote
 

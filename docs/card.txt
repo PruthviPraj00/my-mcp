@@ -41,27 +41,24 @@ p:
 p:
   - Check out our card component which Utilizecardcomponent class.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card sm:max-w-sm">
-   <div class="card-body">
-    <h5 class="card-title mb-2.5">
-     Welcome to Our Service
-    </h5>
-    <p class="mb-4">
-     Discover the features and benefits that our service offers. Enhance your experience with our user-friendly platform designed to meet all your needs.
-    </p>
-    <div class="card-actions">
-     <button class="btn btn-primary">
-      Learn More
-     </button>
-    </div>
-   </div>
+```html
+<div class="card sm:max-w-sm">
+ <div class="card-body">
+  <h5 class="card-title mb-2.5">
+   Welcome to Our Service
+  </h5>
+  <p class="mb-4">
+   Discover the features and benefits that our service offers. Enhance your experience with our user-friendly platform designed to meet all your needs.
+  </p>
+  <div class="card-actions">
+   <button class="btn btn-primary">
+    Learn More
+   </button>
   </div>
  </div>
 </div>
 
+```
 h2:
   - Size
 
@@ -71,97 +68,94 @@ h3:
 p:
   - Card sizes withcard-{xs|sm|md|lg|xl}utility classes.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex-col flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card card-xs sm:max-w-sm">
-   <div class="card-header">
-    <h5 class="card-title">
-     Innovative Solutions
-    </h5>
-   </div>
-   <div class="card-body">
-    <p>
-     Explore our cutting-edge features designed to elevate your experience. Learn how our solutions can help you achieve your goals.
-    </p>
-   </div>
-   <div class="card-footer text-center">
-    <p class="text-base-content/50">
-     Learn more about our features.
-    </p>
-   </div>
-  </div>
-  <div class="card card-sm sm:max-w-sm">
-   <div class="card-header">
-    <h5 class="card-title">
-     Innovative Solutions
-    </h5>
-   </div>
-   <div class="card-body">
-    <p>
-     Explore our cutting-edge features designed to elevate your experience. Learn how our solutions can help you achieve your goals.
-    </p>
-   </div>
-   <div class="card-footer text-center">
-    <p class="text-base-content/50">
-     Learn more about our features.
-    </p>
-   </div>
-  </div>
-  <div class="card sm:max-w-sm">
-   <div class="card-header">
-    <h5 class="card-title">
-     Innovative Solutions
-    </h5>
-   </div>
-   <div class="card-body">
-    <p>
-     Explore our cutting-edge features designed to elevate your experience. Learn how our solutions can help you achieve your goals.
-    </p>
-   </div>
-   <div class="card-footer text-center">
-    <p class="text-base-content/50">
-     Learn more about our features.
-    </p>
-   </div>
-  </div>
-  <div class="card card-lg sm:max-w-sm">
-   <div class="card-header">
-    <h5 class="card-title">
-     Innovative Solutions
-    </h5>
-   </div>
-   <div class="card-body">
-    <p>
-     Explore our cutting-edge features designed to elevate your experience. Learn how our solutions can help you achieve your goals.
-    </p>
-   </div>
-   <div class="card-footer text-center">
-    <p class="text-base-content/50">
-     Learn more about our features.
-    </p>
-   </div>
-  </div>
-  <div class="card card-xl sm:max-w-sm">
-   <div class="card-header">
-    <h5 class="card-title">
-     Innovative Solutions
-    </h5>
-   </div>
-   <div class="card-body">
-    <p>
-     Explore our cutting-edge features designed to elevate your experience. Learn how our solutions can help you achieve your goals.
-    </p>
-   </div>
-   <div class="card-footer text-center">
-    <p class="text-base-content/50">
-     Learn more about our features.
-    </p>
-   </div>
-  </div>
+```html
+<div class="card card-xs sm:max-w-sm">
+ <div class="card-header">
+  <h5 class="card-title">
+   Innovative Solutions
+  </h5>
+ </div>
+ <div class="card-body">
+  <p>
+   Explore our cutting-edge features designed to elevate your experience. Learn how our solutions can help you achieve your goals.
+  </p>
+ </div>
+ <div class="card-footer text-center">
+  <p class="text-base-content/50">
+   Learn more about our features.
+  </p>
+ </div>
+</div>
+<div class="card card-sm sm:max-w-sm">
+ <div class="card-header">
+  <h5 class="card-title">
+   Innovative Solutions
+  </h5>
+ </div>
+ <div class="card-body">
+  <p>
+   Explore our cutting-edge features designed to elevate your experience. Learn how our solutions can help you achieve your goals.
+  </p>
+ </div>
+ <div class="card-footer text-center">
+  <p class="text-base-content/50">
+   Learn more about our features.
+  </p>
+ </div>
+</div>
+<div class="card sm:max-w-sm">
+ <div class="card-header">
+  <h5 class="card-title">
+   Innovative Solutions
+  </h5>
+ </div>
+ <div class="card-body">
+  <p>
+   Explore our cutting-edge features designed to elevate your experience. Learn how our solutions can help you achieve your goals.
+  </p>
+ </div>
+ <div class="card-footer text-center">
+  <p class="text-base-content/50">
+   Learn more about our features.
+  </p>
+ </div>
+</div>
+<div class="card card-lg sm:max-w-sm">
+ <div class="card-header">
+  <h5 class="card-title">
+   Innovative Solutions
+  </h5>
+ </div>
+ <div class="card-body">
+  <p>
+   Explore our cutting-edge features designed to elevate your experience. Learn how our solutions can help you achieve your goals.
+  </p>
+ </div>
+ <div class="card-footer text-center">
+  <p class="text-base-content/50">
+   Learn more about our features.
+  </p>
+ </div>
+</div>
+<div class="card card-xl sm:max-w-sm">
+ <div class="card-header">
+  <h5 class="card-title">
+   Innovative Solutions
+  </h5>
+ </div>
+ <div class="card-body">
+  <p>
+   Explore our cutting-edge features designed to elevate your experience. Learn how our solutions can help you achieve your goals.
+  </p>
+ </div>
+ <div class="card-footer text-center">
+  <p class="text-base-content/50">
+   Learn more about our features.
+  </p>
  </div>
 </div>
 
+```
 h2:
   - Content types
 
@@ -171,159 +165,141 @@ h3:
 p:
   - Simple body example with text.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card sm:max-w-sm">
-   <div class="card-body">
-    <p>
-     Welcome to our card Indulge in a delightful journey through our offerings. Jelly lemon drops, tiramisu, chocolate cake, cotton candy, soufflÃ©, and oat cake sweet roll are just a taste of what's in store.
-    </p>
-   </div>
-  </div>
+```html
+<div class="card sm:max-w-sm">
+ <div class="card-body">
+  <p>
+   Welcome to our card Indulge in a delightful journey through our offerings. Jelly lemon drops, tiramisu, chocolate cake, cotton candy, soufflÃ©, and oat cake sweet roll are just a taste of what's in store.
+  </p>
  </div>
 </div>
 
+```
 h3:
   - Image
 
 p:
   - Example showcasing an image card with content.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card sm:max-w-sm">
-   <figure>
-    <img alt="Watch" src="https://cdn.flyonui.com/fy-assets/components/card/image-9.png"/>
-   </figure>
-   <div class="card-body">
-    <h5 class="card-title mb-2.5">
-     Apple Smart Watch
-    </h5>
-    <p class="mb-4">
-     Stay connected, motivated, and healthy with the latest Apple Watch.
-    </p>
-    <div class="card-actions">
-     <button class="btn btn-primary">
-      Buy Now
-     </button>
-     <button class="btn btn-secondary btn-soft">
-      Add to cart
-     </button>
-    </div>
-   </div>
+```html
+<div class="card sm:max-w-sm">
+ <figure>
+  <img alt="Watch" src="https://cdn.flyonui.com/fy-assets/components/card/image-9.png"/>
+ </figure>
+ <div class="card-body">
+  <h5 class="card-title mb-2.5">
+   Apple Smart Watch
+  </h5>
+  <p class="mb-4">
+   Stay connected, motivated, and healthy with the latest Apple Watch.
+  </p>
+  <div class="card-actions">
+   <button class="btn btn-primary">
+    Buy Now
+   </button>
+   <button class="btn btn-secondary btn-soft">
+    Add to cart
+   </button>
   </div>
  </div>
 </div>
 
+```
 h3:
   - Titles, text, and links
 
 p:
   - Buttons and links placed withincard-actionscan be referred to as actions.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card sm:max-w-sm">
-   <div class="card-body">
-    <h5 class="card-title mb-0">
-     Welcome to Our Platform
-    </h5>
-    <div class="text-base-content/50 mb-6">
-     Your journey starts here
-    </div>
-    <p class="mb-4">
-     Explore a range of features and services designed to enhance your experience. Join us and make the most out of what we have to offer.
-    </p>
-    <div class="card-actions">
-     <a class="link link-primary no-underline" href="#">
-      Get Started
-     </a>
-     <a class="link link-primary no-underline" href="#">
-      Learn More
-     </a>
-    </div>
-   </div>
+```html
+<div class="card sm:max-w-sm">
+ <div class="card-body">
+  <h5 class="card-title mb-0">
+   Welcome to Our Platform
+  </h5>
+  <div class="text-base-content/50 mb-6">
+   Your journey starts here
+  </div>
+  <p class="mb-4">
+   Explore a range of features and services designed to enhance your experience. Join us and make the most out of what we have to offer.
+  </p>
+  <div class="card-actions">
+   <a class="link link-primary no-underline" href="#">
+    Get Started
+   </a>
+   <a class="link link-primary no-underline" href="#">
+    Learn More
+   </a>
   </div>
  </div>
 </div>
 
+```
 h3:
   - Card header
 
 p:
   - With component classcard-headeryou can specify the styling and content for the header sections of a card element in your web application.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card sm:max-w-sm">
-   <div class="card-header">
-    <h5 class="card-title">
-     Exclusive Feature Highlight
-    </h5>
-   </div>
-   <div class="card-body">
-    <p>
-     Discover the unique benefits and features we offer. Dive deeper to learn how our solutions can enhance your experience and meet your needs effectively.
-    </p>
-   </div>
-  </div>
+```html
+<div class="card sm:max-w-sm">
+ <div class="card-header">
+  <h5 class="card-title">
+   Exclusive Feature Highlight
+  </h5>
+ </div>
+ <div class="card-body">
+  <p>
+   Discover the unique benefits and features we offer. Dive deeper to learn how our solutions can enhance your experience and meet your needs effectively.
+  </p>
  </div>
 </div>
 
+```
 h3:
   - Card footer
 
 p:
   - With component classcard-footer, you can specify the styling and content for the footer sections of a card element in your web application.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card sm:max-w-sm">
-   <div class="card-body">
-    <h5 class="card-title mb-2.5">
-     Featured Update
-    </h5>
-    <p>
-     Explore the latest enhancements and updates. Stay informed with our new features designed to improve your experience and deliver greater value.
-    </p>
-   </div>
-   <div class="card-footer text-base-content/50 text-center">
-    2 days ago
-   </div>
-  </div>
+```html
+<div class="card sm:max-w-sm">
+ <div class="card-body">
+  <h5 class="card-title mb-2.5">
+   Featured Update
+  </h5>
+  <p>
+   Explore the latest enhancements and updates. Stay informed with our new features designed to improve your experience and deliver greater value.
+  </p>
+ </div>
+ <div class="card-footer text-base-content/50 text-center">
+  2 days ago
  </div>
 </div>
 
+```
 h3:
   - List group
 
 p:
   - Create a simple list displayed within a card-like interface. Utilize theDivideutility class to add borders between the list items.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card">
-   <ul class="divide-base-content/20 divide-y">
-    <li class="w-72 p-3">
-     Product Overview
-    </li>
-    <li class="p-3">
-     Key Features
-    </li>
-    <li class="p-3">
-     Customer Reviews
-    </li>
-   </ul>
-  </div>
- </div>
+```html
+<div class="card">
+ <ul class="divide-base-content/20 divide-y">
+  <li class="w-72 p-3">
+   Product Overview
+  </li>
+  <li class="p-3">
+   Key Features
+  </li>
+  <li class="p-3">
+   Customer Reviews
+  </li>
+ </ul>
 </div>
 
+```
 h2:
   - Images caps & overlay
 
@@ -336,143 +312,128 @@ p:
 p:
   - Image at top
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card sm:max-w-sm">
-   <figure>
-    <img alt="headphone" src="https://cdn.flyonui.com/fy-assets/components/card/image-7.png"/>
-   </figure>
-   <div class="card-body space-y-3">
-    <h5 class="card-title">
-     Airpods Max
-    </h5>
-    <p>
-     A perfect balance of exhilarating high-fidelity audio and the effortless magic of Airpods.
-    </p>
-    <div class="card-actions">
-     <button class="btn btn-primary">
-      Buy Now
-     </button>
-     <button class="btn btn-secondary btn-soft">
-      Add to cart
-     </button>
-    </div>
-   </div>
+```html
+<div class="card sm:max-w-sm">
+ <figure>
+  <img alt="headphone" src="https://cdn.flyonui.com/fy-assets/components/card/image-7.png"/>
+ </figure>
+ <div class="card-body space-y-3">
+  <h5 class="card-title">
+   Airpods Max
+  </h5>
+  <p>
+   A perfect balance of exhilarating high-fidelity audio and the effortless magic of Airpods.
+  </p>
+  <div class="card-actions">
+   <button class="btn btn-primary">
+    Buy Now
+   </button>
+   <button class="btn btn-secondary btn-soft">
+    Add to cart
+   </button>
   </div>
  </div>
 </div>
 
+```
 p:
   - Or image at bottom
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card sm:max-w-sm">
-   <div class="card-body">
-    <h5 class="card-title mb-2.5">
-     Airpods Max
-    </h5>
-    <p>
-     A perfect balance of exhilarating high-fidelity audio and the effortless magic of Airpods.
-    </p>
-   </div>
-   <figure>
-    <img alt="headphone" src="https://cdn.flyonui.com/fy-assets/components/card/image-7.png"/>
-   </figure>
-  </div>
+```html
+<div class="card sm:max-w-sm">
+ <div class="card-body">
+  <h5 class="card-title mb-2.5">
+   Airpods Max
+  </h5>
+  <p>
+   A perfect balance of exhilarating high-fidelity audio and the effortless magic of Airpods.
+  </p>
  </div>
+ <figure>
+  <img alt="headphone" src="https://cdn.flyonui.com/fy-assets/components/card/image-7.png"/>
+ </figure>
 </div>
 
+```
 h3:
   - Image overlays
 
 p:
   - By utilizing theimage-fullmodifier class, the image expands to occupy the entire width and is employed as an overlay.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card image-full sm:max-w-sm">
-   <figure>
-    <img alt="overlay image" src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png"/>
-   </figure>
-   <div class="card-body">
-    <h2 class="card-title mb-2.5 text-white">
-     Marketing
-    </h2>
-    <p class="text-white">
-     Boost your brand's visibility and engagement through targeted marketing strategies.
-    </p>
-   </div>
-  </div>
+```html
+<div class="card image-full sm:max-w-sm">
+ <figure>
+  <img alt="overlay image" src="https://cdn.flyonui.com/fy-assets/components/card/image-5.png"/>
+ </figure>
+ <div class="card-body">
+  <h2 class="card-title mb-2.5 text-white">
+   Marketing
+  </h2>
+  <p class="text-white">
+   Boost your brand's visibility and engagement through targeted marketing strategies.
+  </p>
  </div>
 </div>
 
+```
 h3:
   - Card glass
 
 p:
   - Apply theglassmodifier class to thecardcomponent class to impart a glass effect onto the card.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose bg-[url('https://cdn.flyonui.com/fy-assets/components/carousel/image-10.png')] bg-cover flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card glass text-white sm:max-w-sm">
-   <figure>
-    <img alt="iphones" src="https://cdn.flyonui.com/fy-assets/components/card/image-1.png"/>
-   </figure>
-   <div class="card-body">
-    <h2 class="card-title mb-2.5 text-white">
-     Smartphone
-    </h2>
-    <p class="mb-4">
-     A high-quality smartphone with the latest features for a premium user experience.
-    </p>
-    <div class="card-actions">
-     <button class="btn btn-warning">
-      Buy Now
-     </button>
-    </div>
-   </div>
+```html
+<div class="card glass text-white sm:max-w-sm">
+ <figure>
+  <img alt="iphones" src="https://cdn.flyonui.com/fy-assets/components/card/image-1.png"/>
+ </figure>
+ <div class="card-body">
+  <h2 class="card-title mb-2.5 text-white">
+   Smartphone
+  </h2>
+  <p class="mb-4">
+   A high-quality smartphone with the latest features for a premium user experience.
+  </p>
+  <div class="card-actions">
+   <button class="btn btn-warning">
+    Buy Now
+   </button>
   </div>
  </div>
 </div>
 
+```
 h3:
   - Horizontal
 
 p:
   - Thecard-sideclass positions images responsively, with options for left or right placement based on breakpoints likesm,md, andlg.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card sm:card-side max-w-sm sm:max-w-full">
-   <figure>
-    <img alt="headphone" src="https://cdn.flyonui.com/fy-assets/components/card/image-7.png"/>
-   </figure>
-   <div class="card-body">
-    <h5 class="card-title mb-0.5">
-     Airpods Max
-    </h5>
-    <p class="mb-2">
-     This is a wider card with supporting text below as a natural lead-in to additional content.
-    </p>
-    <div class="card-actions">
-     <button class="btn btn-primary">
-      Buy Now
-     </button>
-     <button class="btn btn-secondary btn-soft">
-      Add to cart
-     </button>
-    </div>
-   </div>
+```html
+<div class="card sm:card-side max-w-sm sm:max-w-full">
+ <figure>
+  <img alt="headphone" src="https://cdn.flyonui.com/fy-assets/components/card/image-7.png"/>
+ </figure>
+ <div class="card-body">
+  <h5 class="card-title mb-0.5">
+   Airpods Max
+  </h5>
+  <p class="mb-2">
+   This is a wider card with supporting text below as a natural lead-in to additional content.
+  </p>
+  <div class="card-actions">
+   <button class="btn btn-primary">
+    Buy Now
+   </button>
+   <button class="btn btn-secondary btn-soft">
+    Add to cart
+   </button>
   </div>
  </div>
 </div>
 
+```
 h2:
   - Card layout
 
@@ -482,68 +443,65 @@ h3:
 p:
   - Utilize thecard-groupclass to establish a container for organizing cards into a cohesive group.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card-group sm:flex *:not-last:border-e *:not-last:border-base-content/25 max-w-sm sm:max-w-full">
-   <div class="card">
-    <figure>
-     <img alt="paris" src="https://cdn.flyonui.com/fy-assets/components/card/image-4.png"/>
-    </figure>
-    <div class="card-body">
-     <h5 class="card-title mb-2.5">
-      Travel to Paris
-     </h5>
-     <p>
-      Discover iconic landmarks, world-class museums, and exquisite cuisine. Explore the Eiffel Tower, Louvre Museum, and charming neighborhoods.
-     </p>
-    </div>
-    <div class="card-footer">
-     <p class="text-base-content/50 text-sm">
-      Card text content
-     </p>
-    </div>
-   </div>
-   <div class="card">
-    <figure>
-     <img alt="rome" src="https://cdn.flyonui.com/fy-assets/components/card/image-3.png"/>
-    </figure>
-    <div class="card-body">
-     <h5 class="card-title mb-2.5">
-      Travel to Rome
-     </h5>
-     <p>
-      Visit ancient ruins, stunning basilicas, and enjoy delicious Italian cuisine. Explore the Colosseum, Vatican City, and more.
-     </p>
-    </div>
-    <div class="card-footer">
-     <p class="text-base-content/50 text-sm">
-      Card text content
-     </p>
-    </div>
-   </div>
-   <div class="card">
-    <figure>
-     <img alt="sydney" src="https://cdn.flyonui.com/fy-assets/components/card/image-2.png"/>
-    </figure>
-    <div class="card-body">
-     <h5 class="card-title mb-2.5">
-      Travel to Sydney
-     </h5>
-     <p>
-      Explore the vibrant city of Sydney, where every corner tells a story. Visit iconic landmarks, laze on beautiful beaches, and immerse yourself in a lively arts scene.
-     </p>
-    </div>
-    <div class="card-footer">
-     <p class="text-base-content/50 text-sm">
-      Card text content
-     </p>
-    </div>
-   </div>
+```html
+<div class="card-group sm:flex *:not-last:border-e *:not-last:border-base-content/25 max-w-sm sm:max-w-full">
+ <div class="card">
+  <figure>
+   <img alt="paris" src="https://cdn.flyonui.com/fy-assets/components/card/image-4.png"/>
+  </figure>
+  <div class="card-body">
+   <h5 class="card-title mb-2.5">
+    Travel to Paris
+   </h5>
+   <p>
+    Discover iconic landmarks, world-class museums, and exquisite cuisine. Explore the Eiffel Tower, Louvre Museum, and charming neighborhoods.
+   </p>
+  </div>
+  <div class="card-footer">
+   <p class="text-base-content/50 text-sm">
+    Card text content
+   </p>
+  </div>
+ </div>
+ <div class="card">
+  <figure>
+   <img alt="rome" src="https://cdn.flyonui.com/fy-assets/components/card/image-3.png"/>
+  </figure>
+  <div class="card-body">
+   <h5 class="card-title mb-2.5">
+    Travel to Rome
+   </h5>
+   <p>
+    Visit ancient ruins, stunning basilicas, and enjoy delicious Italian cuisine. Explore the Colosseum, Vatican City, and more.
+   </p>
+  </div>
+  <div class="card-footer">
+   <p class="text-base-content/50 text-sm">
+    Card text content
+   </p>
+  </div>
+ </div>
+ <div class="card">
+  <figure>
+   <img alt="sydney" src="https://cdn.flyonui.com/fy-assets/components/card/image-2.png"/>
+  </figure>
+  <div class="card-body">
+   <h5 class="card-title mb-2.5">
+    Travel to Sydney
+   </h5>
+   <p>
+    Explore the vibrant city of Sydney, where every corner tells a story. Visit iconic landmarks, laze on beautiful beaches, and immerse yourself in a lively arts scene.
+   </p>
+  </div>
+  <div class="card-footer">
+   <p class="text-base-content/50 text-sm">
+    Card text content
+   </p>
   </div>
  </div>
 </div>
 
+```
 h2:
   - Animations
 
@@ -553,63 +511,57 @@ h3:
 p:
   - Implement a hover effect on the card image that animates a zoom-out transition.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card group hover:shadow-sm sm:max-w-sm">
-   <figure>
-    <img alt="Shoes" class="transition-transform duration-500 group-hover:scale-110" src="https://cdn.flyonui.com/fy-assets/components/card/image-8.png"/>
-   </figure>
-   <div class="card-body">
-    <h5 class="card-title mb-2.5">
-     Card title
-    </h5>
-    <p class="mb-6">
-     Nike Air Max is a popular line of athletic shoes that feature Nike's signature Air cushioning technology in the sole.
-    </p>
-    <div class="card-actions">
-     <button class="btn btn-primary">
-      Buy Now
-     </button>
-     <button class="btn btn-soft">
-      Add to cart
-     </button>
-    </div>
-   </div>
+```html
+<div class="card group hover:shadow-sm sm:max-w-sm">
+ <figure>
+  <img alt="Shoes" class="transition-transform duration-500 group-hover:scale-110" src="https://cdn.flyonui.com/fy-assets/components/card/image-8.png"/>
+ </figure>
+ <div class="card-body">
+  <h5 class="card-title mb-2.5">
+   Card title
+  </h5>
+  <p class="mb-6">
+   Nike Air Max is a popular line of athletic shoes that feature Nike's signature Air cushioning technology in the sole.
+  </p>
+  <div class="card-actions">
+   <button class="btn btn-primary">
+    Buy Now
+   </button>
+   <button class="btn btn-soft">
+    Add to cart
+   </button>
   </div>
  </div>
 </div>
 
+```
 h3:
   - Translate animation on hover
 
 p:
   - Apply a hover animation to the card image that translates it upwards.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="group">
-   <div class="card transition-transform duration-300 group-hover:-translate-y-2 md:max-w-md">
-    <div class="card-body">
-     <p>
-      Discover a range of delightful treats including lemon drops, tiramisu, chocolate cake, and cotton candy. Our collection offers a variety of flavors to satisfy every craving.
-     </p>
-    </div>
-   </div>
+```html
+<div class="group">
+ <div class="card transition-transform duration-300 group-hover:-translate-y-2 md:max-w-md">
+  <div class="card-body">
+   <p>
+    Discover a range of delightful treats including lemon drops, tiramisu, chocolate cake, and cotton candy. Our collection offers a variety of flavors to satisfy every craving.
+   </p>
   </div>
-  <div class="group">
-   <div class="card transition-transform duration-300 group-hover:-translate-y-2 md:max-w-md">
-    <div class="card-body">
-     <p>
-      Enjoy a selection of sweet indulgences such as soufflÃ©, oat cake, and sweet rolls. Each item is crafted to bring a touch of sweetness to your day.
-     </p>
-    </div>
-   </div>
+ </div>
+</div>
+<div class="group">
+ <div class="card transition-transform duration-300 group-hover:-translate-y-2 md:max-w-md">
+  <div class="card-body">
+   <p>
+    Enjoy a selection of sweet indulgences such as soufflÃ©, oat cake, and sweet rolls. Each item is crafted to bring a touch of sweetness to your day.
+   </p>
   </div>
  </div>
 </div>
 
+```
 h2:
   - Navigation
 
@@ -619,53 +571,50 @@ h3:
 p:
   - Basic tabs in card example.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose !block flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card md:max-w-md">
-   <nav aria-label="Tabs" class="tabs tabs-bordered card-header" role="tablist">
-    <button aria-controls="tabs-card-1" aria-selected="true" class="tab active-tab:tab-active active w-full" data-tab="#tabs-card-1" id="tabs-card-item-1" role="tab" type="button">
-     Home
-    </button>
-    <button aria-controls="tabs-card-2" aria-selected="false" class="tab active-tab:tab-active w-full" data-tab="#tabs-card-2" id="tabs-card-item-2" role="tab" type="button">
+```html
+<div class="card md:max-w-md">
+ <nav aria-label="Tabs" class="tabs tabs-bordered card-header" role="tablist">
+  <button aria-controls="tabs-card-1" aria-selected="true" class="tab active-tab:tab-active active w-full" data-tab="#tabs-card-1" id="tabs-card-item-1" role="tab" type="button">
+   Home
+  </button>
+  <button aria-controls="tabs-card-2" aria-selected="false" class="tab active-tab:tab-active w-full" data-tab="#tabs-card-2" id="tabs-card-item-2" role="tab" type="button">
+   Profile
+  </button>
+  <button aria-controls="tabs-card-3" aria-selected="false" class="tab active-tab:tab-active w-full" data-tab="#tabs-card-3" id="tabs-card-item-3" role="tab" type="button">
+   Messages
+  </button>
+ </nav>
+ <div class="card-body">
+  <div aria-labelledby="tabs-card-item-1" id="tabs-card-1" role="tabpanel">
+   <p class="text-base-content/80">
+    Welcome to the
+    <span class="text-base-content font-semibold">
+     Home tab!
+    </span>
+    Here, you can explore the latest updates, news, and highlights. Stay informed about what's happening and never miss out on important announcements.
+   </p>
+  </div>
+  <div aria-labelledby="tabs-card-item-2" class="hidden" id="tabs-card-2" role="tabpanel">
+   <p class="text-base-content/80">
+    This is your
+    <span class="text-base-content font-semibold">
      Profile
-    </button>
-    <button aria-controls="tabs-card-3" aria-selected="false" class="tab active-tab:tab-active w-full" data-tab="#tabs-card-3" id="tabs-card-item-3" role="tab" type="button">
-     Messages
-    </button>
-   </nav>
-   <div class="card-body">
-    <div aria-labelledby="tabs-card-item-1" id="tabs-card-1" role="tabpanel">
-     <p class="text-base-content/80">
-      Welcome to the
-      <span class="text-base-content font-semibold">
-       Home tab!
-      </span>
-      Here, you can explore the latest updates, news, and highlights. Stay informed about what's happening and never miss out on important announcements.
-     </p>
-    </div>
-    <div aria-labelledby="tabs-card-item-2" class="hidden" id="tabs-card-2" role="tabpanel">
-     <p class="text-base-content/80">
-      This is your
-      <span class="text-base-content font-semibold">
-       Profile
-      </span>
-      tab. Manage your personal information, update your account details, and customize your settings to make your experience unique.
-     </p>
-    </div>
-    <div aria-labelledby="tabs-card-item-3" class="hidden" id="tabs-card-3" role="tabpanel">
-     <p class="text-base-content/80">
-      <span class="text-base-content font-semibold">
-       Messages:
-      </span>
-      Check your recent messages, start new conversations, and stay connected with your friends and contacts. Manage your chat history and keep the communication flowing.
-     </p>
-    </div>
-   </div>
+    </span>
+    tab. Manage your personal information, update your account details, and customize your settings to make your experience unique.
+   </p>
+  </div>
+  <div aria-labelledby="tabs-card-item-3" class="hidden" id="tabs-card-3" role="tabpanel">
+   <p class="text-base-content/80">
+    <span class="text-base-content font-semibold">
+     Messages:
+    </span>
+    Check your recent messages, start new conversations, and stay connected with your friends and contacts. Manage your chat history and keep the communication flowing.
+   </p>
   </div>
  </div>
 </div>
 
+```
 h2:
   - Illustrations
 
@@ -675,228 +624,210 @@ h3:
 p:
   - Feel free to apply this variation to all our semantic color utility classes or Tailwind colors.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose grid sm:grid-cols-3 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card bg-primary text-primary-content">
-   <div class="card-body">
-    <h5 class="card-title text-primary-content mb-2.5">
-     Customer Support
-    </h5>
-    <p>
-     Enhance customer satisfaction by providing timely and effective support solutions.
-    </p>
-   </div>
-  </div>
-  <div class="card bg-primary/20 border-primary text-primary border shadow-none">
-   <div class="card-body">
-    <h5 class="card-title text-primary mb-2.5">
-     Customer Support
-    </h5>
-    <p>
-     Enhance customer satisfaction by providing timely and effective support solutions.
-    </p>
-   </div>
-  </div>
-  <div class="card border-primary text-primary border bg-transparent shadow-none">
-   <div class="card-body">
-    <h5 class="card-title text-primary mb-2.5">
-     Customer Support
-    </h5>
-    <p>
-     Enhance customer satisfaction by providing timely and effective support solutions.
-    </p>
-   </div>
-  </div>
+```html
+<div class="card bg-primary text-primary-content">
+ <div class="card-body">
+  <h5 class="card-title text-primary-content mb-2.5">
+   Customer Support
+  </h5>
+  <p>
+   Enhance customer satisfaction by providing timely and effective support solutions.
+  </p>
+ </div>
+</div>
+<div class="card bg-primary/20 border-primary text-primary border shadow-none">
+ <div class="card-body">
+  <h5 class="card-title text-primary mb-2.5">
+   Customer Support
+  </h5>
+  <p>
+   Enhance customer satisfaction by providing timely and effective support solutions.
+  </p>
+ </div>
+</div>
+<div class="card border-primary text-primary border bg-transparent shadow-none">
+ <div class="card-body">
+  <h5 class="card-title text-primary mb-2.5">
+   Customer Support
+  </h5>
+  <p>
+   Enhance customer satisfaction by providing timely and effective support solutions.
+  </p>
  </div>
 </div>
 
+```
 h3:
   - Text alignments
 
 p:
   - By default, text is aligned left. You can modify the alignment using utility classes such astext-centerortext-right.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose grid sm:grid-cols-3 flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card">
-   <div class="card-body">
-    <h5 class="card-title mb-2.5">
-     Customer Support
-    </h5>
-    <p>
-     Enhance customer satisfaction by providing timely and effective support solutions.
-    </p>
-   </div>
-  </div>
-  <div class="card text-center">
-   <div class="card-body">
-    <h5 class="card-title mb-2.5">
-     Customer Support
-    </h5>
-    <p>
-     Enhance customer satisfaction by providing timely and effective support solutions.
-    </p>
-   </div>
-  </div>
-  <div class="card text-right">
-   <div class="card-body">
-    <h5 class="card-title mb-2.5">
-     Customer Support
-    </h5>
-    <p>
-     Enhance customer satisfaction by providing timely and effective support solutions.
-    </p>
-   </div>
-  </div>
+```html
+<div class="card">
+ <div class="card-body">
+  <h5 class="card-title mb-2.5">
+   Customer Support
+  </h5>
+  <p>
+   Enhance customer satisfaction by providing timely and effective support solutions.
+  </p>
+ </div>
+</div>
+<div class="card text-center">
+ <div class="card-body">
+  <h5 class="card-title mb-2.5">
+   Customer Support
+  </h5>
+  <p>
+   Enhance customer satisfaction by providing timely and effective support solutions.
+  </p>
+ </div>
+</div>
+<div class="card text-right">
+ <div class="card-body">
+  <h5 class="card-title mb-2.5">
+   Customer Support
+  </h5>
+  <p>
+   Enhance customer satisfaction by providing timely and effective support solutions.
+  </p>
  </div>
 </div>
 
+```
 h3:
   - Card with border
 
 p:
   - You can usecard-borderfor bordered card.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card card-border shadow-none sm:max-w-sm">
-   <div class="card-body">
-    <h5 class="card-title mb-2.5">
-     Welcome to Our Service
-    </h5>
-    <p class="mb-4">
-     Discover the features and benefits that our service offers. Enhance your experience with our user-friendly platform designed to meet all your needs.
-    </p>
-    <div class="card-actions">
-     <button class="btn btn-primary">
-      Learn More
-     </button>
-    </div>
-   </div>
+```html
+<div class="card card-border shadow-none sm:max-w-sm">
+ <div class="card-body">
+  <h5 class="card-title mb-2.5">
+   Welcome to Our Service
+  </h5>
+  <p class="mb-4">
+   Discover the features and benefits that our service offers. Enhance your experience with our user-friendly platform designed to meet all your needs.
+  </p>
+  <div class="card-actions">
+   <button class="btn btn-primary">
+    Learn More
+   </button>
   </div>
  </div>
 </div>
 
+```
 h3:
   - Card with alert
 
 p:
   - You can use thecard-alertclass to style alert messages inside a card.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card md:max-w-md">
-   <div class="card-alert alert alert-error alert-soft" role="alert">
-    <span class="font-bold">
-     Attention:
-    </span>
-    Important security update required.
-   </div>
-   <div class="card-body">
-    <h5 class="card-title mb-2.5">
-     Security Alert
-    </h5>
-    <p class="mb-4">
-     We have detected a potential security vulnerability. Please update your settings to ensure your data remains safe. Click the link below for detailed instructions.
-    </p>
-    <a class="text-blue-500 hover:underline" href="#">
-     Update Now
-    </a>
-   </div>
-  </div>
+```html
+<div class="card md:max-w-md">
+ <div class="card-alert alert alert-error alert-soft" role="alert">
+  <span class="font-bold">
+   Attention:
+  </span>
+  Important security update required.
+ </div>
+ <div class="card-body">
+  <h5 class="card-title mb-2.5">
+   Security Alert
+  </h5>
+  <p class="mb-4">
+   We have detected a potential security vulnerability. Please update your settings to ensure your data remains safe. Click the link below for detailed instructions.
+  </p>
+  <a class="text-blue-500 hover:underline" href="#">
+   Update Now
+  </a>
  </div>
 </div>
 
+```
 h3:
   - Empty card
 
 p:
   - Show an empty state placeholder when no data is available, providing friendly tips for users.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card min-h-60 w-full">
-   <div class="card-body items-center justify-center">
-    <span class="icon-[tabler--brand-google-drive] mb-2 size-8">
-    </span>
-    <span>
-     No data to show.
-    </span>
-   </div>
-  </div>
+```html
+<div class="card min-h-60 w-full">
+ <div class="card-body items-center justify-center">
+  <span class="icon-[tabler--brand-google-drive] mb-2 size-8">
+  </span>
+  <span>
+   No data to show.
+  </span>
  </div>
 </div>
 
+```
 h3:
   - Card actions
 
 p:
   - Utilize thedata-remove-elementattribute to specify the connected ID for card removal. Customize the removal animation by incorporating theremoving:modifier, as illustrated below.
 
-Code:
-<div :dir="isRtl ? 'rtl' : 'ltr'" class="overflow-hidden" id="previewFrame" x-ref="previewFrame">
- <div class="bg-base-200/20 border-neutral/10 rounded-box not-prose flex w-full flex-[1_0_0] flex-wrap gap-3 border p-3 sm:p-6">
-  <div class="card removing:translate-x-5 removing:opacity-0 w-full transition duration-300 ease-in-out" id="card-dismiss">
-   <div class="card-header flex justify-between items-center">
-    <span class="card-title">
-     Card Actions
+```html
+<div class="card removing:translate-x-5 removing:opacity-0 w-full transition duration-300 ease-in-out" id="card-dismiss">
+ <div class="card-header flex justify-between items-center">
+  <span class="card-title">
+   Card Actions
+  </span>
+  <div class="card-actions flex gap-0.5 sm:gap-3 flex-nowrap">
+   <div class="tooltip">
+    <button aria-label="Refresh Button" class="tooltip-toggle btn btn-text btn-sm btn-circle">
+     <span class="icon-[tabler--refresh] size-5">
+     </span>
+    </button>
+    <span class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="tooltip">
+     <span class="tooltip-body">
+      Refresh
+     </span>
     </span>
-    <div class="card-actions flex gap-0.5 sm:gap-3 flex-nowrap">
-     <div class="tooltip">
-      <button aria-label="Refresh Button" class="tooltip-toggle btn btn-text btn-sm btn-circle">
-       <span class="icon-[tabler--refresh] size-5">
-       </span>
-      </button>
-      <span class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="tooltip">
-       <span class="tooltip-body">
-        Refresh
-       </span>
-      </span>
-     </div>
-     <div class="tooltip">
-      <button aria-label="Maximize Button" class="tooltip-toggle btn btn-text btn-sm btn-circle">
-       <span class="icon-[tabler--arrows-maximize] size-5">
-       </span>
-      </button>
-      <span class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="tooltip">
-       <span class="tooltip-body">
-        Maximize
-       </span>
-      </span>
-     </div>
-     <div class="tooltip">
-      <button aria-label="Close Button" class="tooltip-toggle btn btn-text btn-sm btn-circle" data-remove-element="#card-dismiss">
-       <span class="icon-[tabler--x] size-5">
-       </span>
-      </button>
-      <span class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="tooltip">
-       <span class="tooltip-body">
-        Close
-       </span>
-      </span>
-     </div>
-    </div>
    </div>
-   <div class="card-body">
-    <h5 class="card-title mb-2.5">
-     Important Update
-    </h5>
-    <p class="mb-4">
-     Stay informed with the latest updates and features that enhance your experience. Click on the icons above to refresh, maximize, or close this card.
-    </p>
-    <a class="text-blue-500 hover:underline" href="#">
-     Learn more
-    </a>
+   <div class="tooltip">
+    <button aria-label="Maximize Button" class="tooltip-toggle btn btn-text btn-sm btn-circle">
+     <span class="icon-[tabler--arrows-maximize] size-5">
+     </span>
+    </button>
+    <span class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="tooltip">
+     <span class="tooltip-body">
+      Maximize
+     </span>
+    </span>
+   </div>
+   <div class="tooltip">
+    <button aria-label="Close Button" class="tooltip-toggle btn btn-text btn-sm btn-circle" data-remove-element="#card-dismiss">
+     <span class="icon-[tabler--x] size-5">
+     </span>
+    </button>
+    <span class="tooltip-content tooltip-shown:opacity-100 tooltip-shown:visible" role="tooltip">
+     <span class="tooltip-body">
+      Close
+     </span>
+    </span>
    </div>
   </div>
  </div>
+ <div class="card-body">
+  <h5 class="card-title mb-2.5">
+   Important Update
+  </h5>
+  <p class="mb-4">
+   Stay informed with the latest updates and features that enhance your experience. Click on the icons above to refresh, maximize, or close this card.
+  </p>
+  <a class="text-blue-500 hover:underline" href="#">
+   Learn more
+  </a>
+ </div>
 </div>
 
+```
 h2:
   - Card
 
