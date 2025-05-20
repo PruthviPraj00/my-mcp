@@ -22,6 +22,8 @@ load_dotenv()
 
 # Read from environment
 qdrant_mode = os.getenv("QDRANT_MODE", "docker")  # Default to docker
+# Option to force re-indexing even if collection exists
+force_reindex = os.getenv("FORCE_REINDEX", "false").lower() == "true"
 
 
 # Initialize the server
@@ -51,6 +53,7 @@ class DocChunk(BaseModel):
     component: str
     content: str
     path: str
+    category: str  # Added category field to track which section the doc belongs to
 
 
 # Function to load and index documentation
@@ -58,6 +61,12 @@ def load_and_index_docs():
     # Check if collection exists
     collections = qdrant_client.get_collections().collections
     collection_names = [collection.name for collection in collections]
+
+    # If collection exists and force_reindex is True, delete the existing collection
+    if COLLECTION_NAME in collection_names and force_reindex:
+        print(f"Force re-indexing: Deleting existing collection {COLLECTION_NAME}")
+        qdrant_client.delete_collection(collection_name=COLLECTION_NAME)
+        collection_names.remove(COLLECTION_NAME)
 
     if COLLECTION_NAME not in collection_names:
         print(f"Creating new collection: {COLLECTION_NAME}")
@@ -70,26 +79,56 @@ def load_and_index_docs():
             ),
         )
 
-        # Load documentation files
-        doc_files = glob.glob("docs/*.txt")
+        # Load documentation files recursively (now supporting .md files)
         doc_chunks = []
+        component_names = []
+
+        # Walk through all subdirectories in the docs folder
+        for root, dirs, files in os.walk("docs"):
+            # Skip hidden directories
+            dirs[:] = [d for d in dirs if not d.startswith(".")]
+
+            # Process markdown files
+            for file in files:
+                if file.endswith(".md") and not file.startswith("_"):
+                    file_path = os.path.join(root, file)
+
+                    # Extract component name (filename without extension)
+                    component_name = os.path.splitext(file)[0]
+
+                    # Extract category from directory structure
+                    # e.g., docs/components/button.md -> category: components
+                    rel_path = os.path.relpath(file_path, "docs")
+                    category_parts = os.path.dirname(rel_path).split(os.path.sep)
+                    category = (
+                        category_parts[0]
+                        if category_parts and category_parts[0] != ""
+                        else "general"
+                    )
+
+                    try:
+                        with open(file_path, "r", encoding="utf-8") as f:
+                            content = f.read()
+
+                        # Add component name to our list
+                        component_names.append(component_name)
+
+                        # Create a document chunk
+                        doc_chunks.append(
+                            DocChunk(
+                                component=component_name,
+                                content=content,
+                                path=file_path,
+                                category=category,
+                            )
+                        )
+                    except Exception as e:
+                        print(f"Error reading {file_path}: {e}")
 
         # Store all component names globally
         global ALL_COMPONENT_NAMES
-        ALL_COMPONENT_NAMES = [
-            os.path.basename(f).replace(".txt", "") for f in doc_files
-        ]
+        ALL_COMPONENT_NAMES = component_names
         print(f"Found {len(ALL_COMPONENT_NAMES)} components")
-
-        for file_path in doc_files:
-            component_name = os.path.basename(file_path).replace(".txt", "")
-            with open(file_path, "r", encoding="utf-8") as f:
-                content = f.read()
-
-            # Create a document chunk
-            doc_chunks.append(
-                DocChunk(component=component_name, content=content, path=file_path)
-            )
 
         # Create embeddings and index documents
         points = []
@@ -103,6 +142,7 @@ def load_and_index_docs():
                         "component": chunk.component,
                         "content": chunk.content,
                         "path": chunk.path,
+                        "category": chunk.category,
                     },
                 )
             )
@@ -113,6 +153,7 @@ def load_and_index_docs():
         print(f"Indexed {len(doc_chunks)} documentation files")
     else:
         print(f"Collection {COLLECTION_NAME} already exists. Skipping indexing.")
+        print("To force re-indexing, set FORCE_REINDEX=true environment variable.")
 
 
 # Function to search documentation based on a query
@@ -136,9 +177,6 @@ def search_docs(query: str, limit: int = 5) -> List[Dict[str, Any]]:
         )
 
     return results
-
-
-
 
 
 # Initialize the documentation index

@@ -5,10 +5,11 @@ import mcp.types as types
 def register_tool(app):
     """
     Register the create-ui tool with the MCP server
-    
+
     Args:
         app: The MCP server instance
     """
+
     @app.list_tools()
     async def list_tools() -> List[types.Tool]:
         return [
@@ -38,7 +39,6 @@ def register_tool(app):
             )
         ]
 
-
     @app.call_tool()
     async def call_tool(
         name: str, arguments: Dict[str, Any]
@@ -46,7 +46,7 @@ def register_tool(app):
         if name == "create-ui":
             # Import here to avoid circular imports
             from main import search_docs, ALL_COMPONENT_NAMES
-            
+
             description = arguments.get("description", "")
             components = arguments.get("components", [])
 
@@ -66,7 +66,25 @@ def register_tool(app):
             # Check for component mentions using ALL_COMPONENT_NAMES
             for component in ALL_COMPONENT_NAMES:
                 # Skip non-component files like introduction, license, etc.
-                if component in ["introduction", "license", "quick-start", "javascript"]:
+                if component in [
+                    "introduction",
+                    "quick start",
+                    "upgrade guide",
+                    "usage",
+                    "framework guides",
+                    "javascript",
+                    "license",
+                    "customization",
+                    "customize components",
+                    "config",
+                    "base style",
+                    "colors",
+                    "icons",
+                    "themes",
+                    "utilities and variables",
+                    "rtl",
+                    "theme generator",
+                ]:
                     continue
 
                 # Replace hyphens with spaces for natural language matching
@@ -84,6 +102,27 @@ def register_tool(app):
                 if component not in potential_components:
                     potential_components.append(component)
 
+            # Create a simple analysis of what components might be needed based on the request
+            component_keywords = {
+                "grid": ["grid", "layout", "columns", "rows"],
+                "card": ["card", "project", "item", "thumbnail"],
+                "modal": ["modal", "popup", "dialog", "opens up"],
+                "carousel": ["carousel", "slider", "slideshow", "gallery"],
+                "image": ["image", "picture", "photo", "img"],
+                "overlay": ["overlay", "hover", "cover"],
+                "button": ["button", "btn", "click"],
+            }
+            
+            # Identify components based on the description
+            description_lower = description.lower()
+            identified_components = []
+            
+            for component, keywords in component_keywords.items():
+                if any(keyword in description_lower for keyword in keywords):
+                    identified_components.append(component)
+                    if component not in potential_components:
+                        potential_components.append(component)
+            
             # Search for relevant documentation
             search_query = description
             # Add identified components to the search query
@@ -99,464 +138,458 @@ def register_tool(app):
             response_text = "# FlyonUI Component Generation\n\n"
             response_text += f"## User Request\n{description}\n\n"
 
-            response_text += "## Relevant Documentation\n\n"
+            # Add a section to help the LLM understand what components are needed
+            response_text += "## Component Analysis\n\n"
+            response_text += "Based on your request, the following FlyonUI components would be useful:\n\n"
 
-            # Include more documentation results for complex component combinations
-            # Determine how many docs to include based on potential components identified
-            max_docs = max(5, len(potential_components))
-            for i, result in enumerate(doc_results[:max_docs]):
-                component_name = result["component"].replace("-", " ").title()
-                response_text += f"### {component_name}\n"
+            # Add identified components to the response
+            for component in identified_components:
+                response_text += f"- **{component.title()}**: Required for your request\n"
+            
+            response_text += "\n"
 
-                # Extract the most relevant part of the documentation
+            # First, thoroughly analyze the documentation to understand the components
+            component_analysis = {}
+            for result in doc_results:
+                component_name = result["component"]
                 doc_content = result["content"]
-                
-                # Extract key information from documentation
-                # Get the component name and add it to the response
+
+                # Create an analysis structure for this component
+                analysis = {
+                    "name": component_name,
+                    "title": "",
+                    "description": "",
+                    "usage": "",
+                    "examples": [],
+                    "classes": [],
+                    "best_example": "",
+                }
+
+                # Extract the title
                 title_start = doc_content.find("# ")
                 if title_start != -1:
                     title_end = doc_content.find("\n\n", title_start)
                     if title_end != -1:
-                        response_text += doc_content[title_start:title_end] + "\n\n"
-                    else:
-                        # If we can't find the end, just take a reasonable chunk
-                        response_text += doc_content[title_start:title_start+100] + "\n\n"
-                
-                # Include a brief description if available
+                        analysis["title"] = doc_content[title_start:title_end].strip()
+
+                # Extract the description
                 p_start = doc_content.find("p:\n  - ")
                 if p_start != -1:
                     p_end = doc_content.find("\n\n", p_start)
                     if p_end != -1:
-                        description_text = doc_content[p_start:p_end].replace("p:\n  - ", "")
-                        response_text += f"{description_text}\n\n"
-                
-                # Try to find the table with class names and descriptions (most important part)
+                        analysis["description"] = (
+                            doc_content[p_start:p_end].replace("p:\n  - ", "").strip()
+                        )
+
+                # Extract the class information
                 table_start = doc_content.find("| Class Name | Type | Description |")
                 if table_start != -1:
-                    # Find where the table ends (next heading or paragraph)
                     table_end = doc_content.find("\n\nh", table_start)
                     if table_end == -1:
                         table_end = doc_content.find("\n\np", table_start)
                     if table_end == -1:
                         table_end = len(doc_content)
-                    
-                    # Include the table of class names and descriptions
-                    table_content = doc_content[table_start:table_end]
-                    
-                    # Only include rows relevant to the request to keep it concise
-                    table_rows = table_content.split("\n")
-                    filtered_rows = [table_rows[0], table_rows[1]]  # Keep header and separator
-                    
-                    # Add relevant rows based on keywords in the description
-                    keywords = description.lower().split()
-                    for row in table_rows[2:]:  # Skip header and separator
-                        if any(keyword in row.lower() for keyword in keywords):
-                            filtered_rows.append(row)
-                    
-                    # If we filtered too aggressively, include some basic rows
-                    if len(filtered_rows) <= 2:  # Only header and separator
-                        # Include basic component classes
-                        for row in table_rows[2:]:  # Skip header and separator
-                            if "Component" in row or result["component"].lower() in row.lower():
-                                filtered_rows.append(row)
-                    
-                    # If still too few rows, add a few more important ones
-                    if len(filtered_rows) <= 5:  # Add a few more important rows
-                        for row in table_rows[2:]:  # Skip header and separator
-                            if "primary" in row.lower() or "size" in row.lower() or "style" in row.lower():
-                                if row not in filtered_rows:
-                                    filtered_rows.append(row)
-                    
-                    # Combine the filtered rows back into a table
-                    filtered_table = "\n".join(filtered_rows)
-                    response_text += filtered_table + "\n\n"
-                
-                # Look for code examples - they're very valuable
-                code_start = doc_content.find("Code:")
-                if code_start != -1:
-                    code_end = doc_content.find("\n\nh", code_start)
-                    if code_end == -1:
-                        code_end = doc_content.find("\n\np", code_start)
-                    if code_end == -1:
-                        code_end = min(code_start + 800, len(doc_content))
-                    
-                    # Extract just the code part, not all the surrounding text
-                    code_content = doc_content[code_start:code_end]
-                    # Find the actual HTML code
-                    html_start = code_content.find("<div")
-                    if html_start != -1:
-                        # Add a brief code example
-                        response_text += "Example:\n```html\n"
-                        response_text += code_content[html_start:min(html_start+400, len(code_content))]
-                        response_text += "\n```\n\n"
-                
-                # If we couldn't extract structured content, include a truncated version
-                if not (title_start != -1 or table_start != -1 or code_start != -1):
-                    max_content_length = 400
-                    if len(doc_content) > max_content_length:
-                        doc_content = (
-                            doc_content[:max_content_length]
-                            + "...\n(Documentation truncated for brevity)"
-                        )
-                    response_text += f"{doc_content}\n\n"
 
-            # Add guidance for implementation
+                    table_content = doc_content[table_start:table_end]
+                    table_rows = table_content.split("\n")[
+                        2:
+                    ]  # Skip header and separator
+
+                    for row in table_rows:
+                        if "|" in row:
+                            parts = row.split("|")[
+                                1:-1
+                            ]  # Remove empty first and last elements
+                            if len(parts) >= 3:
+                                class_name = parts[0].strip()
+                                class_type = parts[1].strip()
+                                class_desc = parts[2].strip()
+                                analysis["classes"].append(
+                                    {
+                                        "name": class_name,
+                                        "type": class_type,
+                                        "description": class_desc,
+                                    }
+                                )
+
+                # Extract examples with their headings to understand context
+                heading_positions = []
+                lines = doc_content.split("\n")
+
+                # Find all h2 and h3 headings
+                for i, line in enumerate(lines):
+                    if line.startswith("h2:") or line.startswith("h3:"):
+                        heading_text = ""
+                        if line.startswith("h2:"):
+                            heading_text = line.replace("h2:\n  - ", "").strip()
+                            heading_level = 2
+                        else:
+                            heading_text = line.replace("h3:\n  - ", "").strip()
+                            heading_level = 3
+
+                        heading_positions.append(
+                            {"line": i, "text": heading_text, "level": heading_level}
+                        )
+
+                # Extract code examples with their context
+                code_positions = []
+                for i, line in enumerate(lines):
+                    if line.startswith("Code:"):
+                        code_positions.append(i)
+
+                # Match code examples with their headings
+                examples = []
+                for code_pos in code_positions:
+                    # Find the closest heading before this code
+                    closest_heading = None
+                    closest_distance = float("inf")
+
+                    for heading in heading_positions:
+                        if (
+                            heading["line"] < code_pos
+                            and code_pos - heading["line"] < closest_distance
+                        ):
+                            closest_heading = heading
+                            closest_distance = code_pos - heading["line"]
+
+                    # Extract the code
+                    for j in range(code_pos + 1, min(code_pos + 30, len(lines))):
+                        if lines[j].startswith("<div"):
+                            # Extract HTML content
+                            html_content = ""
+                            k = j
+                            depth = 0
+                            started = False
+
+                            while k < len(lines) and (not started or depth > 0):
+                                line = lines[k]
+                                if "<div" in line:
+                                    depth += 1
+                                    started = True
+                                if "</div>" in line:
+                                    depth -= 1
+                                html_content += line + "\n"
+                                k += 1
+                                if k - j > 50:  # Limit to 50 lines max
+                                    break
+
+                            if closest_heading:
+                                examples.append(
+                                    {
+                                        "heading": closest_heading["text"],
+                                        "level": closest_heading["level"],
+                                        "code": html_content.strip(),
+                                    }
+                                )
+                            else:
+                                examples.append(
+                                    {
+                                        "heading": "Example",
+                                        "level": 3,
+                                        "code": html_content.strip(),
+                                    }
+                                )
+                            break
+
+                analysis["examples"] = examples
+
+                # Determine the best example based on the request
+                if examples:
+                    best_example = None
+                    best_score = -1
+
+                    for example in examples:
+                        score = 0
+                        # Check if heading matches keywords in the description
+                        for keyword in description.lower().split():
+                            if keyword in example["heading"].lower():
+                                score += 3
+
+                        # Check if the example code contains relevant elements
+                        for keyword in description.lower().split():
+                            if keyword in example["code"].lower():
+                                score += 1
+
+                        # Prefer basic/default examples for beginners
+                        if (
+                            "basic" in example["heading"].lower()
+                            or "default" in example["heading"].lower()
+                        ):
+                            score += 2
+
+                        if score > best_score:
+                            best_score = score
+                            best_example = example
+
+                    if best_example:
+                        analysis["best_example"] = best_example
+
+                component_analysis[component_name] = analysis
+
+            # Generate a concise summary of each component
+            response_text += "## Component Summaries\n\n"
+
+            for component_name, analysis in component_analysis.items():
+                formatted_name = component_name.replace("-", " ").title()
+                response_text += f"### {formatted_name}\n\n"
+
+                # Add title and description
+                if analysis["title"]:
+                    response_text += f"{analysis['title']}\n\n"
+                if analysis["description"]:
+                    response_text += f"{analysis['description']}\n\n"
+
+                # Add key classes (limit to most relevant)
+                if analysis["classes"]:
+                    response_text += "**Key Classes:**\n\n"
+                    response_text += "| Class Name | Type | Description |\n"
+                    response_text += "|------------|------|-------------|\n"
+
+                    # Filter classes to show only the most relevant ones
+                    relevant_classes = []
+
+                    # First include component classes
+                    for cls in analysis["classes"]:
+                        if cls["type"].lower() == "component":
+                            relevant_classes.append(cls)
+
+                    # Then include classes mentioned in the description
+                    for cls in analysis["classes"]:
+                        if cls not in relevant_classes:
+                            for keyword in description.lower().split():
+                                if (
+                                    keyword in cls["name"].lower()
+                                    or keyword in cls["description"].lower()
+                                ):
+                                    relevant_classes.append(cls)
+                                    break
+
+                    # If we still have few classes, add some common ones (color, size, etc.)
+                    if len(relevant_classes) < 5:
+                        for cls in analysis["classes"]:
+                            if cls not in relevant_classes and (
+                                "color" in cls["type"].lower()
+                                or "size" in cls["type"].lower()
+                                or "style" in cls["type"].lower()
+                            ):
+                                relevant_classes.append(cls)
+                                if len(relevant_classes) >= 8:
+                                    break
+
+                    # Show the relevant classes
+                    for cls in relevant_classes[:8]:  # Limit to 8 classes
+                        response_text += f"| {cls['name']} | {cls['type']} | {cls['description']} |\n"
+
+                    response_text += "\n"
+
+                # Add the best example if available
+                if analysis["best_example"]:
+                    response_text += f"**{analysis['best_example']['heading']}:**\n\n"
+                    response_text += "```html\n"
+                    response_text += analysis["best_example"]["code"] + "\n"
+                    response_text += "```\n\n"
+
+            # Add implementation guidance
             response_text += "## Implementation Guidance\n\n"
             response_text += "Based on the documentation above, here's how to implement the requested UI component:\n\n"
 
-            # Add example code structure
+            # Generate implementation code based on the request and component analysis
             response_text += (
-                "```html\n<!-- Example structure for the requested component -->\n"
+                "```html\n<!-- Example implementation for the requested component -->\n"
             )
-            
-            # Analyze the request to determine what components are needed
-            needs_button = "button" in description.lower() or "button" in components
-            needs_form = "form" in description.lower() or "login" in description.lower() or "signup" in description.lower()
-            needs_card = "card" in description.lower() or "card" in components
-            needs_carousel = "carousel" in description.lower() or "carousel" in components or "slider" in description.lower()
-            needs_checkbox = "checkbox" in description.lower() or "remember" in description.lower()
-            needs_link = "link" in description.lower() or "forgot password" in description.lower() or "sign up" in description.lower()
-            
-            # Check for specific input types to enhance the implementation
-            has_password = "password" in description.lower() or any("password" in comp for comp in components)
-            has_email = "email" in description.lower() or "login" in description.lower()
-            has_text_input = "input" in description.lower() or "field" in description.lower() or "text" in description.lower()
-            
-            # Determine if this is a login/signup form with card container
-            login_in_card = needs_form and needs_card
-            
-            # Generate appropriate implementation based on component needs
-            
-            # CASE 1: Login/Signup Form (highest priority for common requests)
+
+            # Determine what type of component to generate based on the request
+            needs_form = (
+                "form" in description.lower()
+                or "login" in description.lower()
+                or "signup" in description.lower()
+                or "register" in description.lower()
+            )
+            needs_card = "card" in description.lower() or any(
+                "card" in comp for comp in potential_components
+            )
+            needs_button = "button" in description.lower() or any(
+                "button" in comp for comp in potential_components
+            )
+            needs_input = (
+                "input" in description.lower()
+                or "field" in description.lower()
+                or any("input" in comp for comp in potential_components)
+            )
+
+            # Generate the appropriate implementation
             if needs_form:
-                # Determine if the form should be in a card
-                container_start = ""
-                container_end = ""
-                if login_in_card:
-                    container_start = "<div class=\"card card-border max-w-md mx-auto\">\n"
-                    if "header" in description.lower():
-                        container_start += "  <div class=\"card-header text-center p-6 bg-base-200/50\">\n"
-                        container_start += "    <h2 class=\"text-2xl font-bold\">" + ("Sign In" if "login" in description.lower() else "Sign Up") + "</h2>\n"
-                        container_start += "  </div>\n"
-                    container_start += "  <div class=\"card-body\">\n"
-                    container_end = "  </div>\n</div>\n"
-                
-                # Start the form
-                form_class = "max-w-md mx-auto p-6" + ("" if login_in_card else " bg-base-100 rounded-lg shadow-md")
-                response_text += container_start
-                response_text += f"<form class=\"{form_class}\">\n"
-                
-                # Add form fields based on login or signup
-                if "signup" in description.lower() or "register" in description.lower():
-                    # Name field for signup
-                    response_text += "  <div class=\"mb-4\">\n"
-                    response_text += "    <label class=\"block text-sm font-medium mb-1\" for=\"name\">Full Name</label>\n"
-                    response_text += "    <div class=\"input\">\n"
-                    response_text += "      <span class=\"icon-[tabler--user] size-5 text-base-content/50\"></span>\n"
-                    response_text += "      <input type=\"text\" id=\"name\" placeholder=\"Enter your name\" />\n"
-                    response_text += "    </div>\n"
-                    response_text += "  </div>\n\n"
-                
-                # Email field (common for both login and signup)
-                response_text += "  <div class=\"mb-4\">\n"
-                response_text += "    <label class=\"block text-sm font-medium mb-1\" for=\"email\">Email</label>\n"
-                response_text += "    <div class=\"input\">\n"
-                response_text += "      <span class=\"icon-[tabler--mail] size-5 text-base-content/50\"></span>\n"
-                response_text += "      <input type=\"email\" id=\"email\" placeholder=\"Enter your email\" />\n"
-                response_text += "    </div>\n"
-                response_text += "  </div>\n\n"
-                
-                # Password field with toggle
-                response_text += "  <div class=\"mb-4\">\n"
-                response_text += "    <label class=\"block text-sm font-medium mb-1\" for=\"password\">Password</label>\n"
-                response_text += "    <div class=\"input\">\n"
-                response_text += "      <span class=\"icon-[tabler--lock] size-5 text-base-content/50\"></span>\n"
-                response_text += "      <input id=\"password\" type=\"password\" placeholder=\"Enter password\" />\n"
-                response_text += "      <button aria-label=\"password toggle\" class=\"block cursor-pointer\" data-toggle-password='{ \"target\": \"#password\" }' type=\"button\">\n"
-                response_text += "        <span class=\"icon-[tabler--eye] text-base-content/80 password-active:block hidden size-5 shrink-0\"></span>\n"
-                response_text += "        <span class=\"icon-[tabler--eye-off] text-base-content/80 password-active:hidden block size-5 shrink-0\"></span>\n"
-                response_text += "      </button>\n"
-                response_text += "    </div>\n"
-                response_text += "  </div>\n\n"
-                
-                # Confirm password for signup
-                if "signup" in description.lower() or "register" in description.lower():
-                    response_text += "  <div class=\"mb-4\">\n"
-                    response_text += "    <label class=\"block text-sm font-medium mb-1\" for=\"confirm-password\">Confirm Password</label>\n"
-                    response_text += "    <div class=\"input\">\n"
-                    response_text += "      <span class=\"icon-[tabler--lock] size-5 text-base-content/50\"></span>\n"
-                    response_text += "      <input id=\"confirm-password\" type=\"password\" placeholder=\"Confirm password\" />\n"
-                    response_text += "    </div>\n"
-                    response_text += "  </div>\n\n"
-                
-                # Remember me checkbox
-                if "remember" in description.lower() or needs_checkbox:
-                    response_text += "  <div class=\"mb-4 flex items-center justify-between\">\n"
-                    response_text += "    <div class=\"flex items-center\">\n"
-                    response_text += "      <input type=\"checkbox\" id=\"remember\" class=\"checkbox checkbox-sm\" />\n"
-                    response_text += "      <label for=\"remember\" class=\"ml-2 text-sm\">Remember me</label>\n"
-                    response_text += "    </div>\n"
-                    
-                    # Forgot password link
-                    if needs_link or "forgot" in description.lower():
-                        response_text += "    <a href=\"#\" class=\"text-sm text-primary hover:underline\">Forgot password?</a>\n"
-                        
-                    response_text += "  </div>\n\n"
-                
-                # Submit button
-                btn_text = "Sign In" if "login" in description.lower() else "Sign Up"
-                response_text += f"  <button type=\"submit\" class=\"btn btn-primary w-full\">{btn_text}</button>\n"
-                
-                # Sign up/in link
-                if needs_link:
-                    response_text += "  <div class=\"text-center mt-4\">\n"
-                    if "login" in description.lower():
-                        response_text += "    <p class=\"text-sm\">Don't have an account? <a href=\"#\" class=\"text-primary hover:underline\">Sign up</a></p>\n"
-                    else:
-                        response_text += "    <p class=\"text-sm\">Already have an account? <a href=\"#\" class=\"text-primary hover:underline\">Sign in</a></p>\n"
-                    response_text += "  </div>\n"
-                
-                response_text += "</form>\n"
-                response_text += container_end
-            
-            # CASE 2: Simple Button (if not part of a form)
-            elif needs_button and not needs_form:
-                primary = "primary" in description.lower()
-                outline = "outline" in description.lower()
-                size = ""
-                if "small" in description.lower() or "sm" in description.lower():
-                    size = "btn-sm"
-                elif "large" in description.lower() or "lg" in description.lower():
-                    size = "btn-lg"
-                elif "extra small" in description.lower() or "xs" in description.lower():
-                    size = "btn-xs"
-                elif "extra large" in description.lower() or "xl" in description.lower():
-                    size = "btn-xl"
-                
-                btn_class = "btn"
-                if primary:
-                    btn_class += " btn-primary"
-                if outline:
-                    btn_class += " btn-outline"
-                if size:
-                    btn_class += f" {size}"
-                
-                button_text = "Button"
-                if "submit" in description.lower():
-                    button_text = "Submit"
-                elif "cancel" in description.lower():
-                    button_text = "Cancel"
-                elif "save" in description.lower():
-                    button_text = "Save"
-                
-                response_text += f"<button class=\"{btn_class}\">{button_text}</button>\n"
-                
-            # CASE 3: Card (if not already handled as part of a form)
-            elif needs_card and not login_in_card:
-                has_image = "image" in description.lower()
-                has_actions = "action" in description.lower() or "button" in description.lower()
-                
-                response_text += "<div class=\"card card-border max-w-sm\">\n"
-                if has_image:
-                    response_text += "  <figure>\n"
-                    response_text += "    <img src=\"https://source.unsplash.com/random/600x400/?nature\" alt=\"Card image\" class=\"w-full h-48 object-cover\" />\n"
-                    response_text += "  </figure>\n"
-                response_text += "  <div class=\"card-body\">\n"
-                response_text += "    <h2 class=\"card-title\">Card Title</h2>\n"
-                response_text += "    <p>This is a description for the card. You can add any content here.</p>\n"
-                if has_actions:
-                    response_text += "    <div class=\"card-actions justify-end\">\n"
-                    response_text += "      <button class=\"btn btn-primary\">Action</button>\n"
-                    response_text += "      <button class=\"btn btn-outline\">Cancel</button>\n"
-                    response_text += "    </div>\n"
-                response_text += "  </div>\n"
-                response_text += "</div>\n"
-                
-            # CASE 4: Carousel
-            elif needs_carousel:
-                response_text += "<div class=\"relative w-full\" data-carousel='{ \"loadingClasses\": \"opacity-0\" }'>\n"
-                response_text += "  <div class=\"carousel h-80\">\n"
-                response_text += "    <div class=\"carousel-body h-full opacity-0\">\n"
-                response_text += "      <!-- Carousel slides -->\n"
-                response_text += "      <div class=\"carousel-slide\">\n"
-                response_text += "        <img src=\"https://source.unsplash.com/random/1200x600/?nature\" alt=\"Slide 1\" class=\"w-full h-full object-cover\" />\n"
-                response_text += "      </div>\n"
-                response_text += "      <div class=\"carousel-slide\">\n"
-                response_text += "        <img src=\"https://source.unsplash.com/random/1200x600/?city\" alt=\"Slide 2\" class=\"w-full h-full object-cover\" />\n"
-                response_text += "      </div>\n"
-                response_text += "      <div class=\"carousel-slide\">\n"
-                response_text += "        <img src=\"https://source.unsplash.com/random/1200x600/?technology\" alt=\"Slide 3\" class=\"w-full h-full object-cover\" />\n"
-                response_text += "      </div>\n"
-                response_text += "    </div>\n"
-                response_text += "  </div>\n"
-                response_text += "  <!-- Navigation buttons -->\n"
-                response_text += "  <button class=\"carousel-prev\" type=\"button\">\n"
-                response_text += "    <span class=\"size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm\">\n"
-                response_text += "      <span class=\"icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180\"></span>\n"
-                response_text += "    </span>\n"
-                response_text += "    <span class=\"sr-only\">Previous</span>\n"
-                response_text += "  </button>\n"
-                response_text += "  <button class=\"carousel-next\" type=\"button\">\n"
-                response_text += "    <span class=\"sr-only\">Next</span>\n"
-                response_text += "    <span class=\"size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm\">\n"
-                response_text += "      <span class=\"icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180\"></span>\n"
-                response_text += "    </span>\n"
-                response_text += "  </button>\n"
-                response_text += "  <!-- Pagination indicators -->\n"
-                response_text += "  <div class=\"carousel-pagination absolute bottom-3 end-0 start-0 flex justify-center gap-3\"></div>\n"
-                response_text += "</div>\n"
-            
-            # CASE 5: Generic component or custom combination
-            else:
-                # Try to detect what kind of component the user might want
-                if has_text_input:
-                    # Provide a text input field
-                    response_text += "<!-- Input field component -->\n"
-                    response_text += "<div class=\"mb-4\">\n"
-                    response_text += "  <label class=\"block text-sm font-medium mb-1\" for=\"input-field\">Input Label</label>\n"
-                    response_text += "  <div class=\"input\">\n"
-                    if has_email:
-                        response_text += "    <span class=\"icon-[tabler--mail] size-5 text-base-content/50\"></span>\n"
-                        response_text += "    <input type=\"email\" id=\"input-field\" placeholder=\"Enter your email\" />\n"
-                    elif has_password:
-                        response_text += "    <span class=\"icon-[tabler--lock] size-5 text-base-content/50\"></span>\n"
-                        response_text += "    <input type=\"password\" id=\"input-field\" placeholder=\"Enter password\" />\n"
-                        response_text += "    <button aria-label=\"password toggle\" class=\"block cursor-pointer\" data-toggle-password='{ \"target\": \"#input-field\" }' type=\"button\">\n"
-                        response_text += "      <span class=\"icon-[tabler--eye] text-base-content/80 password-active:block hidden size-5 shrink-0\"></span>\n"
-                        response_text += "      <span class=\"icon-[tabler--eye-off] text-base-content/80 password-active:hidden block size-5 shrink-0\"></span>\n"
-                        response_text += "    </button>\n"
-                    else:
-                        response_text += "    <span class=\"icon-[tabler--edit] size-5 text-base-content/50\"></span>\n"
-                        response_text += "    <input type=\"text\" id=\"input-field\" placeholder=\"Enter text\" />\n"
-                    response_text += "  </div>\n"
-                    response_text += "</div>\n"
+                # Find the best form example from our component analysis
+                form_example = None
+                for comp_name, analysis in component_analysis.items():
+                    if comp_name == "form" and analysis["best_example"]:
+                        form_example = analysis["best_example"]["code"]
+                        break
+
+                # If we found a form example, use it as a base
+                if form_example:
+                    response_text += form_example + "\n"
                 else:
-                    # Generic component template
-                    response_text += "<!-- Generic component structure -->\n"
-                    response_text += "<div class=\"p-4 bg-base-100 rounded-lg shadow-md\">\n"
-                    response_text += "  <h2 class=\"text-xl font-semibold mb-2\">Component Title</h2>\n"
-                    response_text += "  <p class=\"mb-4\">Component description or content goes here.</p>\n"
-                    response_text += "  <div class=\"flex gap-2\">\n"
-                    response_text += "    <button class=\"btn btn-primary\">Primary Action</button>\n"
-                    response_text += "    <button class=\"btn btn-outline\">Secondary Action</button>\n"
+                    # Create a basic form structure
+                    response_text += '<form class="max-w-md mx-auto p-6">\n'
+
+                    # Add form fields based on the description
+                    if "email" in description.lower() or "login" in description.lower():
+                        # Find an input example
+                        input_example = None
+                        for comp_name, analysis in component_analysis.items():
+                            if comp_name == "input" and analysis["best_example"]:
+                                input_example = analysis["best_example"]["code"]
+                                break
+
+                        if input_example:
+                            # Modify the input example for email
+                            email_input = input_example.replace(
+                                'type="text"', 'type="email"'
+                            )
+                            email_input = email_input.replace(
+                                'placeholder="Enter text"',
+                                'placeholder="Enter your email"',
+                            )
+                            response_text += "  <!-- Email field -->\n"
+                            response_text += '  <div class="mb-4">\n'
+                            response_text += '    <label class="block text-sm mb-1" for="email">Email address</label>\n'
+                            response_text += f"    {email_input}\n"
+                            response_text += "  </div>\n\n"
+                        else:
+                            # Fallback to a basic email input
+                            response_text += "  <!-- Email field -->\n"
+                            response_text += '  <div class="mb-4">\n'
+                            response_text += '    <label class="block text-sm mb-1" for="email">Email address</label>\n'
+                            response_text += '    <input type="email" id="email" placeholder="Enter your email" class="input w-full" />\n'
+                            response_text += "  </div>\n\n"
+
+                    if (
+                        "password" in description.lower()
+                        or "login" in description.lower()
+                        or "signup" in description.lower()
+                    ):
+                        # Find a password input example
+                        password_example = None
+                        for comp_name, analysis in component_analysis.items():
+                            if (
+                                comp_name == "toggle-password"
+                                and analysis["best_example"]
+                            ):
+                                password_example = analysis["best_example"]["code"]
+                                break
+
+                        if password_example:
+                            response_text += "  <!-- Password field -->\n"
+                            response_text += '  <div class="mb-4">\n'
+                            response_text += '    <label class="block text-sm mb-1" for="password">Password</label>\n'
+                            response_text += f"    {password_example}\n"
+                            response_text += "  </div>\n\n"
+                        else:
+                            # Fallback to a basic password input
+                            response_text += "  <!-- Password field -->\n"
+                            response_text += '  <div class="mb-4">\n'
+                            response_text += '    <label class="block text-sm mb-1" for="password">Password</label>\n'
+                            response_text += (
+                                '    <div class="input w-full flex items-center">\n'
+                            )
+                            response_text += '      <input id="password" type="password" placeholder="••••••••" class="flex-1 bg-transparent border-none focus:outline-none p-0" />\n'
+                            response_text += '      <button type="button" aria-label="password toggle" class="block cursor-pointer" data-toggle-password=\'{ "target": "#password" }\'>\n'
+                            response_text += '        <span class="icon-[tabler--eye] text-base-content/60 password-active:block hidden size-5 shrink-0"></span>\n'
+                            response_text += '        <span class="icon-[tabler--eye-off] text-base-content/60 password-active:hidden block size-5 shrink-0"></span>\n'
+                            response_text += "      </button>\n"
+                            response_text += "    </div>\n"
+                            response_text += "  </div>\n\n"
+
+                    # Add a submit button
+                    button_example = None
+                    for comp_name, analysis in component_analysis.items():
+                        if comp_name == "button" and analysis["best_example"]:
+                            button_example = analysis["best_example"]["code"]
+                            break
+
+                    if button_example:
+                        # Modify the button example for submit
+                        submit_button = button_example.replace(
+                            'class="btn', 'class="btn btn-primary w-full'
+                        )
+                        submit_button = submit_button.replace(">Button<", ">Submit<")
+                        response_text += "  <!-- Submit button -->\n"
+                        response_text += f"  {submit_button}\n"
+                    else:
+                        # Fallback to a basic submit button
+                        response_text += "  <!-- Submit button -->\n"
+                        response_text += '  <button type="submit" class="btn btn-primary w-full">Submit</button>\n'
+
+                    response_text += "</form>\n"
+
+            elif needs_card:
+                # Find the best card example
+                card_example = None
+                for comp_name, analysis in component_analysis.items():
+                    if comp_name == "card" and analysis["best_example"]:
+                        card_example = analysis["best_example"]["code"]
+                        break
+
+                if card_example:
+                    response_text += card_example + "\n"
+                else:
+                    # Fallback to a basic card
+                    response_text += '<div class="card">\n'
+                    response_text += '  <div class="card-body">\n'
+                    response_text += '    <h2 class="card-title">Card Title</h2>\n'
+                    response_text += "    <p>Card content goes here.</p>\n"
                     response_text += "  </div>\n"
                     response_text += "</div>\n"
 
-            # If carousel is mentioned in the description, provide a basic carousel template
-            if "carousel" in description.lower() or "carousel" in components:
-                response_text += """<div class="relative w-full" data-carousel='{ "loadingClasses": "opacity-0" }'>
-  <div class="carousel h-80">
-    <div class="carousel-body h-full opacity-0">
-      <!-- Carousel slides go here -->
-      <div class="carousel-slide">
-        <!-- Slide content -->
-      </div>
-      <!-- More slides as needed -->
-    </div>
-  </div>
-  <!-- Navigation buttons -->
-  <button class="carousel-prev" type="button">
-    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
-      <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
-    </span>
-    <span class="sr-only">Previous</span>
-  </button>
-  <button class="carousel-next" type="button">
-    <span class="sr-only">Next</span>
-    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
-      <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
-    </span>
-  </button>
-  <!-- Pagination indicators -->
-  <div class="carousel-pagination absolute bottom-3 end-0 start-0 flex justify-center gap-3"></div>
-</div>"""
-            # If team page is mentioned, provide a basic team page structure
-            if "team" in description.lower():
-                response_text += """<!-- Team Page Structure -->
-<div class="container mx-auto px-4 py-8">
-  <h1 class="text-3xl font-bold text-center mb-8">Our Team</h1>
-  
-  <!-- Team description -->
-  <div class="max-w-3xl mx-auto text-center mb-12">
-    <p class="text-lg text-gray-600">Our talented team of professionals is dedicated to delivering exceptional results.</p>
-  </div>
-  
-  <!-- Team member carousel -->
-  <div class="relative w-full" data-carousel='{ "loadingClasses": "opacity-0", "slidesQty": { "xs": 1, "sm": 2, "md": 3, "lg": 4 } }'>
-    <div class="carousel h-auto">
-      <div class="carousel-body opacity-0 gap-4">
-        <!-- Team member cards -->
-        <div class="carousel-slide">
-          <div class="bg-base-100 rounded-lg shadow-md overflow-hidden">
-            <img src="https://source.unsplash.com/random/300x300/?portrait" alt="Team Member" class="w-full h-64 object-cover">
-            <div class="p-4">
-              <h3 class="text-xl font-semibold">John Doe</h3>
-              <p class="text-sm text-gray-500">CEO & Founder</p>
-              <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <div class="mt-4 flex space-x-3">
-                <a href="#" class="text-blue-500"><span class="icon-[tabler--brand-twitter] size-5"></span></a>
-                <a href="#" class="text-blue-700"><span class="icon-[tabler--brand-linkedin] size-5"></span></a>
-                <a href="#" class="text-gray-700"><span class="icon-[tabler--mail] size-5"></span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- More team members would be added here -->
-      </div>
-    </div>
-    <!-- Navigation buttons -->
-    <button class="carousel-prev" type="button">
-      <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
-        <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
-      </span>
-      <span class="sr-only">Previous</span>
-    </button>
-    <button class="carousel-next" type="button">
-      <span class="sr-only">Next</span>
-      <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
-        <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
-      </span>
-    </button>
-  </div>
-</div>"""
+            elif needs_button:
+                # Find the best button example
+                button_example = None
+                for comp_name, analysis in component_analysis.items():
+                    if comp_name == "button" and analysis["best_example"]:
+                        button_example = analysis["best_example"]["code"]
+                        break
 
-            response_text += "\n```\n\n"
+                if button_example:
+                    response_text += button_example + "\n"
+                else:
+                    # Fallback to a basic button
+                    response_text += '<button class="btn btn-primary">Button</button>\n'
 
-            # Add installation instructions and usage notes
-            response_text += "## Installation Instructions\n\n"
-            response_text += "To use FlyonUI components, make sure you have the following in your project:\n\n"
-            response_text += "1. Tailwind CSS installed and configured\n"
-            response_text += "2. FlyonUI installed: `npm install flyonui`\n"
-            response_text += "3. Include the necessary JavaScript for interactive components\n"
-            response_text += "4. Configure Iconify for Tabler icons: `npm i -D @iconify/tailwind4 @iconify-json/tabler`\n\n"
+            elif needs_input:
+                # Find the best input example
+                input_example = None
+                for comp_name, analysis in component_analysis.items():
+                    if comp_name == "input" and analysis["best_example"]:
+                        input_example = analysis["best_example"]["code"]
+                        break
 
-            # Add usage notes based on the components used
-            response_text += "## Usage Notes\n\n"
+                if input_example:
+                    response_text += input_example + "\n"
+                else:
+                    # Fallback to a basic input
+                    response_text += '<div class="mb-4">\n'
+                    response_text += '  <label class="block text-sm mb-1" for="input">Input Label</label>\n'
+                    response_text += '  <input type="text" id="input" placeholder="Enter text" class="input w-full" />\n'
+                    response_text += "</div>\n"
 
-            if needs_form or has_password:
-                response_text += "### Password Toggle\n"
-                response_text += "The password toggle functionality requires the FlyonUI JavaScript to be properly initialized:\n\n"
-                response_text += "```js\n"
-                response_text += "// Initialize password toggle\n"
-                response_text += "document.addEventListener('DOMContentLoaded', function() {\n"
-                response_text += "  FlyonUI.initPasswordToggle();\n"
-                response_text += "});\n"
-                response_text += "```\n\n"
+            else:
+                # If we can't determine a specific component, use the first best example we find
+                example_used = False
+                for comp_name, analysis in component_analysis.items():
+                    if analysis["best_example"]:
+                        response_text += analysis["best_example"]["code"] + "\n"
+                        example_used = True
+                        break
 
-            if needs_carousel:
-                response_text += "### Carousel\n"
-                response_text += "The carousel component requires JavaScript initialization:\n\n"
-                response_text += "```js\n"
-                response_text += "// Initialize carousel\n"
-                response_text += "document.addEventListener('DOMContentLoaded', function() {\n"
-                response_text += "  FlyonUI.initCarousel();\n"
-                response_text += "});\n"
-                response_text += "```\n\n"
+                if not example_used:
+                    # Fallback to a generic message
+                    response_text += "<!-- No specific component was identified. Please refer to the documentation above. -->\n"
 
-            response_text += "For more details, refer to the FlyonUI documentation."
+            response_text += "```"
 
-            return [types.TextContent(content=response_text)]
-        
+            return [types.TextContent(type="text", text=response_text)]
+
         # If the tool name is not recognized
         return [
             types.TextContent(
