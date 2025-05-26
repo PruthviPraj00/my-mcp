@@ -14,13 +14,6 @@ COPY . .
 # Install dependencies directly (no venv in Docker)
 RUN pip install -e .
 
-# Set environment variables for FlyonUI MCP server
-ENV QDRANT_MODE=cloud
-ENV FORCE_REINDEX=false
-
-# Default to stdio for Smithery
-ENV MCP_TRANSPORT=stdio
-
 # Expose the port that the server will run on
 EXPOSE 8000
 
