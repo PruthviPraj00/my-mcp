@@ -2,13 +2,27 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install uv for faster dependency installation
-RUN pip install uv
+# Install dependencies
+RUN pip install --upgrade pip
+
+# Copy only the requirements first for better caching
+COPY pyproject.toml .
 
 # Copy the rest of the application
 COPY . .
 
-# Install dependencies using uv
-RUN uv pip install -e .
+# Install dependencies directly (no venv in Docker)
+RUN pip install -e .
 
-CMD ["uv", "run", "main.py"]
+# Set environment variables for FlyonUI MCP server
+ENV QDRANT_MODE=cloud
+ENV FORCE_REINDEX=false
+
+# Default to stdio for Smithery
+ENV MCP_TRANSPORT=stdio
+
+# Expose the port that the server will run on
+EXPOSE 8000
+
+# Run the MCP server
+CMD ["python", "main.py"]

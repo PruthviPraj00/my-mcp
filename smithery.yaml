@@ -1,4 +1,4 @@
 version: 1
-start:
-  command: ["uv", "run", "main.py"]
-  port: 8000
+startCommand:
+  type: stdio
+  commandFunction: ["python", "main.py"]
